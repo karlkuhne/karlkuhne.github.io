@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Karl Kuhne</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header id="header">
+        <div id="main-nav">
+            <a href="#work" onclick="scrollToTarget(event)" class="main-nav-item">WORK</a>
+            <a href="#about" onclick="scrollToTarget(event)" class="main-nav-item">ABOUT</a>
+            <a href="#contact" class="main-nav-item">CONTACT</a>
+        </div>
+        <div id="name">
+            <a href="#cover" onclick="scrollToTarget(event)" class="name">KARL KUHNE</a>
+        </div>
+        <div id="socials">
+            <a href="https://linkedin.com" target="_blank" class="socials-item">LINKEDIN</a>
+            <a href="https://instagram.com" target="_blank" class="socials-item">INSTAGRAM</a>
+        </div>
+    </header>
+
+    <nav>
+        <div id="main-nav">
+            <a href="#work" onclick="scrollToTarget(event)" class="main-nav-item">WORK</a>
+            <a href="#about" onclick="scrollToTarget(event)" class="main-nav-item">ABOUT</a>
+            <a href="#contact" class="main-nav-item">CONTACT</a>
+        </div>
+        <div id="socials">
+            <a href="https://linkedin.com" target="_blank" class="socials-item">LINKEDIN</a>
+            <a href="https://instagram.com" target="_blank" class="socials-item">INSTAGRAM</a>
+        </div>
+    </nav>
+
+    <main>
+
+        <div id="cover">
+            <img src="Ressources/Cover.png">
+        </div>
+        <div id="karl">
+            <a href="#header" onclick="scrollToTarget(event)">KARL KUHNE</a>
+        </div>
+
+        <h1 id="work">MY WORK</h1>
+
+
+
+
+        <section id="galery">
+            <div class="project">
+                <img src=Ressources/Opening_Credits/Thumbnail.png>
+                <div class="middle">
+                    <div class="galery-label">OPENING CREDITS</div>
+                </div>
+            </div>
+            <div class="project">
+                <img src="Ressources/Term_Paper/Thumbnail.png">
+                <div class="middle">
+                    <div class="galery-label">RESEARCH</div>
+                </div>
+            </div>
+            <div class="project">
+                <img src="Ressources/Experimentelles_Projekt/Thumbnail.png">
+                <div class="middle">
+                    <div class="galery-label">CUBISM</div>
+                </div>
+            </div>
+            
+            <!-- Character Design -->
+            <div class="project" id ="project-character-design">
+                <img src="Ressources/Character_Design/Thumbnail.png">
+                <div class="middle">
+                    <div class="galery-label">CHARACTER DESIGN</div>
+                </div>
+            </div>
+
+            <article class="lightbox-slideshow-waagerecht" id="lightbox-character-design">
+                <span class="close">&times;</span>
+                <div class="container-slideshow-waagerecht">
+                    <img src="Ressources/Character_Design/Thumbnail.png" class="current-image">
+                    <!-- <img src="Ressources/Character_Design/Posen.png">
+                    <img src="Ressources/Character_Design/Emotions.png"> -->
+                    <div class="navigation-slideshow-waagerecht">
+                        <span class="prev">&#10094;</span>
+                        <span class="next">&#10095;</span>
+                    </div>
+                </div>
+                <div class="caption-slideshow-waagerecht">
+                    <h2>Character Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </article>
+
+            <!-- 
+                YouTube Player
+                PDF Viewer
+                Bilder 16:9
+                Bilder 3:4
+             -->
+
+        </section>
+
+
+        <h1>ABOUT ME</h1>
+
+        <section id="about">
+            
+            <div class="box" id="about-me">
+                <div class="label">
+                    <p>about-me</p>
+                </div>
+                <ol>
+                    <li><p>Hi, I'm <span class="gr">Karl</span>, a student of <span class="b">media informatics and media design</span> from Dresden, <span class="l">Germany</span>.</p></li>
+                    <li><p>My main interest is <span class="p">game design</span>, questioning established principles and exploring alternative solutions.</p></li>
+                    <li><p>I am currently developing my own <span class="ge">video game</span> in <span class="o">Unity</span>.</p></li>
+                    <li><p>Creating this website, I have learned much about <span class="gr">web development</span>.</p></li>
+                    <li><p>Furthermore, I have experience in <span class="l">filmmaking</span>, <span class ="b">3D modeling in Blender</span> and <span class="o">illustration</span>.</p></li>
+                    <li><p>I work with <span class="ge">precision</span> and <span class="p">dedication</span> until a project is successfully finished.</p></li>
+                    <li><p>I am looking forward to working with <span class="gr">you</span>!</p></li>
+                </ol>
+            </div>
+            
+            <div class="box" id="languages">
+                <div class="label">
+                    <p>languages</p>
+                </div>
+                <ol>
+                    <li><p>German - fluent</p></li>
+                    <li><p>English - confident</p></li>
+                    <li><p>Swedish - learning</p></li>
+                    <li><p>Latin - basics</p></li>
+                </ol>
+            </div>
+            
+            <div class="box" id="hobbys">
+                <div class="label">
+                    <p>hobbys</p>
+                </div>
+                <ol>
+                    <li><p>🎮 gaming</p></li>
+                    <li><p>🏋️‍♂️ lifting</p></li>
+                    <li><p>📖 reading</p></li>
+                </ol>
+            </div>
+            
+            <div class="box" id="degrees">
+                <div class="label">
+                    <p>degrees</p>
+                </div>
+                <ol>
+                    <li><p><span class="o">abitur</span> <br> evangelisches kreuzgymnasium dresden</p></li>
+                    <li><p><span class="b">bachelor of arts</span> [ongoing] <br> media informatics and media design, FHD</p></li>
+                </ol>
+            </div>
+
+            <div class="box" id="portrait">
+                <div class="label">
+                    <p>portrait</p>
+                </div>
+                
+                <img src="Ressources/Portrait.jpg" alt="Portrait of Karl">
+            </div>
+            
+        </section>
+
+
+
+
+        <h1>CONTACT</h1>
+
+        <section id="contact">
+
+            <div id="form">
+                <h3>NAME</h3>
+                <input type="name" placeholder="YOUR NAME" />
+
+                <h3>EMAIL ADRESS</h3>
+                <input type="email" placeholder="YOUR EMAIL ADRESS" />
+
+                <h3>MESSAGE</h3>
+                <textarea type="message" placeholder="YOUR MESSAGE" rows="1" style="resize: none;" oninput='this.style.height = ""; this.style.height = this.scrollHeight + "px";'></textarea>
+            </div>
+
+            <div class="checkbox-container">
+                <input type="checkbox" required>
+                <span class="checkbox-text">
+                    By using this form you agree with the storage and handling of your provided data.
+                </span>
+            </div>
+        
+            <button>SEND</button>
+        </section>
+
+    </main>
+
+    <footer>
+        <div id="footer-content">
+            <h3>© 2024 Karl Kuhne</h3>
+        </div>
+    </footer>
+
+</body>
