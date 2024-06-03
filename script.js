@@ -11,24 +11,22 @@ function scrollToTarget(event) {
 
 
 
-
+function getCSSVariable(variableName) {
+  return getComputedStyle(document.documentElement).getPropertyValue(variableName).trim();
+}
 
 function setFontSize() {
   const screenWidth = window.screen.width;
 
-  // Hier kannst du den Prozentsatz festlegen
-  const percentage = 10; // Beispiel: 2% der Bildschirmbreite
-  const fontSize = (screenWidth * percentage) / 100;
-
-  // Setze die CSS-Variable --font-size
-  document.documentElement.style.setProperty('--font-size', `${fontSize}px`);
+  const karlPercentage = parseInt(getCSSVariable('--karl-font-size')); // ParseInt hinzugefügt
+  console.log (karlPercentage);
+  const karlFontSize = (screenWidth * karlPercentage) / 100;
+  document.documentElement.style.setProperty('--karl-font-size', `${karlFontSize}px`); // fontSize zu karlFontSize geändert
 }
 
-// Initiale Schriftgrößenberechnung
 setFontSize();
+window.addEventListener('body.load', setFontSize);
 
-// Schriftgröße neu berechnen bei Änderung der Bildschirmgröße
-window.addEventListener('resize', setFontSize);
 
 
 

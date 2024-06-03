@@ -324,7 +324,7 @@ body {
 }
 
 .box {
-    position: absolute;
+    position: relative;
     background-color: rgb(30, 30, 30);
     border: 0.185rem solid rgb(48, 53, 53);
     border-radius: 0.7rem;
@@ -379,8 +379,9 @@ ol li p {
 }
     
 #portrait {
-    top: 7rem;
+    top: 0rem;
     left: 65%;
+    transform: translate(-50%, -50%);
     width: 14rem;
     
 }
