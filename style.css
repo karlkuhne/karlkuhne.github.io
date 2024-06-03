@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
+:root {
+    --karl-font-size: 10;
+}
+
 /* GitHub Test auf meinem Mac und auf meinem PC */
 
 
@@ -76,9 +80,11 @@ p {
 
 #karl a {
     font-family: Oswald;
-    font-size: 15rem;
+    font-size: var(--karl-font-size);
     font-weight: 700;
 }
+
+
 
 nav {
     width: 100%;

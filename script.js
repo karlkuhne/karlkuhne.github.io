@@ -11,6 +11,29 @@ function scrollToTarget(event) {
 
 
 
+
+
+function setFontSize() {
+  const screenWidth = window.screen.width;
+
+  // Hier kannst du den Prozentsatz festlegen
+  const percentage = 10; // Beispiel: 2% der Bildschirmbreite
+  const fontSize = (screenWidth * percentage) / 100;
+
+  // Setze die CSS-Variable --font-size
+  document.documentElement.style.setProperty('--font-size', `${fontSize}px`);
+}
+
+// Initiale Schriftgrößenberechnung
+setFontSize();
+
+// Schriftgröße neu berechnen bei Änderung der Bildschirmgröße
+window.addEventListener('resize', setFontSize);
+
+
+
+
+
 var prevScrollpos = window.scrollY;
 window.onscroll = function () {
     var currentScrollPos = window.scrollY;
