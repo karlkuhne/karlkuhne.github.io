@@ -234,7 +234,7 @@ body {
 
 
 
-#galery > article {
+.lightbox {
     position: fixed;
     top: 0;
     left: 0;
@@ -245,19 +245,18 @@ body {
     display: none; /* Hidden by default */
 }
 
-#galery > article span {
+.lightbox span {
     font-size: 5.1rem;
     cursor: pointer;
     color: white;
     z-index: 999;
 }
 
-#galery > article span:hover {
+.lightbox span:hover {
     color: rgb(181, 181, 181);
 }
 
-
-#galery > article .close {
+.lightbox .close {
     position: absolute;
     top: 0;
     right: 1.6rem;
@@ -269,7 +268,8 @@ body {
 
 .container-slideshow-waagerecht {
     width: 66%;
-    margin-left: 8rem;
+    margin-left: 8rem; /* nicht responsive */
+    
     display: flex;
     align-items: center;
 
@@ -304,7 +304,7 @@ body {
     /* background-color: green; */
 }
 
-#galery > article p {
+.lightbox p {
     margin-left: 2rem;
 }
 
@@ -327,7 +327,11 @@ body {
     margin-top: 5rem;
     padding-top: 2rem;
 
+    justify-content: center;
+    display: flex;
+
     /* background-color: rgb(25, 25, 25); */
+    background-color: rgb(107, 81, 81);
 }
 
 .box {
@@ -335,6 +339,9 @@ body {
     background-color: rgb(32, 32, 32);
     border: 0.185rem solid rgb(48, 53, 53);
     border-radius: 0.7rem;
+
+    width: fit-content;
+    height: fit-content;
 }
 
 
@@ -395,40 +402,24 @@ ol li p {
 
 
 #about-me {
-    position: relative;
-    top: 14.9rem;
-    left: var(--left-offset);
-    transform: translate(-50%, -50%);
-    width: 47rem;
+    
 }
 
 #portrait {
-    position: absolute;
-    top: calc(50% - 14rem);
-    left: calc(var(--left-offset) + 22rem);
     width: 18rem;
 }
 
 
 #languages {
-    position: absolute;
-    top: calc(50% + 4rem);
-    left: calc(var(--left-offset) - 33.1rem);
-    width: 22rem;
+    
 }
 
 #degrees {
-    position: absolute;
-    top: calc(50% + 6rem);
-    left: calc(var(--left-offset) + 1rem);
-    width: 36.8rem;
+    
 }
 
 #hobbys {
-    position: absolute;
-    top: calc(50% + 12.5rem);
-    left: calc(var(--left-offset) - 13rem);
-    width: 15.6rem;
+    
 }
 
 img {

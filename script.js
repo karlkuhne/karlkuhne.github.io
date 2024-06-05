@@ -63,8 +63,8 @@ document.querySelector('#project-character-design').onclick = () => {
     document.querySelector('#lightbox-character-design').style.display = 'flex';
   } ;
 
-document.querySelector('#galery > article .close').onclick = () => {
-  document.querySelector('#galery > article').style.display = 'none';
+document.querySelector('.lightbox .close').onclick = () => {
+  document.querySelector('.lightbox').style.display = 'none';
 }
 
 
