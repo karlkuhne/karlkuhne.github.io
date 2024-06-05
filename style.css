@@ -3,6 +3,8 @@
 
 :root {
     --karl-font-size: 10;
+
+    --left-offset: 47.7%;
 }
 
 /* GitHub Test auf meinem Mac und auf meinem PC */
@@ -325,7 +327,7 @@ body {
     margin-top: 5rem;
     padding-top: 2rem;
 
-    background-color: rgb(25, 25, 25);
+    /* background-color: rgb(25, 25, 25); */
 }
 
 .box {
@@ -363,6 +365,9 @@ ol li p {
 .label {
     border-bottom: 0.185rem solid rgb(48, 53, 53);
     padding-left: 0.5rem;
+
+    display: flex;
+    align-items: center;
 }
 
 .label p {
@@ -371,15 +376,28 @@ ol li p {
     
     margin-top: 0.75rem;
     margin-bottom: 0.75rem;
+
+    flex: 1;
 }
 
+
+.icon {
+    fill: rgb(62, 62, 62);
+
+    float: right;
+    margin-right: 0.5rem;
+
+    width: 1.7rem;
+    height: 1.7rem;
+
+}
 
 
 
 #about-me {
     position: relative;
     top: 14.9rem;
-    left: 46%;
+    left: var(--left-offset);
     transform: translate(-50%, -50%);
     width: 47rem;
 }
@@ -387,7 +405,7 @@ ol li p {
 #portrait {
     position: absolute;
     top: calc(50% - 14rem);
-    left: calc(46% + 22rem);
+    left: calc(var(--left-offset) + 22rem);
     width: 18rem;
 }
 
@@ -395,21 +413,21 @@ ol li p {
 #languages {
     position: absolute;
     top: calc(50% + 4rem);
-    left: calc(46% - 33.1rem);
+    left: calc(var(--left-offset) - 33.1rem);
     width: 22rem;
 }
 
 #degrees {
     position: absolute;
     top: calc(50% + 6rem);
-    left: calc(46% + 1rem);
+    left: calc(var(--left-offset) + 1rem);
     width: 36.8rem;
 }
 
 #hobbys {
     position: absolute;
     top: calc(50% + 12.5rem);
-    left: calc(46% - 13rem);
+    left: calc(var(--left-offset) - 13rem);
     width: 15.6rem;
 }
 
