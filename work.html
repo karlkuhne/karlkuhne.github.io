@@ -55,19 +55,19 @@
             <div class="project">
                 <img src=Ressources/Opening_Credits/Thumbnail.png>
                 <div class="middle">
-                    <div class="galery-label">OPENING CREDITS</div>
+                    <div class="galery-label selectDisable">OPENING CREDITS</div>
                 </div>
             </div>
             <div class="project">
                 <img src="Ressources/Term_Paper/Thumbnail.png">
                 <div class="middle">
-                    <div class="galery-label">RESEARCH</div>
+                    <div class="galery-label selectDisable">RESEARCH</div>
                 </div>
             </div>
             <div class="project">
                 <img src="Ressources/Experimentelles_Projekt/Thumbnail.png">
                 <div class="middle">
-                    <div class="galery-label">CUBISM</div>
+                    <div class="galery-label selectDisable">CUBISM</div>
                 </div>
             </div>
             
@@ -75,36 +75,38 @@
             <div class="project" id ="project-character-design">
                 <img src="Ressources/Character_Design/Thumbnail.png">
                 <div class="middle">
-                    <div class="galery-label">CHARACTER DESIGN</div>
+                    <div class="galery-label selectDisable">CHARACTER DESIGN</div>
                 </div>
             </div>
 
             <div class="lightbox" class="lightbox-slideshow-waagerecht" id="lightbox-character-design">
                 <span class="close">&times;</span>
                 
-                <div class="container-slideshow-waagerecht">
-                    <img src="Ressources/Character_Design/Thumbnail.png" class="mySlides">
-                    <img src="Ressources/Character_Design/Posen.png" class="mySlides">
-                    <img src="Ressources/Character_Design/Emotions.png" class="mySlides">
-                    
-                    <div class="navigation-slideshow-waagerecht">
-                        <a class="prev selectDisable" onclick="plusSlides(-1)">❮</a>
-                        <a class="next selectDisable" onclick="plusSlides(1)">❯</a>
+                <div class="wrapper-slideshow-waagerecht">
+                    <div class="container-slideshow-waagerecht">
+                        <img src="Ressources/Character_Design/Thumbnail.png" class="mySlides selectDisable" draggable="false" oncontextmenu="return false;">
+                        <img src="Ressources/Character_Design/Posen.png" class="mySlides selectDisable" draggable="false" oncontextmenu="return false;">
+                        <img src="Ressources/Character_Design/Emotions.png" class="mySlides selectDisable" draggable="false" oncontextmenu="return false;">
+                        
+                        <div class="navigation-slideshow-waagerecht">
+                            <a class="prev selectDisable" onclick="plusSlides(-1)">❮</a>
+                            <a class="next selectDisable" onclick="plusSlides(1)">❯</a>
+                        </div>
+    
+                        <div class ="dots-slideshow-waagerecht">
+                            <span class="dot" onclick="currentSlide(1)"></span> 
+                            <span class="dot" onclick="currentSlide(2)"></span> 
+                            <span class="dot" onclick="currentSlide(3)"></span> 
+                          </div>
                     </div>
-
-                    <div class ="dots-slideshow-waagerecht">
-                        <span class="dot" onclick="currentSlide(1)"></span> 
-                        <span class="dot" onclick="currentSlide(2)"></span> 
-                        <span class="dot" onclick="currentSlide(3)"></span> 
-                      </div>
-                </div>
-
-                <div class="caption-slideshow-waagerecht">
-                    <h2>Character Design</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
+    
+                    <div class="caption-slideshow-waagerecht">
+                        <h2>Character Design</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>        
             </div>
-            &#10094;
+            
             <!-- 
                 YouTube Player
                 PDF Viewer

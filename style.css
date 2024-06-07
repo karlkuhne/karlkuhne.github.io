@@ -90,12 +90,16 @@ p {
     top: 23%; /* variable */
     left: 50%;
     transform: translate(-50%, -50%);
+
+    text-align: center;
 }
 
 #karl a {
     font-family: Oswald;
     font-size: var(--karl-font-size);
     font-weight: 700;
+
+    line-height: 10rem;
 }
 
 
@@ -202,6 +206,7 @@ body {
 
 .project {
     position: relative;
+    cursor:pointer;
 }
 
 .middle {
@@ -255,6 +260,9 @@ body {
     width: 100%;
     z-index: 999;
     display: none; /* Hidden by default */
+
+    justify-content: center;
+    align-items: center;
 }
 
 .lightbox span , a {
@@ -280,20 +288,29 @@ body {
     display: none;
 }
 
-.container-slideshow-waagerecht {
-    width: 66%;
-    margin-left: 8rem; /* nicht responsive */
+.wrapper-slideshow-waagerecht {
+    width: 90%;
+    height: 50%;
     
     display: flex;
-    align-items: center;
 
+    background-color: brown;
+}
+
+
+
+
+
+
+.container-slideshow-waagerecht {
+    width: 66%;
     position: relative;
 }
 
 .container-slideshow-waagerecht img {
     border-radius: 0.5rem;
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 
@@ -313,7 +330,7 @@ body {
 .dots-slideshow-waagerecht {
     position: absolute;
     width: 100%;
-    top: 75%;
+    top: 93.5%;
     display: flex;
     justify-content: center;
 }
@@ -323,14 +340,14 @@ body {
     height: 1rem;
     width: 1rem;
     margin: 0 2px;
-    background-color: #bbb;
+    background-color: rgb(181, 181, 181);
     border-radius: 50%;
     display: inline-block;
     transition: background-color;
   }
   
 .active, .dot:hover {
-    background-color: #717171;
+    background-color: rgb(133, 133, 133);
   }
 
 
@@ -340,10 +357,7 @@ body {
 
 .caption-slideshow-waagerecht {
     width: 34%;
-    margin-top: 13.25rem;
-    margin-bottom: 13.25rem;
-    margin-right: 8rem;
-    /* background-color: green; */
+    background-color: green;
 }
 
 .lightbox p {
