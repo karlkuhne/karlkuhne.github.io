@@ -81,21 +81,30 @@
 
             <div class="lightbox" class="lightbox-slideshow-waagerecht" id="lightbox-character-design">
                 <span class="close">&times;</span>
+                
                 <div class="container-slideshow-waagerecht">
-                    <img src="Ressources/Character_Design/Thumbnail.png" class="current-image">
-                    <img src="Ressources/Character_Design/Posen.png">
-                    <img src="Ressources/Character_Design/Emotions.png">
+                    <img src="Ressources/Character_Design/Thumbnail.png" class="mySlides">
+                    <img src="Ressources/Character_Design/Posen.png" class="mySlides">
+                    <img src="Ressources/Character_Design/Emotions.png" class="mySlides">
+                    
                     <div class="navigation-slideshow-waagerecht">
-                        <span class="prev">&#10094;</span>
-                        <span class="next">&#10095;</span>
+                        <a class="prev selectDisable" onclick="plusSlides(-1)">❮</a>
+                        <a class="next selectDisable" onclick="plusSlides(1)">❯</a>
                     </div>
+
+                    <div class ="dots-slideshow-waagerecht">
+                        <span class="dot" onclick="currentSlide(1)"></span> 
+                        <span class="dot" onclick="currentSlide(2)"></span> 
+                        <span class="dot" onclick="currentSlide(3)"></span> 
+                      </div>
                 </div>
+
                 <div class="caption-slideshow-waagerecht">
                     <h2>Character Design</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
             </div>
-
+            &#10094;
             <!-- 
                 YouTube Player
                 PDF Viewer

@@ -9,6 +9,12 @@
 
 /* GitHub Test auf meinem Mac und auf meinem PC */
 
+/* * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} */
+
 
 a {
     text-decoration: none;
@@ -19,7 +25,13 @@ a:hover {
     color: rgb(181, 181, 181);
 }
 
-
+.selectDisable {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
 
 
 h1 {
@@ -245,8 +257,8 @@ body {
     display: none; /* Hidden by default */
 }
 
-.lightbox span {
-    font-size: 5.1rem;
+.lightbox span , a {
+    font-size: 3rem;
     cursor: pointer;
     color: white;
     z-index: 999;
@@ -258,13 +270,15 @@ body {
 
 .lightbox .close {
     position: absolute;
-    top: 0;
+    top: 0.5rem;
     right: 1.6rem;
     font-weight: 600;
 }
 
 
-
+.mySlides {
+    display: none;
+}
 
 .container-slideshow-waagerecht {
     width: 66%;
@@ -282,6 +296,8 @@ body {
     height: auto;
 }
 
+
+
 .navigation-slideshow-waagerecht {
     position: absolute;
     top: 50%;
@@ -294,6 +310,32 @@ body {
 }
 
 
+.dots-slideshow-waagerecht {
+    position: absolute;
+    width: 100%;
+    top: 75%;
+    display: flex;
+    justify-content: center;
+}
+
+.dot {
+    cursor: pointer;
+    height: 1rem;
+    width: 1rem;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color;
+  }
+  
+.active, .dot:hover {
+    background-color: #717171;
+  }
+
+
+
+  
 
 
 .caption-slideshow-waagerecht {
@@ -407,6 +449,7 @@ ol li p {
 
 #portrait {
     width: 18rem;
+    border-radius: 0.7rem;
 }
 
 
