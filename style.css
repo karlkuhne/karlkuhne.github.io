@@ -255,7 +255,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.92);
     height: 100%;
     width: 100%;
     z-index: 999;
@@ -288,7 +288,7 @@ body {
     display: none;
 }
 
-.wrapper-slideshow-waagerecht {
+.wrapper-waagerecht {
     width: 90%;
     height: 65%;
     
@@ -302,12 +302,18 @@ body {
 
 
 
-.container-slideshow-waagerecht {
+.container-waagerecht {
     aspect-ratio: 16 / 9;
     position: relative;
 }
 
-.container-slideshow-waagerecht img {
+.container-waagerecht img {
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 100%;
+}
+
+.container-waagerecht iframe {
     border-radius: 0.5rem;
     width: 100%;
     height: 100%;
@@ -315,7 +321,7 @@ body {
 
 
 
-.navigation-slideshow-waagerecht {
+.navigation-waagerecht {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -355,7 +361,7 @@ body {
   
 
 
-.caption-slideshow-waagerecht {
+.caption-waagerecht {
     /* background-color: green; */
 }
 
@@ -382,9 +388,6 @@ body {
     
     margin-top: 5rem;
     padding-top: 2rem;
-
-    justify-content: center;
-    display: flex;
 
     /* background-color: rgb(25, 25, 25); */
     background-color: rgb(107, 81, 81);
@@ -458,7 +461,8 @@ ol li p {
 
 
 #about-me {
-    
+    left: 50%;
+    transform: translate(-50%);
 }
 
 #portrait {
