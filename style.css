@@ -290,11 +290,11 @@ body {
 
 .wrapper-slideshow-waagerecht {
     width: 90%;
-    height: 50%;
+    height: 65%;
     
     display: flex;
 
-    background-color: brown;
+    /* background-color: brown; */
 }
 
 
@@ -303,7 +303,7 @@ body {
 
 
 .container-slideshow-waagerecht {
-    width: 66%;
+    aspect-ratio: 16 / 9;
     position: relative;
 }
 
@@ -356,12 +356,12 @@ body {
 
 
 .caption-slideshow-waagerecht {
-    width: 34%;
-    background-color: green;
+    /* background-color: green; */
 }
 
 .lightbox p {
     margin-left: 2rem;
+    padding-right: 1rem;
 }
 
 
