@@ -3,8 +3,6 @@
 
 :root {
     --karl-font-size: 10;
-
-    --left-offset: 47.7%;
 }
 
 /* GitHub Test auf meinem Mac und auf meinem PC */
@@ -378,8 +376,6 @@ body {
 }
 
 
-
-
 #about {
     position: relative;
     width: 100%;
@@ -387,10 +383,13 @@ body {
     margin: 0 auto;
     
     margin-top: 5rem;
-    padding-top: 2rem;
 
     /* background-color: rgb(25, 25, 25); */
     background-color: rgb(107, 81, 81);
+
+    display: grid;
+    justify-items: center;
+    
 }
 
 .box {
@@ -459,20 +458,20 @@ ol li p {
 }
 
 
-
 #about-me {
-    left: 50%;
-    transform: translate(-50%);
+    
 }
 
 #portrait {
     width: 18rem;
     border-radius: 0.7rem;
+
+    transform: translateX(31rem) translateY(-60rem);
 }
 
 
 #languages {
-    
+    transform: translateX(-25rem) translateY(-0.85rem);
 }
 
 #degrees {

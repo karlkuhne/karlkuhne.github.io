@@ -32,6 +32,9 @@ window.addEventListener('body.load', setFontSize);
 
 
 
+
+
+
 var prevScrollpos = window.scrollY;
 window.onscroll = function () {
   var currentScrollPos = window.scrollY;
