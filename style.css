@@ -384,8 +384,11 @@ body {
     
     margin-top: 5rem;
 
-    /* background-color: rgb(25, 25, 25); */
-    background-color: rgb(107, 81, 81);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    background-color: rgb(26, 26, 26);
+    /* background-color: rgb(107, 81, 81); */
 
     display: grid;
     justify-items: center;
@@ -394,7 +397,7 @@ body {
 
 .box {
     position: relative;
-    background-color: rgb(32, 32, 32);
+    background-color: rgb(18, 18, 18);
     border: 0.185rem solid rgb(48, 53, 53);
     border-radius: 0.7rem;
 
@@ -459,32 +462,32 @@ ol li p {
 
 
 #about-me {
-    
+    transform: translateX(-3.5rem);
 }
 
 #portrait {
-    width: 18rem;
-    border-radius: 0.7rem;
+    width: 19rem;
 
-    transform: translateX(31rem) translateY(-60rem);
+    transform: translateX(28.4rem) translateY(-56.7rem);
+}
+
+#portrait > img {
+    width: 100%;
 }
 
 
 #languages {
-    transform: translateX(-25rem) translateY(-0.85rem);
+    transform: translateX(-27.3rem) translateY(-0.95rem);
 }
 
 #degrees {
-    
+    transform: translateX(14.25rem) translateY(-22.3rem);
 }
 
 #hobbys {
-    
+    transform: translateX(-10.9rem) translateY(-2.2rem);
 }
 
-img {
-    max-width: 100%;
-}
 
 .gr {
     color: rgb(99, 245, 131);
@@ -608,7 +611,7 @@ textarea::placeholder {
 footer {
     width: 100%;
     height: 7rem;
-    background-color: rgb(30, 30, 30);
+    background-color: rgb(26, 26, 26);
     position: relative;
 }
 
