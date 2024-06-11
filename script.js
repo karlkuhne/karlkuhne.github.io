@@ -59,9 +59,7 @@ window.onscroll = function () {
 }
 
 
-/* Lightbox */
-
-
+/* LIGHTBOX OPEN */
 document.querySelector('#project-character-design').onclick = () => {
   document.querySelector('#lightbox-character-design').style.display = 'flex';
 } ;
@@ -70,12 +68,27 @@ document.querySelector('#project-opening-credits').onclick = () => {
   document.querySelector('#lightbox-opening-credits').style.display = 'flex';
 } ;
 
-/* Closing Lightbox */
+document.querySelector('#project-term-paper').onclick = () => {
+  document.querySelector('#lightbox-term-paper').style.display = 'flex';
+} ;
+
+document.querySelector('#project-cubism').onclick = () => {
+  document.querySelector('#lightbox-cubism').style.display = 'flex';
+} ;
+
+/* LIGHTBOX CLOSE */
 const lightboxes = document.querySelectorAll('.lightbox');
+
 lightboxes.forEach(lightbox => {
   lightbox.querySelector('.close').onclick = () => {
     lightbox.style.display = 'none';
   };
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape' && lightbox.style.display !== 'none') {
+      lightbox.style.display = 'none';
+    }
+  });
 });
 
 
@@ -84,32 +97,63 @@ lightboxes.forEach(lightbox => {
 
 
 
-
-let slideIndex = 1;
-showSlides(slideIndex);
+/* SLIDESHOW CHARACTER DESIGN */
+let characterDesignSlideIndex = 1;
+showSlides(characterDesignSlideIndex);
 
 function plusSlides(n) {
-showSlides(slideIndex += n);
+showSlides(characterDesignSlideIndex += n);
 }
 
 function currentSlide(n) {
-showSlides(slideIndex = n);
+showSlides(characterDesignSlideIndex = n);
 }
 
 function showSlides(n) {
 let i;
-let slides = document.getElementsByClassName("mySlides");
+let slides = document.getElementsByClassName("character-design-slides");
 let dots = document.getElementsByClassName("dot");
-if (n > slides.length) {slideIndex = 1}    
-if (n < 1) {slideIndex = slides.length}
+if (n > slides.length) {characterDesignSlideIndex = 1}    
+if (n < 1) {characterDesignSlideIndex = slides.length}
 for (i = 0; i < slides.length; i++) {
   slides[i].style.display = "none";  
 }
 for (i = 0; i < dots.length; i++) {
   dots[i].className = dots[i].className.replace(" active", "");
 }
-slides[slideIndex-1].style.display = "block";  
-dots[slideIndex-1].className += " active";
+slides[characterDesignSlideIndex-1].style.display = "block";  
+dots[characterDesignSlideIndex-1].className += " active";
+}
+
+
+
+
+/* SLIDESHOW CUBISM */
+let cubismSlideIndex = 1;
+showCubismSlides(cubismSlideIndex);
+
+function plusCubismSlides(n) {
+    showCubismSlides(cubismSlideIndex += n);
+}
+
+function currentCubismSlide(n) {
+    showCubismSlides(cubismSlideIndex = n);
+}
+
+function showCubismSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("cubism-slides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) { cubismSlideIndex = 1 }
+    if (n < 1) { cubismSlideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[cubismSlideIndex - 1].style.display = "block";
+    dots[cubismSlideIndex - 1].className += " active";
 }
 
 

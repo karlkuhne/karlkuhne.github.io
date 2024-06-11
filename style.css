@@ -248,7 +248,7 @@ body {
 
 
 
-
+/* LIGHTBOX ALLGEMEIN */
 .lightbox {
     position: fixed;
     top: 0;
@@ -281,45 +281,71 @@ body {
     font-weight: 600;
 }
 
-
 .mySlides {
     display: none;
 }
 
+/* LIGHTBOX WAAGERECHT */
 .wrapper-waagerecht {
     width: 90%;
     height: 65%;
-    
     display: flex;
-
-    /* background-color: brown; */
 }
-
-
-
-
-
 
 .container-waagerecht {
     aspect-ratio: 16 / 9;
     position: relative;
 }
 
+/* LIGHTBOX SLIDESHOW-WAAGERECHT */
 .container-waagerecht img {
     border-radius: 0.5rem;
     width: 100%;
     height: 100%;
 }
 
+/* LIGHTBOX YOUTUBE */
 .container-waagerecht iframe {
     border-radius: 0.5rem;
     width: 100%;
     height: 100%;
 }
 
+/* LIGHTBOX SENKRECHT */
+.wrapper-senkrecht{
+    width: 90%;
+    height: 90%;
+    display: flex;
+}
+
+/* LIGHTBOX PDF */
+.container-pdf {
+    width: 82%;
+    height: 100%;
+    display: flex;
+}
+
+.container-pdf iframe {
+    border-radius: 0.5rem;
+    width:100%;
+    height:100%;
+}
+
+/* LIGHTBOX SLIDESHOW-SENKRECHT */
+.container-senkrecht {
+    aspect-ratio: 3/4;
+    position: relative;
+}
+
+.container-senkrecht img {
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 100%;
+}
 
 
-.navigation-waagerecht {
+/* NAVIGATION */
+.navigation {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -330,15 +356,25 @@ body {
     margin-right: 20px;
 }
 
-
+/* DOTS SLIDESHOW-WAAGERRECHT */
 .dots-slideshow-waagerecht {
     position: absolute;
     width: 100%;
-    top: 93.5%;
+    bottom: 2rem;
     display: flex;
     justify-content: center;
 }
 
+/* BUTTONS SLIDESHOW-SENKRECHT */
+.dots-slideshow-senkrecht {
+    position: absolute;
+    width: 100%;
+    bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* DOTS STYLING */
 .dot {
     cursor: pointer;
     height: 1rem;
@@ -348,32 +384,36 @@ body {
     border-radius: 50%;
     display: inline-block;
     transition: background-color;
-  }
+}
   
 .active, .dot:hover {
     background-color: rgb(133, 133, 133);
-  }
-
-
-
-  
-
-
-.caption-waagerecht {
-    /* background-color: green; */
 }
 
+/* LIGHTBOX CAPTION */
 .lightbox p {
     margin-left: 2rem;
     padding-right: 1rem;
 }
 
 
-@media (max-with: 768px) {
+/* @media (max-with: 768px) {
     .lightbox img {
         width: 95%;
     }
-}
+} */
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #about {
@@ -387,7 +427,7 @@ body {
     padding-top: 3rem;
     padding-bottom: 3rem;
 
-    background-color: rgb(26, 26, 26);
+    background-color: rgb(28, 28, 28);
     /* background-color: rgb(107, 81, 81); */
 
     display: grid;

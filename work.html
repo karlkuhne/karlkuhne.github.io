@@ -58,13 +58,13 @@
                     <div class="galery-label selectDisable">OPENING CREDITS</div>
                 </div>
             </div>
-            <div class="project">
+            <div class="project" id="project-term-paper">
                 <img src="Ressources/Term_Paper/Thumbnail.png">
                 <div class="middle">
                     <div class="galery-label selectDisable">RESEARCH</div>
                 </div>
             </div>
-            <div class="project">
+            <div class="project" id="project-cubism">
                 <img src="Ressources/Experimentelles_Projekt/Thumbnail.png">
                 <div class="middle">
                     <div class="galery-label selectDisable">CUBISM</div>
@@ -79,19 +79,21 @@
                 </div>
             </div>
 
-            <div class="lightbox" class="lightbox-slideshow-waagerecht" id="lightbox-character-design">
+
+            <!-- LIGHTBOX CHARACTER DESIGN -->
+            <div class="lightbox" id="lightbox-character-design">
                 <span class="close">&times;</span>
 
                 <div class="wrapper-waagerecht">
                     <div class="container-waagerecht">
-                        <img src="Ressources/Character_Design/Thumbnail.png" class="mySlides selectDisable"
+                        <img src="Ressources/Character_Design/Thumbnail.png" class="character-design-slides selectDisable"
                             draggable="false" oncontextmenu="return false;">
-                        <img src="Ressources/Character_Design/Posen.png" class="mySlides selectDisable"
+                        <img src="Ressources/Character_Design/Posen.png" class="character-design-slides selectDisable"
                             draggable="false" oncontextmenu="return false;">
-                        <img src="Ressources/Character_Design/Emotions.png" class="mySlides selectDisable"
+                        <img src="Ressources/Character_Design/Emotions.png" class="character-design-slides selectDisable"
                             draggable="false" oncontextmenu="return false;">
 
-                        <div class="navigation-waagerecht">
+                        <div class="navigation">
                             <a class="prev selectDisable" onclick="plusSlides(-1)">❮</a>
                             <a class="next selectDisable" onclick="plusSlides(1)">❯</a>
                         </div>
@@ -103,7 +105,7 @@
                         </div>
                     </div>
 
-                    <div class="caption-waagerecht">
+                    <div>
                         <h2>Character Design</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet
                             consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -111,7 +113,9 @@
                 </div>
             </div>
 
-            <div class="lightbox" class="lightbox-youtube" id="lightbox-opening-credits">
+
+            <!-- LIGHTBOX OPENING CREDITS -->
+            <div class="lightbox" id="lightbox-opening-credits">
                 <span class="close">&times;</span>
 
                 <div class="wrapper-waagerecht">
@@ -124,13 +128,71 @@
 
                     </div>
 
-                    <div class="caption-waagerecht">
+                    <div>
                         <h2>Opening Credits</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet
                             consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                 </div>
             </div>
+
+
+            <!-- LIGHTBOX TERM PAPER -->
+            <div class="lightbox" id="lightbox-term-paper">
+                <span class="close">&times;</span>
+
+                <div class="wrapper-senkrecht">
+                    <div class="container-pdf">
+                        <iframe src="Ressources/Term_Paper/Term_Paper.pdf"
+                            frameborder="0"></iframe>
+                    </div>
+
+                    <div>
+                        <h2>Diegesis</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet</div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- LIGHTBOX CUBISM -->
+            <div class="lightbox" id="lightbox-cubism">
+                <span class="close">&times;</span>
+            
+                <div class="wrapper-senkrecht">
+                    <div class="container-senkrecht">
+                        <img src="Ressources/Experimentelles_Projekt/IMG_6075.jpg" class="cubism-slides selectDisable" draggable="false" oncontextmenu="return false;">
+                        <img src="Ressources/Experimentelles_Projekt/IMG_6073.jpg" class="cubism-slides selectDisable" draggable="false" oncontextmenu="return false;">
+                        <img src="Ressources/Experimentelles_Projekt/IMG_6074.jpg" class="cubism-slides selectDisable" draggable="false" oncontextmenu="return false;">
+                        <img src="Ressources/Experimentelles_Projekt/IMG_6077.jpg" class="cubism-slides selectDisable" draggable="false" oncontextmenu="return false;">
+                        <img src="Ressources/Experimentelles_Projekt/IMG_6076.jpg" class="cubism-slides selectDisable" draggable="false" oncontextmenu="return false;">
+                        <img src="Ressources/Experimentelles_Projekt/IMG_6078.jpg" class="cubism-slides selectDisable" draggable="false" oncontextmenu="return false;">
+                        <img src="Ressources/Experimentelles_Projekt/IMG_6079.jpg" class="cubism-slides selectDisable" draggable="false" oncontextmenu="return false;">
+            
+                        <div class="navigation">
+                            <a class="prev1 selectDisable" onclick="plusCubismSlides(-1)">❮</a>
+                            <a class="next1 selectDisable" onclick="plusCubismSlides(1)">❯</a>
+                        </div>
+            
+                        <div class="dots-slideshow-senkrecht">
+                            <span class="dot" onclick="currentCubismSlide(1)"></span>
+                            <span class="dot" onclick="currentCubismSlide(2)"></span>
+                            <span class="dot" onclick="currentCubismSlide(3)"></span>
+                            <span class="dot" onclick="currentCubismSlide(4)"></span>
+                            <span class="dot" onclick="currentCubismSlide(5)"></span>
+                            <span class="dot" onclick="currentCubismSlide(6)"></span>
+                            <span class="dot" onclick="currentCubismSlide(7)"></span>
+                        </div>
+                    </div>
+            
+                    <div>
+                        <h2>Cubism</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet</p>
+                    </div>
+                </div>
+            </div>
+
+
 
             <!-- 
                 YouTube Player
