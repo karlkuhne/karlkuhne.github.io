@@ -62,19 +62,23 @@ window.onscroll = function () {
 /* LIGHTBOX OPEN */
 document.querySelector('#project-character-design').onclick = () => {
   document.querySelector('#lightbox-character-design').style.display = 'flex';
-} ;
+  document.body.classList.add('no-scroll');
+};
 
 document.querySelector('#project-opening-credits').onclick = () => {
   document.querySelector('#lightbox-opening-credits').style.display = 'flex';
-} ;
+  document.body.classList.add('no-scroll');
+};
 
 document.querySelector('#project-term-paper').onclick = () => {
   document.querySelector('#lightbox-term-paper').style.display = 'flex';
-} ;
+  document.body.classList.add('no-scroll');
+};
 
 document.querySelector('#project-cubism').onclick = () => {
   document.querySelector('#lightbox-cubism').style.display = 'flex';
-} ;
+  document.body.classList.add('no-scroll');
+};
 
 /* LIGHTBOX CLOSE */
 const lightboxes = document.querySelectorAll('.lightbox');
@@ -82,11 +86,13 @@ const lightboxes = document.querySelectorAll('.lightbox');
 lightboxes.forEach(lightbox => {
   lightbox.querySelector('.close').onclick = () => {
     lightbox.style.display = 'none';
+    document.body.classList.remove('no-scroll');
   };
 
   document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape' && lightbox.style.display !== 'none') {
       lightbox.style.display = 'none';
+      document.body.classList.remove('no-scroll');
     }
   });
 });
