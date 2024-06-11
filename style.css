@@ -361,7 +361,7 @@ body {
 .dots-slideshow-waagerecht {
     position: absolute;
     width: 100%;
-    bottom: 3%;
+    bottom: 20px;
     display: flex;
     justify-content: center;
 }
@@ -370,7 +370,7 @@ body {
 .dots-slideshow-senkrecht {
     position: absolute;
     width: 100%;
-    bottom: 2.4%;
+    bottom: 20px;
     display: flex;
     justify-content: center;
 }
