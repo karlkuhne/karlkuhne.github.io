@@ -293,7 +293,7 @@ body {
 }
 
 .container-waagerecht {
-    aspect-ratio: 16 / 9;
+    width: 224.7rem;
     position: relative;
 }
 
@@ -320,7 +320,7 @@ body {
 
 /* LIGHTBOX PDF */
 .container-pdf {
-    width: 82%;
+    width: 114.8rem;
     height: 100%;
     display: flex;
 }
@@ -333,7 +333,7 @@ body {
 
 /* LIGHTBOX SLIDESHOW-SENKRECHT */
 .container-senkrecht {
-    aspect-ratio: 3/4;
+    width: 53.7rem;
     position: relative;
     margin-left: 12%;
 }
