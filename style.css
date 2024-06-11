@@ -335,6 +335,7 @@ body {
 .container-senkrecht {
     aspect-ratio: 3/4;
     position: relative;
+    margin-left: 12%;
 }
 
 .container-senkrecht img {
@@ -375,7 +376,7 @@ body {
 }
 
 /* DOTS STYLING */
-.dot {
+.dot , .dot1 {
     cursor: pointer;
     height: 1rem;
     width: 1rem;
@@ -393,7 +394,11 @@ body {
 /* LIGHTBOX CAPTION */
 .lightbox p {
     margin-left: 2rem;
-    padding-right: 1rem;
+    padding-right: 1rem; 
+}
+
+.wrapper-senkrecht p {
+    margin-right: 15.7%;
 }
 
 

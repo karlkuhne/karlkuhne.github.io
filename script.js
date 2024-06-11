@@ -143,17 +143,17 @@ function currentCubismSlide(n) {
 function showCubismSlides(n) {
     let i;
     let slides = document.getElementsByClassName("cubism-slides");
-    let dots = document.getElementsByClassName("dot");
+    let dots1 = document.getElementsByClassName("dot1");
     if (n > slides.length) { cubismSlideIndex = 1 }
     if (n < 1) { cubismSlideIndex = slides.length }
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+    for (i = 0; i < dots1.length; i++) {
+        dots1[i].className = dots1[i].className.replace(" active", "");
     }
     slides[cubismSlideIndex - 1].style.display = "block";
-    dots[cubismSlideIndex - 1].className += " active";
+    dots1[cubismSlideIndex - 1].className += " active";
 }
 
 
