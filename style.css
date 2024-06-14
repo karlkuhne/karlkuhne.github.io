@@ -627,7 +627,7 @@ textarea::placeholder {
     font-family: Work Sans;
 }
 
-#contact button {
+#sendButton {
     background-color: blue;
     
     border: 2px solid blue;
@@ -645,11 +645,12 @@ textarea::placeholder {
     margin-bottom: 5.1rem;
 }
 
-#contact button:hover {
+#sendButton:hover {
     background-color: rgb(0, 0, 215);
     border: 2px solid rgb(0, 0, 215);
     cursor: pointer;
 }
+
 
 
 

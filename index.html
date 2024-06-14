@@ -86,12 +86,14 @@
 
                 <div class="wrapper-waagerecht">
                     <div class="container-waagerecht">
-                        <img src="Ressources/Character_Design/Thumbnail.png" class="character-design-slides selectDisable"
-                            draggable="false" oncontextmenu="return false;">
+                        <img src="Ressources/Character_Design/Thumbnail.png"
+                            class="character-design-slides selectDisable" draggable="false"
+                            oncontextmenu="return false;">
                         <img src="Ressources/Character_Design/Posen.png" class="character-design-slides selectDisable"
                             draggable="false" oncontextmenu="return false;">
-                        <img src="Ressources/Character_Design/Emotions.png" class="character-design-slides selectDisable"
-                            draggable="false" oncontextmenu="return false;">
+                        <img src="Ressources/Character_Design/Emotions.png"
+                            class="character-design-slides selectDisable" draggable="false"
+                            oncontextmenu="return false;">
 
                         <div class="navigation">
                             <a class="prev selectDisable" onclick="plusSlides(-1)">❮</a>
@@ -143,37 +145,44 @@
 
                 <div class="wrapper-senkrecht">
                     <div class="container-pdf">
-                        <iframe src="Ressources/Term_Paper/Term_Paper.pdf"
-                            frameborder="0"></iframe>
+                        <iframe src="Ressources/Term_Paper/Term_Paper.pdf" frameborder="0"></iframe>
                     </div>
 
                     <div>
                         <h2>Diegesis</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet
                     </div>
-                    
                 </div>
+
+            </div>
             </div>
 
             <!-- LIGHTBOX CUBISM -->
             <div class="lightbox" id="lightbox-cubism">
                 <span class="close">&times;</span>
-            
+
                 <div class="wrapper-senkrecht">
                     <div class="container-senkrecht">
-                        <img src="Ressources/Experimentelles_Projekt/IMG_6075.jpg" class="cubism-slides selectDisable" draggable="false" oncontextmenu="return false;">
-                        <img src="Ressources/Experimentelles_Projekt/IMG_6073.jpg" class="cubism-slides selectDisable" draggable="false" oncontextmenu="return false;">
-                        <img src="Ressources/Experimentelles_Projekt/IMG_6074.jpg" class="cubism-slides selectDisable" draggable="false" oncontextmenu="return false;">
-                        <img src="Ressources/Experimentelles_Projekt/IMG_6077.jpg" class="cubism-slides selectDisable" draggable="false" oncontextmenu="return false;">
-                        <img src="Ressources/Experimentelles_Projekt/IMG_6076.jpg" class="cubism-slides selectDisable" draggable="false" oncontextmenu="return false;">
-                        <img src="Ressources/Experimentelles_Projekt/IMG_6078.jpg" class="cubism-slides selectDisable" draggable="false" oncontextmenu="return false;">
-                        <img src="Ressources/Experimentelles_Projekt/IMG_6079.jpg" class="cubism-slides selectDisable" draggable="false" oncontextmenu="return false;">
-            
+                        <img src="Ressources/Experimentelles_Projekt/IMG_6075.jpg" class="cubism-slides selectDisable"
+                            draggable="false" oncontextmenu="return false;">
+                        <img src="Ressources/Experimentelles_Projekt/IMG_6073.jpg" class="cubism-slides selectDisable"
+                            draggable="false" oncontextmenu="return false;">
+                        <img src="Ressources/Experimentelles_Projekt/IMG_6074.jpg" class="cubism-slides selectDisable"
+                            draggable="false" oncontextmenu="return false;">
+                        <img src="Ressources/Experimentelles_Projekt/IMG_6077.jpg" class="cubism-slides selectDisable"
+                            draggable="false" oncontextmenu="return false;">
+                        <img src="Ressources/Experimentelles_Projekt/IMG_6076.jpg" class="cubism-slides selectDisable"
+                            draggable="false" oncontextmenu="return false;">
+                        <img src="Ressources/Experimentelles_Projekt/IMG_6078.jpg" class="cubism-slides selectDisable"
+                            draggable="false" oncontextmenu="return false;">
+                        <img src="Ressources/Experimentelles_Projekt/IMG_6079.jpg" class="cubism-slides selectDisable"
+                            draggable="false" oncontextmenu="return false;">
+
                         <div class="navigation">
                             <a class="prev1 selectDisable" onclick="plusCubismSlides(-1)">❮</a>
                             <a class="next1 selectDisable" onclick="plusCubismSlides(1)">❯</a>
                         </div>
-            
+
                         <div class="dots-slideshow-senkrecht">
                             <span class="dot1" onclick="currentCubismSlide(1)"></span>
                             <span class="dot1" onclick="currentCubismSlide(2)"></span>
@@ -184,7 +193,7 @@
                             <span class="dot1" onclick="currentCubismSlide(7)"></span>
                         </div>
                     </div>
-            
+
                     <div>
                         <h2>Cubism</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet</p>
@@ -403,26 +412,30 @@
 
         <section id="contact">
 
-            <div id="form">
+            <form id="form" action="/email.php">
+                
                 <h3>NAME</h3>
-                <input type="name" placeholder="YOUR NAME" />
+                <input id="nameInput" type="name" placeholder="YOUR NAME" required>
 
                 <h3>EMAIL ADRESS</h3>
-                <input type="email" placeholder="YOUR EMAIL ADRESS" />
+                <input id="emailInput" type="email" placeholder="YOUR EMAIL ADRESS" required>
 
                 <h3>MESSAGE</h3>
-                <textarea type="message" placeholder="YOUR MESSAGE" rows="1" style="resize: none;"
-                    oninput='this.style.height = ""; this.style.height = this.scrollHeight + "px";'></textarea>
-            </div>
+                <textarea id="messageInput" type="message" placeholder="YOUR MESSAGE" rows="1" style="resize: none;"
+                    oninput='this.style.height = ""; this.style.height = this.scrollHeight + "px";' required></textarea>
+                </id=>
 
-            <div class="checkbox-container">
-                <input type="checkbox" required>
-                <span class="checkbox-text">
-                    By using this form you agree with the storage and handling of your provided data.
-                </span>
-            </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" required>
+                    <span class="checkbox-text">
+                        By using this form you agree with the storage and handling of your provided data.
+                    </span>
+                </div>
 
-            <button>SEND</button>
+                <input id="sendButton" type="submit">SEND</input>
+
+            </form>
+
         </section>
 
     </main>
