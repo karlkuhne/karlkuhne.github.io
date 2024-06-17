@@ -103,64 +103,57 @@ lightboxes.forEach(lightbox => {
 
 
 
-/* SLIDESHOW CHARACTER DESIGN */
+/* GENERAL SLIDESHOW FUNCTIONALITY */
+function showSlides(slideIndex, slideClass, dotClass) {
+  let i;
+  let slides = document.getElementsByClassName(slideClass);
+  let dots = document.getElementsByClassName(dotClass);
+  if (slideIndex > slides.length) { slideIndex = 1; }
+  if (slideIndex < 1) { slideIndex = slides.length; }
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+  return slideIndex;
+}
+
 let characterDesignSlideIndex = 1;
-showSlides(characterDesignSlideIndex);
-
-function plusSlides(n) {
-showSlides(characterDesignSlideIndex += n);
-}
-
-function currentSlide(n) {
-showSlides(characterDesignSlideIndex = n);
-}
-
-function showSlides(n) {
-let i;
-let slides = document.getElementsByClassName("character-design-slides");
-let dots = document.getElementsByClassName("dot");
-if (n > slides.length) {characterDesignSlideIndex = 1}    
-if (n < 1) {characterDesignSlideIndex = slides.length}
-for (i = 0; i < slides.length; i++) {
-  slides[i].style.display = "none";  
-}
-for (i = 0; i < dots.length; i++) {
-  dots[i].className = dots[i].className.replace(" active", "");
-}
-slides[characterDesignSlideIndex-1].style.display = "block";  
-dots[characterDesignSlideIndex-1].className += " active";
-}
-
-
-
-
-/* SLIDESHOW CUBISM */
 let cubismSlideIndex = 1;
-showCubismSlides(cubismSlideIndex);
 
+showSlides(characterDesignSlideIndex, "character-design-slides", "dot");
+showSlides(cubismSlideIndex, "cubism-slides", "dot1");
+
+function plusSlides(n, slideIndex, slideClass, dotClass) {
+  slideIndex += n;
+  return showSlides(slideIndex, slideClass, dotClass);
+}
+
+function currentSlide(n, slideClass, dotClass) {
+  return showSlides(n, slideClass, dotClass);
+}
+
+// Character Design Slideshow controls
+function plusCharacterDesignSlides(n) {
+  characterDesignSlideIndex = plusSlides(n, characterDesignSlideIndex, "character-design-slides", "dot");
+}
+
+function currentCharacterDesignSlide(n) {
+  characterDesignSlideIndex = currentSlide(n, "character-design-slides", "dot");
+}
+
+// Cubism Slideshow controls
 function plusCubismSlides(n) {
-    showCubismSlides(cubismSlideIndex += n);
+  cubismSlideIndex = plusSlides(n, cubismSlideIndex, "cubism-slides", "dot1");
 }
 
 function currentCubismSlide(n) {
-    showCubismSlides(cubismSlideIndex = n);
+  cubismSlideIndex = currentSlide(n, "cubism-slides", "dot1");
 }
 
-function showCubismSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("cubism-slides");
-    let dots1 = document.getElementsByClassName("dot1");
-    if (n > slides.length) { cubismSlideIndex = 1 }
-    if (n < 1) { cubismSlideIndex = slides.length }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots1.length; i++) {
-        dots1[i].className = dots1[i].className.replace(" active", "");
-    }
-    slides[cubismSlideIndex - 1].style.display = "block";
-    dots1[cubismSlideIndex - 1].className += " active";
-}
 
 
 
