@@ -290,6 +290,8 @@ body {
     width: 90%;
     height: 65%;
     display: flex;
+
+    align-items: center;
 }
 
 .container-waagerecht {
@@ -302,6 +304,8 @@ body {
     border-radius: 0.5rem;
     width: 100%;
     height: 100%;
+
+    object-fit: contain;
 }
 
 /* LIGHTBOX YOUTUBE */
@@ -316,6 +320,8 @@ body {
     width: 90%;
     height: 90%;
     display: flex;
+
+    align-items: center;
 }
 
 /* LIGHTBOX PDF */
@@ -336,6 +342,8 @@ body {
     width: 53.7rem;
     position: relative;
     margin-left: 12%;
+
+    object-fit: contain;
 }
 
 .container-senkrecht img {
@@ -361,7 +369,7 @@ body {
 .dots-slideshow-waagerecht {
     position: absolute;
     width: 100%;
-    bottom: 20px;
+    bottom: 10px;
     display: flex;
     justify-content: center;
 }
@@ -370,7 +378,7 @@ body {
 .dots-slideshow-senkrecht {
     position: absolute;
     width: 100%;
-    bottom: 20px;
+    bottom: 10px;
     display: flex;
     justify-content: center;
 }
@@ -587,7 +595,12 @@ textarea[type="message"] {
 
 textarea[type="message"] {
     height: 2.85rem;
-    line-height: 2.3;
+    overflow: hidden;
+    width: 46rem;
+
+    padding-top: 0.8rem; /* Adjust this value as needed for perfect centering */
+    padding-bottom: 2.3rem; /* Adjust this value as needed for perfect centering */
+    box-sizing: border-box;
 }
 
 /* textarea {
