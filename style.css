@@ -587,6 +587,7 @@ textarea[type="message"] {
 
 textarea[type="message"] {
     height: 2.85rem;
+    line-height: 2.3;
 }
 
 /* textarea {
@@ -603,7 +604,6 @@ textarea::placeholder {
     font-family: Work Sans;
     font-size: 1.3rem;
     color: rgb(120, 120, 120);
-    padding-top: 0.65rem;
 }
 
 .checkbox-container {
