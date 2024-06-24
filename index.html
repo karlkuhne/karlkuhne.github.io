@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
 </head>
 
 <body><!-- 
@@ -117,26 +118,21 @@
 
 
             <!-- LIGHTBOX OPENING CREDITS -->
-            <div class="lightbox" id="lightbox-opening-credits">
+            <div class="lightbox youtube-lightbox" id="lightbox-opening-credits">
                 <span class="close">&times;</span>
-
+            
                 <div class="wrapper-waagerecht">
-                    <div class="container-waagerecht">
-
-                        <iframe
-                            src="https://www.youtube-nocookie.com/embed/e4t05vSzYPg?rel=0&controls=1&modestbranding=0&showinfo=0&autohide=1&iv_load_policy=3&disablekb=1&fs=0&playsinline=1&enablejsapi=1"
-                            title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media; gyroscope;"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+                    <div class="container-youtube">
+                        <div id="playerOpeningCredits"></div>
                     </div>
-
+            
                     <div>
                         <h2>Opening Credits</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet
-                            consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                 </div>
             </div>
+            
 
 
             <!-- LIGHTBOX TERM PAPER -->

@@ -293,12 +293,25 @@ body {
 }
 
 .wrapper-waagerecht-slideshow {
-    align-items:start; /* für große Bildschirme */
+    align-items:start;
 }
 
 .container-waagerecht {
     width: 224.7rem;
     position: relative;
+}
+
+.container-youtube {
+    border-radius: 0.5rem;
+    width: 78rem;
+    height: 100%;
+    position: relative;
+}
+
+.container-youtube iframe {
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 100%;
 }
 
 /* LIGHTBOX SLIDESHOW-WAAGERECHT */
@@ -308,13 +321,6 @@ body {
     height: 100%;
 
     object-fit: contain;
-}
-
-/* LIGHTBOX YOUTUBE */
-.container-waagerecht iframe {
-    border-radius: 0.5rem;
-    width: 100%;
-    height: 100%;
 }
 
 /* LIGHTBOX SENKRECHT */

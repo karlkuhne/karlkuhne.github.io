@@ -80,22 +80,53 @@ document.querySelector('#project-cubism').onclick = () => {
   document.body.classList.add('no-scroll');
 };
 
+
+
+
+
+var player;
+
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('playerOpeningCredits', {
+        height: '100%',
+        width: '100%',
+        videoId: 'QggJzZdIYPI', // e4t05vSzYPg
+        playerVars: {
+          'rel': 0, // Keine relativen Videos anzeigen
+          'controls': 1 // Zeige Video-Steuerelemente an
+      },
+        events: {
+            'onReady': onPlayerReady
+        }
+    });
+}
+
+function onPlayerReady(event) {
+
+}
+
 /* LIGHTBOX CLOSE */
 const lightboxes = document.querySelectorAll('.lightbox');
 
 lightboxes.forEach(lightbox => {
-  lightbox.querySelector('.close').onclick = () => {
+    lightbox.querySelector('.close').onclick = () => {
+        closeLightbox(lightbox);
+    };
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && lightbox.style.display !== 'none') {
+            closeLightbox(lightbox);
+        }
+    });
+});
+
+function closeLightbox(lightbox) {
     lightbox.style.display = 'none';
     document.body.classList.remove('no-scroll');
-  };
-
-  document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape' && lightbox.style.display !== 'none') {
-      lightbox.style.display = 'none';
-      document.body.classList.remove('no-scroll');
+    if (lightbox.classList.contains('youtube-lightbox') && player) {
+        player.pauseVideo(); // Das Video wird gestoppt, wenn die Lightbox geschlossen wird
     }
-  });
-});
+}
 
 
 
