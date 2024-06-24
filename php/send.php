@@ -1,10 +1,5 @@
 <?php
 
-// Debugging aktivieren
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
@@ -16,9 +11,9 @@ require 'PHPMailer-master/src/SMTP.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get form data and sanitize it
-    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-    $message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING);
+    $message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
     // Validate email
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -39,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Enable SSL/TLS encryption
         $mail->Port = 465; // SMTP port for SSL/TLS 
         // Optional debugging
-        $mail->SMTPDebug = SMTP::DEBUG_SERVER; // Change to SMTP::DEBUG_SERVER for verbose debug output
+        $mail->SMTPDebug = SMTP::DEBUG_OFF; // Disable debug output
 
         // Recipients
         $mail->setFrom($email, $name); // Sender's email and name
@@ -52,9 +47,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Send email
         $mail->send();
-        echo "Email successfully sent";
-        // Optionally, redirect to a thank you page
-        // header('Location: thank_you.html');
+        
+        // Redirect to index.html
+        header('Location: ../index.html#form');
+        exit;
+        
     } catch (Exception $e) {
         echo "Email sending failed. Error: {$mail->ErrorInfo}";
         // Optionally, log the error for debugging

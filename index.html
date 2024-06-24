@@ -439,28 +439,25 @@
         <section id="contact">
 
             <form id="form" action="php/send.php" method="post">
-                
                 <h3>NAME</h3>
-                <input id="nameInput" type="name" placeholder="YOUR NAME" required>
-
-                <h3>EMAIL ADRESS</h3>
-                <input id="emailInput" type="email" placeholder="YOUR EMAIL ADRESS" required>
-
+                <input id="nameInput" type="name" name="name" placeholder="YOUR NAME" required>
+            
+                <h3>EMAIL ADDRESS</h3>
+                <input id="emailInput" type="email" name="email" placeholder="YOUR EMAIL ADDRESS" required>
+            
                 <h3>MESSAGE</h3>
-                <textarea id="messageInput" type="message" placeholder="YOUR MESSAGE" rows="1" style="resize: none;"
+                <textarea id="messageInput" type="message" name="message" placeholder="YOUR MESSAGE" rows="1" style="resize: none;"
                     oninput='this.style.height = ""; this.style.height = this.scrollHeight + "px";' required></textarea>
-                </id=>
-
+            
                 <div class="checkbox-container">
                     <input type="checkbox" required>
                     <span class="checkbox-text">
                         By using this form you agree with the storage and handling of your provided data.
                     </span>
                 </div>
-
+            
                 <input id="sendButton" type="submit" value="SEND">
-
-            </form>
+            </form>            
 
         </section>
 
