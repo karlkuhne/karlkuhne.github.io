@@ -30,7 +30,7 @@
         <div id="main-nav">
             <a href="#galery" onclick="scrollToTarget(event)" class="main-nav-item">WORK</a>
             <a href="#about" onclick="scrollToTarget(event)" class="main-nav-item">ABOUT</a>
-            <a href="#contact" class="main-nav-item">CONTACT</a>
+            <a href="#contact" onclick="scrollToTarget(event)" class="main-nav-item">CONTACT</a>
         </div>
         <div id="socials">
             <a href="https://www.linkedin.com/mynetwork/discovery-see-all/?usecase=PEOPLE_FOLLOWS&followMember=karl-kuhne"
@@ -484,7 +484,9 @@
                         </span>
                     </div>
 
-                    <input id="sendButton" type="submit" value="send">
+                    <div id="button-container">
+                        <input id="sendButton" type="submit" value="send">
+                    </div>
                 </form>
 
             </div>
