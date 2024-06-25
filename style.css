@@ -35,7 +35,7 @@ a:hover {
 
 h1 {
     font-family: Work Sans;
-    font-size: 10rem;
+    font-size: 7.3vw;
     font-weight: 900;
     font-style: italic;
     color: white;
@@ -183,7 +183,7 @@ body {
 
 
 #galery {
-    width: 90%;
+    width:65%;
     margin: 0 auto;
 
     display: flex;
@@ -191,6 +191,8 @@ body {
 
     gap: 1rem;
     padding-top: 1rem;
+
+    justify-content: center;
 }
 
 .project img {
@@ -229,23 +231,8 @@ body {
     font-family: Oswald;
     font-weight: 700;
     color: white;
-    line-height: 1.1;
-}
-
-@media screen and (orientation: landscape) {
-    .project {
-        width: calc(50% - 0.5rem);
-    }
-
-    .galery-label {
-        font-size: 6vw;
-    }
-}
-
-@media screen and (orientation: portrait) {
-    .galery-label {
-        font-size: 12vw;
-    }
+    line-height: 1;
+    font-size: 7.5vw;
 }
 
 
