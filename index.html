@@ -457,30 +457,34 @@
 
                 <form id="form" action="php/send.php" method="post">
 
-                    <>
+                    <ol>
                         <li>
-                        <h3>name</h3>
-                        <input id="nameInput" type="name" name="name" required> <!-- placeholder="YOUR NAME" -->
+                            <p>name</p> <br>
+                            <input id="nameInput" type="name" name="name" required> <!-- placeholder="YOUR NAME" -->
                         </li>
                         
-                        <h3>email adress</h3>
-                        <input id="emailInput" type="email" name="email" required> <!-- placeholder="YOUR EMAIL ADDRESS" -->
+                        <li>
+                            <p>email adress</p> <br>
+                            <input id="emailInput" type="email" name="email" required> <!-- placeholder="YOUR EMAIL ADDRESS" -->
+                        </li>
 
-                        <h3>message</h3>
-                        <textarea id="messageInput" type="message" name="message" rows="1" style="resize: none;"
+                        <li>
+                            <p>message</p> <br>
+                            <textarea id="messageInput" type="message" name="message" rows="1" style="resize: none;"
                             oninput='this.style.height = ""; this.style.height = this.scrollHeight + "px";'
                             required></textarea> <!-- placeholder="YOUR MESSAGE" -->
-
-                        <div class="checkbox-container">
-                            <input type="checkbox" required>
-                            <span class="checkbox-text">
-                                By using this form you agree with the storage and handling of your provided data.
-                            </span>
-                        </div>
+                        </li>
 
                     </ol>
 
-                    <input id="sendButton" type="submit" value="SEND">
+                    <div class="checkbox-container">
+                        <input type="checkbox" required>
+                        <span class="checkbox-text">
+                            By using this form you agree with the storage and handling of your provided data.
+                        </span>
+                    </div>
+
+                    <input id="sendButton" type="submit" value="send">
                 </form>
 
             </div>
