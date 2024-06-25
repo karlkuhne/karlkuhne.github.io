@@ -31,37 +31,34 @@ window.addEventListener('body.load', setFontSize);
 
 
 
-
-
-
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
-  const projects = document.querySelectorAll('.project');
+  const fadeInOnScroll = (elementSelector, offsetRem = 0) => {
+    const elements = document.querySelectorAll(elementSelector);
+    const rootFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize); // Größe des Wurzel-Fonts in px
 
-  const fadeInOnScroll = () => {
-    projects.forEach(project => {
-      const rect = project.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom > 0) {
-        project.classList.add('fade-in');
-      }
+    elements.forEach(element => {
+      const rect = element.getBoundingClientRect();
+      const offsetPx = offsetRem * rootFontSize; // Umrechnung von rem in px
+      if (rect.top < window.innerHeight - offsetPx && rect.bottom > offsetPx) {
+        element.classList.add('fade-in');
+      } else {
+        // Entferne die Klasse `fade-in`, wenn das Element den Viewport verlassen hat und vollständig unterhalb des Viewports ist
+        if (rect.top >= window.innerHeight - offsetPx && rect.bottom > window.innerHeight) {
+            element.classList.remove('fade-in');
+        }
+    }
+      
     });
   };
 
-  // Initial check in case elements are already in view
-  fadeInOnScroll();
+  fadeInOnScroll('.project', 0);
+  fadeInOnScroll('#contact-form', 15);
 
-  // Add scroll event listener
-  window.addEventListener('scroll', fadeInOnScroll);
+  window.addEventListener('scroll', () => {
+    fadeInOnScroll('.project', 0);
+    fadeInOnScroll('#contact-form', 15);
+  });
 });
-
-
-
-
-
-
-
 
 
 
