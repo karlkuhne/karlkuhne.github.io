@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-var prevScrollpos = window.scrollY;
+/* var prevScrollpos = window.scrollY;
 window.onscroll = function () {
   var currentScrollPos = window.scrollY;
 
@@ -88,7 +88,7 @@ window.onscroll = function () {
   }
 
   prevScrollpos = currentScrollPos;
-}
+} */
 
 
 /* LIGHTBOX OPEN */

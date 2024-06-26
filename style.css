@@ -107,7 +107,7 @@ nav {
     z-index: 998;
 
     padding-top: 1.4rem;
-    padding-bottom: 3rem;
+    padding-bottom: 3.5rem;
 
     position: absolute;
     bottom: 0;
@@ -116,44 +116,73 @@ nav {
 #main-nav {
     display: flex;
     position: absolute;
-    left: 5%;
+    left: 1.5%;
+}
+
+.main-nav-item {
+    font-family: Work Sans;
+    font-size: 1.5rem;
+    padding-right: 1.3rem;
+    margin-top: 0.5rem;
 }
 
 #socials {
     display: flex;
     position: absolute;
-    right: 5%;
-}
-
-.main-nav-item {
-    font-family: Oswald;
-    font-size: 1.5rem;
-    padding-right: 1.3rem;
-}
-
-.socials-item {
-    font-family: Oswald;
-    font-size: 1.5rem;
-    padding-left: 1.3rem;
+    right: 0.9%;
 }
 
 
 
+.linkedIn-button {
+    color: white;
+    background-color: rgb(11,102, 194);
+    transition: background-color 0.15s;
+    
+    border-radius: 0.5rem;
+    padding: 0.7rem;
+    
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    align-items: center;
+    position: relative;
+    border: none;
+    font-family: "SF Pro Text", Helvetica, sans-serif;
+}
 
-header {
+.linkedIn-button:hover {
+    background-color: rgb(5,79,155);
+    
+}
+
+.linkedIn-button p {
+    margin-top: 0;
+    margin-bottom: 0;
+    border-left: 0.18rem solid white;
+    padding-left: 0.35rem;
+
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+
+
+
+/* header {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 999;
-    transition: top 0.3s;
 
+    transition: top 0.3s;
     visibility: hidden;
 
     padding-top: 1rem;
     padding-bottom: 2.9rem;
 
     background-color: rgb(30, 30, 30);
-}
+} */
 
 #name {
     display: flex;
@@ -697,9 +726,10 @@ textarea::placeholder {
 }
 
 #sendButton {
-    background-color: blue;
+    background-color: rgb(11,102, 194);
+    transition: background-color 0.15s;
     
-    border: 2px solid blue;
+    border: none;
     border-radius: 0.5rem;
 
     font-family: Work Sans;
@@ -713,8 +743,7 @@ textarea::placeholder {
 }
 
 #sendButton:hover {
-    background-color: rgb(0, 0, 215);
-    border: 2px solid rgb(0, 0, 215);
+    background-color: rgb(5,79,155);
     cursor: pointer;
 }
 
