@@ -13,48 +13,41 @@
 
 <body>
 
-    <!-- <header id="header">
-        <div id="main-nav">
-            <a href="#work" onclick="scrollToTarget(event)" class="main-nav-item">WORK</a>
-            <a href="#about" onclick="scrollToTarget(event)" class="main-nav-item">ABOUT</a>
-            <a href="#contact" class="main-nav-item">CONTACT</a>
-        </div>
-        <div id="name">
-            <a href="#cover" onclick="scrollToTarget(event)" class="name">KARL KUHNE</a>
-        </div>
-        <div id="socials">
-            <a href="https://linkedin.com" target="_blank" class="socials-item">LINKEDIN</a>
-            <a href="https://instagram.com" target="_blank" class="socials-item">INSTAGRAM</a>
-        </div>
-    </header> -->
+    <header id="header">
 
-    <nav>
-        <div id="main-nav">
-            <a href="#galery" onclick="scrollToTarget(event)" class="main-nav-item">projects</a>
-            <a href="#about" onclick="scrollToTarget(event)" class="main-nav-item">about</a>
-            <a href="#contact" onclick="scrollToTarget(event)" class="main-nav-item">contact</a>
+        <div id="logo">
+            <a href=".parallax" onclick="scrollToTarget(event)">karl-kuhne-portfolio</a>
         </div>
-        <div id="socials">
-            
-            <button class="linkedIn-button" onclick="window.open('https://www.linkedin.com/mynetwork/discovery-see-all/?usecase=PEOPLE_FOLLOWS&followMember=karl-kuhne', '_blank');">
+
+        <div id="main-nav">
+            <a href="#galery" onclick="scrollToTarget(event)" class="main-nav-item">Projects</a>
+            <a href="#about" onclick="scrollToTarget(event)" class="main-nav-item">About</a>
+            <a href="#contact" onclick="scrollToTarget(event)" class="main-nav-item">Contact</a>
+        </div>
+
+        <div id="linkedIn-button">
+            <button onclick="window.open('https://www.linkedin.com/mynetwork/discovery-see-all/?usecase=PEOPLE_FOLLOWS&followMember=karl-kuhne', '_blank');">
                 <svg fill="white" class="button-icon" width="21" preserveAspectRatio="xMidYMid meet" viewBox="0 0 100 100" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
                     <path d="M92.86,0H7.12A7.17,7.17,0,0,0,0,7.21V92.79A7.17,7.17,0,0,0,7.12,100H92.86A7.19,7.19,0,0,0,100,92.79V7.21A7.19,7.19,0,0,0,92.86,0ZM30.22,85.71H15.4V38H30.25V85.71ZM22.81,31.47a8.59,8.59,0,1,1,8.6-8.59A8.6,8.6,0,0,1,22.81,31.47Zm63,54.24H71V62.5c0-5.54-.11-12.66-7.7-12.66s-8.91,6-8.91,12.26V85.71H39.53V38H53.75v6.52H54c2-3.75,6.83-7.7,14-7.7,15,0,17.79,9.89,17.79,22.74Z"></path>
                 </svg>
                 <p>Let's connect on LinkedIn!</p>
             </button>
-
         </div>
-    </nav>
+    </header>
 
+
+    
     <main>
 
         <div class="parallax"></div>
         <div id="karl">
-            <a href="#header" onclick="scrollToTarget(event)">KARL KUHNE</a>
+            <h1>Lorem Ipsum</h1>
+            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
         </div>
 
-
         <section id="galery">
+
+            <h1 id="galery-header">Project Galery</h1>
             
             <!-- <h1>OPENING CREDITS</h1> -->
              
@@ -321,6 +314,7 @@
 
 
         <section id="about">
+            
 
             <div class="box aboutBox" id="about-me">
                 <div class="label">
