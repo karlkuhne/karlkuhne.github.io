@@ -73,18 +73,14 @@ p {
 
 
 
-#cover {
-    width: 100%; 
-    height: 100vh;
-    position: relative;
-}
-
-#cover img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-
-    
+.parallax {
+    background-image: url("Ressources/Cover.png");
+    min-height: 100vh; 
+  
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #karl {
