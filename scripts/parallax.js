@@ -7,25 +7,27 @@ document.addEventListener('scroll', function() {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    const header = document.getElementById("galery-header");
+    const headers = document.querySelectorAll("#galery-header, #about-header, #contact-header");
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             const rect = entry.boundingClientRect;
+            const element = entry.target;
 
             if (rect.top < window.innerHeight && rect.bottom > 0) {
                 // Element ist im Viewport
-                header.classList.add("fade-in-text");
+                element.classList.add("fade-in-text");
             } else {
                 // Entferne die Klasse `fade-in-text`, wenn das Element den Viewport verlassen hat und vollständig unterhalb des Viewports ist
                 if (rect.top >= window.innerHeight && rect.bottom > window.innerHeight) {
-                    header.classList.remove("fade-in-text");
+                    element.classList.remove("fade-in-text");
                 }
             }
         });
     });
 
-    observer.observe(header);
+    headers.forEach(header => observer.observe(header));
 });
+
 
 

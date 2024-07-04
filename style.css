@@ -535,9 +535,7 @@ a {
     height: 50rem;
     margin: 0 auto;
 
-    margin-top: 5rem;
-
-    padding-top: 3rem;
+    
     padding-bottom: 3rem;
 
     /* background-color: rgb(28, 28, 28); tatsächlich*/
@@ -673,6 +671,9 @@ ol li p {
 #contact {
     width: 100%;
     margin: 0 auto;
+
+    margin-top: 5.75rem;
+    margin-bottom: 7.5rem;
 }
 
 #contact-form {
