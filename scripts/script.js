@@ -1,8 +1,10 @@
+const rootFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
+
 function scrollToTarget(event) {
   event.preventDefault();
   const targetId = event.target.getAttribute('href');
   const targetElement = document.querySelector(targetId);
-  const targetPosition = targetElement.offsetTop;
+  const targetPosition = targetElement.offsetTop - 3 * rootFontSize;
   window.scrollTo({
     top: targetPosition,
     behavior: 'smooth'
@@ -32,7 +34,6 @@ window.addEventListener('body.load', setFontSize);
 document.addEventListener("DOMContentLoaded", function () {
   const fadeInOnScroll = (elementSelector, offsetRem = 0) => {
     const elements = document.querySelectorAll(elementSelector);
-    const rootFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize); // Größe des Wurzel-Fonts in px
 
     elements.forEach(element => {
       const rect = element.getBoundingClientRect();
