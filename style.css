@@ -166,7 +166,7 @@ header {
 
 
 #linkedIn-button button {
-    background-color: rgb(30, 30, 30);
+    background-color: rgb(50, 50, 50);
     transition: background-color 0.15s;
 
     border: 0.185rem solid var(--border-color) !important;
@@ -184,7 +184,8 @@ header {
 
 
 #linkedIn-button button:hover {
-    background-color: rgb(50,50,50);
+    background-color: rgb(40 , 40, 40);
+    cursor: pointer;
 }
 
 #linkedIn-button button p {
@@ -214,20 +215,11 @@ body {
 
 
 
-hr {
-    width: 75%;
-    border: none;
-    height: 0.2rem;
-    background-color: var(--border-color);
-}
-
-
-
 
 
 
 #galery {
-    width: 65%;
+    width: 103rem;
     margin: 0 auto;
 
     display: flex;
@@ -237,6 +229,12 @@ hr {
     padding-top: 1rem;
 
     justify-content: center;
+}
+
+@media (max-width: 107rem) {
+    #galery {
+        width: 97.3%;    
+    }
 }
 
 .project .thumbnail img {
@@ -368,7 +366,7 @@ a {
 
 .container-youtube {
     border-radius: 0.5rem;
-    width: 78rem;
+    width: 91.7rem;
     height: 100%;
     position: relative;
 }
@@ -509,7 +507,7 @@ a {
 #about {
     position: relative;
     width: 100%;
-    height: 64rem;
+    height: 69rem;
     margin: 0 auto;
 
     /* background-color: rgb(28, 28, 28); tatsächlich*/
@@ -530,6 +528,14 @@ a {
     height: fit-content;
 }
 
+.aboutBox {
+    opacity: 0;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.aboutBox.fade-in {
+    opacity: 1;
+}
 
 
 
@@ -788,4 +794,61 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+
+
+#about-header {
+    margin-top: 10rem!important;
+    margin-bottom: 0rem!important;
+    opacity: 0;
+}
+
+#contact-header {
+    margin-top: 10rem!important;
+    margin-bottom: 0rem!important;
+    opacity: 0;
+}
+
+#galery-header {
+    margin-top: 10rem!important;
+    margin-bottom: 0rem!important;
+    opacity: 0;
+}
+
+
+#about-header.fade-in {
+    opacity: 1;
+    animation: left-to-right-fade-in 0.35s ease-in;
+    -webkit-mask-repeat: no-repeat;
+}
+
+#contact-header.fade-in {
+    opacity: 1;
+    animation: left-to-right-fade-in 1s ease-in;
+    -webkit-mask-repeat: no-repeat;
+}
+
+#galery-header.fade-in {
+    opacity: 1;
+    animation: left-to-right-fade-in 0.5s ease-in;
+    -webkit-mask-repeat: no-repeat;
+}
+
+
+
+@keyframes left-to-right-fade-in {
+    0% {
+        -webkit-mask-size: 0%;
+        -webkit-mask-image: linear-gradient(to right,
+                rgba(0, 0, 0, 1) 70%,
+                rgba(0, 0, 0, 0));
+    }
+
+    100% {
+        -webkit-mask-size: 100%;
+        -webkit-mask-image: linear-gradient(to right,
+                rgba(0, 0, 0, 1) 70%,
+                rgba(0, 0, 0, 0));
+    }
 }

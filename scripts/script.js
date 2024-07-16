@@ -4,7 +4,7 @@ function scrollToTarget(event) {
   event.preventDefault();
   const targetId = event.target.getAttribute('href');
   const targetElement = document.querySelector(targetId);
-  const targetPosition = targetElement.offsetTop - 3 * rootFontSize;
+  const targetPosition = targetElement.offsetTop /* - 0 * rootFontSize */;
   window.scrollTo({
     top: targetPosition,
     behavior: 'smooth'
@@ -42,20 +42,28 @@ document.addEventListener("DOMContentLoaded", function () {
         element.classList.add('fade-in');
       } else {
         // Entferne die Klasse `fade-in`, wenn das Element den Viewport verlassen hat und vollständig unterhalb des Viewports ist
-        if (rect.top >= window.innerHeight - offsetPx && rect.bottom > window.innerHeight) {
-            element.classList.remove('fade-in');
+        if (rect.top >= window.innerHeight  && rect.bottom > window.innerHeight) {
+          element.classList.remove('fade-in');
         }
-    }
-      
+      }
+
     });
   };
 
   fadeInOnScroll('.project', 0);
-  fadeInOnScroll('#contact-form', 15);
+  fadeInOnScroll('#contact-form', 7.5);
+  fadeInOnScroll('.aboutBox', 7.5);
+  fadeInOnScroll('#about-header', 20);
+  fadeInOnScroll('#contact-header', 20);
+  fadeInOnScroll('#galery-header', 20);
 
   window.addEventListener('scroll', () => {
     fadeInOnScroll('.project', 0);
-    fadeInOnScroll('#contact-form', 15);
+    fadeInOnScroll('#contact-form', 7.5);
+    fadeInOnScroll('.aboutBox', 7.5);
+    fadeInOnScroll('#about-header', 20);
+    fadeInOnScroll('#contact-header', 20);
+    fadeInOnScroll('#galery-header', 20);
   });
 });
 
@@ -123,7 +131,7 @@ function onYouTubeIframeAPIReady() {
   player = new YT.Player('playerOpeningCredits', {
     height: '100%',
     width: '100%',
-    videoId: 'QggJzZdIYPI', // e4t05vSzYPg
+    videoId: 'e4t05vSzYPg',
     playerVars: {
       'rel': 0, // Keine relativen Videos anzeigen
       'controls': 1 // Zeige Video-Steuerelemente an
@@ -217,61 +225,3 @@ function plusCubismSlides(n) {
 function currentCubismSlide(n) {
   cubismSlideIndex = currentSlide(n, "cubism-slides", "dot1");
 }
-
-
-
-
-
-
-
-/* About Section */
-
-// Get all the .box elements
-const boxes = document.querySelectorAll('.box');
-
-// Variables to store the current dragged box and its initial position
-let draggedBox = null;
-let initialX = 0;
-let initialY = 0;
-
-// Function to handle the mousedown event
-function startDrag(event) {
-  // Set the draggedBox to the current box being dragged
-  draggedBox = event.target;
-
-  // Store the initial position of the dragged box
-  initialX = event.clientX - parseInt(draggedBox.offsetLeft);
-  initialY = event.clientY - parseInt(draggedBox.offsetTop);
-
-  // Add a mousemove event listener to handle the dragging
-  document.addEventListener('mousemove', drag);
-
-  // Add a mouseup event listener to handle the drag end
-  document.addEventListener('mouseup', endDrag);
-}
-
-// Function to handle the dragging
-function drag(event) {
-  // Calculate the new position of the dragged box
-  const x = event.clientX - initialX;
-  const y = event.clientY - initialY;
-
-  // Update the position of the dragged box
-  draggedBox.style.left = `${x}px`;
-  draggedBox.style.top = `${y}px`;
-}
-
-// Function to handle the drag end
-function endDrag() {
-  // Remove the mousemove and mouseup event listeners
-  document.removeEventListener('mousemove', drag);
-  document.removeEventListener('mouseup', endDrag);
-
-  // Reset the draggedBox variable
-  draggedBox = null;
-}
-
-// Add the mousedown event listener to each .box element
-boxes.forEach(box => {
-  box.addEventListener('mousedown', startDrag);
-});

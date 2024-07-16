@@ -16,16 +16,16 @@
     <header id="header">
 
         <div id="logo">
-            <a href=".parallax" onclick="scrollToTarget(event)">karl-kuhne-portfolio</a>
+            <a href=".parallax" class="selectDisable" onclick="scrollToTarget(event)">karl-kuhne-portfolio</a>
         </div>
 
         <div id="main-nav">
-            <a href="#galery" onclick="scrollToTarget(event)" class="main-nav-item">Projects</a>
-            <a href="#about" onclick="scrollToTarget(event)" class="main-nav-item">About</a>
-            <a href="#contact" onclick="scrollToTarget(event)" class="main-nav-item">Contact</a>
+            <a href="#galery" onclick="scrollToTarget(event)" class="main-nav-item selectDisable">Projects</a>
+            <a href="#about" onclick="scrollToTarget(event)" class="main-nav-item selectDisable">About</a>
+            <a href="#contact" onclick="scrollToTarget(event)" class="main-nav-item selectDisable">Contact</a>
         </div>
 
-        <div id="linkedIn-button">
+        <div id="linkedIn-button" class="selectDisable">
             <button onclick="window.open('https://www.linkedin.com/mynetwork/discovery-see-all/?usecase=PEOPLE_FOLLOWS&followMember=karl-kuhne', '_blank');">
                 <svg fill="white" class="button-icon" width="21" preserveAspectRatio="xMidYMid meet" viewBox="0 0 100 100" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
                     <path d="M92.86,0H7.12A7.17,7.17,0,0,0,0,7.21V92.79A7.17,7.17,0,0,0,7.12,100H92.86A7.19,7.19,0,0,0,100,92.79V7.21A7.19,7.19,0,0,0,92.86,0ZM30.22,85.71H15.4V38H30.25V85.71ZM22.81,31.47a8.59,8.59,0,1,1,8.6-8.59A8.6,8.6,0,0,1,22.81,31.47Zm63,54.24H71V62.5c0-5.54-.11-12.66-7.7-12.66s-8.91,6-8.91,12.26V85.71H39.53V38H53.75v6.52H54c2-3.75,6.83-7.7,14-7.7,15,0,17.79,9.89,17.79,22.74Z"></path>
@@ -41,8 +41,8 @@
 
         <div class="parallax"></div>
         <div id="karl">
-            <h1>Lorem Ipsum</h1>
-            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+            <h1>Hi, I am Karl</h1>
+            <h2>A media design and informatics student</h2>
         </div>
 
         <section id="galery">
@@ -315,7 +315,7 @@
 
         <section id="about">
 
-            <h1 id="about-header">about me</h1>
+            <h1 id="about-header">about-me</h1>
 
             <div class="box aboutBox" id="about-me">
                 <div class="label">
@@ -503,7 +503,7 @@
 
                 </div>
 
-                <img src="Ressources/Portrait.jpg" alt="Portrait of Karl">
+                <img src="Ressources/Portrait.jpg" alt="Portrait of Karl" class="selectDisable" draggable="false" oncontextmenu="return false;">
             </div>
 
         </section>
