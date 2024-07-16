@@ -511,7 +511,7 @@ a {
     margin: 0 auto;
 
     /* background-color: rgb(28, 28, 28); tatsächlich*/
-    /* background-color: rgb(107, 81, 81); */
+   /*  background-color: rgb(107, 81, 81); */
 
     display: grid;
     justify-items: center;
@@ -618,6 +618,31 @@ ol li p {
 
 #hobbys {
     transform: translateX(-10.9rem) translateY(-2.2rem);
+}
+
+@media (max-width: 79.5rem) {
+    #about-me {
+        transform: translateX(0.295rem);
+    }
+    
+    #portrait {
+        transform: translateX(14.1rem) translateY(-33.95rem);
+    }
+    #languages {
+        transform: translateX(-12.7rem) translateY(0.8rem);
+    }
+
+    #degrees {
+        transform: translateX(5rem) translateY(2.2rem); /* 6.25rem */
+    }
+
+    #hobbys {
+        transform: translateX(-15.65rem) translateY(1.5rem);
+    }
+
+    #about  {
+        height: 90.3rem;
+    }
 }
 
 
