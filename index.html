@@ -14,10 +14,15 @@
 <body>
 
     <header id="header">
+        
 
-        <div id="logo">
-            <a href=".parallax" class="selectDisable" onclick="scrollToTarget(event)">karl-kuhne-portfolio</a>
-        </div>
+            <div id="logo">
+                <a href=".parallax" class="selectDisable" onclick="scrollToTarget(event)">karl-kuhne-portfolio</a>
+            </div>
+
+        
+
+        
 
         <div id="main-nav">
             <a href="#galery" onclick="scrollToTarget(event)" class="main-nav-item selectDisable">Projects</a>
@@ -26,9 +31,13 @@
         </div>
 
         <div id="linkedIn-button" class="selectDisable">
-            <button onclick="window.open('https://www.linkedin.com/mynetwork/discovery-see-all/?usecase=PEOPLE_FOLLOWS&followMember=karl-kuhne', '_blank');">
-                <svg fill="white" class="button-icon" width="21" preserveAspectRatio="xMidYMid meet" viewBox="0 0 100 100" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
-                    <path d="M92.86,0H7.12A7.17,7.17,0,0,0,0,7.21V92.79A7.17,7.17,0,0,0,7.12,100H92.86A7.19,7.19,0,0,0,100,92.79V7.21A7.19,7.19,0,0,0,92.86,0ZM30.22,85.71H15.4V38H30.25V85.71ZM22.81,31.47a8.59,8.59,0,1,1,8.6-8.59A8.6,8.6,0,0,1,22.81,31.47Zm63,54.24H71V62.5c0-5.54-.11-12.66-7.7-12.66s-8.91,6-8.91,12.26V85.71H39.53V38H53.75v6.52H54c2-3.75,6.83-7.7,14-7.7,15,0,17.79,9.89,17.79,22.74Z"></path>
+            <button
+                onclick="window.open('https://www.linkedin.com/mynetwork/discovery-see-all/?usecase=PEOPLE_FOLLOWS&followMember=karl-kuhne', '_blank');">
+                <svg fill="white" class="button-icon" width="21" preserveAspectRatio="xMidYMid meet"
+                    viewBox="0 0 100 100" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
+                    <path
+                        d="M92.86,0H7.12A7.17,7.17,0,0,0,0,7.21V92.79A7.17,7.17,0,0,0,7.12,100H92.86A7.19,7.19,0,0,0,100,92.79V7.21A7.19,7.19,0,0,0,92.86,0ZM30.22,85.71H15.4V38H30.25V85.71ZM22.81,31.47a8.59,8.59,0,1,1,8.6-8.59A8.6,8.6,0,0,1,22.81,31.47Zm63,54.24H71V62.5c0-5.54-.11-12.66-7.7-12.66s-8.91,6-8.91,12.26V85.71H39.53V38H53.75v6.52H54c2-3.75,6.83-7.7,14-7.7,15,0,17.79,9.89,17.79,22.74Z">
+                    </path>
                 </svg>
                 <p>Let's connect on LinkedIn!</p>
             </button>
@@ -36,21 +45,21 @@
     </header>
 
 
-    
+
     <main>
 
         <div class="parallax"></div>
         <div id="karl">
             <h1>Hi, I am Karl</h1>
-            <h2>A media design and informatics student</h2>
+            <h2>a media design and informatics student</h2>
         </div>
 
         <section id="galery">
 
             <h1 id="galery-header">project galery</h1>
-            
+
             <!-- <h1>OPENING CREDITS</h1> -->
-             
+
             <div class="box project">
                 <div class="label">
                     <p>opening-credits</p>
@@ -74,11 +83,12 @@
                 </div>
 
                 <div class="thumbnail" id="project-opening-credits">
-                    <img src=Ressources/Opening_Credits/Thumbnail.png class="selectDisable" draggable="false" oncontextmenu="return false;">
+                    <img src=Ressources/Opening_Credits/Thumbnail.png class="selectDisable" draggable="false"
+                        oncontextmenu="return false;">
                 </div>
             </div>
 
-            
+
             <!-- <h1>RESEARCH</h1> -->
 
             <div class="box project">
@@ -103,7 +113,8 @@
                     </svg>
                 </div>
                 <div class="thumbnail" id="project-term-paper">
-                    <img src="Ressources/Term_Paper/Thumbnail.png" class="selectDisable" draggable="false" oncontextmenu="return false;">
+                    <img src="Ressources/Term_Paper/Thumbnail.png" class="selectDisable" draggable="false"
+                        oncontextmenu="return false;">
                 </div>
             </div>
 
@@ -130,7 +141,8 @@
                     </svg>
                 </div>
                 <div class="thumbnail" id="project-cubism">
-                    <img src="Ressources/Experimentelles_Projekt/Thumbnail.png" class="selectDisable" draggable="false" oncontextmenu="return false;">
+                    <img src="Ressources/Experimentelles_Projekt/Thumbnail.png" class="selectDisable" draggable="false"
+                        oncontextmenu="return false;">
                 </div>
             </div>
 
@@ -157,14 +169,15 @@
                     </svg>
                 </div>
                 <div class="thumbnail" id="project-character-design">
-                    <img src="Ressources/Character_Design/Thumbnail.png" class="selectDisable" draggable="false" oncontextmenu="return false;">
+                    <img src="Ressources/Character_Design/Thumbnail.png" class="selectDisable" draggable="false"
+                        oncontextmenu="return false;">
                 </div>
             </div>
 
 
             <!-- LIGHTBOX CHARACTER DESIGN -->
             <div class="lightbox" id="lightbox-character-design">
-                <span class="close">&times;</span>
+                <span class="close selectDisable">&times;</span>
 
                 <div class="wrapper-waagerecht wrapper-waagerecht-slideshow">
                     <div class="container-waagerecht">
@@ -189,10 +202,14 @@
                         </div>
                     </div>
 
-                    <div>
+                    <div class="text-waagerecht">
                         <h2>Character Design</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet
-                            consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                            diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+                            voluptua.</p>
                     </div>
                 </div>
             </div>
@@ -200,16 +217,22 @@
 
             <!-- LIGHTBOX OPENING CREDITS -->
             <div class="lightbox youtube-lightbox" id="lightbox-opening-credits">
-                <span class="close">&times;</span>
+                <span class="close  selectDisable">&times;</span>
 
                 <div class="wrapper-waagerecht">
                     <div class="container-youtube">
                         <div id="playerOpeningCredits"></div>
                     </div>
 
-                    <div>
+                    <div class="text-waagerecht">
                         <h2>Opening Credits</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                            diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+                            voluptua.</p>
+                        </>
                     </div>
                 </div>
             </div>
@@ -218,21 +241,26 @@
 
             <!-- LIGHTBOX TERM PAPER -->
             <div class="lightbox" id="lightbox-term-paper">
-                <span class="close">&times;</span>
+                <span class="close selectDisable">&times;</span>
 
-                <div class="wrapper-senkrecht">
+                <div class="wrapper-waagerecht">
                     <div class="container-pdf">
                         <iframe src="Ressources/Term_Paper/Term_Paper.pdf" frameborder="0"></iframe>
                     </div>
 
-                    <div>
+                    <div class="text-waagerecht">
                         <h2>Diegesis</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                            sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+                            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                            aliquyam erat, sed diam voluptua.</p>
                     </div>
                 </div>
 
             </div>
-            </div>
+
 
             <!-- LIGHTBOX CUBISM -->
             <!-- <div class="lightbox" id="lightbox-cubism">
@@ -279,7 +307,7 @@
             </div> -->
 
             <div class="lightbox" id="lightbox-cubism">
-                <span class="close">&times;</span>
+                <span class="close  selectDisable">&times;</span>
 
                 <div class="wrapper-waagerecht wrapper-waagerecht-slideshow">
                     <div class="container-waagerecht">
@@ -302,10 +330,14 @@
                         </div>
                     </div>
 
-                    <div>
+                    <div class="text-waagerecht">
                         <h2>Cubism</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet
-                            consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                            diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+                            voluptua.</p>
                     </div>
                 </div>
             </div>
@@ -503,7 +535,8 @@
 
                 </div>
 
-                <img src="Ressources/Portrait.jpg" alt="Portrait of Karl" class="selectDisable" draggable="false" oncontextmenu="return false;">
+                <img src="Ressources/Portrait.jpg" alt="Portrait of Karl" class="selectDisable" draggable="false"
+                    oncontextmenu="return false;">
             </div>
 
         </section>
@@ -514,7 +547,7 @@
 
         <section id="contact">
 
-            <h1 id="contact-header" >contact me</h1>
+            <h1 id="contact-header">contact me</h1>
 
             <div class="box" id="contact-form">
                 <div class="label">
@@ -546,17 +579,18 @@
                             <p>name</p> <br>
                             <input id="nameInput" type="name" name="name" required> <!-- placeholder="YOUR NAME" -->
                         </li>
-                        
+
                         <li>
                             <p>email adress</p> <br>
-                            <input id="emailInput" type="email" name="email" required> <!-- placeholder="YOUR EMAIL ADDRESS" -->
+                            <input id="emailInput" type="email" name="email" required>
+                            <!-- placeholder="YOUR EMAIL ADDRESS" -->
                         </li>
 
                         <li>
                             <p>message</p> <br>
                             <textarea id="messageInput" type="message" name="message" rows="1" style="resize: none;"
-                            oninput='this.style.height = ""; this.style.height = this.scrollHeight + "px";'
-                            required></textarea> <!-- placeholder="YOUR MESSAGE" -->
+                                oninput='this.style.height = ""; this.style.height = this.scrollHeight + "px";'
+                                required></textarea> <!-- placeholder="YOUR MESSAGE" -->
                         </li>
 
                     </ol>

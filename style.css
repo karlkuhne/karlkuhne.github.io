@@ -314,7 +314,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.92);
+    background-color: rgba(0, 0, 0, 0.95);
     height: 100%;
     width: 100%;
     z-index: 999;
@@ -325,8 +325,7 @@ body {
     align-items: center;
 }
 
-.lightbox span,
-a {
+.lightbox span,a {
     font-size: 3rem;
     cursor: pointer;
     color: white;
@@ -351,22 +350,46 @@ a {
 /* LIGHTBOX WAAGERECHT */
 .wrapper-waagerecht {
     width: 90%;
-    height: 65%;
+    height: 90%;
     display: flex;
-}
-
-.wrapper-waagerecht-slideshow {
-    align-items: start;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .container-waagerecht {
-    width: 224.7rem;
+    width: 103.5rem;
     position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+}
+
+.container-waagerecht img {
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.text-waagerecht {
+    align-self: center;
+    width: 103.5rem;
+}
+
+.lightbox p {
+    margin-left: 0!important;
+    margin-top: 0!important;
+}
+
+.lightbox h2 {
+    margin-left: 0!important;
+    margin-bottom: 0.5rem!important;
 }
 
 .container-youtube {
     border-radius: 0.5rem;
-    width: 91.7rem;
+    width: 103.5rem;
     height: 100%;
     position: relative;
 }
@@ -377,14 +400,44 @@ a {
     height: 100%;
 }
 
-/* LIGHTBOX SLIDESHOW-WAAGERECHT */
-.container-waagerecht img {
+
+.container-pdf {
+    width: 103.5rem;
+    height: 100%;
+}
+
+.container-pdf iframe {
     border-radius: 0.5rem;
     width: 100%;
     height: 100%;
-
-    object-fit: contain;
 }
+
+@media (max-width: 107rem) {
+    .container-waagerecht {
+        width: 97.3vw;
+    }
+
+    .container-youtube {
+        width: 97.3vw;
+        height: 54.73vw;
+    }
+
+    .container-pdf {
+        width: 97.3vw;
+        height: 54.73vw;
+    }
+
+    .text-waagerecht {
+        width: 97.3vw;
+    }
+}
+
+
+
+
+
+
+
 
 /* LIGHTBOX SENKRECHT */
 .wrapper-senkrecht {
@@ -393,19 +446,6 @@ a {
     display: flex;
 
     /* align-items: center; */
-}
-
-/* LIGHTBOX PDF */
-.container-pdf {
-    width: 114.8rem;
-    height: 100%;
-    display: flex;
-}
-
-.container-pdf iframe {
-    border-radius: 0.5rem;
-    width: 100%;
-    height: 100%;
 }
 
 /* LIGHTBOX SLIDESHOW-SENKRECHT */
