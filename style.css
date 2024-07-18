@@ -119,6 +119,7 @@ nav {
     align-items: center;
     display: flex;
     padding: 0 0.65rem;
+    justify-content: space-between;
 }
 
 #logo {
@@ -130,10 +131,13 @@ nav {
 
 #main-nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+}
+
+#nav-buttons {
+    display: flex;
     gap: 3rem;
-    list-style: none;
+    margin: 0 auto;
 }
 
 .main-nav-item {
@@ -215,7 +219,7 @@ nav {
         position: fixed;
         width: 100%;
         left: -1.95rem;
-        top: 3.25rem;
+        top: 3rem;
 
         opacity: 0;
         pointer-events: none;
@@ -229,10 +233,6 @@ nav {
         text-align: center;
     }
 
-    #nav-buttons {
-        
-    }
-
     .main-nav-item {
         margin: 16px 0;
     }
@@ -240,10 +240,6 @@ nav {
     #main-nav.active {
         opacity: 1;
         pointer-events: auto;
-    }
-
-    #linkedIn-button {
-        margin-left: 0;
     }
 
 }
@@ -633,6 +629,7 @@ a {
 
 
 
+ul,
 ol {
     margin-top: 1.25rem;
     margin-bottom: 1.25rem;
