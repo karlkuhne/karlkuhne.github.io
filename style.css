@@ -115,29 +115,30 @@ header {
 }
 
 nav {
-    min-height: 4.25rem;
-    align-items: center;
     display: flex;
-    padding: 0 0.65rem;
     justify-content: space-between;
+    align-items: center;
+    height: 4.25rem;
 }
 
 #logo {
     font-family: Work Sans;
     font-size: 1.75rem;
     font-weight: 600;
-    padding-left: 0.5rem;
+    margin-left: 1rem;
 }
 
 #main-nav {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
 }
 
 #nav-buttons {
     display: flex;
     gap: 3rem;
     margin: 0 auto;
+    align-items: center;
 }
 
 .main-nav-item {
@@ -148,6 +149,11 @@ nav {
 
 .main-nav-item:hover {
     color: white;
+}
+
+
+#linkedIn-button {
+    margin-right: 0.65rem;
 }
 
 #linkedIn-button button {
@@ -185,6 +191,7 @@ nav {
 #hamburger {
     display: none;
     cursor: pointer;
+    margin-right: 1.55rem;
 }
 
 .bar {
@@ -218,13 +225,11 @@ nav {
     #main-nav {
         position: fixed;
         width: 100%;
-        left: -1.95rem;
-        top: 3rem;
+        top: 4.25rem;
 
         opacity: 0;
         pointer-events: none;
-        transition: opacity 0.3s ease-in-out;
-
+        
         background-color: rgb(30, 30, 30, 0.5);
         backdrop-filter: blur(0.5rem);
 
@@ -233,13 +238,21 @@ nav {
         text-align: center;
     }
 
-    .main-nav-item {
-        margin: 16px 0;
+    #nav-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    #linkedIn-button {
+        margin: 0 auto;
+        margin-top: 0.7rem;
+        margin-bottom: 1rem;
     }
 
     #main-nav.active {
         opacity: 1;
         pointer-events: auto;
+        transition: opacity 0.3s ease-in-out;
     }
 
 }
