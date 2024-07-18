@@ -114,12 +114,11 @@ header {
     backdrop-filter: blur(0.5rem);
 }
 
-#navbar {
+nav {
     min-height: 4.25rem;
     align-items: center;
     display: flex;
     padding: 0 0.65rem;
-    justify-content: space-between;
 }
 
 #logo {
@@ -216,7 +215,7 @@ header {
         position: fixed;
         width: 100%;
         left: -1.95rem;
-        top: 3rem;
+        top: 3.25rem;
 
         opacity: 0;
         pointer-events: none;
@@ -230,6 +229,10 @@ header {
         text-align: center;
     }
 
+    #nav-buttons {
+        
+    }
+
     .main-nav-item {
         margin: 16px 0;
     }
@@ -237,6 +240,10 @@ header {
     #main-nav.active {
         opacity: 1;
         pointer-events: auto;
+    }
+
+    #linkedIn-button {
+        margin-left: 0;
     }
 
 }
@@ -626,7 +633,6 @@ a {
 
 
 
-ul,
 ol {
     margin-top: 1.25rem;
     margin-bottom: 1.25rem;
