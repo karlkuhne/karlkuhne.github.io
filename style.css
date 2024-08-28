@@ -1,23 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
-/* Coverschrift
-Animation zu spaet
-Graue Hintergrundfarbe */
-
 :root {
     --karl-font-size: 10;
     --border-color: rgb(82, 82, 82);
 }
-
-/* GitHub Test auf meinem Mac und auf meinem PC */
-
-/* * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-} */
-
 
 a {
     text-decoration: none;
@@ -36,6 +23,8 @@ a:hover {
     user-select: none;
 }
 
+
+/* FONTS */
 
 h1 {
     font-family: Work Sans;
@@ -81,6 +70,7 @@ p {
 }
 
 
+/* COVER */
 
 .parallax {
     background-image: url("Ressources/Cover.png");
@@ -111,8 +101,7 @@ p {
 }
 
 
-
-
+/* STICKY HEADER */
 
 header {
     position: fixed;
@@ -120,8 +109,8 @@ header {
     width: 100%;
     z-index: 999;
 
-    background-color: rgb(30, 30, 30, 0.5);
-    backdrop-filter: blur(0.5rem);
+    background-color: rgb(30, 30, 30, 0.6);
+    backdrop-filter: blur(0.6rem);
 }
 
 nav {
@@ -160,7 +149,6 @@ nav {
 .main-nav-item:hover {
     color: white;
 }
-
 
 #linkedIn-button {
     margin-right: 0.65rem;
@@ -268,27 +256,14 @@ nav {
 }
 
 
-
-
-
-
-
 body {
     background-color: rgb(18, 18, 18);
-    /* rgb(18, 18, 18) */
     padding: 0;
     margin: 0;
 }
 
-/* .brighter {
-    background-color: rgb(30,30,30);
-} */
 
-
-
-
-
-
+/* PROJECT GALERY */
 
 #galery {
     width: 103rem;
@@ -309,6 +284,25 @@ body {
     }
 }
 
+.project {
+    opacity: 0;
+    transform: translateY(10rem);
+    transition: opacity 1.3s ease-out, transform 0.6s ease-out;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.project.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project .thumbnail {
+    position: relative;
+    z-index: 1;
+}
+
 .project .thumbnail img {
     width: 100%;
     height: 100%;
@@ -318,7 +312,6 @@ body {
     transition: transform 0.4s ease;
 }
 
-
 .project:hover .thumbnail img {
     transform: scale(1.025);
 }
@@ -327,32 +320,6 @@ body {
     position: relative;
     z-index: 2;
     background-color: rgb(30, 30, 30);
-}
-
-.project .thumbnail {
-    position: relative;
-    z-index: 1;
-}
-
-
-
-.project {
-    opacity: 0;
-    transform: translateY(10rem);
-    transition: opacity 1.3s ease-out, transform 0.6s ease-out;
-}
-
-.project.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-
-.project {
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
 }
 
 .middle {
@@ -380,8 +347,8 @@ body {
 }
 
 
+/* LIGHTBOX */
 
-/* LIGHTBOX ALLGEMEIN */
 .lightbox {
     position: fixed;
     top: 0;
@@ -391,14 +358,12 @@ body {
     width: 100%;
     z-index: 999;
     display: none;
-    /* Hidden by default */
 
     justify-content: center;
     align-items: center;
 }
 
-.lightbox span,
-a {
+.lightbox span, a {
     font-size: 3rem;
     cursor: pointer;
     color: white;
@@ -420,7 +385,6 @@ a {
     display: none;
 }
 
-/* LIGHTBOX WAAGERECHT */
 .wrapper-waagerecht {
     width: 90%;
     height: 90%;
@@ -473,7 +437,6 @@ a {
     height: 100%;
 }
 
-
 .container-pdf {
     width: 103.5rem;
     height: 100%;
@@ -505,39 +468,28 @@ a {
     }
 }
 
+#project-button {
+    background-color: rgb(11, 102, 194);
+    transition: background-color 0.15s;
 
-
-
-
-
-
-
-/* LIGHTBOX SENKRECHT */
-.wrapper-senkrecht {
-    width: 90%;
-    height: 90%;
-    display: flex;
-
-    /* align-items: center; */
-}
-
-/* LIGHTBOX SLIDESHOW-SENKRECHT */
-.container-senkrecht {
-    width: 53.7rem;
-    position: relative;
-    margin-left: 12%;
-
-    object-fit: contain;
-}
-
-.container-senkrecht img {
+    border: none;
     border-radius: 0.5rem;
-    width: 100%;
-    height: 100%;
+
+    font-family: Work Sans;
+    font-size: 1.5rem;
+    color: white;
+
+    padding: 0.5rem 1rem 0.5rem 1rem;
+
+    margin-bottom: 1.5rem;
+    margin-right: 1.5rem;
 }
 
+#project-button:hover {
+    background-color: rgb(5, 79, 155);
+    cursor: pointer;
+}
 
-/* NAVIGATION */
 .navigation {
     position: absolute;
     top: 50%;
@@ -549,7 +501,6 @@ a {
     margin-right: 20px;
 }
 
-/* DOTS SLIDESHOW-WAAGERRECHT */
 .dots-slideshow-waagerecht {
     position: absolute;
     width: 100%;
@@ -558,16 +509,6 @@ a {
     justify-content: center;
 }
 
-/* BUTTONS SLIDESHOW-SENKRECHT */
-.dots-slideshow-senkrecht {
-    position: absolute;
-    width: 100%;
-    bottom: 10px;
-    display: flex;
-    justify-content: center;
-}
-
-/* DOTS STYLING */
 .dot,
 .dot1 {
     cursor: pointer;
@@ -585,7 +526,6 @@ a {
     background-color: rgb(133, 133, 133);
 }
 
-/* LIGHTBOX CAPTION */
 .lightbox p {
     margin-left: 2rem;
     padding-right: 1rem;
@@ -596,26 +536,12 @@ a {
 }
 
 
-/* @media (max-with: 768px) {
-    .lightbox img {
-        width: 95%;
-    }
-} */
-
-
-
-
 .no-scroll {
     overflow: hidden;
 }
 
 
-
-
-
-
-
-
+/* ABOUT ME */
 
 #about {
     position: relative;
@@ -623,13 +549,9 @@ a {
     height: 69rem;
     margin: 0 auto;
 
-    /* background-color: rgb(28, 28, 28); tatsächlich*/
-    /*  background-color: rgb(107, 81, 81); */
-
     display: grid;
     justify-items: center;
 
-    /* background-color: blue; */
 }
 
 .box {
@@ -650,8 +572,6 @@ a {
 .aboutBox.fade-in {
     opacity: 1;
 }
-
-
 
 ul,
 ol {
@@ -674,9 +594,6 @@ ol li p {
     margin-bottom: 0;
 }
 
-
-
-
 .label {
     border-bottom: 0.185rem solid var(--border-color);
     padding-left: 0.5rem;
@@ -695,7 +612,6 @@ ol li p {
     flex: 1;
 }
 
-
 .icon {
     fill: var(--border-color);
 
@@ -706,7 +622,6 @@ ol li p {
     height: 1.7rem;
 
 }
-
 
 #about-me {
     transform: translateX(-3.5rem);
@@ -720,7 +635,6 @@ ol li p {
 #portrait>img {
     width: 100%;
 }
-
 
 #languages {
     transform: translateX(-27.3rem) translateY(-0.95rem);
@@ -810,7 +724,7 @@ ol li p {
 }
 
 
-
+/* CONTACT FORM */
 
 #contact {
     width: 100%;
@@ -828,7 +742,6 @@ ol li p {
     transition: opacity 0.5s ease-out;
 }
 
-
 #contact-form.fade-in {
     opacity: 1;
 }
@@ -841,8 +754,6 @@ ol li p {
     margin-bottom: 0;
     margin-top: 1rem;
 }
-
-
 
 input[type="name"],
 input[type="email"],
@@ -875,22 +786,6 @@ textarea[type="message"] {
     /* Adjust this value as needed for perfect centering */
     box-sizing: border-box;
 }
-
-/* textarea {
-    margin-bottom: 5.1rem;
-} */
-
-/* input::placeholder {
-    font-family: Work Sans;
-    font-size: 1.3rem;
-    color: rgb(120,120,120);
-}
-
-textarea::placeholder {
-    font-family: Work Sans;
-    font-size: 1.3rem;
-    color: rgb(120, 120, 120);
-} */
 
 .checkbox-container {
     display: flex;
@@ -943,8 +838,7 @@ textarea::placeholder {
 }
 
 
-
-
+/* FOOTER */
 
 footer {
     width: 100%;
@@ -961,6 +855,7 @@ footer {
 }
 
 
+/* ANIMATIONS */
 
 #about-header {
     margin-top: 10rem !important;
@@ -999,8 +894,6 @@ footer {
     -webkit-mask-repeat: no-repeat;
 }
 
-
-
 @keyframes left-to-right-fade-in {
     0% {
         -webkit-mask-size: 0%;
@@ -1015,4 +908,34 @@ footer {
                 rgba(0, 0, 0, 1) 70%,
                 rgba(0, 0, 0, 0));
     }
+}
+
+
+/* PROJECT PAGE */
+
+.project-title {
+    margin-top: 11rem;
+}
+
+.project-images {
+  display: block;
+  margin: 0 auto;
+  margin-top: 3.5rem;
+  width: 103rem;
+  border-radius: 0.7rem;
+}
+
+.project-subtitle {
+    margin: 0 0 0 0;
+    text-align: center;
+}
+
+.project-description-title {
+    margin: 0 0 0 0;
+}
+
+.project-description {
+    width: 103rem;
+    margin: 0 auto;
+    margin-top: 6.2rem;
 }
