@@ -227,7 +227,7 @@ nav {
 
         opacity: 0;
         pointer-events: none;
-        
+
         background-color: rgb(30, 30, 30, 0.5);
         backdrop-filter: blur(0.5rem);
 
@@ -240,7 +240,7 @@ nav {
         flex-direction: column;
         gap: 0.5rem;
     }
-    
+
     #linkedIn-button {
         margin: 0 auto;
         margin-top: 0.7rem;
@@ -363,7 +363,8 @@ body {
     align-items: center;
 }
 
-.lightbox span, a {
+.lightbox span,
+a {
     font-size: 3rem;
     cursor: pointer;
     color: white;
@@ -679,7 +680,7 @@ ol li p {
     #languages {
         transform: translateX(0rem) translateY(0.15rem);
     }
-    
+
     #hobbys {
         transform: translateX(0rem) translateY(0.45rem);
     }
@@ -917,14 +918,6 @@ footer {
     margin-top: 11rem;
 }
 
-.project-images {
-  display: block;
-  margin: 0 auto;
-  margin-top: 3.5rem;
-  width: 103rem;
-  border-radius: 0.7rem;
-}
-
 .project-subtitle {
     margin: 0 0 0 0;
     text-align: center;
@@ -934,8 +927,26 @@ footer {
     margin: 0 0 0 0;
 }
 
+.project-description img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 3.5rem;
+    width: 103rem;
+    border-radius: 0.7rem;
+}
+
 .project-description {
     width: 103rem;
     margin: 0 auto;
     margin-top: 6.2rem;
+}
+
+@media (max-width: 107rem) {
+    .project-description {
+        width: 97.3vw;
+    }
+
+    .project-description img {
+        width: 97.3vw;
+    }
 }
