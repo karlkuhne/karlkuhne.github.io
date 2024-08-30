@@ -28,7 +28,7 @@ a:hover {
 
 h1 {
     font-family: Work Sans;
-    font-size: 8rem;
+    font-size: 5rem; /* ehem 8rem */
     font-weight: 900;
     font-style: italic;
     color: white;
@@ -46,8 +46,8 @@ h1 {
 
 h2 {
     font-family: Work Sans;
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 1.5rem; /* ehem 3rem */
+    font-weight: 600;
     color: white;
 
     margin-left: 2rem;
@@ -64,7 +64,7 @@ h3 {
 
 p {
     font-family: Work Sans;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: white;
     line-height: 1.1;
 }
@@ -122,7 +122,7 @@ nav {
 
 #logo {
     font-family: Work Sans;
-    font-size: 1.75rem;
+    font-size: 1.5rem; /* ehem 1.75rem */
     font-weight: 600;
     margin-left: 1rem;
 }
@@ -266,7 +266,7 @@ body {
 /* PROJECT GALERY */
 
 #galery {
-    width: 103rem;
+    width: 64.5vw; /* 103rem */
     margin: 0 auto;
 
     display: flex;
@@ -396,7 +396,7 @@ a {
 }
 
 .container-waagerecht {
-    width: 103.5rem;
+    width: 64.5vw; /* 103.5rem */
     position: relative;
     top: 0;
     left: 0;
@@ -412,7 +412,7 @@ a {
 
 .text-waagerecht {
     align-self: center;
-    width: 103.5rem;
+    width: 64.5vw; /* 103.5rem */
 }
 
 .lightbox p {
@@ -427,7 +427,7 @@ a {
 
 .container-youtube {
     border-radius: 0.5rem;
-    width: 103.5rem;
+    width: 64.5vw; /* 103.5rem */
     height: 100%;
     position: relative;
 }
@@ -439,7 +439,7 @@ a {
 }
 
 .container-pdf {
-    width: 103.5rem;
+    width: 64.5vw; /* 103.5rem */
     height: 100%;
 }
 
@@ -915,7 +915,8 @@ footer {
 /* PROJECT PAGE */
 
 .project-title {
-    margin-top: 11rem;
+    margin-top: 7.5rem;
+    font-size: 4rem;
 }
 
 .project-subtitle {
@@ -927,18 +928,26 @@ footer {
     margin: 0 0 0 0;
 }
 
-.project-description img {
+.project-cover img {
     display: block;
     margin: 0 auto;
-    margin-top: 3.5rem;
-    width: 103rem;
+    width: 62.5rem!important;
     border-radius: 0.7rem;
 }
 
-.project-description {
-    width: 103rem;
+.project-cover {
+    width: 64.5vw; /* 103.5rem */
     margin: 0 auto;
     margin-top: 6.2rem;
+}
+
+.project-description {
+    width: 64.5vw; /* 103.5rem */
+    margin: 0 auto;
+}
+
+.project-description p {
+    text-align: justify;
 }
 
 @media (max-width: 107rem) {
