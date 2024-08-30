@@ -928,7 +928,7 @@ footer {
 
 
 
-@media (max-width: 1718px) {
+@media (max-width: var(--main-width)){
     #galery {
         width: var(--responsive-main-width);
     }
