@@ -4,7 +4,7 @@
 :root {
     --karl-font-size: 10;
     --border-color: rgb(82, 82, 82);
-    --main-width: 65;
+    --main-width: 63;
     --responsive-main-width: 96.75%;
 }
 
@@ -28,7 +28,7 @@ a:hover {
 
 /* FONTS */
 
-h1 {
+h1, h2 {
     font-family: Work Sans;
     font-size: 5rem; /* ehem 8rem */
     font-weight: 900;
@@ -40,7 +40,7 @@ h1 {
     text-align: center;
 }
 
-h2 {
+h3 {
     font-family: Work Sans;
     font-size: 1.5rem; /* ehem 3rem */
     font-weight: 600;
@@ -50,7 +50,7 @@ h2 {
     margin-top: 1.5rem;
 }
 
-h3 {
+h4 {
     font-family: Work Sans;
     font-size: 1.5rem;
     font-weight: 500;
@@ -172,12 +172,13 @@ nav {
     cursor: pointer;
 }
 
-#linkedIn-button button p {
+#linkedIn-button span {
     margin-top: 0;
     margin-bottom: 0;
     border-left: 0.18rem solid white;
     padding-left: 0.35rem;
 
+    color: white;
     font-size: 1.2rem;
     font-weight: 600;
 }
@@ -341,10 +342,10 @@ body {
 
 .lightbox {
     position: fixed;
-    top: 0;
+    top: -0.75rem;
     left: 0;
     background-color: rgba(0, 0, 0, 0.95);
-    height: 100%;
+    height: 102%;
     width: 100%;
     z-index: 999;
     display: none;
@@ -410,7 +411,7 @@ a {
     margin-top: 0 !important;
 }
 
-.lightbox h2 {
+.lightbox h3 {
     margin-left: 0 !important;
     margin-bottom: 0.5rem !important;
 }
@@ -437,9 +438,10 @@ a {
     border-radius: 0.5rem;
     width: 100%;
     height: 100%;
+    border: none;
 }
 
-#project-button {
+.project-button {
     background-color: rgb(11, 102, 194);
     transition: background-color 0.15s;
 
@@ -456,7 +458,7 @@ a {
     margin-right: 1.5rem;
 }
 
-#project-button:hover {
+.project-button:hover {
     background-color: rgb(5, 79, 155);
     cursor: pointer;
 }
@@ -546,17 +548,17 @@ a {
 
 ul,
 ol {
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
-    margin-left: 0.5rem;
-    padding-right: 3.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 0rem;
+    padding-right: 2.3rem;
 }
 
 ol li::marker,
 ul li::marker {
     color: grey;
     font-family: Work Sans;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 
 }
 
@@ -567,14 +569,14 @@ ol li p {
 
 .label {
     border-bottom: 0.185rem solid var(--border-color);
-    padding-left: 0.5rem;
+    padding-left: 0.6rem;
 
     display: flex;
     align-items: center;
 }
 
 .label p {
-    padding-left: 1rem;
+    padding-left: 0.5rem;
     font-weight: 400;
 
     margin-top: 0.75rem;
@@ -595,12 +597,12 @@ ol li p {
 }
 
 #about-me {
-    transform: translateX(-3.5rem);
+    transform: translateX(-5rem);
 }
 
 #portrait {
     width: 19rem;
-    transform: translateX(28.4rem) translateY(-56.7rem);
+    transform: translateX(22rem) translateY(-49.5rem);
 }
 
 #portrait>img {
@@ -608,64 +610,68 @@ ol li p {
 }
 
 #languages {
-    transform: translateX(-27.3rem) translateY(-0.95rem);
+    transform: translateX(-23.2rem) translateY(-0.95rem);
 }
 
 #degrees {
-    transform: translateX(14.25rem) translateY(-22.3rem);
+    transform: translateX(10rem) translateY(-18.5rem);
 }
 
 #hobbys {
-    transform: translateX(-10.9rem) translateY(-2.2rem);
+    transform: translateX(-10.5rem) translateY(-3.5rem);
 }
 
-@media (max-width: 79.5rem) {
+#about {
+    height: 55.5rem;
+}
+
+@media (max-width: 65rem) {
     #about-me {
         transform: translateX(0rem);
     }
 
     #portrait {
-        transform: translateX(14.1rem) translateY(-33.95rem);
+        transform: translateX(8.8rem) translateY(-30rem);
     }
 
     #languages {
-        transform: translateX(-12.7rem) translateY(0.8rem);
+        transform: translateX(-10.4rem) translateY(0.8rem);
     }
 
     #degrees {
-        transform: translateX(5rem) translateY(2.2rem);
+        transform: translateX(3.4rem) translateY(4.1rem);
         /* 6.25rem */
     }
 
     #hobbys {
-        transform: translateX(-15.65rem) translateY(1.5rem);
+        transform: translateX(-12.4rem) translateY(1.5rem);
     }
 
     #about {
-        height: 83.8rem;
+        height: 74rem;
     }
 }
 
-@media (max-width: 50rem) {
+@media (max-width: 39.5rem) {
     #languages {
-        transform: translateX(0rem) translateY(0.15rem);
+        transform: translateX(-7.2rem) translateY(0.8rem);
     }
-
+    
     #hobbys {
-        transform: translateX(0rem) translateY(0.45rem);
+        transform: translateX(8.1rem) translateY(-9.2rem);
     }
-
+    
     #portrait {
-        transform: translateX(0rem) translateY(-12.55rem);
+        transform: translateX(0rem) translateY(-18.5rem);
     }
-
+    
     #degrees {
-        transform: translateX(0rem) translateY(24.2rem);
-        /* 6.25rem */
+        transform: translateX(0rem) translateY(15.6rem);
     }
+    
 
     #about {
-        height: 108rem;
+        height: 85.3rem;
     }
 }
 
@@ -726,9 +732,9 @@ ol li p {
     margin-top: 1rem;
 }
 
-input[type="name"],
+input[type="text"],
 input[type="email"],
-textarea[type="message"] {
+textarea {
     width: 44.15rem;
     height: 3rem;
     background-color: rgb(18, 18, 18);
@@ -746,7 +752,7 @@ textarea[type="message"] {
     padding-left: 1rem;
 }
 
-textarea[type="message"] {
+textarea {
     height: 2.85rem;
     overflow: hidden;
     width: 45.5rem;
@@ -885,7 +891,7 @@ footer {
 /* PROJECT PAGE */
 
 .project-title {
-    margin-top: 7.5rem;
+    margin-top: 8rem;
     font-size: 4rem;
 }
 
@@ -903,6 +909,9 @@ footer {
     margin: 0 auto;
     width: 100%;
     border-radius: 0.7rem;
+
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
 }
 
 .project-cover {
@@ -921,41 +930,32 @@ footer {
 }
 
 
+/* RESPONSIVE */
 
+.responsive #galery {
+    width: var(--responsive-main-width);
+}
 
+.responsive .container-waagerecht {
+    width: var(--responsive-main-width);
+}
 
+.responsive .container-youtube {
+    width: var(--responsive-main-width);
+}   
 
+.responsive .container-pdf {
+    width: var(--responsive-main-width);
+}
 
+.responsive .text-waagerecht {
+    width: var(--responsive-main-width);
+}
 
+.responsive .project-cover {
+    width: var(--responsive-main-width);
+}
 
-@media (max-width: var(--main-width)){
-    #galery {
-        width: var(--responsive-main-width);
-    }
-
-
-    .container-waagerecht {
-        width: var(--responsive-main-width);
-    }
-
-    .container-youtube {
-        width: var(--responsive-main-width);
-    }
-
-    .container-pdf {
-        width: var(--responsive-main-width);
-    }
-
-    .text-waagerecht {
-        width: var(--responsive-main-width);
-    }
-
-    .project-cover {
-        width: var(--responsive-main-width);
-    }
-
-    .project-description {
-        width: var(--responsive-main-width);
-    }
-    
+.responsive .project-description {
+    width: var(--responsive-main-width);
 }
