@@ -1,8 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap'); */
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('fonts/Work_Sans/WorkSans-VariableFont_wght.ttf') format('truetype');
+}
+
 
 :root {
-    --karl-font-size: 10;
     --border-color: rgb(82, 82, 82);
     --main-width: 63;
     --responsive-main-width: 96.75%;
@@ -89,7 +93,7 @@ p {
 }
 
 #karl a {
-    font-family: Oswald;
+    font-family: Work Sans;
     font-size: var(--karl-font-size);
     font-weight: 700;
 
@@ -313,30 +317,6 @@ body {
     background-color: rgb(30, 30, 30);
 }
 
-.middle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
-
-    opacity: 0;
-}
-
-.project:hover .middle {
-    opacity: 0.5;
-    transition-duration: 0.4s;
-}
-
-.galery-label {
-    font-family: Oswald;
-    font-weight: 700;
-    color: white;
-    line-height: 1;
-    font-size: 7.5vw;
-}
-
 
 /* LIGHTBOX */
 
@@ -558,7 +538,7 @@ ol li::marker,
 ul li::marker {
     color: grey;
     font-family: Work Sans;
-    font-size: 1.2rem;
+    font-size: 1rem;
 
 }
 
@@ -591,10 +571,16 @@ ol li p {
     float: right;
     margin-right: 0.5rem;
 
-    width: 1.7rem;
-    height: 1.7rem;
-
+    width: 1.2rem;
+    height: 1.2rem;
 }
+
+.icon path {
+    stroke-width: 1.1;
+    stroke: var(--border-color);
+    fill: var(--border-color);
+}
+
 
 #about-me {
     transform: translateX(-5rem);
@@ -614,7 +600,7 @@ ol li p {
 }
 
 #degrees {
-    transform: translateX(10rem) translateY(-18.5rem);
+    transform: translateX(9.4rem) translateY(-18.5rem);
 }
 
 #hobbys {
@@ -631,7 +617,7 @@ ol li p {
     }
 
     #portrait {
-        transform: translateX(8.8rem) translateY(-30rem);
+        transform: translateX(8.8rem) translateY(-29.6rem);
     }
 
     #languages {
@@ -639,12 +625,12 @@ ol li p {
     }
 
     #degrees {
-        transform: translateX(3.4rem) translateY(4.1rem);
+        transform: translateX(3.4rem) translateY(4.2rem);
         /* 6.25rem */
     }
 
     #hobbys {
-        transform: translateX(-12.4rem) translateY(1.5rem);
+        transform: translateX(-13rem) translateY(1.5rem);
     }
 
     #about {
@@ -741,7 +727,7 @@ textarea {
     /* rgb(48, 53, 53) */
 
     font-family: Work Sans;
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: white;
 
     border: 0.185rem solid var(--border-color);
@@ -927,6 +913,26 @@ footer {
 
 .project-description p {
     text-align: justify;
+}
+
+/* TABLE */
+
+table, th, td {
+  border: none;
+  font-family: Work Sans;
+  font-size: 1.2rem;
+  color: white;
+  text-align: left;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+table tr td:nth-child(2) {
+  padding-left: 3rem;
 }
 
 

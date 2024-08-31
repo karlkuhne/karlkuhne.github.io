@@ -8,7 +8,7 @@ document.addEventListener('scroll', function () {
 });
 
 
-// BURHFER MENU
+// BURGER MENU
 
 const hamburger = document.querySelector("#hamburger");
 const mainNav = document.querySelector("#main-nav");
@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setInitialMainWidth();
   adjustLayout();
 });
+
 
 // RESPONSIVE
 
