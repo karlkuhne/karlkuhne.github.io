@@ -10,13 +10,15 @@
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="scripts/parallax.js" defer></script>
     <script src="scripts/lightbox.js" defer></script>
+    <script src="scripts/cms.js" defer></script>
 </head>
 
 <body>
     <header>
         <nav>
             <div>
-                <a href=".parallax" id="logo" class="selectDisable" onclick="scrollToTarget(event)">karl-kuhne-portfolio</a>
+                <a href=".parallax" id="logo" class="selectDisable"
+                    onclick="scrollToTarget(event)">karl-kuhne-portfolio</a>
             </div>
             <div id="main-nav">
                 <div id="nav-buttons">
@@ -85,8 +87,8 @@
                 </div>
 
                 <div class="thumbnail" id="project-opening-credits">
-                    <img src=Ressources/Opening_Credits/Thumbnail.png alt="Thumbnail Opening Credits" class="selectDisable" draggable="false"
-                        oncontextmenu="return false;">
+                    <img src=Ressources/Opening_Credits/Thumbnail.png alt="Thumbnail Opening Credits"
+                        class="selectDisable" draggable="false" oncontextmenu="return false;">
                 </div>
             </div>
 
@@ -115,108 +117,75 @@
                     </svg>
                 </div>
                 <div class="thumbnail" id="project-term-paper">
-                    <img src="Ressources/Term_Paper/Thumbnail.png" alt="Designing for immersion: The influence of diegetic player guidance on the gaming experience | Karl Kuhne 2024" class="selectDisable" draggable="false"
-                        oncontextmenu="return false;">
+                    <img src="Ressources/Term_Paper/Thumbnail.png"
+                        alt="Designing for immersion: The influence of diegetic player guidance on the gaming experience | Karl Kuhne 2024"
+                        class="selectDisable" draggable="false" oncontextmenu="return false;">
                 </div>
             </div>
 
-            <!-- CUBISM -->
-            <div class="box project">
-                <div class="label">
-                    <p>cubistic-portraits</p>
+            <!-- CUBISM & CHARACTER DESIGN TEMPLATE -->
+            <template id="project-template">
+                <div class="box project" data-project-id="">
+                    <div class="label">
+                        <p class="label-text"></p>
 
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                        <path d="M2.67 8c0-.37.3-.67.66-.67h9.34a.67.67 0 1 1 0 1.34H3.33A.67.67 0 0 1 2.67 8"
-                            style="touch-action: none;"></path>
-                    </svg>
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                            <path d="M2.67 8c0-.37.3-.67.66-.67h9.34a.67.67 0 1 1 0 1.34H3.33A.67.67 0 0 1 2.67 8"
+                                style="touch-action: none;"></path>
+                        </svg>
 
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path
-                            d="M8.2 4c-1.12 0-1.82-.05-2.56.33a3 3 0 0 0-1.31 1.3C3.95 6.39 4 7.09 4 8.2v7.6c0 1.12-.05 1.82.33 2.56a3 3 0 0 0 1.3 1.31c.75.38 1.45.33 2.57.33h7.6c1.12 0 1.82.05 2.56-.33a3 3 0 0 0 1.31-1.3c.38-.75.33-1.45.33-2.57V8.2c0-1.12.05-1.82-.33-2.56a3 3 0 0 0-1.3-1.31C17.61 3.95 16.91 4 15.8 4Zm0 2h7.6c1.12 0 1.54.05 1.65.1a1 1 0 0 1 .44.45c.06.11.11.53.11 1.65v7.6c0 1.12-.05 1.54-.1 1.65a1 1 0 0 1-.45.44c-.11.06-.53.11-1.65.11H8.2a6 6 0 0 1-1.65-.1 1 1 0 0 1-.44-.45A6 6 0 0 1 6 15.8V8.2c0-1.12.05-1.54.1-1.65a1 1 0 0 1 .45-.44C6.66 6.05 7.08 6 8.2 6"
-                            style="touch-action: none;"></path>
-                    </svg>
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M8.2 4c-1.12 0-1.82-.05-2.56.33a3 3 0 0 0-1.31 1.3C3.95 6.39 4 7.09 4 8.2v7.6c0 1.12-.05 1.82.33 2.56a3 3 0 0 0 1.3 1.31c.75.38 1.45.33 2.57.33h7.6c1.12 0 1.82.05 2.56-.33a3 3 0 0 0 1.31-1.3c.38-.75.33-1.45.33-2.57V8.2c0-1.12.05-1.82-.33-2.56a3 3 0 0 0-1.3-1.31C17.61 3.95 16.91 4 15.8 4Zm0 2h7.6c1.12 0 1.54.05 1.65.1a1 1 0 0 1 .44.45c.06.11.11.53.11 1.65v7.6c0 1.12-.05 1.54-.1 1.65a1 1 0 0 1-.45.44c-.11.06-.53.11-1.65.11H8.2a6 6 0 0 1-1.65-.1 1 1 0 0 1-.44-.45A6 6 0 0 1 6 15.8V8.2c0-1.12.05-1.54.1-1.65a1 1 0 0 1 .45-.44C6.66 6.05 7.08 6 8.2 6"
+                                style="touch-action: none;"></path>
+                        </svg>
 
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                        <path
-                            d="M3.53 3.53a.67.67 0 0 1 .94 0L8 7.06l3.53-3.53a.67.67 0 1 1 .94.94L8.94 8l3.53 3.53a.67.67 0 1 1-.94.94L8 8.94l-3.53 3.53a.67.67 0 1 1-.94-.94L7.06 8 3.53 4.47a.67.67 0 0 1 0-.94"
-                            style="touch-action: none;"></path>
-                    </svg>
-                </div>
-                <div class="thumbnail" id="project-cubism">
-                    <img src="Ressources/Experimentelles_Projekt/Thumbnail.png" alt="Cubistic portrait of a woman" class="selectDisable" draggable="false"
-                        oncontextmenu="return false;">
-                </div>
-            </div>
-
-            <!-- CHARACTER DESIGN -->
-            <div class="box project">
-                <div class="label">
-                    <p>character-design</p>
-
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                        <path d="M2.67 8c0-.37.3-.67.66-.67h9.34a.67.67 0 1 1 0 1.34H3.33A.67.67 0 0 1 2.67 8"
-                            style="touch-action: none;"></path>
-                    </svg>
-
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path
-                            d="M8.2 4c-1.12 0-1.82-.05-2.56.33a3 3 0 0 0-1.31 1.3C3.95 6.39 4 7.09 4 8.2v7.6c0 1.12-.05 1.82.33 2.56a3 3 0 0 0 1.3 1.31c.75.38 1.45.33 2.57.33h7.6c1.12 0 1.82.05 2.56-.33a3 3 0 0 0 1.31-1.3c.38-.75.33-1.45.33-2.57V8.2c0-1.12.05-1.82-.33-2.56a3 3 0 0 0-1.3-1.31C17.61 3.95 16.91 4 15.8 4Zm0 2h7.6c1.12 0 1.54.05 1.65.1a1 1 0 0 1 .44.45c.06.11.11.53.11 1.65v7.6c0 1.12-.05 1.54-.1 1.65a1 1 0 0 1-.45.44c-.11.06-.53.11-1.65.11H8.2a6 6 0 0 1-1.65-.1 1 1 0 0 1-.44-.45A6 6 0 0 1 6 15.8V8.2c0-1.12.05-1.54.1-1.65a1 1 0 0 1 .45-.44C6.66 6.05 7.08 6 8.2 6"
-                            style="touch-action: none;"></path>
-                    </svg>
-
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                        <path
-                            d="M3.53 3.53a.67.67 0 0 1 .94 0L8 7.06l3.53-3.53a.67.67 0 1 1 .94.94L8.94 8l3.53 3.53a.67.67 0 1 1-.94.94L8 8.94l-3.53 3.53a.67.67 0 1 1-.94-.94L7.06 8 3.53 4.47a.67.67 0 0 1 0-.94"
-                            style="touch-action: none;"></path>
-                    </svg>
-                </div>
-                <div class="thumbnail" id="project-character-design">
-                    <img src="Ressources/Character_Design/Thumbnail.png" alt="Mushroom man turnaround" class="selectDisable" draggable="false"
-                        oncontextmenu="return false;">
-                </div>
-            </div>
-
-
-            <!-- LIGHTBOX CHARACTER DESIGN -->
-            <div class="lightbox" id="lightbox-character-design">
-                <span class="close selectDisable">&times;</span>
-
-                <div class="wrapper-waagerecht wrapper-waagerecht-slideshow">
-                    <div class="container-waagerecht">
-                        <img src="Ressources/Character_Design/Thumbnail1.png" alt="Mushroom man turnaround"
-                            class="character-design-slides selectDisable" draggable="false"
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                            <path
+                                d="M3.53 3.53a.67.67 0 0 1 .94 0L8 7.06l3.53-3.53a.67.67 0 1 1 .94.94L8.94 8l3.53 3.53a.67.67 0 1 1-.94.94L8 8.94l-3.53 3.53a.67.67 0 1 1-.94-.94L7.06 8 3.53 4.47a.67.67 0 0 1 0-.94"
+                                style="touch-action: none;"></path>
+                        </svg>
+                    </div>
+                    <div class="thumbnail">
+                        <img class="thumbnail-img" src="" alt="" class="selectDisable" draggable="false"
                             oncontextmenu="return false;">
-                        <img src="Ressources/Character_Design/Posen.png" alt="Mushroom man doing monk poses"
-                            class="character-design-slides selectDisable" draggable="false"
-                            oncontextmenu="return false;">
-                        <img src="Ressources/Character_Design/Emotions.png" alt="Mushroom man faces showing emotions"
-                            class="character-design-slides selectDisable" draggable="false"
-                            oncontextmenu="return false;">
+                    </div>
+                </div>
+            </template>
+
+            <!-- Container for the Projects -->
+            <div id="projects-container"></div>
+
+
+            <!-- LIGHTBOX TEMPLATE -->
+            <template id="lightbox-template">
+                <div class="lightbox">
+                    <span class="close selectDisable">&times;</span>
+
+                    <div class="wrapper-waagerecht wrapper-waagerecht-slideshow">
+                        <div class="container-waagerecht">
+                            <!-- Die Bilder der Lightbox werden hier dynamisch eingefügt -->
+                        </div>
 
                         <div class="navigation">
-                            <a class="prev selectDisable" onclick="plusCharacterDesignSlides(-1)">❮</a>
-                            <a class="next selectDisable" onclick="plusCharacterDesignSlides(1)">❯</a>
+                            <a class="prev selectDisable" onclick="plusSlides(-1)">❮</a>
+                            <a class="next selectDisable" onclick="plusSlides(1)">❯</a>
                         </div>
 
                         <div class="dots-slideshow-waagerecht">
-                            <span class="dot" onclick="currentCharacterDesignSlide(1)"></span>
-                            <span class="dot" onclick="currentCharacterDesignSlide(2)"></span>
-                            <span class="dot" onclick="currentCharacterDesignSlide(3)"></span>
+                            <!-- Die Dots für die Navigation werden hier dynamisch eingefügt -->
                         </div>
                     </div>
 
                     <div class="text-waagerecht">
-                        <h3>Character Design</h3>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-                            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                            diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-                            voluptua.</p>
-                        <a class="project-button selectDisable" href="character-design.html">Project Page</a>
+                        <h3 class="project-title"></h3>
+                        <p class="project-description"></p>
+                        <a class="project-button selectDisable" href="" target="_blank">Project Page</a>
                     </div>
                 </div>
-            </div>
+            </template>
+
+
 
 
             <!-- LIGHTBOX OPENING CREDITS -->
@@ -264,48 +233,6 @@
 
             </div>
 
-
-            <!-- LIGHTBOX CUBISM -->
-
-            <div class="lightbox" id="lightbox-cubism">
-                <span class="close  selectDisable">&times;</span>
-
-                <div class="wrapper-waagerecht wrapper-waagerecht-slideshow">
-                    <div class="container-waagerecht">
-                        <img src="Ressources/Experimentelles_Projekt/3.png" alt="Cubistic portraits of a man and a woman"
-                            class="cubism-slides selectDisable" draggable="false"
-                            oncontextmenu="return false;">
-                        <img src="Ressources/Experimentelles_Projekt/1.png" alt="Cubistic portraits of two women"
-                            class="cubism-slides selectDisable" draggable="false"
-                            oncontextmenu="return false;">
-                        <img src="Ressources/Experimentelles_Projekt/2.png" alt="Cubistic portraits of a man and a woman"
-                            class="cubism-slides selectDisable" draggable="false"
-                            oncontextmenu="return false;">
-
-                        <div class="navigation">
-                            <a class="prev selectDisable" onclick="plusCubismSlides(-1)">❮</a>
-                            <a class="next selectDisable" onclick="plusCubismSlides(1)">❯</a>
-                        </div>
-
-                        <div class="dots-slideshow-waagerecht">
-                            <span class="dot1" onclick="currentCubismSlide(1)"></span>
-                            <span class="dot1" onclick="currentCubismSlide(2)"></span>
-                            <span class="dot1" onclick="currentCubismSlide(3)"></span>
-                        </div>
-                    </div>
-
-                    <div class="text-waagerecht">
-                        <h3>Cubism</h3>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-                            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                            diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-                            voluptua.</p>
-                        <a class="project-button selectDisable" href="cubism.html">Project Page</a>
-                    </div>
-                </div>
-            </div>
 
         </section>
 
