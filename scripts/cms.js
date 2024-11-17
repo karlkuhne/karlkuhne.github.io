@@ -8,7 +8,9 @@ const projectsData = {
             "images": [
                 "Ressources/Caveman_hits_Giraffe_in_a_Car/1.png",
                 "Ressources/Caveman_hits_Giraffe_in_a_Car/2.png",
-                "Ressources/Caveman_hits_Giraffe_in_a_Car/3.png"
+                "Ressources/Caveman_hits_Giraffe_in_a_Car/3.png",
+                "Ressources/Caveman_hits_Giraffe_in_a_Car/4.png",
+                "Ressources/Caveman_hits_Giraffe_in_a_Car/5.png"
             ],
             "name": "Caveman hits Giraffe in a Car",
             "description": "„Caveman Hits Giraffe in a Car“ ist ein rasantes Actionspiel, das während eines 5-tägigen Game Jams entstanden ist. In diesem handgezeichneten Roguelite kämpfst du gegen immer schwierigere Gegnerwellen, die aus den unterschiedlichsten Gegnertypen bestehen. Nach jeder Welle kannst du eine von drei Fähigkeiten verbessern: Gesundheit, Schaden oder Geschwindigkeit. Sammle zwischen den Spielen Punkte um einzigartige Fähigkeiten freizuspielen und miss dich mit unserer Spielerschaft auf der öffentlichen Bestenliste.",
