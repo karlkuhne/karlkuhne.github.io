@@ -1,8 +1,5 @@
 // LIGHTBOX OPEN
-document.querySelector('#project-character-design').onclick = () => {
-    document.querySelector('#lightbox-character-design').style.display = 'flex';
-    document.body.classList.add('no-scroll');
-  };
+
   
   document.querySelector('#project-opening-credits').onclick = () => {
     document.querySelector('#lightbox-opening-credits').style.display = 'flex';
@@ -14,10 +11,7 @@ document.querySelector('#project-character-design').onclick = () => {
     document.body.classList.add('no-scroll');
   };
   
-  document.querySelector('#project-cubism').onclick = () => {
-    document.querySelector('#lightbox-cubism').style.display = 'flex';
-    document.body.classList.add('no-scroll');
-  };
+  
   
   
   // YOUTUBE PLAYER

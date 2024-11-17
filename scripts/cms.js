@@ -96,7 +96,8 @@ function openLightbox(project) {
     lightbox.style.display = 'flex';
     document.body.classList.add('no-scroll');
 
-    // Aktiviere den ersten Dot
+    // Setze den aktuellen Index auf 1 (startet bei der ersten Folie)
+    currentIndex = 1;
     showSlides(currentIndex); // Zeigt das erste Bild und markiert den ersten Dot als aktiv
 
     // Event Listener für das Schließen der Lightbox
@@ -109,8 +110,8 @@ function openLightbox(project) {
 }
 
 
-// Hilfsfunktionen für die Bildnavigation
-let currentIndex = 1;
+
+let currentIndex = 1; // Standardmäßig auf das erste Bild setzen
 
 function plusSlides(n) {
     showSlides(currentIndex += n);
@@ -140,6 +141,7 @@ function showSlides(n) {
     slides[currentIndex - 1].style.display = 'block';
     dots[currentIndex - 1].classList.add('active');
 }
+
 
 
 // Rufe die Funktion auf, um die Projekte zu generieren
