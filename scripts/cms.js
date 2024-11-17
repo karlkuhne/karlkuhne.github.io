@@ -150,10 +150,25 @@ function openLightbox(project) {
     // Event Listener für das Schließen der Lightbox
     const closeBtn = lightbox.querySelector('.close');
     closeBtn.addEventListener('click', () => {
+        closeLightbox(lightbox);
+    });
+
+    // Event Listener für Escape-Taste zum Schließen der Lightbox
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            closeLightbox(lightbox);
+        }
+    });
+
+    // Funktion zum Schließen der Lightbox
+    function closeLightbox(lightbox) {
         lightbox.style.display = 'none';
         document.body.classList.remove('no-scroll');
         lightbox.remove();
-    });
+
+        // Entferne den Event Listener für Escape, wenn die Lightbox geschlossen wird
+        document.removeEventListener('keydown', closeOnEscape);
+    }
 }
 
 let currentIndex = 1; // Standardmäßig auf das erste Bild setzen

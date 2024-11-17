@@ -48,18 +48,4 @@
     };
   });
 
-  document.addEventListener('keydown', (event) => {
-    if (event.key === "Escape") {
-        // Finde die aktuell sichtbare Lightbox
-        const openLightbox = document.querySelector('.lightbox[style*="display: flex"]');
-        
-        if (openLightbox) {
-            // Schließe die Lightbox
-            openLightbox.style.display = 'none';
-            document.body.classList.remove('no-scroll');
-            openLightbox.remove(); // Entfernt die Lightbox aus dem DOM
-        }
-    }
-});
-
   
