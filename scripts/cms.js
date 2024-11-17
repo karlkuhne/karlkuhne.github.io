@@ -2,36 +2,18 @@
 const projectsData = {
     "projects": [
         {
-            "label": "opening-credits",
-            "thumbnail": "Ressources/Opening_Credits/Thumbnail.png",
-            "type": "iframe",
-            "src": "https://www.youtube.com/embed/e4t05vSzYPg",
-            "name": "Opening Credits",
-            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-            "projectPage": "openingcredits.html"
-        },
-
-        {
-            "label": "term-paper",
-            "thumbnail": "Ressources/Term_Paper/Thumbnail.png",
-            "type": "iframe",
-            "src": "Ressources/Term_Paper/Term_Paper.pdf",
-            "name": "Designing for immersion: The influence of diegetic player guidance on the gaming experience",
-            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-            "projectPage": "diegesis.html"
-        },
-        {
-            "label": "cubistic-portraits",
-            "thumbnail": "Ressources/Experimentelles_Projekt/Thumbnail.png",
+            "label": "unity-game",
+            "thumbnail": "Ressources/Caveman_hits_Giraffe_in_a_Car/Thumbnail.png",
             "type": "slideshow",
             "images": [
-                "Ressources/Experimentelles_Projekt/3.png",
-                "Ressources/Experimentelles_Projekt/1.png",
-                "Ressources/Experimentelles_Projekt/2.png"
+                "Ressources/Caveman_hits_Giraffe_in_a_Car/1.png",
+                "Ressources/Caveman_hits_Giraffe_in_a_Car/2.png",
+                "Ressources/Caveman_hits_Giraffe_in_a_Car/3.png"
             ],
-            "name": "Cubism",
-            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-            "projectPage": "cubism.html"
+            "name": "Caveman hits Giraffe in a Car",
+            "description": "„Caveman Hits Giraffe in a Car“ ist ein rasantes Actionspiel, das während eines 5-tägigen Game Jams entstanden ist. In diesem handgezeichneten Roguelite kämpfst du gegen immer schwierigere Gegnerwellen, die aus den unterschiedlichsten Gegnertypen bestehen. Nach jeder Welle kannst du eine von drei Fähigkeiten verbessern: Gesundheit, Schaden oder Geschwindigkeit. Sammle zwischen den Spielen Punkte um einzigartige Fähigkeiten freizuspielen und miss dich mit unserer Spielerschaft auf der öffentlichen Bestenliste.",
+            "projectPage": "game.html"
+
         },
         {
             "label": "character-design",
@@ -47,19 +29,40 @@ const projectsData = {
             "projectPage": "character-design.html"
         },
         {
-            "label": "unity-game",
-            "thumbnail": "Ressources/Caveman_hits_Giraffe_in_a_Car/Thumbnail.png",
+            "label": "term-paper",
+            "thumbnail": "Ressources/Term_Paper/Thumbnail.png",
+            "type": "iframe",
+            "src": "Ressources/Term_Paper/Term_Paper.pdf",
+            "name": "Designing for immersion: The influence of diegetic player guidance on the gaming experience",
+            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "projectPage": "diegesis.html"
+        },
+        {
+            "label": "opening-credits",
+            "thumbnail": "Ressources/Opening_Credits/Thumbnail.png",
+            "type": "iframe",
+            "src": "https://www.youtube.com/embed/e4t05vSzYPg",
+            "name": "Opening Credits",
+            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "projectPage": "openingcredits.html"
+        },
+
+        
+        {
+            "label": "cubistic-portraits",
+            "thumbnail": "Ressources/Experimentelles_Projekt/Thumbnail.png",
             "type": "slideshow",
             "images": [
-                "Ressources/Caveman_hits_Giraffe_in_a_Car/1.png",
-                "Ressources/Caveman_hits_Giraffe_in_a_Car/2.png",
-                "Ressources/Caveman_hits_Giraffe_in_a_Car/3.png"
+                "Ressources/Experimentelles_Projekt/3.png",
+                "Ressources/Experimentelles_Projekt/1.png",
+                "Ressources/Experimentelles_Projekt/2.png"
             ],
-            "name": "Caveman hits Giraffe in a Car",
+            "name": "Cubism",
             "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-            "projectPage": "game.html"
-
+            "projectPage": "cubism.html"
         },
+        
+        
         
     ]
 };
