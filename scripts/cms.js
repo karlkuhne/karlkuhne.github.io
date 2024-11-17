@@ -36,7 +36,7 @@ const projectsData = {
             "src": "Ressources/Term_Paper/Term_Paper.pdf",
             "name": "Designing for immersion: The influence of diegetic player guidance on the gaming experience",
             "description": "Ein rasantes Action-Roguelike, das aus einem 5-tägigen Game Jam entstanden ist. Kämpfe gegen abwechslungsreiche Gegnerwellen, verbessere deine Fähigkeiten und verewige dich auf der Bestenliste.",
-
+            "website": "Ressources/Term_Paper/Term_Paper.pdf",
         },
         {
             "label": "vorspann",
