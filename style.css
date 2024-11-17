@@ -647,8 +647,13 @@ ol li p {
 }
 
 @media (max-width: 48rem) {
+    #about-me {
+        transform: translateX(0rem) translateY(0rem);
+        width: 24rem;
+    }
+
     #languages {
-        transform: translateX(0rem) translateY(36.3rem);
+        transform: translateX(0rem) translateY(36.1rem);
     }
     
     #hobbys {
@@ -656,11 +661,11 @@ ol li p {
     }
     
     #portrait {
-        transform: translateX(0rem) translateY(-21.5rem);
+        transform: translateX(0rem) translateY(-24.5rem);
     }
     
     #degrees {
-        transform: translateX(0rem) translateY(26.1rem);
+        transform: translateX(0rem) translateY(25.9rem);
     }
     
 

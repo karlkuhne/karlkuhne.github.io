@@ -98,6 +98,8 @@ function generateProjects() {
 
 // Funktion zum Öffnen der Lightbox und Laden der Inhalte
 // Funktion zum Öffnen der Lightbox und Laden der Inhalte
+// Funktion zum Öffnen der Lightbox und Laden der Inhalte
+// Funktion zum Öffnen der Lightbox und Laden der Inhalte
 function openLightbox(project) {
     const template = document.getElementById('lightbox-template');
     const clone = template.content.cloneNode(true);
@@ -133,11 +135,20 @@ function openLightbox(project) {
         const iframe = document.createElement('iframe');
         iframe.src = project.src;
         iframe.classList.add('pdf-viewer');
-        /* iframe.style.width = "100%";
-        iframe.style.height = "100%"; */
         iframe.frameBorder = "0";
         iframe.allow = "fullscreen";
+        iframe.style.width = "100%"; // Setze die Breite auf 100%
+        
+        // Füge den iFrame zum Container hinzu, bevor wir die Höhe berechnen
         imagesContainer.appendChild(iframe);
+
+        // Warte, bis der iFrame vollständig geladen ist
+        iframe.onload = () => {
+            // Berechne die Höhe des iFrames (9:16 Verhältnis)
+            const iframeWidth = iframe.offsetWidth; // Breite des iFrames
+            const iframeHeight = iframeWidth * 9 / 16; // Höhe basierend auf 9:16
+            iframe.style.height = iframeHeight + 'px'; // Setze die Höhe dynamisch
+        };
 
         // Entferne die Dots und Navigations-Buttons, da sie nicht für PDFs benötigt werden
         dotsContainer.style.display = 'none';
@@ -210,8 +221,8 @@ function openLightbox(project) {
             closeLightbox(lightbox);
         }
     });
-
 }
+
 
 
 
