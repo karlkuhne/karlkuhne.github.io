@@ -2,7 +2,7 @@
 const projectsData = {
     "projects": [
         {
-            "label": "unity-game",
+            "label": "unity-spiel",
             "thumbnail": "Ressources/Caveman_hits_Giraffe_in_a_Car/Thumbnail.png",
             "type": "slideshow",
             "images": [
@@ -29,7 +29,7 @@ const projectsData = {
             "projectPage": "character-design.html"
         },
         {
-            "label": "term-paper",
+            "label": "hausarbeit",
             "thumbnail": "Ressources/Term_Paper/Thumbnail.png",
             "type": "iframe",
             "src": "Ressources/Term_Paper/Term_Paper.pdf",
@@ -38,7 +38,7 @@ const projectsData = {
             "projectPage": "diegesis.html"
         },
         {
-            "label": "opening-credits",
+            "label": "vorspann",
             "thumbnail": "Ressources/Opening_Credits/Thumbnail.png",
             "type": "iframe",
             "src": "https://www.youtube.com/embed/e4t05vSzYPg",
@@ -49,7 +49,7 @@ const projectsData = {
 
         
         {
-            "label": "cubistic-portraits",
+            "label": "kubistische-portraits",
             "thumbnail": "Ressources/Experimentelles_Projekt/Thumbnail.png",
             "type": "slideshow",
             "images": [

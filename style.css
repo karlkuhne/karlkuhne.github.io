@@ -549,6 +549,10 @@ ul li::marker {
 
 }
 
+ol li {
+  padding-bottom: 0.5rem;
+}
+
 ol li p {
     margin-top: 0;
     margin-bottom: 0;
@@ -590,12 +594,12 @@ ol li p {
 
 
 #about-me {
-    transform: translateX(-5rem);
+    transform: translateX(-7rem);
 }
 
 #portrait {
     width: 19rem;
-    transform: translateX(22rem) translateY(-49.5rem);
+    transform: translateX(23rem) translateY(-50.2rem);
 }
 
 #portrait>img {
@@ -603,19 +607,19 @@ ol li p {
 }
 
 #languages {
-    transform: translateX(-23.2rem) translateY(-0.95rem);
+    transform: translateX(-23.5rem) translateY(-0.95rem);
 }
 
 #degrees {
-    transform: translateX(9.4rem) translateY(-18.5rem);
+    transform: translateX(10.4rem) translateY(-18.5rem);
 }
 
 #hobbys {
-    transform: translateX(-10.5rem) translateY(-3.5rem);
+    transform: translateX(-10.5rem) translateY(-2rem);
 }
 
 #about {
-    height: 55.5rem;
+    height: 63rem;
 }
 
 @media (max-width: 65rem) {
