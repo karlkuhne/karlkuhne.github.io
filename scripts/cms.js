@@ -2,10 +2,20 @@
 const projectsData = {
     "projects": [
         {
+            "label": "opening-credits",
+            "thumbnail": "Ressources/Opening_Credits/Thumbnail.png",
+            "type": "iframe",
+            "src": "https://www.youtube.com/embed/e4t05vSzYPg",
+            "name": "Opening Credits",
+            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "projectPage": "openingcredits.html"
+        },
+
+        {
             "label": "term-paper",
             "thumbnail": "Ressources/Term_Paper/Thumbnail.png",
-            "type": "pdf",
-            "pdfSrc": "Ressources/Term_Paper/Term_Paper.pdf",
+            "type": "iframe",
+            "src": "Ressources/Term_Paper/Term_Paper.pdf",
             "name": "Designing for immersion: The influence of diegetic player guidance on the gaming experience",
             "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
             "projectPage": "diegesis.html"
@@ -83,6 +93,7 @@ function generateProjects() {
 }
 
 // Funktion zum Öffnen der Lightbox und Laden der Inhalte
+// Funktion zum Öffnen der Lightbox und Laden der Inhalte
 function openLightbox(project) {
     const template = document.getElementById('lightbox-template');
     const clone = template.content.cloneNode(true);
@@ -112,10 +123,10 @@ function openLightbox(project) {
             dot.onclick = () => currentSlide(index + 1); // Wechselt zum entsprechenden Bild
             dotsContainer.appendChild(dot);
         });
-    } else if (project.type === "pdf") { // PDF
-        // Füge ein Iframe hinzu, das die PDF anzeigt
+    } else if (project.type === "iframe") { // PDF oder Video
+        // Füge ein Iframe hinzu, das die PDF oder das Video anzeigt
         const iframe = document.createElement('iframe');
-        iframe.src = project.pdfSrc;
+        iframe.src = project.src;
         iframe.classList.add('pdf-viewer');
         iframe.style.width = "100%";
         iframe.style.height = "100%";
@@ -135,6 +146,9 @@ function openLightbox(project) {
     projectName.textContent = project.name;
     projectDescription.textContent = project.description;
     projectButton.href = project.projectPage;
+
+    // Setze sicher, dass der Button im gleichen Tab öffnet
+    projectButton.target = "_self"; // Ensures the project link opens in the same tab
 
     // Füge die Lightbox zum Body hinzu und öffne sie
     document.body.appendChild(clone);
@@ -170,6 +184,7 @@ function openLightbox(project) {
         document.removeEventListener('keydown', closeOnEscape);
     }
 }
+
 
 let currentIndex = 1; // Standardmäßig auf das erste Bild setzen
 
