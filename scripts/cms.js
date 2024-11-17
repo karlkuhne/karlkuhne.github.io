@@ -2,6 +2,15 @@
 const projectsData = {
     "projects": [
         {
+            "label": "term-paper",
+            "thumbnail": "Ressources/Term_Paper/Thumbnail.png",
+            "type": "pdf",
+            "pdfSrc": "Ressources/Term_Paper/Term_Paper.pdf",
+            "name": "Designing for immersion: The influence of diegetic player guidance on the gaming experience",
+            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "projectPage": "diegesis.html"
+        },
+        {
             "label": "cubistic-portraits",
             "thumbnail": "Ressources/Experimentelles_Projekt/Thumbnail.png",
             "type": "slideshow",
@@ -41,15 +50,7 @@ const projectsData = {
             "projectPage": "game.html"
 
         },
-        {
-            "label": "term-paper",
-            "thumbnail": "Ressources/Term_Paper/Thumbnail.png",
-            "type": "pdf",
-            "pdfSrc": "Ressources/Term_Paper/Term_Paper.pdf",
-            "name": "Designing for immersion: The influence of diegetic player guidance on the gaming experience",
-            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-            "projectPage": "diegesis.html"
-        }
+        
     ]
 };
 
