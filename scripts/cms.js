@@ -9,8 +9,8 @@ const projectsData = {
                 "Ressources/Experimentelles_Projekt/1.png",
                 "Ressources/Experimentelles_Projekt/2.png"
             ],
-            "title": "Cubism",
-            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr...",
+            "name": "Cubism",
+            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
             "projectPage": "cubism.html"
         },
         {
@@ -21,9 +21,22 @@ const projectsData = {
                 "Ressources/Character_Design/Posen.png",
                 "Ressources/Character_Design/Emotions.png"
             ],
-            "title": "Character Design",
-            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr...",
+            "name": "Character Design",
+            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
             "projectPage": "character-design.html"
+        },
+        {
+            "label": "unity-game",
+            "thumbnail": "Ressources/Caveman_hits_Giraffe_in_a_Car/Thumbnail.png",
+            "images": [
+                "Ressources/Caveman_hits_Giraffe_in_a_Car/1.png",
+                "Ressources/Caveman_hits_Giraffe_in_a_Car/2.png",
+                "Ressources/Caveman_hits_Giraffe_in_a_Car/3.png"
+            ],
+            "name": "Caveman hits Giraffe in a Car",
+            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "projectPage": "game.html"
+
         }
     ]
 };
@@ -65,7 +78,7 @@ function openLightbox(project) {
     const lightbox = clone.querySelector('.lightbox');
     const imagesContainer = clone.querySelector('.container-waagerecht');
     const dotsContainer = clone.querySelector('.dots-slideshow-waagerecht');
-    const projectTitle = clone.querySelector('.project-title');
+    const projectName = clone.querySelector('.project-name');
     const projectDescription = clone.querySelector('.project-description');
     const projectButton = clone.querySelector('.project-button');
 
@@ -87,7 +100,7 @@ function openLightbox(project) {
     });
 
     // Textinhalt der Lightbox
-    projectTitle.textContent = project.title;
+    projectName.textContent = project.name;
     projectDescription.textContent = project.description;
     projectButton.href = project.projectPage;
 

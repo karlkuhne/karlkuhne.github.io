@@ -46,71 +46,20 @@
     lightbox.querySelector('.close').onclick = () => {
       closeLightbox(lightbox);
     };
-  
-    document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape' && lightbox.style.display !== 'none') {
-        closeLightbox(lightbox);
-      }
-    });
   });
-  
-  function closeLightbox(lightbox) {
-    lightbox.style.display = 'none';
-    document.body.classList.remove('no-scroll');
-    if (lightbox.classList.contains('youtube-lightbox') && player) {
-      player.pauseVideo(); // Das Video wird gestoppt, wenn die Lightbox geschlossen wird
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === "Escape") {
+        // Finde die aktuell sichtbare Lightbox
+        const openLightbox = document.querySelector('.lightbox[style*="display: flex"]');
+        
+        if (openLightbox) {
+            // Schließe die Lightbox
+            openLightbox.style.display = 'none';
+            document.body.classList.remove('no-scroll');
+            openLightbox.remove(); // Entfernt die Lightbox aus dem DOM
+        }
     }
-  }
+});
+
   
-  
-  // SLIDESHOW
-  
-  function showSlides(slideIndex, slideClass, dotClass) {
-    let i;
-    let slides = document.getElementsByClassName(slideClass);
-    let dots = document.getElementsByClassName(dotClass);
-    if (slideIndex > slides.length) { slideIndex = 1; }
-    if (slideIndex < 1) { slideIndex = slides.length; }
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-    return slideIndex;
-  }
-  
-  let characterDesignSlideIndex = 1;
-  let cubismSlideIndex = 1;
-  
-  showSlides(characterDesignSlideIndex, "character-design-slides", "dot");
-  showSlides(cubismSlideIndex, "cubism-slides", "dot1");
-  
-  function plusSlides(n, slideIndex, slideClass, dotClass) {
-    slideIndex += n;
-    return showSlides(slideIndex, slideClass, dotClass);
-  }
-  
-  function currentSlide(n, slideClass, dotClass) {
-    return showSlides(n, slideClass, dotClass);
-  }
-  
-  // CHARACTER DESIGN SHLIDESHOW CONTROLS
-  function plusCharacterDesignSlides(n) {
-    characterDesignSlideIndex = plusSlides(n, characterDesignSlideIndex, "character-design-slides", "dot");
-  }
-  
-  function currentCharacterDesignSlide(n) {
-    characterDesignSlideIndex = currentSlide(n, "character-design-slides", "dot");
-  }
-  
-  // CUBISM SLIDESHOW CONTROLS
-  function plusCubismSlides(n) {
-    cubismSlideIndex = plusSlides(n, cubismSlideIndex, "cubism-slides", "dot1");
-  }
-  
-  function currentCubismSlide(n) {
-    cubismSlideIndex = currentSlide(n, "cubism-slides", "dot1");
-  }

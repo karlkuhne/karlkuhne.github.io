@@ -273,7 +273,6 @@ body {
     display: flex;
     flex-wrap: wrap;
 
-    gap: 1rem;
     padding-top: 1rem;
 
     justify-content: center;
@@ -286,6 +285,8 @@ body {
     cursor: pointer;
     position: relative;
     overflow: hidden;
+
+    margin-top: 1rem;
 }
 
 .project.fade-in {
@@ -329,7 +330,8 @@ body {
     width: 100%;
     z-index: 999;
     display: none;
-
+    
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -359,7 +361,7 @@ a {
 
 .wrapper-waagerecht {
     width: var(--main-width); /* 103.5rem */
-    height: 90%;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -381,9 +383,14 @@ a {
     object-fit: contain;
 }
 
-.text-waagerecht {
+.text-waagerecht .project-description{
     align-self: center;
     width: var(--main-width); /* 103.5rem */
+    margin-bottom: 2rem;
+}
+
+.text-waagerecht {
+    margin-left: 1rem;
 }
 
 .lightbox p {
@@ -445,9 +452,9 @@ a {
 
 .navigation {
     position: absolute;
-    top: 50%;
+    top: 39%;
     transform: translateY(-50%);
-    width: calc(100% - 40px);
+    width: calc(var(--main-width) - 40px);
     display: flex;
     justify-content: space-between;
     margin-left: 20px;
@@ -455,9 +462,9 @@ a {
 }
 
 .dots-slideshow-waagerecht {
-    position: absolute;
+    position: relative;
     width: 100%;
-    bottom: 10px;
+    bottom: 2rem;
     display: flex;
     justify-content: center;
 }
