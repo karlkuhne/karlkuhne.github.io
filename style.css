@@ -653,24 +653,24 @@ ol li p {
     }
 
     #languages {
-        transform: translateX(0rem) translateY(36.1rem);
+        transform: translateX(0rem) translateY(36.3rem);
     }
     
     #hobbys {
-        transform: translateX(0rem) translateY(-10.3rem);
+        transform: translateX(0rem) translateY(-11rem);
     }
     
     #portrait {
-        transform: translateX(0rem) translateY(-24.5rem);
+        transform: translateX(0rem) translateY(-25.8rem);
     }
     
     #degrees {
-        transform: translateX(0rem) translateY(25.9rem);
+        transform: translateX(0rem) translateY(25.2rem);
     }
     
 
     #about {
-        height: 129.5rem;
+        height: 140rem;
     }
 }
 
