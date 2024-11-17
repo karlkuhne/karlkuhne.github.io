@@ -51,7 +51,7 @@ h3 {
     color: white;
 
     margin-left: 2rem;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
 }
 
 h4 {
@@ -66,7 +66,7 @@ p {
     font-family: Work Sans;
     font-size: 1.2rem;
     color: white;
-    line-height: 1.1;
+    line-height: 1.2;
 }
 
 
@@ -361,8 +361,8 @@ a {
 
 .wrapper-waagerecht {
     width: var(--main-width); /* 103.5rem */
-    height: 62%;
-    display: flex;
+    height: 55%;
+    /* display: flex; */
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -478,8 +478,8 @@ a {
 }
 
 .navigation {
-    position: absolute;
-    top: 43%;
+    position: relative;
+    top: -50%;
     transform: translateY(-50%);
     width: calc(var(--main-width) - 40px);
     display: flex;
@@ -491,7 +491,7 @@ a {
 .dots-slideshow-waagerecht {
     position: relative;
     width: 100%;
-    bottom: 2rem;
+    bottom: 6rem;
     display: flex;
     justify-content: center;
 }

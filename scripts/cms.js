@@ -5,7 +5,6 @@ const projectsData = {
             "label": "unity-spiel",
             "thumbnail": "Ressources/Caveman_hits_Giraffe_in_a_Car/Thumbnail.png",
             "type": "slideshow",
-            "website": "https://cavemanhitsgiraffeinacar.github.io/",
             "images": [
                 "Ressources/Caveman_hits_Giraffe_in_a_Car/1.png",
                 "Ressources/Caveman_hits_Giraffe_in_a_Car/2.png",
@@ -14,9 +13,8 @@ const projectsData = {
                 "Ressources/Caveman_hits_Giraffe_in_a_Car/5.png"
             ],
             "name": "Caveman hits Giraffe in a Car",
-            "description": "„Caveman Hits Giraffe in a Car“ ist ein rasantes Actionspiel, das während eines 5-tägigen Game Jams entstanden ist. In diesem handgezeichneten Roguelite kämpfst du gegen immer schwierigere Gegnerwellen, die aus den unterschiedlichsten Gegnertypen bestehen. Nach jeder Welle kannst du eine von drei Fähigkeiten verbessern: Gesundheit, Schaden oder Geschwindigkeit. Sammle zwischen den Spielen Punkte um einzigartige Fähigkeiten freizuspielen und miss dich mit unserer Spielerschaft auf der öffentlichen Bestenliste.",
-            "projectPage": "game.html"
-
+            "description": "„Caveman Hits Giraffe in a Car“ ist ein rasantes Actionspiel, das aus einem 5-tägigen Game Jam entstanden ist. In diesem handgezeichneten Roguelite kämpfst du gegen immer schwierigere Gegnerwellen, die aus den unterschiedlichsten Gegnertypen bestehen. Nach jeder Welle kannst du eine von drei Fähigkeiten verbessern: Gesundheit, Schaden oder Geschwindigkeit. Sammle zwischen den Spielen Punkte um einzigartige Fähigkeiten freizuspielen und miss dich mit unserer Spielerschaft auf der öffentlichen Bestenliste.",
+            "website": "https://cavemanhitsgiraffeinacar.github.io/",
         },
         {
             "label": "character-design",
@@ -38,7 +36,7 @@ const projectsData = {
             "src": "Ressources/Term_Paper/Term_Paper.pdf",
             "name": "Designing for immersion: The influence of diegetic player guidance on the gaming experience",
             "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-            "projectPage": "diegesis.html"
+            
         },
         {
             "label": "vorspann",
@@ -47,7 +45,7 @@ const projectsData = {
             "src": "https://www.youtube.com/embed/e4t05vSzYPg",
             "name": "Opening Credits",
             "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-            "projectPage": "openingcredits.html"
+            
         },
 
         
@@ -152,7 +150,6 @@ function openLightbox(project) {
     // Textinhalt der Lightbox
     projectName.textContent = project.name;
     projectDescription.textContent = project.description;
-    projectButton.href = project.projectPage;
 
     // Setze sicher, dass der Button im gleichen Tab öffnet
     projectButton.target = "_self"; // Ensures the project link opens in the same tab
@@ -163,6 +160,13 @@ function openLightbox(project) {
         websiteButton.style.display = 'inline-block'; // Button anzeigen
     } else {
         websiteButton.style.display = 'none'; // Button ausblenden
+    }
+
+    if (project.projectPage) {
+        projectButton.href = project.projectPage;
+        projectButton.style.display = 'inline-block';
+    } else {
+        projectButton.style.display = 'none';
     }
 
     // Füge die Lightbox zum Body hinzu und öffne sie
