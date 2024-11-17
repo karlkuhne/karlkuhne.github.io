@@ -13,7 +13,7 @@ const projectsData = {
                 "Ressources/Caveman_hits_Giraffe_in_a_Car/5.png"
             ],
             "name": "Caveman hits Giraffe in a Car",
-            "description": "„Caveman Hits Giraffe in a Car“ ist ein rasantes Actionspiel, das aus einem 5-tägigen Game Jam entstanden ist. In diesem handgezeichneten Roguelite kämpfst du gegen immer schwierigere Gegnerwellen, die aus den unterschiedlichsten Gegnertypen bestehen. Nach jeder Welle kannst du eine von drei Fähigkeiten verbessern: Gesundheit, Schaden oder Geschwindigkeit. Sammle zwischen den Spielen Punkte um einzigartige Fähigkeiten freizuspielen und miss dich mit unserer Spielerschaft auf der öffentlichen Bestenliste.",
+            "description": "Ein rasantes Action-Roguelike, das aus einem 5-tägigen Game Jam entstanden ist. Kämpfe gegen abwechslungsreiche Gegnerwellen, verbessere deine Fähigkeiten und verewige dich auf der Bestenliste.",
             "website": "https://cavemanhitsgiraffeinacar.github.io/",
         },
         {
@@ -26,7 +26,7 @@ const projectsData = {
                 "Ressources/Character_Design/Emotions.png"
             ],
             "name": "Character Design",
-            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "description": "Ein rasantes Action-Roguelike, das aus einem 5-tägigen Game Jam entstanden ist. Kämpfe gegen abwechslungsreiche Gegnerwellen, verbessere deine Fähigkeiten und verewige dich auf der Bestenliste.",
             "projectPage": "character-design.html"
         },
         {
@@ -35,7 +35,7 @@ const projectsData = {
             "type": "iframe",
             "src": "Ressources/Term_Paper/Term_Paper.pdf",
             "name": "Designing for immersion: The influence of diegetic player guidance on the gaming experience",
-            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "description": "Ein rasantes Action-Roguelike, das aus einem 5-tägigen Game Jam entstanden ist. Kämpfe gegen abwechslungsreiche Gegnerwellen, verbessere deine Fähigkeiten und verewige dich auf der Bestenliste.",
 
         },
         {
@@ -44,7 +44,7 @@ const projectsData = {
             "type": "iframe",
             "src": "https://www.youtube.com/embed/e4t05vSzYPg",
             "name": "Opening Credits",
-            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "description": "Ein rasantes Action-Roguelike, das aus einem 5-tägigen Game Jam entstanden ist. Kämpfe gegen abwechslungsreiche Gegnerwellen, verbessere deine Fähigkeiten und verewige dich auf der Bestenliste.",
 
         },
 
@@ -59,7 +59,7 @@ const projectsData = {
                 "Ressources/Experimentelles_Projekt/2.png"
             ],
             "name": "Cubism",
-            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "description": "Ein rasantes Action-Roguelike, das aus einem 5-tägigen Game Jam entstanden ist. Kämpfe gegen abwechslungsreiche Gegnerwellen, verbessere deine Fähigkeiten und verewige dich auf der Bestenliste.",
             "projectPage": "cubism.html"
         },
 
@@ -249,12 +249,12 @@ function showSlides(n) {
         slide.style.display = 'none';
     });
     dots.forEach((dot) => {
-        dot.classList.remove('active');
+        dot.classList.remove('dotactive');
     });
 
     // Zeige das aktuelle Bild an und setze den aktiven Dot
     slides[currentIndex - 1].style.display = 'block';
-    dots[currentIndex - 1].classList.add('active');
+    dots[currentIndex - 1].classList.add('dotactive');
 }
 
 // Rufe die Funktion auf, um die Projekte zu generieren
