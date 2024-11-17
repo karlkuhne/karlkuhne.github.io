@@ -596,7 +596,7 @@ ol li p {
 
 #portrait {
     width: 19rem;
-    transform: translateX(23rem) translateY(-50.2rem);
+    transform: translateX(23rem) translateY(-51.2rem);
 }
 
 #portrait>img {
@@ -616,56 +616,56 @@ ol li p {
 }
 
 #about {
-    height: 63rem;
+    height: 66rem;
 }
 
-@media (max-width: 65rem) {
+@media (max-width: 68rem) {
     #about-me {
         transform: translateX(0rem);
     }
 
     #portrait {
-        transform: translateX(8.8rem) translateY(-29.6rem);
+        transform: translateX(12.4rem) translateY(-33.6rem);
     }
 
     #languages {
-        transform: translateX(-10.4rem) translateY(0.8rem);
+        transform: translateX(-12rem) translateY(0.8rem);
     }
 
     #degrees {
-        transform: translateX(3.4rem) translateY(4.2rem);
+        transform: translateX(7.1rem) translateY(2.3rem);
         /* 6.25rem */
     }
 
     #hobbys {
-        transform: translateX(-13rem) translateY(1.5rem);
+        transform: translateX(-13.8rem) translateY(1.5rem);
     }
 
     #about {
-        height: 74rem;
+        height: 82rem;
     }
 }
 
-@media (max-width: 39.5rem) {
+@media (max-width: 48rem) {
     #languages {
-        transform: translateX(-7.2rem) translateY(0.8rem);
+        transform: translateX(0rem) translateY(36.3rem);
     }
     
     #hobbys {
-        transform: translateX(8.1rem) translateY(-9.2rem);
+        transform: translateX(0rem) translateY(-10.3rem);
     }
     
     #portrait {
-        transform: translateX(0rem) translateY(-18.5rem);
+        transform: translateX(0rem) translateY(-21.5rem);
     }
     
     #degrees {
-        transform: translateX(0rem) translateY(15.6rem);
+        transform: translateX(0rem) translateY(26.1rem);
     }
     
 
     #about {
-        height: 85.3rem;
+        height: 129.5rem;
     }
 }
 
