@@ -4,6 +4,7 @@ const projectsData = {
         {
             "label": "cubistic-portraits",
             "thumbnail": "Ressources/Experimentelles_Projekt/Thumbnail.png",
+            "type": "slideshow",
             "images": [
                 "Ressources/Experimentelles_Projekt/3.png",
                 "Ressources/Experimentelles_Projekt/1.png",
@@ -16,6 +17,7 @@ const projectsData = {
         {
             "label": "character-design",
             "thumbnail": "Ressources/Character_Design/Thumbnail.png",
+            "type": "slideshow",
             "images": [
                 "Ressources/Character_Design/Thumbnail1.png",
                 "Ressources/Character_Design/Posen.png",
@@ -28,6 +30,7 @@ const projectsData = {
         {
             "label": "unity-game",
             "thumbnail": "Ressources/Caveman_hits_Giraffe_in_a_Car/Thumbnail.png",
+            "type": "slideshow",
             "images": [
                 "Ressources/Caveman_hits_Giraffe_in_a_Car/1.png",
                 "Ressources/Caveman_hits_Giraffe_in_a_Car/2.png",
@@ -37,6 +40,15 @@ const projectsData = {
             "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
             "projectPage": "game.html"
 
+        },
+        {
+            "label": "term-paper",
+            "thumbnail": "Ressources/Term_Paper/Thumbnail.png",
+            "type": "pdf",
+            "pdfSrc": "Ressources/Term_Paper/Term_Paper.pdf",
+            "name": "Designing for immersion: The influence of diegetic player guidance on the gaming experience",
+            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "projectPage": "diegesis.html"
         }
     ]
 };
@@ -82,22 +94,41 @@ function openLightbox(project) {
     const projectDescription = clone.querySelector('.project-description');
     const projectButton = clone.querySelector('.project-button');
 
-    // Bilder und Dots generieren
-    project.images.forEach((image, index) => {
-        const imgElement = document.createElement('img');
-        imgElement.src = image;
-        imgElement.alt = `Image ${index + 1}`;
-        imgElement.classList.add('project-slide');
-        imgElement.classList.add('selectDisable');
-        imgElement.draggable = false;
-        imgElement.oncontextmenu = () => false;
-        imagesContainer.appendChild(imgElement);
+    // NEU: JE NACH PROJEKTTYP (SLIDESHOW ODER PDF) WIRD DER INHALT BESTIMMT
+    if (project.type === "slideshow") { // SLIDESHOW
+        project.images.forEach((image, index) => {
+            const imgElement = document.createElement('img');
+            imgElement.src = image;
+            imgElement.alt = `Image ${index + 1}`;
+            imgElement.classList.add('project-slide');
+            imgElement.classList.add('selectDisable');
+            imgElement.draggable = false;
+            imgElement.oncontextmenu = () => false;
+            imagesContainer.appendChild(imgElement);
 
-        const dot = document.createElement('span');
-        dot.classList.add('dot');
-        dot.onclick = () => currentSlide(index + 1); // Wechselt zum entsprechenden Bild
-        dotsContainer.appendChild(dot);
-    });
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+            dot.onclick = () => currentSlide(index + 1); // Wechselt zum entsprechenden Bild
+            dotsContainer.appendChild(dot);
+        });
+    } else if (project.type === "pdf") { // PDF
+        // Füge ein Iframe hinzu, das die PDF anzeigt
+        const iframe = document.createElement('iframe');
+        iframe.src = project.pdfSrc;
+        iframe.classList.add('pdf-viewer');
+        iframe.style.width = "100%";
+        iframe.style.height = "100%";
+        iframe.frameBorder = "0";
+        iframe.allow = "fullscreen";
+        imagesContainer.appendChild(iframe);
+
+        // Entferne die Dots und Navigations-Buttons, da sie nicht für PDFs benötigt werden
+        dotsContainer.style.display = 'none';
+        const navigation = clone.querySelector('.navigation');
+        if (navigation) {
+            navigation.style.display = 'none';
+        }
+    }
 
     // Textinhalt der Lightbox
     projectName.textContent = project.name;
@@ -109,9 +140,11 @@ function openLightbox(project) {
     lightbox.style.display = 'flex';
     document.body.classList.add('no-scroll');
 
-    // Setze den aktuellen Index auf 1 (startet bei der ersten Folie)
-    currentIndex = 1;
-    showSlides(currentIndex); // Zeigt das erste Bild und markiert den ersten Dot als aktiv
+    // Setze den aktuellen Index auf 1 (startet bei der ersten Folie, falls Slideshow)
+    if (project.type === "slideshow") {
+        currentIndex = 1;
+        showSlides(currentIndex); // Zeigt das erste Bild und markiert den ersten Dot als aktiv
+    }
 
     // Event Listener für das Schließen der Lightbox
     const closeBtn = lightbox.querySelector('.close');
@@ -121,8 +154,6 @@ function openLightbox(project) {
         lightbox.remove();
     });
 }
-
-
 
 let currentIndex = 1; // Standardmäßig auf das erste Bild setzen
 
@@ -154,8 +185,6 @@ function showSlides(n) {
     slides[currentIndex - 1].style.display = 'block';
     dots[currentIndex - 1].classList.add('active');
 }
-
-
 
 // Rufe die Funktion auf, um die Projekte zu generieren
 generateProjects();
