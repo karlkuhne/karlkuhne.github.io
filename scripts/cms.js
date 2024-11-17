@@ -36,7 +36,7 @@ const projectsData = {
             "src": "Ressources/Term_Paper/Term_Paper.pdf",
             "name": "Designing for immersion: The influence of diegetic player guidance on the gaming experience",
             "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-            
+
         },
         {
             "label": "vorspann",
@@ -45,10 +45,10 @@ const projectsData = {
             "src": "https://www.youtube.com/embed/e4t05vSzYPg",
             "name": "Opening Credits",
             "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-            
+
         },
 
-        
+
         {
             "label": "kubistische-portraits",
             "thumbnail": "Ressources/Experimentelles_Projekt/Thumbnail.png",
@@ -62,9 +62,9 @@ const projectsData = {
             "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
             "projectPage": "cubism.html"
         },
-        
-        
-        
+
+
+
     ]
 };
 
@@ -72,20 +72,20 @@ const projectsData = {
 function generateProjects() {
     const projectsContainer = document.getElementById('projects-container');
     const template = document.getElementById('project-template');
-    
+
     projectsData.projects.forEach(project => {
         const clone = template.content.cloneNode(true);
-        
+
         // Setze die Projektdaten aus der JSON
         const projectDiv = clone.querySelector('.project');
         const labelText = clone.querySelector('.label-text');
         const thumbnailImg = clone.querySelector('.thumbnail-img');
-        
+
         projectDiv.setAttribute('data-project-id', project.label);
         labelText.textContent = project.label;
         thumbnailImg.src = project.thumbnail;
         thumbnailImg.alt = project.label;
-        
+
         // Füge das Projekt in den Container ein
         projectsContainer.appendChild(clone);
 
@@ -133,8 +133,8 @@ function openLightbox(project) {
         const iframe = document.createElement('iframe');
         iframe.src = project.src;
         iframe.classList.add('pdf-viewer');
-        iframe.style.width = "100%";
-        iframe.style.height = "100%";
+        /* iframe.style.width = "100%";
+        iframe.style.height = "100%"; */
         iframe.frameBorder = "0";
         iframe.allow = "fullscreen";
         imagesContainer.appendChild(iframe);
@@ -202,6 +202,15 @@ function openLightbox(project) {
         // Entferne den Event Listener für Escape, wenn die Lightbox geschlossen wird
         document.removeEventListener('keydown', closeOnEscape);
     }
+
+    // Event Listener für das Klicken außerhalb der Lightbox (zum Schließen)
+    lightbox.addEventListener('click', (event) => {
+        // Wenn der Klick außerhalb des Inhaltsbereichs der Lightbox erfolgt
+        if (!event.target.closest('.wrapper-waagerecht')) {
+            closeLightbox(lightbox);
+        }
+    });
+
 }
 
 

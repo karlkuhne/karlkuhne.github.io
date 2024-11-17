@@ -58,10 +58,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function adjustLayout() {
   const remInPixels = getRemInPixels();
-  const responsiveThreshold = InitialMainWidth + 2.5 * remInPixels; // InitialMainWidth + 1rem in px
+  const responsiveThreshold = InitialMainWidth + 4 * remInPixels;
 
   if (window.innerWidth < responsiveThreshold) {
     document.body.classList.add('responsive');
+
+    var iframes = document.querySelectorAll('.container-waagerecht iframe');
+
+    iframes.forEach(function (iframe) {
+      var width = iframe.offsetWidth; // Breite jedes Iframes ermitteln
+      var height = width * 9 / 16;    // Höhe basierend auf der Breite und der Formel 9:16 berechnen
+      iframe.style.height = height + 'px'; // Höhe setzen
+    });
+
   } else {
     document.body.classList.remove('responsive');
   }
