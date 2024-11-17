@@ -5,6 +5,7 @@ const projectsData = {
             "label": "unity-spiel",
             "thumbnail": "Ressources/Caveman_hits_Giraffe_in_a_Car/Thumbnail.png",
             "type": "slideshow",
+            "website": "https://cavemanhitsgiraffeinacar.github.io/",
             "images": [
                 "Ressources/Caveman_hits_Giraffe_in_a_Car/1.png",
                 "Ressources/Caveman_hits_Giraffe_in_a_Car/2.png",
@@ -110,6 +111,7 @@ function openLightbox(project) {
     const projectName = clone.querySelector('.project-name');
     const projectDescription = clone.querySelector('.project-description');
     const projectButton = clone.querySelector('.project-button');
+    const websiteButton = clone.querySelector('.website-button');
 
     // NEU: JE NACH PROJEKTTYP (SLIDESHOW ODER PDF) WIRD DER INHALT BESTIMMT
     if (project.type === "slideshow") { // SLIDESHOW
@@ -155,6 +157,14 @@ function openLightbox(project) {
     // Setze sicher, dass der Button im gleichen Tab öffnet
     projectButton.target = "_self"; // Ensures the project link opens in the same tab
 
+    // Website Button anzeigen oder ausblenden, je nach Vorhandensein eines Links
+    if (project.website) {
+        websiteButton.href = project.website;
+        websiteButton.style.display = 'inline-block'; // Button anzeigen
+    } else {
+        websiteButton.style.display = 'none'; // Button ausblenden
+    }
+
     // Füge die Lightbox zum Body hinzu und öffne sie
     document.body.appendChild(clone);
     lightbox.style.display = 'flex';
@@ -189,6 +199,7 @@ function openLightbox(project) {
         document.removeEventListener('keydown', closeOnEscape);
     }
 }
+
 
 
 let currentIndex = 1; // Standardmäßig auf das erste Bild setzen
