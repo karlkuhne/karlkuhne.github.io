@@ -388,13 +388,14 @@ a {
     top: 40%;
     transform: translateY(-50%);
     
-
-    width:calc(var(--main-width) - 40px);
+    width: calc(var(--main-width) - 40px);
     display: flex;
     justify-content: space-between;
     padding-left: 20px;
     padding-right: 20px;
-}
+  }
+
+
 
 .navigation a {
     text-shadow: 1px  1px 1px #000,
@@ -406,9 +407,9 @@ a {
 .dots-slideshow-waagerecht {
     position: relative;
     width: var(--main-width);
-    top: 97%;
+    top: calc(97% - 4.5rem);
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
 
