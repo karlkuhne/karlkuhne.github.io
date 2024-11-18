@@ -12,6 +12,11 @@ const projectsData = {
                 "Ressources/Caveman_hits_Giraffe_in_a_Car/4.png",
                 "Ressources/Caveman_hits_Giraffe_in_a_Car/5.png"
             ],
+            "apps": [
+                "Ressources/Icons/Unity.png",
+                "Ressources/Icons/Rider.png",
+                "Ressources/Icons/Procreate.png"
+            ],
             "name": "Caveman hits Giraffe in a Car",
             "description": "Ein rasantes Action-Roguelike, das aus einem 5-tägigen Game Jam entstanden ist. Kämpfe gegen abwechslungsreiche Gegnerwellen, verbessere deine Fähigkeiten und verewige dich auf der Bestenliste.",
             "website": "https://cavemanhitsgiraffeinacar.github.io/",
@@ -25,6 +30,9 @@ const projectsData = {
                 "Ressources/Character_Design/Posen.png",
                 "Ressources/Character_Design/Emotions.png"
             ],
+            "apps": [
+                "Ressources/Icons/Procreate.png"
+            ],
             "name": "Character Design",
             "description": "Mein erstes Character Design „Hosbol Pogronop“, inspiriert von der Myconid-Rasse aus Dungeons and Dragons.",
             "projectPage": "character-design.html"
@@ -33,6 +41,9 @@ const projectsData = {
             "label": "hausarbeit",
             "thumbnail": "Ressources/Term_Paper/Thumbnail.png",
             "type": "iframe",
+            "apps": [
+                "Ressources/Icons/Word.png"
+            ],
             "src": "Ressources/Term_Paper/Term_Paper.pdf",
             "name": "Designing for immersion: The influence of diegetic player guidance on the gaming experience",
             "description": "Gemäß des Grundsatzes „Designing for immersion“ ergründet diese Hausarbeit, ob Spielerführungsmechaniken in Videospielen besser Teil der erzählten Welt oder externes Spielelement sein sollten.",
@@ -43,6 +54,9 @@ const projectsData = {
             "thumbnail": "Ressources/Opening_Credits/Thumbnail.png",
             "type": "iframe",
             "src": "https://www.youtube.com/embed/e4t05vSzYPg",
+            "apps": [
+                "Ressources/Icons/Premiere.png"
+            ],
             "name": "Opening Credits",
             "description": "Ein Vorspann für eine fiktive Serie, welcher die einzigartige Stimmung einer nächtlichen Stadt einfangen soll.",
 
@@ -57,6 +71,9 @@ const projectsData = {
                 "Ressources/Experimentelles_Projekt/3.png",
                 "Ressources/Experimentelles_Projekt/1.png",
                 "Ressources/Experimentelles_Projekt/2.png"
+            ],
+            "apps": [
+                "Ressources/Icons/Hand.png"
             ],
             "name": "Cubism",
             "description": "Eine Reihe von kubistischen Portraits, fiktive Personen, Pastellkreide auf Papier.",
@@ -96,10 +113,7 @@ function generateProjects() {
     });
 }
 
-// Funktion zum Öffnen der Lightbox und Laden der Inhalte
-// Funktion zum Öffnen der Lightbox und Laden der Inhalte
-// Funktion zum Öffnen der Lightbox und Laden der Inhalte
-// Funktion zum Öffnen der Lightbox und Laden der Inhalte
+
 function openLightbox(project) {
     const template = document.getElementById('lightbox-template');
     const clone = template.content.cloneNode(true);
@@ -108,6 +122,7 @@ function openLightbox(project) {
     const lightbox = clone.querySelector('.lightbox');
     const imagesContainer = clone.querySelector('.container-waagerecht');
     const dotsContainer = clone.querySelector('.dots-slideshow-waagerecht');
+    const appIconsContainer = clone.querySelector('.app-icons');
     const projectName = clone.querySelector('.project-name');
     const projectDescription = clone.querySelector('.project-description');
     const projectButton = clone.querySelector('.project-button');
@@ -164,6 +179,19 @@ function openLightbox(project) {
 
     // Setze sicher, dass der Button im gleichen Tab öffnet
     projectButton.target = "_self"; // Ensures the project link opens in the same tab
+
+    if (project.apps && project.apps.length > 0) {
+        project.apps.forEach((app) => {
+            const appIcon = document.createElement('img');
+            appIcon.src = app;
+            appIcon.alt = app.name;
+            appIcon.classList.add('app-icon');
+            appIconsContainer.appendChild(appIcon);
+        });
+    } else {
+        appIconsContainer.style.display = 'none';
+    }
+
 
     // Website Button anzeigen oder ausblenden, je nach Vorhandensein eines Links
     if (project.website) {

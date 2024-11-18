@@ -495,7 +495,11 @@ a {
 
     padding: 0.5rem 1rem 0.5rem 1rem;
 
+<<<<<<< Updated upstream
     margin-top: 1rem;
+=======
+    margin-top: 1.3rem;
+>>>>>>> Stashed changes
     margin-right: 1.5rem;
 }
 
@@ -518,7 +522,11 @@ a {
 
     padding: 0.5rem 1rem 0.5rem 1rem;
 
+<<<<<<< Updated upstream
     margin-top: 1rem;
+=======
+    margin-top: 1.3rem;
+>>>>>>> Stashed changes
     margin-right: 1.5rem;
 }
 
@@ -532,6 +540,29 @@ a {
       width: 98.5vw;
     }
   }
+
+  .app-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    align-items: center;
+  }
+
+  .app-icons img {
+    width: 3.5rem;
+    height: 3.5rem;
+    object-fit: contain;
+    border-radius: 0.75rem;
+    filter: grayscale(30%);
+}
+
+.app-icons span {
+    font-family: Work Sans;
+    font-size: 1.5rem;
+    /* ehem 3rem */
+    font-weight: 600;
+    color: white;
+}
 
 
 
