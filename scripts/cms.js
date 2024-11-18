@@ -26,7 +26,7 @@ const projectsData = {
                 "Ressources/Character_Design/Emotions.png"
             ],
             "name": "Character Design",
-            "description": "Ein rasantes Action-Roguelike, das aus einem 5-tägigen Game Jam entstanden ist. Kämpfe gegen abwechslungsreiche Gegnerwellen, verbessere deine Fähigkeiten und verewige dich auf der Bestenliste.",
+            "description": "Mein erstes Character Design „Hosbol Pogronop“, inspiriert von der Myconid-Rasse aus Dungeons and Dragons.",
             "projectPage": "character-design.html"
         },
         {
@@ -35,7 +35,7 @@ const projectsData = {
             "type": "iframe",
             "src": "Ressources/Term_Paper/Term_Paper.pdf",
             "name": "Designing for immersion: The influence of diegetic player guidance on the gaming experience",
-            "description": "Ein rasantes Action-Roguelike, das aus einem 5-tägigen Game Jam entstanden ist. Kämpfe gegen abwechslungsreiche Gegnerwellen, verbessere deine Fähigkeiten und verewige dich auf der Bestenliste.",
+            "description": "Gemäß des Grundsatzes „Designing for immersion“ ergründet diese Hausarbeit, ob Spielerführungsmechaniken in Videospielen besser Teil der erzählten Welt oder externes Spielelement sein sollten.",
             "website": "Ressources/Term_Paper/Term_Paper.pdf",
         },
         {
@@ -44,7 +44,7 @@ const projectsData = {
             "type": "iframe",
             "src": "https://www.youtube.com/embed/e4t05vSzYPg",
             "name": "Opening Credits",
-            "description": "Ein rasantes Action-Roguelike, das aus einem 5-tägigen Game Jam entstanden ist. Kämpfe gegen abwechslungsreiche Gegnerwellen, verbessere deine Fähigkeiten und verewige dich auf der Bestenliste.",
+            "description": "Ein Vorspann für eine fiktive Serie, welcher die einzigartige Stimmung einer nächtlichen Stadt einfangen soll.",
 
         },
 
@@ -59,7 +59,7 @@ const projectsData = {
                 "Ressources/Experimentelles_Projekt/2.png"
             ],
             "name": "Cubism",
-            "description": "Ein rasantes Action-Roguelike, das aus einem 5-tägigen Game Jam entstanden ist. Kämpfe gegen abwechslungsreiche Gegnerwellen, verbessere deine Fähigkeiten und verewige dich auf der Bestenliste.",
+            "description": "Eine Reihe von kubistischen Portraits, fiktive Personen, Pastellkreide auf Papier.",
             "projectPage": "cubism.html"
         },
 

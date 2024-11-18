@@ -35,7 +35,7 @@ a:hover {
 h1,
 h2 {
     font-family: Work Sans;
-    font-size: 5rem;
+    font-size: 4rem;
     /* ehem 8rem */
     font-weight: 900;
     font-style: italic;
@@ -48,11 +48,12 @@ h2 {
 
 h3 {
     font-family: Work Sans;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     /* ehem 3rem */
     font-weight: 600;
     color: white;
     margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
 h4 {
@@ -65,7 +66,7 @@ h4 {
 
 p {
     font-family: Work Sans;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: white;
     line-height: 1.2;
 }
@@ -123,7 +124,7 @@ nav {
 
 #logo {
     font-family: Work Sans;
-    font-size: 1.5rem;
+    font-size: 1.34rem;
     /* ehem 1.75rem */
     font-weight: 600;
     margin-left: 1rem;
@@ -185,7 +186,7 @@ nav {
     padding-left: 0.35rem;
 
     color: white;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 600;
 }
 
@@ -347,7 +348,7 @@ body {
   }
 
   h2 {
-    font-size: 2.9rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -489,12 +490,12 @@ a {
     border-radius: 0.5rem;
 
     font-family: Work Sans;
-    font-size: 1.2rem;
+    font-size:1rem;
     color: white;
 
     padding: 0.5rem 1rem 0.5rem 1rem;
 
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-right: 1.5rem;
 }
 
@@ -512,12 +513,12 @@ a {
     border-radius: 0.5rem;
 
     font-family: Work Sans;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: white;
 
     padding: 0.5rem 1rem 0.5rem 1rem;
 
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-right: 1.5rem;
 }
 
@@ -833,7 +834,7 @@ textarea {
 }
 
 .checkbox-container .checkbox-text {
-    font-size: 1.14rem;
+    font-size: 1rem;
     color: white;
     font-family: Work Sans;
 }
@@ -853,7 +854,7 @@ textarea {
     border-radius: 0.5rem;
 
     font-family: Work Sans;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: white;
 
     padding: 0.5rem 1.3rem 0.5rem 1.3rem;
@@ -989,7 +990,7 @@ th,
 td {
     border: none;
     font-family: Work Sans;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: white;
     text-align: left;
 }
