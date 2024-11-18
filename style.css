@@ -578,9 +578,6 @@ a {
     background-color: rgb(30, 30, 30);
     border: 0.185rem solid var(--border-color);
     border-radius: 0.7rem;
-
-    width: fit-content;
-    height: fit-content;
 }
 
 .aboutBox {
@@ -780,6 +777,9 @@ ol li p {
 #contact-form {
     left: 50%;
     transform: translateX(-50%);
+
+    width: fit-content;
+    height: fit-content;
 
     opacity: 0;
     transition: opacity 0.5s ease-out;

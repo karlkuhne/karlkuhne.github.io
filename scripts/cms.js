@@ -4,6 +4,7 @@ const projectsData = {
         {
             "label": "unity-spiel",
             "thumbnail": "Ressources/Caveman_hits_Giraffe_in_a_Car/Thumbnail.png",
+            "square": "Ressources/Caveman_hits_Giraffe_in_a_Car/Thumbnail_Square.png",
             "type": "slideshow",
             "images": [
                 "Ressources/Caveman_hits_Giraffe_in_a_Car/1.png",
@@ -41,6 +42,7 @@ const projectsData = {
         {
             "label": "hausarbeit",
             "thumbnail": "Ressources/Term_Paper/Thumbnail.png",
+            "square": "Ressources/Term_Paper/Thumbnail_Square.png",
             "type": "iframe",
             "apps": [
                 "Ressources/Icons/Word.png"
@@ -53,6 +55,7 @@ const projectsData = {
         {
             "label": "vorspann",
             "thumbnail": "Ressources/Opening_Credits/Thumbnail.png",
+            "square": "Ressources/Opening_Credits/Thumbnail_Square.png",
             "type": "iframe",
             "src": "https://www.youtube.com/embed/e4t05vSzYPg",
             "apps": [
@@ -67,6 +70,7 @@ const projectsData = {
         {
             "label": "kubistische-portraits",
             "thumbnail": "Ressources/Experimentelles_Projekt/Thumbnail.png",
+            "square": "Ressources/Experimentelles_Projekt/Thumbnail_Square.png",
             "type": "slideshow",
             "images": [
                 "Ressources/Experimentelles_Projekt/3.png",
@@ -288,3 +292,23 @@ function showSlides(n) {
 
 // Rufe die Funktion auf, um die Projekte zu generieren
 generateProjects();
+
+// Dynamischer Wechsel zwischen Thumbnails basierend auf der Bildschirmgröße
+function updateThumbnails() {
+    const isLargeScreen = window.matchMedia('(max-width: 48rem)').matches;
+
+    document.querySelectorAll('.thumbnail-img').forEach(img => {
+        const projectId = img.closest('.project').getAttribute('data-project-id');
+        const project = projectsData.projects.find(p => p.label === projectId);
+
+        if (isLargeScreen) {
+            img.src = project.square; // Square Thumbnails
+        } else {
+            img.src = project.thumbnail; // Normal Thumbnails
+        }
+    });
+}
+
+// Beim Laden und bei Fensteränderung aufrufen
+window.addEventListener('resize', updateThumbnails);
+updateThumbnails();
