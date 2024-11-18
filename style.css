@@ -340,7 +340,7 @@ body {
 
 @media (max-width: 48.3rem) {
   #galery {
-    width: 95vwvw;
+    width: 95vw;
   }
 
   .project .thumbnail img{
@@ -810,16 +810,17 @@ textarea {
 @media (max-width: 47.3rem) {
     #form {
         width: 95vw;
+        align-self: center;
     }
 
     input[type="text"],
     input[type="email"],
     textarea {
-        width: 81.8vw;
+        width: 94%;
     }
 
     textarea {
-        width: 85vw;
+        width: 99%
     }
 }
 
