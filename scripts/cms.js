@@ -24,11 +24,12 @@ const projectsData = {
         {
             "label": "character-design",
             "thumbnail": "Ressources/Character_Design/Thumbnail.png",
+            "square": "Ressources/Character_Design/Thumbnail_Square.png",
             "type": "slideshow",
             "images": [
-                "Ressources/Character_Design/Thumbnail1.png",
-                "Ressources/Character_Design/Posen.png",
-                "Ressources/Character_Design/Emotions.png"
+                "Ressources/Character_Design/1.png",
+                "Ressources/Character_Design/2.png",
+                "Ressources/Character_Design/3.png"
             ],
             "apps": [
                 "Ressources/Icons/Procreate.png"

@@ -260,15 +260,15 @@ nav {
 }
 
 @media (max-width: 48rem) {
-    nav{
+    nav {
         background-color: rgb(30, 30, 30, 0.88);
     }
 
     #main-nav {
         background-color: rgb(30, 30, 30, 0.95);
     }
-    
-    
+
+
 }
 
 
@@ -338,18 +338,20 @@ body {
     overflow: hidden;
 }
 
-@media (max-width: 48.3rem) {
-  #galery {
-    width: 95vw;
-  }
+@media (max-width: 48rem) {
+    #galery {
+        width: 99vw;
+    }
 
-  .project .thumbnail img{
-    height: 85.5vw;
-  }
+    .thumbnail-img {
+        height: 85.5vw;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
 
-  h2 {
-    font-size: 8.5vw;
-  }
+    h2 {
+        font-size: 8.5vw;
+    }
 }
 
 
@@ -490,7 +492,7 @@ a {
     border-radius: 0.5rem;
 
     font-family: Work Sans;
-    font-size:1rem;
+    font-size: 1rem;
     color: white;
 
     padding: 0.5rem 1rem 0.5rem 1rem;
@@ -527,18 +529,18 @@ a {
 
 @media (max-width: 48rem) {
     .wrapper-waagerecht {
-      width: 98.5vw;
+        width: 98.5vw;
     }
-  }
+}
 
-  .app-icons {
+.app-icons {
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
     align-items: center;
-  }
+}
 
-  .app-icons img {
+.app-icons img {
     width: 3.5rem;
     height: 3.5rem;
     object-fit: contain;
@@ -838,10 +840,12 @@ textarea {
     input[type="email"],
     textarea {
         width: 94%;
+        height: 2.55rem;
     }
 
     textarea {
-        width: 99%
+        width: 104%;
+        height: 2.85rem;
     }
 }
 
