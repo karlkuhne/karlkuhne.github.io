@@ -46,6 +46,14 @@ h2 {
     text-align: center;
 }
 
+h1 {
+    font-size: calc(var(--main-width)/10);
+}
+
+#karl h3 {
+    font-size: calc(var(--main-width)/30);
+}
+
 h3 {
     font-family: Work Sans;
     font-size: 1.25rem;
@@ -85,9 +93,11 @@ p {
 }
 
 #karl {
+    width: calc(var(--main-width)/1.5);;
     position: absolute;
     top: 40%;
-    /* variable */
+
+
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -102,6 +112,36 @@ p {
     line-height: 10rem;
 }
 
+#arrow {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 0rem;
+
+    font-size: 3rem;
+    color: white;
+    rotate: 90deg;
+
+    animation: moveUpDown 3s infinite;
+}
+
+@keyframes moveUpDown {
+  0% {
+    bottom: -1rem;
+  }
+  50% {
+    bottom: 0rem;
+  }
+  100% {
+    bottom: -1rem;
+  }
+}
+
+
+#arrow:hover {
+    color: rgb(181, 181, 181);
+    cursor: pointer;
+}
 
 /* STICKY HEADER */
 
@@ -920,7 +960,7 @@ footer {
 /* ANIMATIONS */
 
 #about-header {
-    margin-top: 10rem !important;
+    margin-top: 9rem !important;
     margin-bottom: 0rem !important;
     opacity: 0;
 }
@@ -929,10 +969,11 @@ footer {
     margin-top: 10rem !important;
     margin-bottom: 0rem !important;
     opacity: 0;
+    padding-top: 0.7rem;
 }
 
 #galery-header {
-    margin-top: 10rem !important;
+    margin-top: 8rem !important;
     margin-bottom: 0rem !important;
     opacity: 0;
 }
