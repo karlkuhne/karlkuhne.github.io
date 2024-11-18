@@ -66,7 +66,7 @@ h4 {
 
 p {
     font-family: Work Sans;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: white;
     line-height: 1.2;
 }
@@ -145,7 +145,7 @@ nav {
 
 .main-nav-item {
     font-family: Work Sans;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: rgb(181, 181, 181)
 }
 
@@ -186,7 +186,7 @@ nav {
     padding-left: 0.35rem;
 
     color: white;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 600;
 }
 
@@ -494,12 +494,7 @@ a {
     color: white;
 
     padding: 0.5rem 1rem 0.5rem 1rem;
-
-<<<<<<< Updated upstream
-    margin-top: 1rem;
-=======
     margin-top: 1.3rem;
->>>>>>> Stashed changes
     margin-right: 1.5rem;
 }
 
@@ -517,16 +512,11 @@ a {
     border-radius: 0.5rem;
 
     font-family: Work Sans;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: white;
 
     padding: 0.5rem 1rem 0.5rem 1rem;
-
-<<<<<<< Updated upstream
-    margin-top: 1rem;
-=======
     margin-top: 1.3rem;
->>>>>>> Stashed changes
     margin-right: 1.5rem;
 }
 
@@ -612,7 +602,7 @@ ol li::marker,
 ul li::marker {
     color: grey;
     font-family: Work Sans;
-    font-size: 1rem;
+    font-size: 1.1rem;
 
 }
 
@@ -689,26 +679,26 @@ ol li p {
     height: 56.9rem;
 }
 
-@media (max-width: 68rem) {
+@media (max-width: 65rem) {
     #about-me {
         transform: translateX(0rem);
     }
 
     #portrait {
-        transform: translateX(9.7rem) translateY(-28.9rem);
+        transform: translateX(11.4rem) translateY(-30.2rem);
     }
 
     #languages {
-        transform: translateX(-10.2rem) translateY(0.8rem);
+        transform: translateX(-11.2rem) translateY(0.8rem);
     }
 
     #degrees {
-        transform: translateX(6.1rem) translateY(3.5rem);
+        transform: translateX(6.7rem) translateY(3rem);
         /* 6.25rem */
     }
 
     #hobbys {
-        transform: translateX(-12rem) translateY(1.5rem);
+        transform: translateX(-13rem) translateY(1.5rem);
     }
 
     #about {
@@ -716,7 +706,7 @@ ol li p {
     }
 }
 
-@media (max-width: 39.7rem) {
+@media (max-width: 44em) {
     #about-me {
         transform: translateX(0rem) translateY(0rem);
         width: 24rem;
@@ -815,7 +805,7 @@ textarea {
     /* rgb(48, 53, 53) */
 
     font-family: Work Sans;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: white;
 
     border: 0.185rem solid var(--border-color);
@@ -871,7 +861,7 @@ textarea {
 }
 
 .checkbox-container .checkbox-text {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: white;
     font-family: Work Sans;
 }
@@ -891,7 +881,7 @@ textarea {
     border-radius: 0.5rem;
 
     font-family: Work Sans;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: white;
 
     padding: 0.5rem 1.3rem 0.5rem 1.3rem;
@@ -1027,7 +1017,7 @@ th,
 td {
     border: none;
     font-family: Work Sans;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: white;
     text-align: left;
 }
