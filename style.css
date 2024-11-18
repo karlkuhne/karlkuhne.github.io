@@ -338,7 +338,7 @@ body {
     overflow: hidden;
 }
 
-@media (max-width: 47.3rem) {
+@media (max-width: 48.3rem) {
   #galery {
     width: 95vwvw;
   }
