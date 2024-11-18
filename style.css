@@ -338,9 +338,9 @@ body {
     overflow: hidden;
 }
 
-@media (max-width: 48rem) {
+@media (max-width: 47.3rem) {
   #galery {
-    width: 98.5vw;
+    width: 95vwvw;
   }
 
   .project .thumbnail img{
@@ -348,7 +348,7 @@ body {
   }
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 8.5vw;
   }
 }
 
@@ -767,7 +767,7 @@ ol li p {
 }
 
 #form {
-    width: 50rem;
+    width: 45em;
 }
 
 #form>ol {
@@ -778,7 +778,7 @@ ol li p {
 input[type="text"],
 input[type="email"],
 textarea {
-    width: 44.15rem;
+    width: 38.7rem;
     height: 3rem;
     background-color: rgb(18, 18, 18);
     /* rgb(48, 53, 53) */
@@ -798,7 +798,7 @@ textarea {
 textarea {
     height: 2.85rem;
     overflow: hidden;
-    width: 45.5rem;
+    width: 40.2rem;
 
     padding-top: 0.8rem;
     /* Adjust this value as needed for perfect centering */
@@ -807,19 +807,19 @@ textarea {
     box-sizing: border-box;
 }
 
-@media (max-width: 48rem) {
+@media (max-width: 47.3rem) {
     #form {
-        width: 98.5vw;
+        width: 95vw;
     }
 
     input[type="text"],
     input[type="email"],
     textarea {
-        width: 71vw;
+        width: 81.8vw;
     }
 
     textarea {
-        width: 78.5vw;
+        width: 85vw;
     }
 }
 
