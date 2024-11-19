@@ -23,6 +23,7 @@ const projectsData = {
             "name": "Caveman hits Giraffe in a Car",
             "description": "Ein rasantes Action-Roguelike, das aus einem 5-tägigen Game Jam entstanden ist. Kämpfe gegen abwechslungsreiche Gegnerwellen, verbessere deine Fähigkeiten und verewige dich auf der Bestenliste.",
             "website": "https://cavemanhitsgiraffeinacar.github.io/",
+            "projectPage": "cavemanhitsgiraffe.html"
         },
         {
             "label": "character-design",
@@ -40,7 +41,6 @@ const projectsData = {
             ],
             "name": "Character Design",
             "description": "Mein erstes Character Design „Hosbol Pogronop“, inspiriert von der Myconid-Rasse aus Dungeons and Dragons.",
-            "projectPage": "character-design.html"
         },
         {
             "label": "hausarbeit",
@@ -86,7 +86,6 @@ const projectsData = {
             ],
             "name": "Cubism",
             "description": "Eine Reihe von kubistischen Portraits, fiktive Personen, Pastellkreide auf Papier.",
-            "projectPage": "cubism.html"
         },
         {
             "label": "animationsfilm-kuh",
@@ -98,7 +97,6 @@ const projectsData = {
             "apps": [
                 "Ressources/Icons/Blender.png",
                 "Ressources/Icons/Premiere.png",
-                "Ressources/Icons/AfterEffects.png"
             ],
             "name": "Animationsfilm: Kuh",
             "description": "In diesem Film wurde die Integration eines CGI-Elements in ein reales Video durchgeführt. Das Projekt umfasst die Erstellung und Animation eines 3D-Elements sowie das Tracking und die Integration dieses Objekts in ein selbst aufgenommenes Video.",
@@ -112,7 +110,8 @@ const projectsData = {
             "src": "https://youtube.com/embed/aGy7EN_uFUs",
             "apps": [
                 "Ressources/Icons/Blender.png",
-                "Ressources/Icons/Premiere.png"
+                "Ressources/Icons/Premiere.png",
+                "Ressources/Icons/AfterEffects.png"
             ],
             "name": "Animationsfilm: Object Terrors",
             "description": "Das Konzept besteht darin, häufige menschliche Phobien auf alltägliche Haushalts- gegenstände zu übertragen. Um dieses Konzept audiovisuell umzusetzen, sollen fünf Gegenstände in derem jeweiligen Raum monologartig über deren Ängste sprechen. Der Sprechakt soll authentisch wirken, als wäre eine reale Person interviewt worden.",
@@ -125,6 +124,9 @@ const projectsData = {
             "type": "slideshow",
             "images": [
                 "Ressources/iso_room/Render.png",
+            ],
+            "apps": [
+                "Ressources/Icons/Blender.png",
             ],
             "name": "Isometrischer Raum",
             "description": "Mein erstes Projekt in Blender, rendered in Cycles.",

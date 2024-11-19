@@ -550,9 +550,9 @@ a {
     font-size: 1.1rem;
     color: white;
 
-    padding: 0.5rem 1rem 0.5rem 1rem;
+    padding: 0.4rem 0.75rem 0.4rem 0.75rem;
     margin-top: 1.3rem;
-    margin-right: 1.5rem;
+    margin-right: 1.3rem;
 }
 
 .allproject-button {
@@ -580,8 +580,8 @@ a {
 }
 
 .app-icons img {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
     object-fit: contain;
     border-radius: 0.75rem;
     /* filter: grayscale(30%); */
