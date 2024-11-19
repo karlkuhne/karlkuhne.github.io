@@ -47,11 +47,22 @@ h2 {
 }
 
 h1 {
-    font-size: calc(var(--main-width)/10);
+    font-size: 7rem;
 }
 
 #karl h3 {
-    font-size: calc(var(--main-width)/30);
+    font-size: 2.5rem;
+}
+
+@media (max-width: 48rem) {
+    h1 {
+        font-size: 10vw;
+    }
+    
+    #karl h3 {
+        font-size: 5vw;
+    }
+    
 }
 
 h3 {
@@ -93,7 +104,7 @@ p {
 }
 
 #karl {
-    width: calc(var(--main-width)/1.5);;
+    width: 55rem;
     position: absolute;
     top: 40%;
 
@@ -104,12 +115,10 @@ p {
     text-align: center;
 }
 
-#karl a {
-    font-family: Work Sans;
-    font-size: var(--karl-font-size);
-    font-weight: 700;
-
-    line-height: 10rem;
+@media (max-width: 48rem) {
+    #karl {
+        width: 90vw;
+    }
 }
 
 #arrow {
@@ -135,6 +144,12 @@ p {
   100% {
     bottom: -1rem;
   }
+}
+
+@media (max-width: 48rem) {
+    #arrow {
+        left: 39.5%;
+    }
 }
 
 
@@ -585,7 +600,7 @@ a {
     height: 3.5rem;
     object-fit: contain;
     border-radius: 0.75rem;
-    filter: grayscale(30%);
+    /* filter: grayscale(30%); */
 }
 
 .app-icons span {

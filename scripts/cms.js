@@ -16,7 +16,8 @@ const projectsData = {
             "apps": [
                 "Ressources/Icons/Unity.png",
                 "Ressources/Icons/Rider.png",
-                "Ressources/Icons/Procreate.png"
+                "Ressources/Icons/Procreate.png",
+                "Ressources/Icons/GitHub.png"
             ],
             "name": "Caveman hits Giraffe in a Car",
             "description": "Ein rasantes Action-Roguelike, das aus einem 5-tägigen Game Jam entstanden ist. Kämpfe gegen abwechslungsreiche Gegnerwellen, verbessere deine Fähigkeiten und verewige dich auf der Bestenliste.",
