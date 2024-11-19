@@ -166,32 +166,6 @@ function generateFeaturedProjects() {
 
 }
 
-function generateAllProjects() {
-
-  const allProjectsContainer = document.getElementById('all-projects-container');
-  const template = document.getElementById('project-template');
-  
-  projectsData.projects.forEach(project => {
-    const clone = template.content.cloneNode(true);
-    const projectDiv = clone.querySelector('.project');
-    const labelText = clone.querySelector('.label-text');
-    const thumbnailImg = clone.querySelector('.thumbnail-img');
-
-    projectDiv.setAttribute('data-project-id', project.label);
-    labelText.textContent = project.label;
-    thumbnailImg.src = project.thumbnail;
-    thumbnailImg.alt = project.label;
-
-    allProjectsContainer.appendChild(clone);
-
-    // Event Listener für das Öffnen der Lightbox
-    projectDiv.addEventListener('click', () => {
-      openLightbox(project);
-    });
-  });
-}
-
-
 function openLightbox(project) {
     const template = document.getElementById('lightbox-template');
     const clone = template.content.cloneNode(true);
@@ -373,7 +347,6 @@ function showSlides(n) {
 
 
 generateFeaturedProjects();
-generateAllProjects();
 
 
 
