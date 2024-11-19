@@ -3,6 +3,7 @@ const projectsData = {
     "projects": [
         {
             "label": "unity-spiel",
+            "featured": true,
             "thumbnail": "Ressources/Caveman_hits_Giraffe_in_a_Car/Thumbnail.png",
             "square": "Ressources/Caveman_hits_Giraffe_in_a_Car/Thumbnail_Square.png",
             "type": "slideshow",
@@ -25,6 +26,7 @@ const projectsData = {
         },
         {
             "label": "character-design",
+            "featured": false,
             "thumbnail": "Ressources/Character_Design/Thumbnail.png",
             "square": "Ressources/Character_Design/Thumbnail_Square.png",
             "type": "slideshow",
@@ -42,6 +44,7 @@ const projectsData = {
         },
         {
             "label": "hausarbeit",
+            "featured": true,
             "thumbnail": "Ressources/Term_Paper/Thumbnail.png",
             "square": "Ressources/Term_Paper/Thumbnail_Square.png",
             "type": "iframe",
@@ -55,6 +58,7 @@ const projectsData = {
         },
         {
             "label": "vorspann",
+            "featured": true,
             "thumbnail": "Ressources/Opening_Credits/Thumbnail.png",
             "square": "Ressources/Opening_Credits/Thumbnail_Square.png",
             "type": "iframe",
@@ -68,6 +72,7 @@ const projectsData = {
         },
         {
             "label": "kubistische-portraits",
+            "featured": false,
             "thumbnail": "Ressources/Experimentelles_Projekt/Thumbnail.png",
             "square": "Ressources/Experimentelles_Projekt/Thumbnail_Square.png",
             "type": "slideshow",
@@ -85,6 +90,7 @@ const projectsData = {
         },
         {
             "label": "animationsfilm-kuh",
+            "featured": false,
             "thumbnail": "Ressources/Kuh/Thumbnail.png",
             "square": "Ressources/Kuh/Thumbnail_Square.png",
             "type": "iframe",
@@ -98,6 +104,7 @@ const projectsData = {
         },
         {
             "label": "animationsfilm-object-terrors",
+            "featured": false,
             "thumbnail": "Ressources/Object_Terrors/Thumbnail.png",
             "square": "Ressources/Object_Terrors/Thumbnail_Square.png",
             "type": "iframe",
@@ -111,6 +118,7 @@ const projectsData = {
         },
         {
             "label": "isometrischer-raum",
+            "featured": false,
             "thumbnail": "Ressources/iso_room/Thumbnail.png",
             "square": "Ressources/iso_room/Thumbnail_Square.png",
             "type": "slideshow",
@@ -124,31 +132,38 @@ const projectsData = {
 };
 
 // Funktion zum Erstellen der Projekte
-function generateProjects() {
-    const projectsContainer = document.getElementById('projects-container');
+function generateFeaturedProjects() {
+    const featuredProjectsContainer = document.getElementById('featured-projects-container');
+    const allProjectsContainer = document.getElementById('all-projects-container');
+
     const template = document.getElementById('project-template');
 
     projectsData.projects.forEach(project => {
+        if (project.featured === true) {
+            
         const clone = template.content.cloneNode(true);
-
+        
         // Setze die Projektdaten aus der JSON
         const projectDiv = clone.querySelector('.project');
         const labelText = clone.querySelector('.label-text');
         const thumbnailImg = clone.querySelector('.thumbnail-img');
-
+        
         projectDiv.setAttribute('data-project-id', project.label);
         labelText.textContent = project.label;
         thumbnailImg.src = project.thumbnail;
         thumbnailImg.alt = project.label;
-
+        
         // Füge das Projekt in den Container ein
-        projectsContainer.appendChild(clone);
-
+        featuredProjectsContainer.appendChild(clone);
+        console.log("1");
         // Event Listener für das Öffnen der Lightbox
         projectDiv.addEventListener('click', () => {
             openLightbox(project);
         });
+        }
+
     });
+
 }
 
 
@@ -333,7 +348,7 @@ function showSlides(n) {
 }
 
 // Rufe die Funktion auf, um die Projekte zu generieren
-generateProjects();
+generateFeaturedProjects();
 
 // Dynamischer Wechsel zwischen Thumbnails basierend auf der Bildschirmgröße
 function updateThumbnails() {
