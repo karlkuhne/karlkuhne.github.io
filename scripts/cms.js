@@ -1,4 +1,4 @@
-// Die JSON-Daten mit den Projektinformationen
+
 const projectsData = {
     "projects": [
         {
@@ -133,8 +133,8 @@ const projectsData = {
 
 // Funktion zum Erstellen der Projekte
 function generateFeaturedProjects() {
+    
     const featuredProjectsContainer = document.getElementById('featured-projects-container');
-    const allProjectsContainer = document.getElementById('all-projects-container');
 
     const template = document.getElementById('project-template');
 
@@ -155,7 +155,7 @@ function generateFeaturedProjects() {
         
         // Füge das Projekt in den Container ein
         featuredProjectsContainer.appendChild(clone);
-        console.log("1");
+        
         // Event Listener für das Öffnen der Lightbox
         projectDiv.addEventListener('click', () => {
             openLightbox(project);
@@ -164,6 +164,31 @@ function generateFeaturedProjects() {
 
     });
 
+}
+
+function generateAllProjects() {
+
+  const allProjectsContainer = document.getElementById('all-projects-container');
+  const template = document.getElementById('project-template');
+  
+  projectsData.projects.forEach(project => {
+    const clone = template.content.cloneNode(true);
+    const projectDiv = clone.querySelector('.project');
+    const labelText = clone.querySelector('.label-text');
+    const thumbnailImg = clone.querySelector('.thumbnail-img');
+
+    projectDiv.setAttribute('data-project-id', project.label);
+    labelText.textContent = project.label;
+    thumbnailImg.src = project.thumbnail;
+    thumbnailImg.alt = project.label;
+
+    allProjectsContainer.appendChild(clone);
+
+    // Event Listener für das Öffnen der Lightbox
+    projectDiv.addEventListener('click', () => {
+      openLightbox(project);
+    });
+  });
 }
 
 
@@ -315,7 +340,6 @@ function openLightbox(project) {
 
 
 
-
 let currentIndex = 1; // Standardmäßig auf das erste Bild setzen
 
 function plusSlides(n) {
@@ -347,8 +371,11 @@ function showSlides(n) {
     dots[currentIndex - 1].classList.add('dotactive');
 }
 
-// Rufe die Funktion auf, um die Projekte zu generieren
+
 generateFeaturedProjects();
+generateAllProjects();
+
+
 
 // Dynamischer Wechsel zwischen Thumbnails basierend auf der Bildschirmgröße
 function updateThumbnails() {
