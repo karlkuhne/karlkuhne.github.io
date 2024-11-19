@@ -58,7 +58,7 @@ const projectsData = {
         },
         {
             "label": "vorspann",
-            "featured": true,
+            "featured": false,
             "thumbnail": "Ressources/Opening_Credits/Thumbnail.png",
             "square": "Ressources/Opening_Credits/Thumbnail_Square.png",
             "type": "iframe",
@@ -90,14 +90,15 @@ const projectsData = {
         },
         {
             "label": "animationsfilm-kuh",
-            "featured": false,
+            "featured": true,
             "thumbnail": "Ressources/Kuh/Thumbnail.png",
             "square": "Ressources/Kuh/Thumbnail_Square.png",
             "type": "iframe",
             "src": "https://youtube.com/embed/tydYfFgj4q0",
             "apps": [
                 "Ressources/Icons/Blender.png",
-                "Ressources/Icons/Premiere.png"
+                "Ressources/Icons/Premiere.png",
+                "Ressources/Icons/AfterEffects.png"
             ],
             "name": "Animationsfilm: Kuh",
             "description": "In diesem Film wurde die Integration eines CGI-Elements in ein reales Video durchgeführt. Das Projekt umfasst die Erstellung und Animation eines 3D-Elements sowie das Tracking und die Integration dieses Objekts in ein selbst aufgenommenes Video.",
