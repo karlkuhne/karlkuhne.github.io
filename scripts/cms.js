@@ -66,8 +66,6 @@ const projectsData = {
             "description": "Ein Vorspann für eine fiktive Serie, welcher die einzigartige Stimmung einer nächtlichen Stadt einfangen soll.",
 
         },
-
-
         {
             "label": "kubistische-portraits",
             "thumbnail": "Ressources/Experimentelles_Projekt/Thumbnail.png",
@@ -85,9 +83,43 @@ const projectsData = {
             "description": "Eine Reihe von kubistischen Portraits, fiktive Personen, Pastellkreide auf Papier.",
             "projectPage": "cubism.html"
         },
-
-
-
+        {
+            "label": "animationsfilm-kuh",
+            "thumbnail": "Ressources/Kuh/Thumbnail.png",
+            "square": "Ressources/Kuh/Thumbnail_Square.png",
+            "type": "iframe",
+            "src": "https://youtube.com/embed/tydYfFgj4q0",
+            "apps": [
+                "Ressources/Icons/Blender.png",
+                "Ressources/Icons/Premiere.png"
+            ],
+            "name": "Animationsfilm: Kuh",
+            "description": "In diesem Film wurde die Integration eines CGI-Elements in ein reales Video durchgeführt. Das Projekt umfasst die Erstellung und Animation eines 3D-Elements sowie das Tracking und die Integration dieses Objekts in ein selbst aufgenommenes Video.",
+        },
+        {
+            "label": "animationsfilm-object-terrors",
+            "thumbnail": "Ressources/Object_Terrors/Thumbnail.png",
+            "square": "Ressources/Object_Terrors/Thumbnail_Square.png",
+            "type": "iframe",
+            "src": "https://youtube.com/embed/aGy7EN_uFUs",
+            "apps": [
+                "Ressources/Icons/Blender.png",
+                "Ressources/Icons/Premiere.png"
+            ],
+            "name": "Animationsfilm: Object Terrors",
+            "description": "Das Konzept besteht darin, häufige menschliche Phobien auf alltägliche Haushalts- gegenstände zu übertragen. Um dieses Konzept audiovisuell umzusetzen, sollen fünf Gegenstände in derem jeweiligen Raum monologartig über deren Ängste sprechen. Der Sprechakt soll authentisch wirken, als wäre eine reale Person interviewt worden.",
+        },
+        {
+            "label": "isometrischer-raum",
+            "thumbnail": "Ressources/iso_room/Thumbnail.png",
+            "square": "Ressources/iso_room/Thumbnail_Square.png",
+            "type": "slideshow",
+            "images": [
+                "Ressources/iso_room/Render.png",
+            ],
+            "name": "Isometrischer Raum",
+            "description": "Mein erstes Projekt in Blender, rendered in Cycles.",
+        }
     ]
 };
 
@@ -151,6 +183,15 @@ function openLightbox(project) {
             dot.onclick = () => currentSlide(index + 1); // Wechselt zum entsprechenden Bild
             dotsContainer.appendChild(dot);
         });
+
+        if (project.images.length === 1) {
+            // Blende die Navigationspfeile und die Dots aus
+            dotsContainer.style.display = 'none';
+            const navigation = clone.querySelector('.navigation');
+            if (navigation) {
+                navigation.style.display = 'none';
+            }
+        }
     } else if (project.type === "iframe") { // PDF oder Video
         // Füge ein Iframe hinzu, das die PDF oder das Video anzeigt
         const iframe = document.createElement('iframe');
