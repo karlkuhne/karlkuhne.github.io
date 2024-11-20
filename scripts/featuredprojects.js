@@ -116,6 +116,7 @@ const projectsData = {
             ],
             "name": "Animationsfilm: Object Terrors",
             "description": "Das Konzept besteht darin, häufige menschliche Phobien auf alltägliche Haushalts- gegenstände zu übertragen. Um dieses Konzept audiovisuell umzusetzen, sollen fünf Gegenstände in derem jeweiligen Raum monologartig über deren Ängste sprechen. Der Sprechakt soll authentisch wirken, als wäre eine reale Person interviewt worden.",
+            "projectPage": "objectTerrors.html",
         },
         {
             "label": "isometrischer-raum",
