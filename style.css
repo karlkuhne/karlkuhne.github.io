@@ -506,7 +506,7 @@ iframe {
 
 @media (max-width: 40rem) {
     .navigation {
-        width: 100%;
+        width: 99vw;
     }
 }
 
