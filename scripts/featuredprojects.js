@@ -93,13 +93,14 @@ const projectsData = {
             "thumbnail": "Ressources/Kuh/Thumbnail.png",
             "square": "Ressources/Kuh/Thumbnail_Square.png",
             "type": "iframe",
-            "src": "https://youtube.com/embed/tydYfFgj4q0",
+            "src": "https://youtube.com/embed/J7LF3Q7Vtjg",
             "apps": [
                 "Ressources/Icons/Blender.png",
                 "Ressources/Icons/Premiere.png",
             ],
             "name": "Animationsfilm: Kuh",
             "description": "In diesem Film wurde die Integration eines CGI-Elements in ein reales Video durchgeführt. Das Projekt umfasst die Erstellung und Animation eines 3D-Elements sowie das Tracking und die Integration dieses Objekts in ein selbst aufgenommenes Video.",
+            "projectPage": "cow.html",
         },
         {
             "label": "animationsfilm-object-terrors",
@@ -215,7 +216,7 @@ function openLightbox(project) {
         iframe.src = project.src;
         iframe.classList.add('pdf-viewer');
         iframe.frameBorder = "0";
-        iframe.allow = "fullscreen";
+        iframe.allowfullscreen = "true";
         iframe.style.width = "100%"; // Setze die Breite auf 100%
         
         // Füge den iFrame zum Container hinzu, bevor wir die Höhe berechnen
