@@ -504,7 +504,11 @@ iframe {
     padding-right: 20px;
 }
 
-
+@media (max-width: 40rem) {
+    .navigation {
+        width: 100%;
+    }
+}
 
 .navigation a {
     text-shadow: 1px 1px 1px #000,
