@@ -3,6 +3,7 @@ const projectsData = {
     "projects": [
         {
             "label": "unity-spiel",
+            "category": "spiel",
             "featured": true,
             "thumbnail": "Ressources/Caveman_hits_Giraffe_in_a_Car/Thumbnail.png",
             "square": "Ressources/Caveman_hits_Giraffe_in_a_Car/Thumbnail_Square.png",
@@ -27,6 +28,7 @@ const projectsData = {
         },
         {
             "label": "character-design",
+            "category": "illustration",
             "featured": false,
             "thumbnail": "Ressources/Character_Design/Thumbnail.png",
             "square": "Ressources/Character_Design/Thumbnail_Square.png",
@@ -44,6 +46,7 @@ const projectsData = {
         },
         {
             "label": "hausarbeit",
+            "category": "forschungsprojekt",
             "featured": true,
             "thumbnail": "Ressources/Term_Paper/Thumbnail.png",
             "square": "Ressources/Term_Paper/Thumbnail_Square.png",
@@ -58,6 +61,7 @@ const projectsData = {
         },
         {
             "label": "vorspann",
+            "category": "film",
             "featured": false,
             "thumbnail": "Ressources/Opening_Credits/Thumbnail.png",
             "square": "Ressources/Opening_Credits/Thumbnail_Square.png",
@@ -72,6 +76,7 @@ const projectsData = {
         },
         {
             "label": "kubistische-portraits",
+            "category": "illustration",
             "featured": false,
             "thumbnail": "Ressources/Experimentelles_Projekt/Thumbnail.png",
             "square": "Ressources/Experimentelles_Projekt/Thumbnail_Square.png",
@@ -89,6 +94,7 @@ const projectsData = {
         },
         {
             "label": "animationsfilm-kuh",
+            "category": "film",
             "featured": true,
             "thumbnail": "Ressources/Kuh/Thumbnail.png",
             "square": "Ressources/Kuh/Thumbnail_Square.png",
@@ -104,6 +110,7 @@ const projectsData = {
         },
         {
             "label": "animationsfilm-object-terrors",
+            "category": "film",
             "featured": false,
             "thumbnail": "Ressources/Object_Terrors/Thumbnail.png",
             "square": "Ressources/Object_Terrors/Thumbnail_Square.png",
@@ -120,6 +127,7 @@ const projectsData = {
         },
         {
             "label": "isometrischer-raum",
+            "category": "illustration",
             "featured": false,
             "thumbnail": "Ressources/iso_room/Thumbnail.png",
             "square": "Ressources/iso_room/Thumbnail_Square.png",
@@ -149,6 +157,7 @@ function generateAllProjects() {
     const thumbnailImg = clone.querySelector('.thumbnail-img');
 
     projectDiv.setAttribute('data-project-id', project.label);
+    projectDiv.setAttribute('data-category', project.category);
     labelText.textContent = project.label;
     thumbnailImg.src = project.thumbnail;
     thumbnailImg.alt = project.label;
@@ -344,9 +353,6 @@ function showSlides(n) {
 
 generateAllProjects();
 
-
-
-
 // Dynamischer Wechsel zwischen Thumbnails basierend auf der Bildschirmgröße
 function updateThumbnails() {
     const isLargeScreen = window.matchMedia('(max-width: 40rem)').matches;
@@ -366,3 +372,37 @@ function updateThumbnails() {
 // Beim Laden und bei Fensteränderung aufrufen
 window.addEventListener('resize', updateThumbnails);
 updateThumbnails();
+
+
+
+
+
+
+// FILTER
+
+function setupFilters() {
+    const filterButtons = document.querySelectorAll('.filter-button');
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const category = button.getAttribute('data-category');
+            filterProjects(category);
+        });
+    });
+}
+
+function filterProjects(category) {
+    const allProjects = document.querySelectorAll('.project');
+
+    allProjects.forEach(project => {
+        const projectCategory = project.getAttribute('data-category');
+        if (category === 'alle' || projectCategory === category) {
+            project.style.display = 'block';  // Show project
+        } else {
+            project.style.display = 'none';  // Hide project
+        }
+    });
+}
+
+// Initialize filters
+setupFilters();
