@@ -351,7 +351,7 @@ body {
 }
 
 .filter-button {
-    background-color: rgb(46, 46, 46);
+    background-color: rgb(40, 40, 40);
     transition: background-color 0.15s;
     width: fit-content;
 
@@ -367,8 +367,8 @@ body {
     margin-right: 1.3rem;
 }
 
-.filter-active  .filter-button {
-    background-color: rgb(81, 81, 81);
+.filter-active {
+    background-color: rgb(100, 100, 100);
     cursor: pointer;
 }
 

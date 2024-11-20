@@ -380,16 +380,19 @@ updateThumbnails();
 
 // FILTER
 
-function setupFilters() {
-    const filterButtons = document.querySelectorAll('.filter-button');
-    
+const filterButtons = document.querySelectorAll('.filter-button');
+
+function SetupFilters() {
     filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const category = button.getAttribute('data-category');
-            filterProjects(category);
+        button.addEventListener('click', function() {
+            const filter = button.getAttribute('data-category');
+            filterButtons.forEach(btn => btn.classList.remove('filter-active'));
+            this.classList.add('filter-active');
+            filterProjects(filter);
         });
     });
 }
+
 
 function filterProjects(category) {
     const allProjects = document.querySelectorAll('.project');
@@ -404,5 +407,4 @@ function filterProjects(category) {
     });
 }
 
-// Initialize filters
-setupFilters();
+SetupFilters();
