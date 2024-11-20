@@ -488,11 +488,13 @@ iframe {
     border: none;
 }
 
-
+.container-waagerecht {
+    position: relative;
+}
 
 .navigation {
     position: absolute;
-    top: 42.5%;
+    top: 52%;
     transform: translateY(-50%);
 
     width: calc(var(--main-width) - 40px);
