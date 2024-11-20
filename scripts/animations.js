@@ -1,3 +1,45 @@
+// FILTER
+
+const filterButtons = document.querySelectorAll('.filter-button');
+
+function SetupFilters() {
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const filter = button.getAttribute('data-category');
+            filterButtons.forEach(btn => btn.classList.remove('filter-active'));
+            this.classList.add('filter-active');
+            filterProjects(filter);
+        });
+    });
+}
+
+
+function filterProjects(category) {
+    const allProjects = document.querySelectorAll('.project');
+    
+    allProjects.forEach(project => project.classList.remove('fade-in'));
+    
+    allProjects.forEach(project => {
+        const projectCategory = project.getAttribute('data-category');
+        if (category === 'alle' || projectCategory === category) {
+            project.style.display = 'block';
+        } else {
+            project.style.display = 'none';
+        }
+    });
+
+    const visibleProjects = Array.from(allProjects).filter(project => project.style.display === 'block');
+    visibleProjects.slice(0, 2).forEach(project => {
+        setTimeout(() => project.classList.add('fade-in'), 50);
+    });
+}
+
+
+
+SetupFilters();
+
+// ANIMATIONS
+
 const rootFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
 
 
