@@ -54,7 +54,7 @@ h1 {
     font-size: 2.5rem;
 }
 
-@media (max-width: 48rem) {
+@media (max-width: 40rem) {
     h1 {
         font-size: 10vw;
     }
@@ -115,7 +115,7 @@ p {
     text-align: center;
 }
 
-@media (max-width: 48rem) {
+@media (max-width: 40rem) {
     #karl {
         width: 90vw;
     }
@@ -146,7 +146,7 @@ p {
   }
 }
 
-@media (max-width: 48rem) {
+@media (max-width: 40rem) {
     #arrow {
         left: 39.5%;
     }
@@ -314,7 +314,7 @@ nav {
 
 }
 
-@media (max-width: 48rem) {
+@media (max-width: 40rem) {
     nav {
         background-color: rgb(30, 30, 30, 0.88);
     }
@@ -393,7 +393,7 @@ body {
     overflow: hidden;
 }
 
-@media (max-width: 48rem) {
+@media (max-width: 40rem) {
     #galery {
         width: 99vw;
     }
@@ -404,6 +404,10 @@ body {
         object-fit: cover;
     }
 
+    
+}
+
+@media (max-width: 45rem) {
     h2 {
         font-size: 8.5vw;
     }
@@ -566,7 +570,7 @@ a {
 
 
 
-@media (max-width: 48rem) {
+@media (max-width: 40rem) {
     .wrapper-waagerecht {
         width: 98.5vw;
     }
