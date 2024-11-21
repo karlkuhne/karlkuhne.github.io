@@ -146,7 +146,7 @@ p {
   }
 }
 
-@media (max-width: 40rem) {
+@media (max-width: 40.9rem) {
     #arrow {
         left: 39.5%;
     }
@@ -314,7 +314,7 @@ nav {
 
 }
 
-@media (max-width: 40rem) {
+@media (max-width: 40.9rem) {
     nav {
         background-color: rgb(30, 30, 30, 0.88);
     }
@@ -430,7 +430,7 @@ body {
     overflow: hidden;
 }
 
-@media (max-width: 40rem) {
+@media (max-width: 40.9rem) {
     #galery {
         width: 99vw;
     }
@@ -541,7 +541,7 @@ iframe {
     padding-right: 20px;
 }
 
-@media (max-width: 40rem) {
+@media (max-width: 40.9rem) {
     .navigation {
         width: 90vw;
     }
@@ -623,7 +623,7 @@ iframe {
 
 
 
-@media (max-width: 40rem) {
+@media (max-width: 40.9rem) {
     .wrapper-waagerecht {
         width: 98.5vw;
     }

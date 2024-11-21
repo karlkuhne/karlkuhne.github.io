@@ -355,7 +355,7 @@ generateAllProjects();
 
 // Dynamischer Wechsel zwischen Thumbnails basierend auf der Bildschirmgröße
 function updateThumbnails() {
-    const isLargeScreen = window.matchMedia('(max-width: 40rem)').matches;
+    const isLargeScreen = window.matchMedia('(max-width: 40.9rem)').matches;
 
     document.querySelectorAll('.thumbnail-img').forEach(img => {
         const projectId = img.closest('.project').getAttribute('data-project-id');
