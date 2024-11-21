@@ -13,9 +13,14 @@ function SetupFilters() {
     });
 }
 
+let previusCategory = 'alle';
 
 function filterProjects(category) {
     const allProjects = document.querySelectorAll('.project');
+
+    if (category === previusCategory) {
+      return;
+  }
     
     allProjects.forEach(project => project.classList.remove('fade-in'));
     
@@ -32,6 +37,8 @@ function filterProjects(category) {
     visibleProjects.slice(0, 2).forEach(project => {
         setTimeout(() => project.classList.add('fade-in'), 50);
     });
+
+    previusCategory = category;
 }
 
 
