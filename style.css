@@ -93,12 +93,22 @@ p {
 
 /* COVER */
 
-.parallax {
+/* .parallax {
     background-image: url("Ressources/Cover.png");
+    background-position: right;
     min-height: 100vh;
 
     background-attachment: scroll;
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ */
+.parallax {
+    background-image: url("Ressources/Cover.png");
+    height: 100vh;
+    background-attachment: scroll;
+    background-position: right; /* Änderung hier */
     background-repeat: no-repeat;
     background-size: cover;
 }
