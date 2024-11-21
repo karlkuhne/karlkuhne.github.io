@@ -359,7 +359,7 @@ body {
     margin-top: 1.3rem;
 }
 
-@media (max-width: 40rem) {
+@media (max-width: 54rem) {
     .filter-container {
         width: 90vw;
         flex-wrap: wrap;
