@@ -350,6 +350,22 @@ body {
     justify-content: center;
 }
 
+.filter-container {
+    display: flex;
+    justify-content: center;
+    width: var(--main-width);
+    align-self: center;
+    gap: 1rem;
+    margin-top: 1.3rem;
+}
+
+@media (max-width: 40rem) {
+    .filter-container {
+        width: 90vw;
+        flex-wrap: wrap;
+    }
+}
+
 .filter-button {
     background-color: rgb(40, 40, 40);
     transition: background-color 0.15s;
@@ -363,8 +379,6 @@ body {
     color: white;
 
     padding: 0.4rem 0.75rem 0.4rem 0.75rem;
-    margin-top: 1.3rem;
-    margin-right: 1.3rem;
 }
 
 .filter-active {
@@ -1124,7 +1138,6 @@ table {
 table tr td:nth-child(2) {
     padding-left: 3rem;
 }
-
 
 /* RESPONSIVE */
 
