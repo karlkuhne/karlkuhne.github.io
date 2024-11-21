@@ -5,21 +5,21 @@ const projectsData = {
             "label": "unity-spiel",
             "category": "spiel",
             "featured": true,
-            "thumbnail": "Ressources/Caveman_hits_Giraffe_in_a_Car/Thumbnail.png",
-            "square": "Ressources/Caveman_hits_Giraffe_in_a_Car/Thumbnail_Square.png",
+            "thumbnail": "Ressources/Caveman_hits_Giraffe_in_a_Car/Thumbnail.avif",
+            "square": "Ressources/Caveman_hits_Giraffe_in_a_Car/Thumbnail_Square.avif",
             "type": "slideshow",
             "images": [
-                "Ressources/Caveman_hits_Giraffe_in_a_Car/1.png",
-                "Ressources/Caveman_hits_Giraffe_in_a_Car/2.png",
-                "Ressources/Caveman_hits_Giraffe_in_a_Car/3.png",
-                "Ressources/Caveman_hits_Giraffe_in_a_Car/4.png",
-                "Ressources/Caveman_hits_Giraffe_in_a_Car/5.png"
+                "Ressources/Caveman_hits_Giraffe_in_a_Car/1.avif",
+                "Ressources/Caveman_hits_Giraffe_in_a_Car/2.avif",
+                "Ressources/Caveman_hits_Giraffe_in_a_Car/3.avif",
+                "Ressources/Caveman_hits_Giraffe_in_a_Car/4.avif",
+                "Ressources/Caveman_hits_Giraffe_in_a_Car/5.avif"
             ],
             "apps": [
-                "Ressources/Icons/Unity.png",
-                "Ressources/Icons/Rider.png",
-                "Ressources/Icons/Procreate.png",
-                "Ressources/Icons/GitHub.png"
+                "Ressources/Icons/Unity.avif",
+                "Ressources/Icons/Rider.avif",
+                "Ressources/Icons/Procreate.avif",
+                "Ressources/Icons/GitHub.avif"
             ],
             "name": "Caveman hits Giraffe in a Car",
             "description": "Ein rasantes Action-Roguelike, das aus einem 5-tägigen Game Jam entstanden ist. Kämpfe gegen abwechslungsreiche Gegnerwellen, verbessere deine Fähigkeiten und verewige dich auf der Bestenliste.",
@@ -30,16 +30,16 @@ const projectsData = {
             "label": "character-design",
             "category": "illustration",
             "featured": false,
-            "thumbnail": "Ressources/Character_Design/Thumbnail.png",
-            "square": "Ressources/Character_Design/Thumbnail_Square.png",
+            "thumbnail": "Ressources/Character_Design/Thumbnail.avif",
+            "square": "Ressources/Character_Design/Thumbnail_Square.avif",
             "type": "slideshow",
             "images": [
-                "Ressources/Character_Design/1.png",
-                "Ressources/Character_Design/2.png",
-                "Ressources/Character_Design/3.png"
+                "Ressources/Character_Design/1.avif",
+                "Ressources/Character_Design/2.avif",
+                "Ressources/Character_Design/3.avif"
             ],
             "apps": [
-                "Ressources/Icons/Procreate.png"
+                "Ressources/Icons/Procreate.avif"
             ],
             "name": "Character Design",
             "description": "Mein erstes Character Design „Hosbol Pogronop“, inspiriert von der Myconid-Rasse aus Dungeons and Dragons.",
@@ -48,11 +48,11 @@ const projectsData = {
             "label": "hausarbeit",
             "category": "forschungsprojekt",
             "featured": true,
-            "thumbnail": "Ressources/Term_Paper/Thumbnail.png",
-            "square": "Ressources/Term_Paper/Thumbnail_Square.png",
+            "thumbnail": "Ressources/Term_Paper/Thumbnail.avif",
+            "square": "Ressources/Term_Paper/Thumbnail_Square.avif",
             "type": "iframe",
             "apps": [
-                "Ressources/Icons/Word.png"
+                "Ressources/Icons/Word.avif"
             ],
             "src": "Ressources/Term_Paper/Term_Paper.pdf",
             "name": "Designing for immersion: The influence of diegetic player guidance on the gaming experience",
@@ -63,12 +63,12 @@ const projectsData = {
             "label": "vorspann",
             "category": "film",
             "featured": false,
-            "thumbnail": "Ressources/Opening_Credits/Thumbnail.png",
-            "square": "Ressources/Opening_Credits/Thumbnail_Square.png",
+            "thumbnail": "Ressources/Opening_Credits/Thumbnail.avif",
+            "square": "Ressources/Opening_Credits/Thumbnail_Square.avif",
             "type": "iframe",
             "src": "https://www.youtube.com/embed/e4t05vSzYPg",
             "apps": [
-                "Ressources/Icons/Premiere.png"
+                "Ressources/Icons/Premiere.avif"
             ],
             "name": "Opening Credits",
             "description": "Ein Vorspann für eine fiktive Serie, welcher die einzigartige Stimmung einer nächtlichen Stadt einfangen soll.",
@@ -78,16 +78,16 @@ const projectsData = {
             "label": "kubistische-portraits",
             "category": "illustration",
             "featured": false,
-            "thumbnail": "Ressources/Experimentelles_Projekt/Thumbnail.png",
-            "square": "Ressources/Experimentelles_Projekt/Thumbnail_Square.png",
+            "thumbnail": "Ressources/Experimentelles_Projekt/Thumbnail.avif",
+            "square": "Ressources/Experimentelles_Projekt/Thumbnail_Square.avif",
             "type": "slideshow",
             "images": [
-                "Ressources/Experimentelles_Projekt/3.png",
-                "Ressources/Experimentelles_Projekt/1.png",
-                "Ressources/Experimentelles_Projekt/2.png"
+                "Ressources/Experimentelles_Projekt/3.avif",
+                "Ressources/Experimentelles_Projekt/1.avif",
+                "Ressources/Experimentelles_Projekt/2.avif"
             ],
             "apps": [
-                "Ressources/Icons/Hand.png"
+                "Ressources/Icons/Hand.avif"
             ],
             "name": "Cubism",
             "description": "Eine Reihe von kubistischen Portraits, fiktive Personen, Pastellkreide auf Papier.",
@@ -96,13 +96,13 @@ const projectsData = {
             "label": "animationsfilm-kuh",
             "category": "film",
             "featured": true,
-            "thumbnail": "Ressources/Kuh/Thumbnail.png",
-            "square": "Ressources/Kuh/Thumbnail_Square.png",
+            "thumbnail": "Ressources/Kuh/Thumbnail.avif",
+            "square": "Ressources/Kuh/Thumbnail_Square.avif",
             "type": "iframe",
             "src": "https://youtube.com/embed/J7LF3Q7Vtjg",
             "apps": [
-                "Ressources/Icons/Blender.png",
-                "Ressources/Icons/Premiere.png",
+                "Ressources/Icons/Blender.avif",
+                "Ressources/Icons/Premiere.avif",
             ],
             "name": "Animationsfilm: Kuh",
             "description": "In diesem Film wurde die Integration eines CGI-Elements in ein reales Video durchgeführt. Das Projekt umfasst die Erstellung und Animation eines 3D-Elements sowie das Tracking und die Integration dieses Objekts in ein selbst aufgenommenes Video.",
@@ -112,14 +112,14 @@ const projectsData = {
             "label": "animationsfilm-object-terrors",
             "category": "film",
             "featured": false,
-            "thumbnail": "Ressources/Object_Terrors/Thumbnail.png",
-            "square": "Ressources/Object_Terrors/Thumbnail_Square.png",
+            "thumbnail": "Ressources/Object_Terrors/Thumbnail.avif",
+            "square": "Ressources/Object_Terrors/Thumbnail_Square.avif",
             "type": "iframe",
             "src": "https://youtube.com/embed/aGy7EN_uFUs",
             "apps": [
-                "Ressources/Icons/Blender.png",
-                "Ressources/Icons/Premiere.png",
-                "Ressources/Icons/AfterEffects.png"
+                "Ressources/Icons/Blender.avif",
+                "Ressources/Icons/Premiere.avif",
+                "Ressources/Icons/AfterEffects.avif"
             ],
             "name": "Animationsfilm: Object Terrors",
             "description": "Das Konzept besteht darin, häufige menschliche Phobien auf alltägliche Haushalts- gegenstände zu übertragen. Um dieses Konzept audiovisuell umzusetzen, sollen fünf Gegenstände in derem jeweiligen Raum monologartig über deren Ängste sprechen. Der Sprechakt soll authentisch wirken, als wäre eine reale Person interviewt worden.",
@@ -129,14 +129,14 @@ const projectsData = {
             "label": "isometrischer-raum",
             "category": "illustration",
             "featured": false,
-            "thumbnail": "Ressources/iso_room/Thumbnail.png",
-            "square": "Ressources/iso_room/Thumbnail_Square.png",
+            "thumbnail": "Ressources/iso_room/Thumbnail.avif",
+            "square": "Ressources/iso_room/Thumbnail_Square.avif",
             "type": "slideshow",
             "images": [
-                "Ressources/iso_room/Render.png",
+                "Ressources/iso_room/Render.avif",
             ],
             "apps": [
-                "Ressources/Icons/Blender.png",
+                "Ressources/Icons/Blender.avif",
             ],
             "name": "Isometrischer Raum",
             "description": "Mein erstes Projekt in Blender, rendered in Cycles.",

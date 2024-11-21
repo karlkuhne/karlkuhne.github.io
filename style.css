@@ -89,7 +89,7 @@ p {
 /* COVER */
 
 .parallax {
-    background-image: url("Ressources/Cover.png");
+    background-image: url("Ressources/Cover.avif");
     height: 100vh;
     background-position: center;
     background-attachment: scroll;
