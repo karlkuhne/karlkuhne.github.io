@@ -46,6 +46,7 @@ h2 {
 
 #karl h3 {
     font-size: calc(var(--main-width) / 30);
+    margin-top: 0.5rem;
 }
 
 @media (max-width: 49rem) {
@@ -105,6 +106,8 @@ p {
     background-position: right; /* Änderung hier */
     background-repeat: no-repeat;
     background-size: cover;
+
+    filter: grayscale(60%);
 }
 
 #karl {
@@ -749,11 +752,11 @@ ol li p {
 
 
 #about-me {
-    transform: translateX(-5rem);
+    transform: translateX(-3rem);
 }
 
 #portrait {
-    width: 18rem;
+    width: 17.5rem;
     transform: translateX(22rem) translateY(-48.2rem);
 }
 
@@ -783,24 +786,24 @@ ol li p {
     }
 
     #portrait {
-        transform: translateX(11.4rem) translateY(-30.2rem);
+        transform: translateX(8.9rem) translateY(-30.4rem);
     }
 
     #languages {
-        transform: translateX(-11.2rem) translateY(0.8rem);
+        transform: translateX(-9.4rem) translateY(0.8rem);
     }
 
     #degrees {
-        transform: translateX(6.7rem) translateY(3rem);
+        transform: translateX(4rem) translateY(2.4rem);
         /* 6.25rem */
     }
 
     #hobbys {
-        transform: translateX(-13rem) translateY(1.5rem);
+        transform: translateX(-10.4rem) translateY(1.5rem);
     }
 
     #about {
-        height: 73.5rem;
+        height: 68rem;
     }
 }
 
