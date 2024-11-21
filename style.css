@@ -769,11 +769,11 @@ ol li p {
 }
 
 #degrees {
-    transform: translateX(9.4rem) translateY(-17.5rem);
+    transform: translateX(9.4rem) translateY(-18.2rem);
 }
 
 #hobbys {
-    transform: translateX(-9.5rem) translateY(-3rem);
+    transform: translateX(-9rem) translateY(-3rem);
 }
 
 #about {
