@@ -2,11 +2,12 @@
 <html lang="zxx">
 
 <head>
-    <title>Karl Kuhne | Portfolio</title>
+    <title>Karl Kuhne | Projekt "Object Terrors"</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="scripts/layout.js" defer></script>
+    <script src="scripts/projectPage.js" defer></script>
 </head>
 
 <body>
@@ -80,7 +81,7 @@
                 Dabei besteht die unglückliche Ironie, dass ihre spezifischen Phobien genau mit ihrem
                 vorgesehenem Verwendungszweck in Konflikt stehen. So wie Menschen oft in Lebensumständen
                 gefangen sind, die ihre Ängste verstärken, sind auch diese Objekte gezwungen, täglich ihren
-                angstauslösenden Aufgaben nachzugehen.
+                angstauslösenden Aufgaben nachzugehen.<br><br>
                 Um dieses Konzept audiovisuell umzusetzen, sollen fünf Gegenstände in derem jeweiligen Raum
                 monologartig über deren Ängste sprechen. Der Sprechakt soll authentisch wirken, als wäre eine
                 reale Person interviewt worden.</p>
@@ -88,50 +89,50 @@
             <p>Zuerst erfolgte eine Sammlung der darzustellenden Gegenstände. Ausgehend von einer
                 Computermaus mit Berührungsängsten, diese Idee bestand schon seit einer frühen Idee im
                 Seminar, kamen durch Brainstorming noch eine Glühbirne mit Höhenangst, ein Wecker mit Angst
-                im Dunkeln, ein Stift mit Sozialängsten und eine Kerze mit Angst vor Feuer hinzu.
+                im Dunkeln, ein Stift mit Sozialängsten und eine Kerze mit Angst vor Feuer hinzu.<br><br>
                 Diese Gegenstände wurden dann in Blender 4.2 anhand von Referenzbildern modelliert.
                 Besondere Aufmerksamkeit wurde dabei auf die Topologie des Modells gelegt, um eine saubere
                 Geometrie zu gewährleisten, die sich gut für die spätere Animation eignet. Danach wurden die Objekte
-                mit diversen Materialien besehen, um deren Farben und Reflektivität zu bestimmen.
+                mit diversen Materialien besehen, um deren Farben und Reflektivität zu bestimmen.<br><br>
                 Nach selbigem Vorgehen wurden anschließend die Umgebungen [Wände, andere Gegenstände und
                 Möbelstücke] erstellt. Dann wurden die fünf “Protagonisten” mit je einer Kamera in deren jeweiliges
                 Umfeld platziert. Anhand des Blicks durch die Kameras wurde dann jeweils ein Beleuchtungssetup
                 erstellt, wobei immer ein Hauptlicht und ein Fülllicht verwendet wurde, und ein kleines Mikrofon
-                eingefügt, um den Eindruck eines Interviews zu vermitteln.
+                eingefügt, um den Eindruck eines Interviews zu vermitteln.<br><br>
                 [Dadurch, dass in diesem Kurzfilm auf eine großartige Animation der 3D-Modelle verzichtet werden
                 sollte, weil die Gegenstände durch bspw. Gestikulierung zu sehr vermenschlicht würden, was hier aber
                 zugungsten des stabilen “hölzernen” Typs eines festen Objekts weitestgehend vermieden werden
                 sollte, waren die entscheidenden Variablen der Szenen-aufbau und die Plazierung der Kamera. Weil
                 deren Position und Rotation ständig einfach angespasst werden können, kommt das erste Erstellen
                 eines Szenenaufbaus dem Storyboard/ Animatic gleich. Es bringt reichlich wenig, den Szenenaufbau
-                erst einmal zu skizzieren und eventuell zu verwerfen, wenn diesen direkt live vornehmen kann.]
+                erst einmal zu skizzieren und eventuell zu verwerfen, wenn diesen direkt live vornehmen kann.]<br><br>
                 Bevor mit der Animation begonnen werden konnte, musste zunächst der Text für jedes Objekt
                 geschrieben werden. Dazu wurde ChatGPT 4o bzw. 4o mini verwendet, um fünf mal jeweilszwei kurze
                 Monologe zu generieren. Hier bestand die Schwierigkeit darin, den Text einerseits so klingen zu
                 lassen, als käme er von einem Menschen, dabei aber andererseits den Gegenstand durch allzu
                 spezifische menschliche Aussagen nicht auszuschließen. So sind beispielsweise Füllwörter und
                 Phrasen wie “You know?” zuträglich, aber Erlebnisse die nur Menschen haben können abträglich.
-                [Diese Gratwanderung hat das 3.5 Modell übrigens nicht geschafft.]
+                [Diese Gratwanderung hat das 3.5 Modell übrigens nicht geschafft.]<br><br>
                 Anschließend sollten diese Zeilen vertont werden, auf Englisch, um den Film zugänglicher zu machen.
                 Damit dort allerdings nicht ein deutscher Akzent oder unsaubere Aussprache ablenkt, wurde die Artlist
                 VoiceOver AI benutzt. Diese hat überzeugende Tonspuren geliefert, indem sie sogar Atemgeräusche
-                eingebaut hat.
+                eingebaut hat.<br><br>
                 Nun erfolgte die Zusammenführung der Monologe und der 3D-Szenen, die zu diesem Zeitpunkt noch
                 statisch waren. Um eine Sprechanimation für die Gegenstände zu erstellen, wurde zunächst die
                 Position eines derer Teile bzw. deren Skalierung an den Ausschlag der Tonspur geknüpft. So sind die
-                Charaktermodelle nicht statisch, sondern bewegen sich leicht gemäß der Tonlage.
+                Charaktermodelle nicht statisch, sondern bewegen sich leicht gemäß der Tonlage.<br><br>
                 Weiterhin sollte ein übergelagerter Mund hinzugefügt werden. Nach ettlichen Stunden Arbeit an
                 Planes für Lippen, Zähne und Zunge, alle jeweils gerigged und durch ein aufwendiges Node Setup
                 gefärbt, hat sich dann beim Versuch einer Animation herausgestellt, dass Blender [bzw. Die Version
                 4.2] dafür nicht geeignet ist: Nch dem Anpassen aller Keyframes im Pose Mode waren dann nach dem
-                Wechsel zurück in den Object Mode alle Planes seltsam verzerrt.
+                Wechsel zurück in den Object Mode alle Planes seltsam verzerrt.<br><br>
                 Also wurden alle zehn Szenen im bisherigen Zustand exportiert und in After Effects geladen. Dort
                 wurde das bisherige Plane Setup wieder ähnlich umgesetzt, die dann allerdings nicht über Keyframes,
                 sondern wieder über eine Knüpfung der Öffnung von Lippen und Zähnen an den Ausschlag der
                 Tonspur. Anschließend wurde jeweils der Mund durch Skalierung und Rotation den Gegenständen
-                “aufgesetzt”.
+                “aufgesetzt”.<br><br>
                 [Es wurde sich bewusst gegen das Hinzugügen von Augen entschieden, da diese an Wackel-augen
-                erinntert hätten, was dem wichtigen Thema die Ernsthaftigkeit genimmen hätte.]
+                erinntert hätten, was dem wichtigen Thema die Ernsthaftigkeit genimmen hätte.]<br><br>
                 Abschließend wurden wiederum aus After Effects alle Szenen exportiert und in Premiere Pro
                 zusammengefügt. Dort wurde in der Reihenfolge darauf geachtet, dass immer ein neuer Gegen-stand
                 eingeführt wird, bevor ein bereits bekannter seinen zweiten Auftritt hat, damit es kurz-weilig bleibt.
