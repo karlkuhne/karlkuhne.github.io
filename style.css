@@ -446,7 +446,7 @@ body {
 
 @media (max-width: 45rem) {
     h2 {
-        font-size: 8.5vw;
+        font-size: 9vw;
     }
 }
 
@@ -1080,7 +1080,6 @@ footer {
 
 .project-title {
     margin-top: 8rem;
-    font-size: 4rem;
 }
 
 .project-subtitle {
