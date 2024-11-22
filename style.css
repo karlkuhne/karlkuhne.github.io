@@ -309,7 +309,7 @@ nav {
 
 }
 
-@media (max-width: 40.9rem) {
+@media (max-width: 63.5rem) {
     nav {
         background-color: rgb(30, 30, 30, 0.88);
     }
