@@ -1110,12 +1110,12 @@ footer {
 }
 
 .project-description {
-    width: var(--main-width);
+    width: calc(var(--main-width) / 1.4);
     margin: 0 auto;
 }
 
 .project-description p {
-    text-align: justify;
+    text-align: left;
 }
 
 /* TABLE */
@@ -1158,6 +1158,10 @@ table tr td:nth-child(2) {
     width: var(--responsive-main-width);
 }
 
-.responsive .project-description , .responsive .project-cover {
+.responsive .project-cover {
     width: var(--responsive-main-width);
+}
+
+.responsive .project-description {
+    width: calc(var(--responsive-main-width) / 1.4);
 }
