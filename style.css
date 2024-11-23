@@ -118,7 +118,7 @@ p {
 
 #arrow {
     position: absolute;
-    left: 47%;
+    left: 48.3%;
     transform: translate(-50%, -50%);
     bottom: 0rem;
 
@@ -362,7 +362,7 @@ body {
 }
 
 .filter-button {
-    background-color: rgb(40, 40, 40);
+    background-color: rgb(44, 45, 49);
     transition: background-color 0.15s;
     width: fit-content;
 
@@ -379,7 +379,7 @@ body {
 }
 
 .filter-active {
-    background-color: rgb(100, 100, 100);
+    background-color: rgb(85, 85, 90); 
     cursor: pointer;
 }
 
