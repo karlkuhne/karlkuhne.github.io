@@ -66,7 +66,7 @@ const projectsData = {
             "thumbnail": "Ressources/Opening_Credits/Thumbnail.avif",
             "square": "Ressources/Opening_Credits/Thumbnail_Square.avif",
             "type": "iframe",
-            "src": "https://www.youtube.com/embed/e4t05vSzYPg",
+            "src": "https://www.youtube.com/embed/e4t05vSzYPg" + "?rel=0",
             "apps": [
                 "Ressources/Icons/Premiere.avif"
             ],
@@ -99,7 +99,7 @@ const projectsData = {
             "thumbnail": "Ressources/Kuh/Thumbnail.avif",
             "square": "Ressources/Kuh/Thumbnail_Square.avif",
             "type": "iframe",
-            "src": "https://youtube.com/embed/J7LF3Q7Vtjg",
+            "src": "https://youtube.com/embed/J7LF3Q7Vtjg" + "?rel=0",
             "apps": [
                 "Ressources/Icons/Blender.avif",
                 "Ressources/Icons/Premiere.avif",
@@ -115,7 +115,7 @@ const projectsData = {
             "thumbnail": "Ressources/Object_Terrors/Thumbnail.avif",
             "square": "Ressources/Object_Terrors/Thumbnail_Square.avif",
             "type": "iframe",
-            "src": "https://youtube.com/embed/aGy7EN_uFUs",
+            "src": "https://youtube.com/embed/aGy7EN_uFUs" + "?rel=0",
             "apps": [
                 "Ressources/Icons/Blender.avif",
                 "Ressources/Icons/Premiere.avif",
