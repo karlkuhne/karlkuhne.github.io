@@ -24,7 +24,7 @@ const projectsData = {
             "name": "Caveman hits Giraffe in a Car",
             "description": "Ein rasantes Action-Roguelike, das aus einem 5-tägigen Game Jam entstanden ist. Kämpfe gegen abwechslungsreiche Gegnerwellen, verbessere deine Fähigkeiten und verewige dich auf der Bestenliste.",
             "website": "https://cavemanhitsgiraffeinacar.github.io/",
-            "projectPage": "cavemanhitsgiraffe"
+            "projectPage": "./projekte/cavemanhitsgiraffe"
         },
         {
             "label": "character-design",
@@ -106,7 +106,7 @@ const projectsData = {
             ],
             "name": "Animationsfilm: Kuh",
             "description": "In diesem Film wurde die Integration eines CGI-Elements in ein reales Video durchgeführt. Das Projekt umfasst die Erstellung und Animation eines 3D-Elements sowie das Tracking und die Integration dieses Objekts in ein selbst aufgenommenes Video.",
-            "projectPage": "cow",
+            "projectPage": "./projekte/cow",
         },
         {
             "label": "animationsfilm-object-terrors",
@@ -123,7 +123,7 @@ const projectsData = {
             ],
             "name": "Animationsfilm: Object Terrors",
             "description": "Das Konzept besteht darin, häufige menschliche Phobien auf alltägliche Haushalts- gegenstände zu übertragen. Um dieses Konzept audiovisuell umzusetzen, sollen fünf Gegenstände in derem jeweiligen Raum monologartig über deren Ängste sprechen. Der Sprechakt soll authentisch wirken, als wäre eine reale Person interviewt worden.",
-            "projectPage": "objectTerrors",
+            "projectPage": "./projekte/objectTerrors",
         },
         {
             "label": "isometrischer-raum",
