@@ -374,6 +374,8 @@ body {
     color: white;
 
     padding: 0.4rem 0.75rem 0.4rem 0.75rem;
+
+    z-index: 12;
 }
 
 .filter-active {

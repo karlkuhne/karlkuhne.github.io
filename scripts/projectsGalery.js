@@ -45,7 +45,7 @@ const projectsData = {
             "description": "Mein erstes Character Design „Hosbol Pogronop“, inspiriert von der Myconid-Rasse aus Dungeons and Dragons.",
         },
         {
-            "label": "hausarbeit",
+            "label": "designing-for-immersion",
             "category": "forschungsprojekt",
             "featured": true,
             "thumbnail": "Ressources/Term_Paper/Thumbnail.avif",
@@ -54,10 +54,10 @@ const projectsData = {
             "apps": [
                 "Ressources/Icons/Word.avif"
             ],
-            "src": "Ressources/Term_Paper/Term_Paper.pdf",
+            "src": "projekte/designing-for-immersion.pdf",
             "name": "Designing for immersion: The influence of diegetic player guidance on the gaming experience",
             "description": "Gemäß des Grundsatzes „Designing for immersion“ ergründet diese Hausarbeit, ob Spielerführungsmechaniken in Videospielen besser Teil der erzählten Welt oder externes Spielelement sein sollten.",
-            "website": "Ressources/Term_Paper/Term_Paper.pdf",
+            "website": "projekte/designing-for-immersion.pdf",
         },
         {
             "label": "vorspann",
@@ -123,7 +123,7 @@ const projectsData = {
             ],
             "name": "Animationsfilm: Object Terrors",
             "description": "Das Konzept besteht darin, häufige menschliche Phobien auf alltägliche Haushalts- gegenstände zu übertragen. Um dieses Konzept audiovisuell umzusetzen, sollen fünf Gegenstände in derem jeweiligen Raum monologartig über deren Ängste sprechen. Der Sprechakt soll authentisch wirken, als wäre eine reale Person interviewt worden.",
-            "projectPage": "./projekte/objectTerrors",
+            "projectPage": "./projekte/object-terrors",
         },
         {
             "label": "isometrischer-raum",
@@ -147,31 +147,31 @@ const projectsData = {
 
 function generateAllProjects() {
 
-  const allProjectsContainer = document.getElementById('all-projects-container');
-  const template = document.getElementById('project-template');
+    const allProjectsContainer = document.getElementById('all-projects-container');
+    const template = document.getElementById('project-template');
+    
+    projectsData.projects.forEach(project => {
+      const clone = template.content.cloneNode(true);
+      const projectDiv = clone.querySelector('.project');
+      const labelText = clone.querySelector('.label-text');
+      const thumbnailImg = clone.querySelector('.thumbnail-img');
   
-  projectsData.projects.forEach(project => {
-    const clone = template.content.cloneNode(true);
-    const projectDiv = clone.querySelector('.project');
-    const labelText = clone.querySelector('.label-text');
-    const thumbnailImg = clone.querySelector('.thumbnail-img');
-
-    projectDiv.setAttribute('data-project-id', project.label);
-    projectDiv.setAttribute('data-category', project.category);
-    labelText.textContent = project.label;
-    thumbnailImg.src = project.thumbnail;
-    thumbnailImg.alt = project.label;
-
-    allProjectsContainer.appendChild(clone);
-
-    // Event Listener für das Öffnen der Lightbox
-    projectDiv.addEventListener('click', () => {
-      openLightbox(project);
+      projectDiv.setAttribute('data-project-id', project.label);
+      projectDiv.setAttribute('data-category', project.category);
+      labelText.textContent = project.label;
+      thumbnailImg.src = project.thumbnail;
+      thumbnailImg.alt = project.label;
+  
+      allProjectsContainer.appendChild(clone);
+  
+      // Event Listener für das Öffnen der Lightbox
+      projectDiv.addEventListener('click', () => {
+        openLightbox(project);
+      });
     });
-  });
-}
-
-
+  }
+  
+  
 function openLightbox(project) {
     const template = document.getElementById('lightbox-template');
     const clone = template.content.cloneNode(true);

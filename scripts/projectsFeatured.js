@@ -45,7 +45,7 @@ const projectsData = {
             "description": "Mein erstes Character Design „Hosbol Pogronop“, inspiriert von der Myconid-Rasse aus Dungeons and Dragons.",
         },
         {
-            "label": "hausarbeit",
+            "label": "designing-for-immersion",
             "category": "forschungsprojekt",
             "featured": true,
             "thumbnail": "Ressources/Term_Paper/Thumbnail.avif",
@@ -54,10 +54,10 @@ const projectsData = {
             "apps": [
                 "Ressources/Icons/Word.avif"
             ],
-            "src": "Ressources/Term_Paper/Term_Paper.pdf",
+            "src": "projekte/designing-for-immersion.pdf",
             "name": "Designing for immersion: The influence of diegetic player guidance on the gaming experience",
             "description": "Gemäß des Grundsatzes „Designing for immersion“ ergründet diese Hausarbeit, ob Spielerführungsmechaniken in Videospielen besser Teil der erzählten Welt oder externes Spielelement sein sollten.",
-            "website": "Ressources/Term_Paper/Term_Paper.pdf",
+            "website": "projekte/designing-for-immersion.pdf",
         },
         {
             "label": "vorspann",
