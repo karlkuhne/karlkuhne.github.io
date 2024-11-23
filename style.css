@@ -34,7 +34,7 @@ a:hover {
 h1,
 h2 {
     font-family: Work Sans;
-    font-size: calc(var(--main-width) / 13);
+    font-size: calc(var(--main-width) / 14.5);
     font-weight: 900;
     font-style: italic;
     color: white;
@@ -1094,8 +1094,13 @@ footer {
     width: 100%;
     border-radius: 0.7rem;
 
-    margin-top: 2.5rem;
+    margin-top: 1.1rem;
     margin-bottom: 2rem;
+}
+
+.project-cover iframe {
+    margin-top: 1.1rem;
+    margin-bottom: 1.65rem;
 }
 
 .project-cover {
