@@ -372,3 +372,7 @@ function updateThumbnails() {
 // Beim Laden und bei Fensteränderung aufrufen
 window.addEventListener('resize', updateThumbnails);
 updateThumbnails();
+
+document.querySelector('#nav-buttons:first-child').addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
