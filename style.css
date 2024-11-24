@@ -1139,6 +1139,12 @@ footer {
     margin-bottom: 0.3rem;
   }
 
+  @media (max-width: 40.9rem) {
+    .table {
+        flex-direction: column;
+    }
+  }
+
   .separator {
     margin-top: 3rem;
     margin-bottom: 3rem;
