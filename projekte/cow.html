@@ -58,31 +58,26 @@
         <section class="project-description">
 
             <div class="table">
-                  <div class="column">
+                <div class="column">
                     <h3>Zeitraum</h3>
                     <p>3 Tage</p>
-                  </div>
-                  <div class="column">
+                </div>
+                <div class="column">
                     <h3>Prozess</h3>
                     <p>Aufnahme des Videos</p>
                     <p>Modellierung & Licht-Setup</p>
                     <p>Tracking & Animation</p>
                     <p>Videoschnitt</p>
-                  </div>
-                  <div class="column">
+                </div>
+                <div class="column">
                     <h3>Tools</h3>
                     <p>Blender</p>
                     <p>Premiere Pro</p>
-                  </div>
-              </div>
+                </div>
+            </div>
 
-              <hr class="separator">
+            <hr class="separator">
 
-            <p>In diesem Film wurde die Integration eines CGI-Elements in ein reales Video durchgeführt. Das
-                Projekt umfasst die Erstellung und Animation eines 3D-Elements sowie das Tracking und die
-                Integration dieses Objekts in ein selbst aufgenommenes Video. Das resultierende Video hat eine
-                Gesamtlänge von 32 Sekunden und wurde hauptsächlich mit Blender, finalisierend in Premiere
-                Pro, realisiert.</p>
             <h3>Konzept</h3>
             <p>Die Idee war, die Imagination eines Kindes im Spiel mit einer Kuhfigur darzustellen. Dafür soll
                 zuerst das spielende Kind gezeigt werden und nach einem “Traum”-Übergang die Kuh, welche
@@ -94,11 +89,15 @@
                 Das Haupt-3D Element “Kuh” wurde von Grund auf mit Blender 4.2 modelliert. Besondere
                 Aufmerksamkeit wurde dabei auf die Topologie des Modells gelegt, um eine saubere Geometrie
                 zu gewährleisten, die sich gut für die spätere Animation eignet. Das Texturing des Modells erfolgte
-                im Texture Paint Modus, wie direkt aufs Modell gemalt wurde.<br><br>
-                Im Lichtsetup habe ich durchs HDRI “Studio” eine gleichmäßige Beleuchtung erzeugt. Weiterhin
+                im Texture Paint Modus, wie direkt aufs Modell gemalt wurde.<br></p>
+            <img src="../Ressources/Kuh/ShadowCatcher.avif" alt="Shadow Catcher" class="selectDisable"
+                draggable="false">
+            <p>Im Lichtsetup habe ich durchs HDRI “Studio” eine gleichmäßige Beleuchtung erzeugt. Weiterhin
                 habe ich eine Lichtquelle “Sonne” eingefügt, die im selben Winkel wie die Sonne im realen Video
                 scheint. Für einen realistischen Schattenwurf habe ich eine Shadow Catcher-Ebene erzeugt, wo
                 durch ein spezielles Node-Setup nur der Schatten, nicht aber die Ebene selbst sichtbar ist.<br><br>
+
+
                 Das Modell wurde gerigged, um die Bewegungen des “Kuh”-Elements zu ermöglichen. Hierfür
                 wurden 6 Bones verwendet, darunter vier Knochen für die Beine, die an einen großen Knochen
                 im Torso gebunden sind, zur Bewegung des gesamten Objekts. Im Weight Paint Modus wurde es
@@ -107,7 +106,10 @@
                 Dann wurde das reale Video importiert und durch eine Vielzahl aus automatisch generierten und
                 aussortierten Tracking Punkten für die Einbettung der Kuh vorbereitet. Diese wurde anschließend
                 unter Beachtung des typischen Gangs vierfüßiger Tiere so animiert, als würde sie auf der realen
-                Couch laufen. Neben diesem Gang wurden auch zwei Drehungen und drei Sprünge dargestellt.<br><br>
+                Couch laufen. Neben diesem Gang wurden auch zwei Drehungen und drei Sprünge dargestellt.<br></p>
+            <img src="../Ressources/Kuh/MotionTracking.avif" alt="Tracking" class="selectDisable" draggable="false">
+            <img src="../Ressources/Kuh/Anim.avif" alt="Animation" class="selectDisable" draggable="false">
+            <p>
                 Hierbei kam das Animationsgesetz der Antizipation zum Einsatz: Die Kuh holt zum Sprung aus,
                 indem sie sich vorher nach unten beugt. Quetschen und Strecken wurden bewusst nicht
                 eingesetzt, da der stabile “hölzerne” Typ des Spielzeugs erhalten bleiben soll.<br><br>

@@ -1129,6 +1129,17 @@ footer {
     text-align: left;
 }
 
+.project-description img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 0.7rem;
+    margin-top: 1.1rem;
+    margin-bottom: 1.1rem;
+}
+
+
+
 /* TABLE */
 
 .table {
