@@ -429,7 +429,7 @@ body {
 
 @media (max-width: 40.9rem) {
     #galery {
-        width: 99vw;
+        width: 95vw;
     }
 
     .thumbnail-img {
@@ -606,6 +606,8 @@ iframe {
     padding: 0.4rem 0.75rem 0.4rem 0.75rem;
     margin-top: 1.3rem;
     margin-right: 1.3rem;
+
+    z-index: 12;
 }
 
 .allproject-button {
@@ -621,7 +623,7 @@ iframe {
 
 @media (max-width: 40.9rem) {
     .wrapper-waagerecht {
-        width: 98.5vw;
+        width: 95vw;
     }
 }
 
@@ -1117,6 +1119,10 @@ footer {
     .project-description {
         width: 80vw;
     }
+
+    .project-cover {
+        width: 95vw;
+    }
 }
 
 .project-description p {
@@ -1140,8 +1146,12 @@ footer {
   }
 
   .column p {
-    margin-top: 0.3rem;
-    margin-bottom: 0.3rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .column h3 {
+    margin-bottom: 0.5rem;
   }
 
   @media (max-width: 40.9rem) {
