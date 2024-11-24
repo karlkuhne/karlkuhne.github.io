@@ -182,7 +182,7 @@ function openLightbox(project) {
     const dotsContainer = clone.querySelector('.dots-slideshow-waagerecht');
     const appIconsContainer = clone.querySelector('.app-icons');
     const projectName = clone.querySelector('.project-name');
-    const projectDescription = clone.querySelector('.project-description');
+    const lightboxDescription = clone.querySelector('.lightbox-description');
     const projectButton = clone.querySelector('.project-button');
     const websiteButton = clone.querySelector('.website-button');
 
@@ -242,7 +242,7 @@ function openLightbox(project) {
 
     // Textinhalt der Lightbox
     projectName.textContent = project.name;
-    projectDescription.textContent = project.description;
+    lightboxDescription.textContent = project.description;
 
     // Setze sicher, dass der Button im gleichen Tab öffnet
     projectButton.target = "_self"; // Ensures the project link opens in the same tab

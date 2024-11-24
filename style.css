@@ -580,11 +580,10 @@ iframe {
 }
 
 
-.project-description {
+.lightbox-description {
     align-self: center;
     width: var(--main-width);
-    /* 103.5rem */
-    margin-bottom: 2rem;
+    margin-bottom: 0!important;
 }
 
 .lightbox p {
