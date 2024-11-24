@@ -1113,6 +1113,12 @@ footer {
     margin: 0 auto;
 }
 
+@media (max-width: 40.9rem) {
+    .project-description {
+        width: 80vw;
+    }
+}
+
 .project-description p {
     text-align: left;
 }
