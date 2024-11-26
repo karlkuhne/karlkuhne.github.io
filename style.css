@@ -85,6 +85,17 @@ p {
     line-height: 1.2;
 }
 
+.hyperlink {
+    font-family: Work Sans;
+    font-size: 1.1rem;
+    color: #5252ff;
+    line-height: 1.2;
+}
+
+.hyperlink:hover {
+    color: #8080ff;
+}
+
 
 /* COVER */
 
