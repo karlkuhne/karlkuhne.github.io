@@ -756,6 +756,7 @@ ol li p {
 
 #about-me {
     transform: translateX(-3rem);
+    width: 35.5rem;
 }
 
 #portrait {
