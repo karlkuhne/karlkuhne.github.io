@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3025" height="1440" viewBox="0 0 3025 1440">
+  <!-- Example using RGB color for the fill -->
+  <path d="M0,1500 A700,700 0 0,1 3025,1500" fill="rgb(33, 33, 33)" />
+  <path d="M300,1500 A600,600 0 0,1 2725,1500" fill="rgb(60,60,60)" />
+  <path d="M600,1500 A500,500 0 0,1 2425,1500" fill="rgb(93,93,93)" />
+  <path d="M900,1500 A400,400 0 0,1 2125,1500" fill="rgb(120,120,120)" />
+</svg>
+
