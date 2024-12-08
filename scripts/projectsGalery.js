@@ -29,7 +29,7 @@ const projectsData = {
         {
             "label": "character-design",
             "category": "illustration",
-            "featured": false,
+            "featured": true,
             "thumbnail": "Ressources/Character_Design/Thumbnail.avif",
             "square": "Ressources/Character_Design/Thumbnail_Square.avif",
             "type": "slideshow",
@@ -95,7 +95,7 @@ const projectsData = {
         {
             "label": "animationsfilm-kuh",
             "category": "film",
-            "featured": true,
+            "featured": false,
             "thumbnail": "Ressources/Kuh/Thumbnail.avif",
             "square": "Ressources/Kuh/Thumbnail_Square.avif",
             "type": "iframe",
