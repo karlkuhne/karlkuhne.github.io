@@ -390,17 +390,17 @@
 
                     <ol>
                         <li>
-                            <p>name</p> <br>
+                            <label for="nameInput">Name</label> <br>
                             <input id="nameInput" type="text" name="name" required>
                         </li>
 
                         <li>
-                            <p>email-adresse</p> <br>
+                            <label for="emailInput">E-Mail-Adresse</label> <br>
                             <input id="emailInput" type="email" name="email" required>
                         </li>
 
                         <li>
-                            <p>nachricht</p> <br>
+                            <label for="messageInput">Nachricht</label> <br>
                             <textarea id="messageInput" name="message" rows="1" style="resize: none;"
                                 oninput='this.style.height = ""; this.style.height = this.scrollHeight + "px";'
                                 required></textarea>
@@ -409,8 +409,8 @@
                     </ol>
 
                     <div class="checkbox-container">
-                        <input type="checkbox" required>
-                        <span class="checkbox-text">
+                        <input id ="consentCheckbox" type="checkbox" required>
+                        <label for="consentCheckbox">
                             Ich erkläre mich mit der Speicherung und Verarbeitung der angegebenen Daten einverstanden.
                         </span>
                     </div>
