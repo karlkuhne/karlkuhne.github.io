@@ -27,6 +27,27 @@ const projectsData = {
             "projectPage": "./projekte/cavemanhitsgiraffe"
         },
         {
+            "label": "portfolio-webseite",
+            "category": "spiel",
+            "featured": true,
+            "thumbnail": "Ressources/Portfolio_Website/Thumbnail.avif",
+            "square": "Ressources/Portfolio_Website/Thumbnail_Square.avif",
+            "type": "slideshow",
+            "images": [
+                "Ressources/Portfolio_Website/1.avif",
+                "Ressources/Portfolio_Website/2.avif",
+                "Ressources/Portfolio_Website/3.avif",
+            ],
+            "apps": [
+                "Ressources/Icons/VisualStudio.avif",
+                "Ressources/Icons/GitHub.avif",
+                "Ressources/Icons/XAMPP.avif"
+            ],
+            "name": "Portfolio Webseite",
+            "description": "Meine eigene Webseite, umgesetzt mit HTML, CSS und JavaScript mit einem textbasierten CMS zum Hochladen der Projekte. Die Seite wird als GitHub Page mit einer Custom Domain gehostet. Weiterhin habe ich diese bei Google indexiert und nach Pagespeed optimiert.",
+            "projectPage": "./projekte/portfolio-webseite"
+        },
+        {
             "label": "character-design",
             "category": "illustration",
             "featured": false,

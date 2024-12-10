@@ -40,10 +40,11 @@ const projectsData = {
             ],
             "apps": [
                 "Ressources/Icons/VisualStudio.avif",
-                "Ressources/Icons/GitHub.avif"
+                "Ressources/Icons/GitHub.avif",
+                "Ressources/Icons/XAMPP.avif"
             ],
             "name": "Portfolio Webseite",
-            "description": "Eine moderne Portfolio Webseite, die mit HTML, CSS und JavaScript erstellt wurde.",
+            "description": "Meine eigene Webseite, umgesetzt mit HTML, CSS und JavaScript mit einem textbasierten CMS zum Hochladen der Projekte. Die Seite wird als GitHub Page mit einer Custom Domain gehostet. Weiterhin habe ich diese bei Google indexiert und nach Pagespeed optimiert.",
             "projectPage": "./projekte/portfolio-webseite"
         },
         {
