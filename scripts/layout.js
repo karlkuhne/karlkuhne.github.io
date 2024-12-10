@@ -44,8 +44,6 @@ function setInitialMainWidth() {
   const InitialMainWidthPercentage = parseInt(getCSSVariable('--main-width'), 10);
   InitialMainWidth = (screenWidth * InitialMainWidthPercentage) / 100;
   document.documentElement.style.setProperty('--main-width', `${InitialMainWidth}px`);
-
-  console.log(InitialMainWidth);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
