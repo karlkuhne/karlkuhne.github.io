@@ -29,7 +29,7 @@ const projectsData = {
         {
             "label": "character-design",
             "category": "illustration",
-            "featured": true,
+            "featured": false,
             "thumbnail": "Ressources/Character_Design/Thumbnail.avif",
             "square": "Ressources/Character_Design/Thumbnail_Square.avif",
             "type": "slideshow",

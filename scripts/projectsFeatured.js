@@ -27,9 +27,29 @@ const projectsData = {
             "projectPage": "./projekte/cavemanhitsgiraffe"
         },
         {
+            "label": "portfolio-webseite",
+            "category": "spiel",
+            "featured": true,
+            "thumbnail": "Ressources/Portfolio_Website/Thumbnail.avif",
+            "square": "Ressources/Portfolio_Website/Thumbnail_Square.avif",
+            "type": "slideshow",
+            "images": [
+                "Ressources/Portfolio_Website/1.avif",
+                "Ressources/Portfolio_Website/2.avif",
+                "Ressources/Portfolio_Website/3.avif",
+            ],
+            "apps": [
+                "Ressources/Icons/VisualStudio.avif",
+                "Ressources/Icons/GitHub.avif"
+            ],
+            "name": "Portfolio Webseite",
+            "description": "Eine moderne Portfolio Webseite, die mit HTML, CSS und JavaScript erstellt wurde.",
+            "projectPage": "./projekte/portfolio-webseite"
+        },
+        {
             "label": "character-design",
             "category": "illustration",
-            "featured": true,
+            "featured": false,
             "thumbnail": "Ressources/Character_Design/Thumbnail.avif",
             "square": "Ressources/Character_Design/Thumbnail_Square.avif",
             "type": "slideshow",
