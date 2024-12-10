@@ -57,13 +57,19 @@ h2 {
     h1 {
         font-size: 8.1vw;
     }
-    
-    #karl h3 {
-        font-size: 3.53vw;
-    }
-    
-}
+} 
 
+@media (max-width: 78rem)
+{
+    #title {
+        font-size: 7.7vw;
+    }
+
+    h2 {
+        font-size: 3.65vw;
+    }
+}
+    
 h3 {
     font-family: Work Sans;
     font-size: 1.25rem;
