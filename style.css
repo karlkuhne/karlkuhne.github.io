@@ -2,6 +2,7 @@
 @font-face {
     font-family: 'Work Sans';
     src: url('fonts/Work_Sans/WorkSans-VariableFont_wght.ttf') format('truetype');
+    font-display: swap;
 }
 
 
@@ -766,6 +767,7 @@ ol li p {
 
 #portrait>img {
     width: 100%;
+    height: 100%;
 }
 
 #languages {
