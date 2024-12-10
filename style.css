@@ -110,15 +110,13 @@ p , label {
 /* COVER */
 
 .parallax {
-    background-image: url("Ressources/Cover.avif");
+    background-image: url('Ressources/Cover.svg');
     height: 100vh;
-    background-position: center;
-    background-attachment: scroll;
-    background-repeat: no-repeat;
     background-size: cover;
-
-    filter: grayscale(60%);
+    background-repeat: no-repeat;
+    background-position: center;
 }
+
 
 #karl {
     width: var(--main-width);
