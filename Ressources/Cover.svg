@@ -10,21 +10,19 @@
     </defs>
                 
     <mask id="fade">
-        <!-- Extend the height of the mask to cover more of the vertical space -->
         <rect x="0" y="0" width="1800" height="900" fill="black">
             <animate attributeName="fill" values="black; black; white; white; black" keyTimes="0; 0.5; 0.501; 0.99; 1" dur="6s" repeatCount="indefinite"></animate>
         </rect>
-        <!-- Increase the circle size to cover more vertical space -->
+
         <circle cx="800" cy="500" r="0" fill="white">
             <animate attributeName="r" values="0; 2500; 0; 0" keyTimes="0; 0.5; 0.501; 1" dur="6s" repeatCount="indefinite"></animate>
         </circle>
     </mask>
-    
-    <!-- Adjust the rest of the content to align with the new viewBox size -->
+
     <rect x="0" y="0" width="1800" height="900" fill="url(#minus)"></rect>
                 
-    <path d="M 320 80 l 160 0 l 0 80 l -120 0 l -200 200 l -100 0 l 0 -20 Z" fill="url(#plus)" mask="url(#fade)"></path>
-    <path d="M 680 80 l 120 0 l 0 280 l -100 0 l 0 -160 l -20 0 l -160 160 l -100 0 l 0 -20 Z" fill="url(#plus)" mask="url(#fade)"></path>
-    <path d="M 880 80 l 100 0 l 0 200 l 200 -200 l 120 0 l 0 180 l 40 0 l 180 -180 l 160 0 l 0 80 l -120 0 l -200 200 l -140 0 l 0 -160 l -40 0 l -160 160 l -140 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
-    <path d="M 1620 280 l 60 0 l 0 80 l -120 0 l 0 -20 Z" fill="url(#plus)" mask="url(#fade)"></path>
+    <path d="M 320 300 l 160 0 l 0 80 l -120 0 l -200 200 l -100 0 l 0 -20 Z" fill="url(#plus)" mask="url(#fade)"></path>
+    <path d="M 680 300 l 120 0 l 0 280 l -100 0 l 0 -160 l -20 0 l -160 160 l -100 0 l 0 -20 Z" fill="url(#plus)" mask="url(#fade)"></path>
+    <path d="M 880 300 l 100 0 l 0 200 l 200 -200 l 120 0 l 0 180 l 40 0 l 180 -180 l 160 0 l 0 80 l -120 0 l -200 200 l -140 0 l 0 -160 l -40 0 l -160 160 l -140 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
+    <path d="M 1620 480 l 60 0 l 0 80 l -120 0 l 0 -20 Z" fill="url(#plus)" mask="url(#fade)"></path>
 </svg>
