@@ -36,7 +36,6 @@ const projectsData = {
             "images": [
                 "Ressources/Portfolio_Website/1.avif",
                 "Ressources/Portfolio_Website/2.avif",
-                "Ressources/Portfolio_Website/3.avif",
             ],
             "apps": [
                 "Ressources/Icons/VisualStudio.avif",
