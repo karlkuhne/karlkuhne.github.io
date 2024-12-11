@@ -9,7 +9,7 @@
         </pattern>
     </defs>
                 
-    <mask id="fade">
+    <!-- <mask id="fade">
         <rect x="0" y="0" width="1800" height="900" fill="black">
             <animate attributeName="fill" values="black; black; white; white; black" keyTimes="0; 0.5; 0.501; 0.99; 1" dur="5s" repeatCount="indefinite"></animate>
         </rect>
@@ -17,17 +17,22 @@
         <circle cx="900" cy="500" r="0" fill="white">
             <animate attributeName="r" values="0; 2500; 0; 0" keyTimes="0; 0.5; 0.501; 1" dur="5s" repeatCount="indefinite"></animate>
         </circle>
-    </mask>
+    </mask> -->
 
     <rect x="0" y="0" width="1800" height="900" fill="url(#minus)"></rect>
                 
-    
-    <path d="M 490 300 l 80 0 l 0 100 l 85 1 l 25 29 l 1 190 l -80 0 l 0 -140 l -39 0 l 0 140 l -70 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
+    <!-- <path d="M 490 300 l 80 0 l 0 100 l 85 1 l 25 29 l 1 190 l -80 0 l 0 -140 l -39 0 l 0 140 l -70 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
     <path d="M 820 630 l 80 0 l 0 -200 l -20 -20 l -157 0 l -20 20 l 0 169 l 30 30 l 68 0 l 0 -60 l -20 0 l 0 -80 l 40 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
     <path d="M 920 300 l 80 0 l 0 320 l -80 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
     <path d="M 1020 300 l 80 0 l 0 320 l -80 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
-    <path d="M 1240 625 l 60 -1 l 20 -20 l 0 -179 l -20 -20 l -150 0 l -20 32 l 0 169 l 23 18 l 87 1 l 0 -78 l -31 0 l 0 -63 l 31 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
+    <path d="M 1240 625 l 60 -1 l 20 -20 l 0 -179 l -20 -20 l -150 0 l -20 32 l 0 169 l 23 18 l 87 1 l 0 -78 l -31 0 l 0 -63 l 31 0 Z" fill="url(#plus)" mask="url(#fade)"></path> -->
+
+    <!-- <path d="M 490 420 l 0 -80 l 80 0 l 0 80 l -80 0 l 0 200 l 80 0 l 0 -180 l -80 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
+    <path d="M 820 490 l 0 -80 l -157 0 l -20 20 l 0 169 l 30 30 l 146 0 l 0 -80 l -97 0 l 0 -59 Z " fill="url(#plus)" mask="url(#fade)"></path>
+    <path d="M 1010 300 l 80 0 l 0 100 l 85 1 l 25 29 l 1 190 l -80 0 l 0 -140 l -39 0 l 0 140 l -70 0 Z" fill="url(#plus)" mask="url(#fade)"></path> -->
+
     
+    <path d="M 490 304 l 80 0 l 0 100 l 85 1 l 25 29 l -1 168 l -20 20 l -93 0 l -1 -69 l 44 0 l -1 -71 l -39 -1 l 0 141 l -55 1 l -23 -23 Z" fill="url(#plus)" mask="url(#fade)"></path>
     
 </svg>
 
