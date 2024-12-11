@@ -11,18 +11,26 @@
                 
     <mask id="fade">
         <rect x="0" y="0" width="1800" height="900" fill="black">
-            <animate attributeName="fill" values="black; black; white; white; black" keyTimes="0; 0.5; 0.501; 0.99; 1" dur="6s" repeatCount="indefinite"></animate>
+            <animate attributeName="fill" values="black; black; white; white; black" keyTimes="0; 0.5; 0.501; 0.99; 1" dur="7s" repeatCount="indefinite"></animate>
         </rect>
 
         <circle cx="800" cy="500" r="0" fill="white">
-            <animate attributeName="r" values="0; 2500; 0; 0" keyTimes="0; 0.5; 0.501; 1" dur="6s" repeatCount="indefinite"></animate>
+            <animate attributeName="r" values="0; 2500; 0; 0" keyTimes="0; 0.5; 0.501; 1" dur="7s" repeatCount="indefinite"></animate>
         </circle>
     </mask>
 
     <rect x="0" y="0" width="1800" height="900" fill="url(#minus)"></rect>
                 
-    <path d="M 320 300 l 160 0 l 0 80 l -120 0 l -200 200 l -100 0 l 0 -20 Z" fill="url(#plus)" mask="url(#fade)"></path>
-    <path d="M 680 300 l 120 0 l 0 280 l -100 0 l 0 -160 l -20 0 l -160 160 l -100 0 l 0 -20 Z" fill="url(#plus)" mask="url(#fade)"></path>
-    <path d="M 880 300 l 100 0 l 0 200 l 200 -200 l 120 0 l 0 180 l 40 0 l 180 -180 l 160 0 l 0 80 l -120 0 l -200 200 l -140 0 l 0 -160 l -40 0 l -160 160 l -140 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
-    <path d="M 1620 480 l 60 0 l 0 80 l -120 0 l 0 -20 Z" fill="url(#plus)" mask="url(#fade)"></path>
+    <path d="M 320 143 l 80 0 l 0 180 l 77 -77 l 78 0 l -109 109 l 108 108 l -78 -1 l -69 -69 l -7 7 l 0 62 l -80 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
+    <path d="M 680 470 l 80 0 l 0 -200 l -20 -20 l -157 0 l -20 20 l -3 200 l 80 0 l 0 -140 l 40 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
+    <path d="M 780 240 l 180 0 l -1 80 l -98 0 l 0 137 l -80 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
+    <path d="M 980 140 l 80 0 l 0 320 l -80 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
+
+    <path d="M 320 503 l 80 -1 l 0 180 l 77 -77 l 78 0 l -109 109 l 108 108 l -78 -1 l -69 -69 l -7 7 l 0 62 l -80 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
+    <path d="M 680 600 l 80 0 l 0 200 l -20 20 l -157 0 l -20 -20 l -3 -200 l 80 0 l 0 140 l 40 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
+    <path d="M 780 510  l 83 0 l 0 122 l 134 -2 l 2 187 l -80 -3 l -1 -112 l -55 1 l 1 114 l -84 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
+    <path d="M 1140 830 l 80 0 l 0 -200 l -20 -20 l -157 0 l -20 20 l -3 200 l 80 0 l 0 -140 l 40 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
 </svg>
+
+<!-- 280 --> <!-- 100 -->
+
