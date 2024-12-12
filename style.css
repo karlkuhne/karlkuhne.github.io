@@ -110,11 +110,7 @@ p , label {
 /* COVER */
 
 .parallax {
-<<<<<<< Updated upstream
-    background-image: url('Ressources/Cover.svg');
-=======
     background-image: url('Ressources/CoverLogo.svg');
->>>>>>> Stashed changes
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
