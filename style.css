@@ -547,12 +547,12 @@ iframe {
 
 @media (max-width: 40.9rem) {
     .steam {
-        height: 11.25rem;
+        height: 11.7rem;
         background-color: red;
     }
 
     .steam iframe {
-        height: 17.5rem;
+        height: 12rem;
     }
 }
 
