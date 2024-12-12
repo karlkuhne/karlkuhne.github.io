@@ -21,6 +21,7 @@ const projectsData = {
                 "Ressources/Icons/Procreate.avif",
                 "Ressources/Icons/GitHub.avif"
             ],
+            "steam": "https://store.steampowered.com/widget/3381780/%22%20frameborder=%220%22%20width=%22646%22%20height=%22190",
             "name": "Caveman hits Giraffe in a Car",
             "description": "Ein rasantes Action-Roguelike, das aus einem 5-tägigen Game Jam entstanden ist. Kämpfe gegen abwechslungsreiche Gegnerwellen, verbessere deine Fähigkeiten und verewige dich auf der Bestenliste.",
             "website": "https://cavemanhitsgiraffeinacar.github.io/",
@@ -214,6 +215,20 @@ function openLightbox(project) {
     const lightboxDescription = clone.querySelector('.lightbox-description');
     const projectButton = clone.querySelector('.project-button');
     const websiteButton = clone.querySelector('.website-button');
+    const steamContainer = clone.querySelector('.steam'); // Steam-Container
+
+    // Neu: Steam-Link einfügen, falls vorhanden
+    if (project.steam) {
+        const iframe = document.createElement('iframe');
+        iframe.src = project.steam;
+        steamContainer.appendChild(iframe);
+        steamContainer.style.display = 'block';
+
+        projectName.style.display = 'none';
+        lightboxDescription.style.display = 'none';
+    } else {
+        steamContainer.style.display = 'none';
+    }
 
     // NEU: JE NACH PROJEKTTYP (SLIDESHOW ODER PDF) WIRD DER INHALT BESTIMMT
     if (project.type === "slideshow") { // SLIDESHOW

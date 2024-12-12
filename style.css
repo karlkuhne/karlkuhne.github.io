@@ -538,7 +538,12 @@ iframe {
     border: none;
 }
 
-
+.steam {
+    width: 100%;
+    height: 10rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
 
 .container-waagerecht iframe {
     width: 100%;
