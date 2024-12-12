@@ -29,13 +29,31 @@
 
         .letter1 {
             opacity: 0;
-            animation: fade-in 3s forwards, fly-in-out 1s linear forwards;
-            animation-delay: 1.5s;
+            animation: fade-in 4s forwards, fly-in-out 1s linear forwards;
+            animation-delay: 1.65s;
+        }
+
+        .letter2 {
+            opacity: 0;
+            animation: fade-in 4s forwards, fly-in-out 1s linear forwards;
+            animation-delay: 1.8s;
+        }
+
+        .letter3 {
+            opacity: 0;
+            animation: fade-in 4s forwards, fly-in-out 1s linear forwards;
+            animation-delay: 1.95s;
+        }
+
+        .letter4 {
+            opacity: 0;
+            animation: fade-in 4s forwards, fly-in-out 1s linear forwards;
+            animation-delay: 2.1s;
         }
 
         @keyframes fly-in-out {
             0% { transform: translate(0, 0); }
-            100% { transform: translate(-300px, 0); }
+            100% { transform: translate(-440px, 0); }
         }
 
         @keyframes fade-in {
@@ -50,5 +68,13 @@
     <path d="M 820 480 l 80 0 l 0 180 l 77 -77 l 78 0 l -109 109 l 108 108 l -78 -1 l -69 -69 l -7 7 l 0 62 l -80 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
 
     <path class="letter1" d="M 1120 490 l 80 0 l 0 -200 l -20 -20 l -157 0 l -20 20 l 0 169 l 30 30 l 68 0 l 0 -60 l -20 0 l 0 -80 l 40 0 Z" fill="url(#plus)"></path>
-    <path class="letter1" d="M 1180 580 l 80 0 l 0 200 l -20 20 l -157 0 l -20 -20 l -3 -200 l 80 0 l 0 140 l 40 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
+    <path class="letter1" d="M 1180 580 l 80 0 l 0 200 l -20 20 l -157 0 l -20 -20 l -3 -200 l 80 0 l 0 140 l 40 0 Z" fill="url(#plus)"></path>
+
+    <path class="letter2" d="M 1220 480 l 0 -170 l 25 -50 l 140 0 l 0 80 l -80 0 l 0 140 Z" fill="url(#plus)"></path>
+    <path class="letter2" d="M 1280 480 l 80 0 l 0 100 l 83 0 l 35 37 l 1 190 l -77 0 l 0 -140 l -45 0 l 0 140 l -76 0 Z" fill="url(#plus)"></path>
+
+    <path class="letter3" d="M 1400 160 l 80 0 l 0 320 l -80 0 Z" fill="url(#plus)"></path>
+    <path class="letter3" d="M 1620 810 l 80 0 l 0 -200 l -20 -20 l -157 0 l -20 20 l -3 200 l 80 0 l 0 -140 l 40 0 Z" fill="url(#plus)"></path>
+
+    <path class="letter4" d="M 1720 778 l 0 -147 l 26 -48 l 144 0 l 29 31 l 0 87 l -110 0 l 0 30 l 110 0 l 0 66 l -173 0 Z" fill="url(#plus)"></path>
 </svg>
