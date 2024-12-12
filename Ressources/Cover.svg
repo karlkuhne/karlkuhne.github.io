@@ -19,34 +19,45 @@
         </circle>
     </mask> -->
 
+    <style>
+        path {
+            animation: fly-in-out 10s linear infinite;
+        }
+
+        @keyframes fly-in-out {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-6000px, 0); }
+        }
+    </style>
+
     <rect x="0" y="0" width="1800" height="900" fill="url(#minus)"></rect>
                 
-    <!-- <path d="M 490 300 l 80 0 l 0 100 l 85 1 l 25 29 l 1 190 l -80 0 l 0 -140 l -39 0 l 0 140 l -70 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
-    <path d="M 820 630 l 80 0 l 0 -200 l -20 -20 l -157 0 l -20 20 l 0 169 l 30 30 l 68 0 l 0 -60 l -20 0 l 0 -80 l 40 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
-    <path d="M 920 300 l 80 0 l 0 320 l -80 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
-    <path d="M 1020 300 l 80 0 l 0 320 l -80 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
-    <path d="M 1240 625 l 60 -1 l 20 -20 l 0 -179 l -20 -20 l -150 0 l -20 32 l 0 169 l 23 18 l 87 1 l 0 -78 l -31 0 l 0 -63 l 31 0 Z" fill="url(#plus)" mask="url(#fade)"></path> -->
+    <path d="M 1980 300 l 80 0 l 0 100 l 83 0 l 35 37 l 1 190 l -77 0 l 0 -140 l -45 0 l 0 140 l -76 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
+    <path d="M 2320 630 l 80 0 l 0 -200 l -20 -20 l -157 0 l -20 20 l 0 169 l 30 30 l 68 0 l 0 -60 l -20 0 l 0 -80 l 40 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
+    <path d="M 2420 300 l 80 0 l 0 320 l -80 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
+    <path d="M 2520 300 l 80 0 l 0 320 l -80 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
+    <path d="M 2740 625 l 60 -1 l 20 -20 l 0 -179 l -20 -20 l -150 0 l -20 32 l 0 169 l 23 18 l 87 1 l 0 -78 l -31 0 l 0 -63 l 31 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
 
-    <!-- <path d="M 490 420 l 0 -80 l 80 0 l 0 80 l -80 0 l 0 200 l 80 0 l 0 -180 l -80 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
-    <path d="M 820 490 l 0 -80 l -157 0 l -20 20 l 0 169 l 30 30 l 146 0 l 0 -80 l -97 0 l 0 -59 Z " fill="url(#plus)" mask="url(#fade)"></path>
-    <path d="M 1010 300 l 80 0 l 0 100 l 85 1 l 25 29 l 1 190 l -80 0 l 0 -140 l -39 0 l 0 140 l -70 0 Z" fill="url(#plus)" mask="url(#fade)"></path> -->
+    <path d="M 2840 540 l 0 160 80 0 0 -160 -80 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
+
+    <path d="M 3000 420 l 0 -80 l 80 0 l 0 80 l -80 0 l 0 200 l 80 0 l 0 -180 l -80 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
+    <path d="M 3280 490 l 0 -80 l -157 0 l -20 20 l 0 169 l 30 30 l 146 0 l 0 -80 l -97 0 l 0 -59 Z " fill="url(#plus)" mask="url(#fade)"></path>
+    <path d="M 3307 300 l 80 0 l 0 100 l 83 0 l 35 37 l 1 190 l -77 0 l 0 -140 l -45 0 l 0 140 l -76 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
 
     
-    <path d="M 490 304 l 80 0 l 0 100 l 85 1 l 25 29 l -1 168 l -20 20 l -93 0 l -1 -69 l 44 0 l -1 -71 l -39 -1 l 0 141 l -55 1 l -23 -23 Z" fill="url(#plus)" mask="url(#fade)"></path>
-    
+    <path d="M 3580 304 l 80 0 l 0 100 l 85 1 l 25 29 l -1 168 l -20 20 l -93 0 l -1 -69 l 44 0 l -1 -71 l -39 -1 l 0 141 l -55 1 l -23 -23 Z" fill="url(#plus)" mask="url(#fade)"></path>
+    <path d="M 3780 420 l 0 -80 l 80 0 l 0 80 l -80 0 l 0 200 l 80 0 l 0 -180 l -80 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
+    <path d="M 4000 630 l 80 0 l 0 -200 l -20 -20 l -157 0 l -20 20 l -3 200 l 80 0 l 0 -140 l 40 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
+
+    <path d="M 4160 300 l 80 0 l 0 180 l 77 -77 l 78 0 l -109 109 l 108 108 l -78 -1 l -69 -69 l -7 7 l 0 62 l -80 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
+    <path d="M 4520 630 l 80 0 l 0 -200 l -20 -20 l -157 0 l -20 20 l 0 169 l 30 30 l 68 0 l 0 -60 l -20 0 l 0 -80 l 40 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
+    <path d="M 4620 620 l 0 -170 l 25 -50 l 140 0 l 0 80 l -80 0 l 0 140 Z" fill="url(#plus)" mask="url(#fade)"></path>
+    <path d="M 4800 300 l 80 0 l 0 320 l -80 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
+
+    <path d="M 4960 300 l 80 0 l 0 180 l 77 -77 l 78 0 l -109 109 l 108 108 l -78 -1 l -69 -69 l -7 7 l 0 62 l -80 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
+    <path d="M 5320 400 l 80 0 l 0 200 l -20 20 l -157 0 l -20 -20 l -3 -200 l 80 0 l 0 140 l 40 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
+    <path d="M 5420 300 l 80 0 l 0 100 l 83 0 l 35 37 l 1 190 l -77 0 l 0 -140 l -45 0 l 0 140 l -76 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
+    <path d="M 5760 630 l 80 0 l 0 -200 l -20 -20 l -157 0 l -20 20 l -3 200 l 80 0 l 0 -140 l 40 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
+    <path d="M 5860 598 l 0 -147 l 26 -48 l 144 0 l 29 31 l 0 87 l -110 0 l 0 30 l 110 0 l 0 66 l -173 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
+
 </svg>
-
-<!-- k -->
-<!-- <path d="M 540 143 l 80 0 l 0 180 l 77 -77 l 78 0 l -109 109 l 108 108 l -78 -1 l -69 -69 l -7 7 l 0 62 l -80 0 Z" fill="url(#plus)" mask="url(#fade)"></path> -->
-
-<!-- r -->
-<!-- <path d="M 1000 465 l 0 -170 l 25 -50 l 140 0 l 0 80 l -80 0 l 0 140 Z" fill="url(#plus)" mask="url(#fade)"></path> -->
-
-<!-- e -->
-<!-- <path d="M 1239 797 l 0 -147 l 26 -48 l 144 0 l 29 31 l 0 87 l -110 0 l 0 30 l 109 1 l 0 66 l -173 0 Z" fill="url(#plus)" mask="url(#fade)"></path> -->
-
-<!-- n -->
-<!-- <path d="M 1140 830 l 80 0 l 0 -200 l -20 -20 l -157 0 l -20 20 l -3 200 l 80 0 l 0 -140 l 40 0 Z" fill="url(#plus)" mask="url(#fade)"></path> -->
-
-<!-- u -->
-<!-- <path d="M 700 599 l 80 0 l 0 200 l -20 20 l -157 0 l -20 -20 l -3 -200 l 80 0 l 0 140 l 40 0 Z" fill="url(#plus)" mask="url(#fade)"></path> -->
