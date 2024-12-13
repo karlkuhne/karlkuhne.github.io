@@ -24,31 +24,31 @@
     <style>
         path {
             animation: fly-in-out 1s linear forwards;
-            animation-delay: 3.5s;
+            animation-delay: 2.5s;
         }
 
         .letter1 {
             opacity: 0;
             animation: fade-in 4s forwards, fly-in-out 1s linear forwards;
-            animation-delay: 3.65s;
+            animation-delay: 2.65s;
         }
 
         .letter2 {
             opacity: 0;
             animation: fade-in 4s forwards, fly-in-out 1s linear forwards;
-            animation-delay: 3.8s;
+            animation-delay: 2.8s;
         }
 
         .letter3 {
             opacity: 0;
             animation: fade-in 4s forwards, fly-in-out 1s linear forwards;
-            animation-delay: 3.95s;
+            animation-delay: 2.95s;
         }
 
         .letter4 {
             opacity: 0;
             animation: fade-in 4s forwards, fly-in-out 1s linear forwards;
-            animation-delay: 4.1s;
+            animation-delay: 3.1s;
         }
 
         @keyframes fly-in-out {
