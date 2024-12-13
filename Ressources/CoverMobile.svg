@@ -11,11 +11,11 @@
                 
     <mask id="fade">
         <rect x="0" y="0" width="1800" height="900" fill="black">
-            <animate attributeName="fill" values="black; black; white; white; black" keyTimes="0; 0.5; 0.501; 0.99; 1" dur="5s" repeatCount="indefinite"></animate>
+            <animate attributeName="fill" values="black; black; white; white; black" keyTimes="0; 0.5; 0.501; 0.99; 1" dur="6s" repeatCount="indefinite"></animate>
         </rect>
 
         <circle cx="900" cy="500" r="0" fill="white">
-            <animate attributeName="r" values="0; 2500; 0; 0" keyTimes="0; 0.5; 0.501; 1" dur="5s" repeatCount="indefinite"></animate>
+            <animate attributeName="r" values="0; 2500; 0; 0" keyTimes="0; 0.5; 0.501; 1" dur="6s" repeatCount="indefinite"></animate>
         </circle>
     </mask>
 
