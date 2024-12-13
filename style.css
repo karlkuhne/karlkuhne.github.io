@@ -1122,7 +1122,7 @@ footer {
 /* PROJECT PAGE */
 
 .project-title {
-    margin-top: 8rem;
+    
 }
 
 .project-subtitle {
@@ -1174,6 +1174,15 @@ footer {
     align-items: center;
 }
 
+/* .project-description img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 0.7rem;
+    margin-top: 1.1rem;
+    margin-bottom: 1.1rem;
+} */
+
 .image-item img {
     outline: 0.15rem solid var(--border-color);
     border-radius: 0.35rem;
@@ -1224,6 +1233,7 @@ footer {
 
   .column h3 {
     margin-bottom: 0.5rem;
+    margin-top: 1.53rem;
   }
 
   @media (max-width: 40.9rem) {
@@ -1233,7 +1243,7 @@ footer {
   }
 
   .separator {
-    margin-top: 3rem;
+    margin-top: 2rem;
     margin-bottom: 3rem;
     border-color:rgb(122, 122, 122);
   }
