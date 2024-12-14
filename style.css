@@ -1197,6 +1197,16 @@ pre {
     border-radius: 0.5rem;
 }
 
+code[class="language-javascript"] {
+    font-size: 1.1rem !important;
+}
+
+@media (max-width: 40.9rem) {
+    code[class="language-javascript"] {
+        font-size: 0.8rem !important;
+    }
+}
+
 
 /* TABLE */
 
