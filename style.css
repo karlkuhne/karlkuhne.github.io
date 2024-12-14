@@ -95,6 +95,12 @@ p , label {
     line-height: 1.2;
 }
 
+@media (max-width: 40.9rem) {
+    p {
+        font-size: 0.9rem;
+    }
+}
+
 .hyperlink {
     font-family: Work Sans;
     font-size: 1.1rem;
@@ -1162,16 +1168,20 @@ footer {
 
 @media (max-width: 40.9rem) {
     .project-description {
-        width: 80vw;
+        width: 91.8vw;
     }
 
     .project-cover {
-        width: 95vw;
+        width: 91.8vw;
     }
 }
 
 .project-description p {
-    text-align: left;
+    text-align: justify;
+    hyphens: auto;
+    hyphenate-limit-chars: 7 auto auto;
+
+    line-height: 1.75rem;
 }
 
 .project-description img {
@@ -1181,6 +1191,10 @@ footer {
     border-radius: 0.7rem;
     margin-top: 1.1rem;
     margin-bottom: 1.1rem;
+}
+
+pre {
+    border-radius: 0.5rem;
 }
 
 
@@ -1201,8 +1215,8 @@ footer {
   }
 
   .column p {
-    margin-top: 0.2rem;
-    margin-bottom: 0.4rem;
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
   }
 
   .column h3 {
