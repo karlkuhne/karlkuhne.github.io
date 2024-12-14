@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="../style.css">
     <script src="../scripts/layout.js" defer></script>
     <script src="../scripts/projectPage.js" defer></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+
 </head>
 
 <body>
@@ -76,15 +81,18 @@
 
             <hr class="separator">
 
-            <h3>Konzept</h3>
+            <h3>Statisches textbasiertes CMS</h3>
+            <p>Zum Hinzufügen von neuen Projekten habe ich ein textbasiertes CMS erstellt</p>
             
-            <img src="../Ressources/Portfolio_Website/First.png" alt="Shadow Catcher" class="selectDisable"
-                draggable="false">
-                <img src="../Ressources/Portfolio_Website/Now.png" alt="Shadow Catcher" class="selectDisable"
-                draggable="false">
-
-
-
+            <pre><code class="language-javascript">const projectsData = {
+    "projects": [
+        {
+            "label": "portfolio-webseite",
+            "category": "spiel",
+            "featured": true,
+            "thumbnail": "Ressources/Portfolio_Website/Thumbnail.avif",</code></pre>
+            
+            <!-- <img src="../Ressources/Portfolio_Website/CMS.png" alt="Shadow Catcher" class="selectDisable" draggable="false"> -->
 
         </section>
     </main>

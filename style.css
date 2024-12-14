@@ -1156,7 +1156,7 @@ footer {
 }
 
 .project-description {
-    width: calc(var(--main-width) / 1.4);
+    width: calc(var(--main-width) / 1.5);
     margin: 0 auto;
 }
 
@@ -1184,7 +1184,6 @@ footer {
 }
 
 
-
 /* TABLE */
 
 .table {
@@ -1203,7 +1202,7 @@ footer {
 
   .column p {
     margin-top: 0.2rem;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.4rem;
   }
 
   .column h3 {
@@ -1217,8 +1216,8 @@ footer {
   }
 
   .separator {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-top: 3.2rem;
+    margin-bottom: 3.2rem;
     border-color:rgb(122, 122, 122);
   }
 
