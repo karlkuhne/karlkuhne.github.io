@@ -81,9 +81,15 @@
 
             <hr class="separator">
 
-            <h3>Statisches textbasiertes CMS</h3>
-            <p>Computer games or graphical user interfaces often need to check if certain objects overlap, get selected or manipulated by the user. Using a pointing device like a</p>
-            
+            <h2>Key Features</h2>
+            <h3>Hinzufügen neuer Projekte</h3>
+            <p>Um das Portfolio effizient aktuell zu halten, muss das Einpflegen neuer Projekte schnell und einfach
+                sein.
+                Dafür wurde ein textbasiertes CMS entwickelt: Man muss lediglich die Projektinhalte in die
+                <i>projectsData.js</i> schreiben, beim Laden der Seite werden dann automatisch anhand zweier Templates
+                für jedes Projekt
+                das Vorschaubild und die Lightbox generiert.
+
             <pre style="background-color: #222222;"><code class="language-javascript">const projectsData = {
     "projects": [
         {
@@ -92,8 +98,19 @@
             "featured": true,
             "thumbnail": "Ressources/Portfolio_Website/Thumbnail.avif",
             ...</code></pre>
-            
-            <!-- <img src="../Ressources/Portfolio_Website/CMS.png" alt="Shadow Catcher" class="selectDisable" draggable="false"> -->
+
+            <h3>Cover</h3>
+            <p>Bei der Landing-Page kommt ein animiertes SVG-Design zum Einsatz. Dabei ist jeder Buchstabe separat 
+                in einem path-Element definiert und mit dem "+"-Pattern gefüllt. Zuerst wird nur das Logo eingeblendet, 
+                und dann fliegen [bei einem ausreichend großem Bildschirm] nacheinander die einzelnen Buchstaben ein.
+            </p>
+
+            <pre style="background-color: #222222;"><code class="language-javascript">.letter1 {
+                opacity: 0;
+                animation: fade-in 3s forwards, fly-in 1s linear forwards;
+                animation-delay: 1.3s;
+            }</code></pre>
+
 
         </section>
     </main>

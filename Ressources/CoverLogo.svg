@@ -23,35 +23,35 @@
 
     <style>
         path {
-            animation: fly-in-out 1s linear forwards;
+            animation: fly-in 1s linear forwards;
             animation-delay: 1.15s;
         }
 
         .letter1 {
             opacity: 0;
-            animation: fade-in 3s forwards, fly-in-out 1s linear forwards;
+            animation: fade-in 3s forwards, fly-in 1s linear forwards;
             animation-delay: 1.3s;
         }
 
         .letter2 {
             opacity: 0;
-            animation: fade-in 3s forwards, fly-in-out 1s linear forwards;
+            animation: fade-in 3s forwards, fly-in 1s linear forwards;
             animation-delay: 1.45s;
         }
 
         .letter3 {
             opacity: 0;
-            animation: fade-in 3s forwards, fly-in-out 1s linear forwards;
+            animation: fade-in 3s forwards, fly-in 1s linear forwards;
             animation-delay: 1.60s;
         }
 
         .letter4 {
             opacity: 0;
-            animation: fade-in 3s forwards, fly-in-out 1s linear forwards;
+            animation: fade-in 3s forwards, fly-in 1s linear forwards;
             animation-delay: 1.75s;
         }
 
-        @keyframes fly-in-out {
+        @keyframes fly-in {
             0% { transform: translate(0, 0); }
             100% { transform: translate(-440px, 0); }
         }
