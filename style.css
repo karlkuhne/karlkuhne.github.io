@@ -123,7 +123,7 @@ p , label {
     background-position: center;
 }
 
-@media (max-width: 40.9rem) {
+@media (max-width: 105rem) {
     .parallax {
         background-image: url('Ressources/CoverMobile.svg');
     }
@@ -1162,7 +1162,7 @@ footer {
 }
 
 .project-description {
-    width: calc(var(--main-width) / 1.5);
+    width: calc(var(--main-width) / 1.325);
     margin: 0 auto;
 }
 
@@ -1268,5 +1268,5 @@ code[class="language-javascript"] {
 }
 
 .responsive .project-description {
-    width: calc(var(--responsive-main-width) / 1.4);
+    width: calc(var(--responsive-main-width) / 1.325);
 }
