@@ -16,14 +16,16 @@
 
     <!-- Primary Meta Tags -->
     <meta name="title" content="Karl Kuhne | Portfolio" />
-    <meta name="description" content="Willkommen auf meiner Portfolio-Seite. Entdecke meine Projekte und erfahre mehr über mich." />
+    <meta name="description"
+        content="Willkommen auf meiner Portfolio-Seite. Entdecke meine Projekte und erfahre mehr über mich." />
     <meta name="author" content="Karl Kuhne" />
     <meta name="copyright" content="Karl Kuhne" />
     <meta name="robots" content="index, follow" />
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Karl Kuhne | Portfolio" />
-    <meta property="og:description" content="Willkommen auf meiner Portfolio-Seite. Entdecke meine Projekte und erfahre mehr über mich." />
+    <meta property="og:description"
+        content="Willkommen auf meiner Portfolio-Seite. Entdecke meine Projekte und erfahre mehr über mich." />
     <meta property="og:image" content="/Ressources/Portrait.avif" />
     <meta property="og:url" content="https://karlkuhne.me" />
     <meta property="og:type" content="website" />
@@ -42,403 +44,421 @@
     }
     </script>
 
-     <!-- Performance Improvements -->
-     <link rel="preconnect" href="https://karlkuhne.me">
-     <link rel="dns-prefetch" href="https://karlkuhne.me">
+    <!-- Performance Improvements -->
+    <link rel="preconnect" href="https://karlkuhne.me">
+    <link rel="dns-prefetch" href="https://karlkuhne.me">
 
-      <!-- Page specific -->
+    <!-- Page specific -->
     <title>Karl Kuhne | Portfolio</title>
-    <meta name="description" content="Willkommen auf meiner Portfolio-Seite. Entdecke meine Projekte und erfahre mehr über mich..">
+    <meta name="description"
+        content="Willkommen auf meiner Portfolio-Seite. Entdecke meine Projekte und erfahre mehr über mich..">
 
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div>
-                <a href=".parallax" id="logo" class="selectDisable"
-                    onclick="scrollToTarget(event)">karl-kuhne-portfolio</a>
-            </div>
-            <div id="main-nav">
-                <div id="nav-buttons">
-                    <a href="projekt-galerie" class="main-nav-item selectDisable">projekte</a>
-                    <a href="#about" onclick="scrollToTarget(event)" class="main-nav-item selectDisable">über-mich</a>
-                    <a href="#contact" onclick="scrollToTarget(event)" class="main-nav-item selectDisable">kontakt</a>
-                </div>
-                <div id="linkedIn-button" class="selectDisable">
-                    <button
-                        onclick="window.open('https://www.linkedin.com/mynetwork/discovery-see-all/?usecase=PEOPLE_FOLLOWS&followMember=karl-kuhne', '_blank');">
-                        <svg fill="white" class="button-icon" width="21" preserveAspectRatio="xMidYMid meet"
-                            viewBox="0 0 100 100" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
-                            <path
-                                d="M92.86,0H7.12A7.17,7.17,0,0,0,0,7.21V92.79A7.17,7.17,0,0,0,7.12,100H92.86A7.19,7.19,0,0,0,100,92.79V7.21A7.19,7.19,0,0,0,92.86,0ZM30.22,85.71H15.4V38H30.25V85.71ZM22.81,31.47a8.59,8.59,0,1,1,8.6-8.59A8.6,8.6,0,0,1,22.81,31.47Zm63,54.24H71V62.5c0-5.54-.11-12.66-7.7-12.66s-8.91,6-8.91,12.26V85.71H39.53V38H53.75v6.52H54c2-3.75,6.83-7.7,14-7.7,15,0,17.79,9.89,17.79,22.74Z">
-                            </path>
-                        </svg>
-                        <span>Kontakt auf LinkedIn</span>
-                    </button>
-                </div>
-            </div>
-
-            <div id="hamburger" class="selectDisable">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </nav>
-    </header>
-
-
-
-    <main>
-
-        <div class="parallax"></div>
-        
-        <span href="#galery" id="arrow" class="selectDisable" onclick="scrollToTarget(event)">❯</span>
-
-        <section id="galery">
-
-            <h1 id="galery-header">vorgestellte-projekte</h1>
-
-            <template id="project-template">
-                <div class="box project" data-project-id="">
-                    <div class="label">
-                        <p class="label-text"></p>
-
-                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                            <path d="M2.67 8c0-.37.3-.67.66-.67h9.34a.67.67 0 1 1 0 1.34H3.33A.67.67 0 0 1 2.67 8"
-                                style="touch-action: none;"></path>
-                        </svg>
-
-                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path
-                                d="M8.2 4c-1.12 0-1.82-.05-2.56.33a3 3 0 0 0-1.31 1.3C3.95 6.39 4 7.09 4 8.2v7.6c0 1.12-.05 1.82.33 2.56a3 3 0 0 0 1.3 1.31c.75.38 1.45.33 2.57.33h7.6c1.12 0 1.82.05 2.56-.33a3 3 0 0 0 1.31-1.3c.38-.75.33-1.45.33-2.57V8.2c0-1.12.05-1.82-.33-2.56a3 3 0 0 0-1.3-1.31C17.61 3.95 16.91 4 15.8 4Zm0 2h7.6c1.12 0 1.54.05 1.65.1a1 1 0 0 1 .44.45c.06.11.11.53.11 1.65v7.6c0 1.12-.05 1.54-.1 1.65a1 1 0 0 1-.45.44c-.11.06-.53.11-1.65.11H8.2a6 6 0 0 1-1.65-.1 1 1 0 0 1-.44-.45A6 6 0 0 1 6 15.8V8.2c0-1.12.05-1.54.1-1.65a1 1 0 0 1 .45-.44C6.66 6.05 7.08 6 8.2 6"
-                                style="touch-action: none;"></path>
-                        </svg>
-
-                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                            <path
-                                d="M3.53 3.53a.67.67 0 0 1 .94 0L8 7.06l3.53-3.53a.67.67 0 1 1 .94.94L8.94 8l3.53 3.53a.67.67 0 1 1-.94.94L8 8.94l-3.53 3.53a.67.67 0 1 1-.94-.94L7.06 8 3.53 4.47a.67.67 0 0 1 0-.94"
-                                style="touch-action: none;"></path>
-                        </svg>
+    <div id="page-container">
+        <div id="content-wrap">
+            <header>
+                <nav>
+                    <div>
+                        <a href=".parallax" id="logo" class="selectDisable"
+                            onclick="scrollToTarget(event)">karl-kuhne-portfolio</a>
                     </div>
-                    <div class="thumbnail">
-                        <img class="thumbnail-img selectDisable" src="" alt="" draggable="false"
-                            oncontextmenu="return false;">
+                    <div id="main-nav">
+                        <div id="nav-buttons">
+                            <a href="projekt-galerie" class="main-nav-item selectDisable">projekte</a>
+                            <a href="#about" onclick="scrollToTarget(event)"
+                                class="main-nav-item selectDisable">über-mich</a>
+                            <a href="#contact" onclick="scrollToTarget(event)"
+                                class="main-nav-item selectDisable">kontakt</a>
+                        </div>
+                        <div id="linkedIn-button" class="selectDisable">
+                            <button
+                                onclick="window.open('https://www.linkedin.com/mynetwork/discovery-see-all/?usecase=PEOPLE_FOLLOWS&followMember=karl-kuhne', '_blank');">
+                                <svg fill="white" class="button-icon" width="21" preserveAspectRatio="xMidYMid meet"
+                                    viewBox="0 0 100 100" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
+                                    <path
+                                        d="M92.86,0H7.12A7.17,7.17,0,0,0,0,7.21V92.79A7.17,7.17,0,0,0,7.12,100H92.86A7.19,7.19,0,0,0,100,92.79V7.21A7.19,7.19,0,0,0,92.86,0ZM30.22,85.71H15.4V38H30.25V85.71ZM22.81,31.47a8.59,8.59,0,1,1,8.6-8.59A8.6,8.6,0,0,1,22.81,31.47Zm63,54.24H71V62.5c0-5.54-.11-12.66-7.7-12.66s-8.91,6-8.91,12.26V85.71H39.53V38H53.75v6.52H54c2-3.75,6.83-7.7,14-7.7,15,0,17.79,9.89,17.79,22.74Z">
+                                    </path>
+                                </svg>
+                                <span>Kontakt auf LinkedIn</span>
+                            </button>
+                        </div>
                     </div>
-                </div>
-            </template>
 
-            <div id="featured-projects-container"></div>
+                    <div id="hamburger" class="selectDisable">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </nav>
+            </header>
 
-            <template id="lightbox-template">
-                <div class="lightbox">
-                    <span class="close selectDisable">&times;</span>
 
-                    <div class="wrapper-waagerecht">
-                        <div class="container-waagerecht">
-                            <div class="navigation">
-                                <a class="prev selectDisable" onclick="plusSlides(-1)">❮</a>
-                                <a class="next selectDisable" onclick="plusSlides(1)">❯</a>
+
+            <main>
+
+                <div class="parallax"></div>
+
+                <span href="#galery" id="arrow" class="selectDisable" onclick="scrollToTarget(event)">❯</span>
+
+                <section id="galery">
+
+                    <h1 id="galery-header">vorgestellte-projekte</h1>
+
+                    <template id="project-template">
+                        <div class="box project" data-project-id="">
+                            <div class="label">
+                                <p class="label-text"></p>
+
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2.67 8c0-.37.3-.67.66-.67h9.34a.67.67 0 1 1 0 1.34H3.33A.67.67 0 0 1 2.67 8"
+                                        style="touch-action: none;"></path>
+                                </svg>
+
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path
+                                        d="M8.2 4c-1.12 0-1.82-.05-2.56.33a3 3 0 0 0-1.31 1.3C3.95 6.39 4 7.09 4 8.2v7.6c0 1.12-.05 1.82.33 2.56a3 3 0 0 0 1.3 1.31c.75.38 1.45.33 2.57.33h7.6c1.12 0 1.82.05 2.56-.33a3 3 0 0 0 1.31-1.3c.38-.75.33-1.45.33-2.57V8.2c0-1.12.05-1.82-.33-2.56a3 3 0 0 0-1.3-1.31C17.61 3.95 16.91 4 15.8 4Zm0 2h7.6c1.12 0 1.54.05 1.65.1a1 1 0 0 1 .44.45c.06.11.11.53.11 1.65v7.6c0 1.12-.05 1.54-.1 1.65a1 1 0 0 1-.45.44c-.11.06-.53.11-1.65.11H8.2a6 6 0 0 1-1.65-.1 1 1 0 0 1-.44-.45A6 6 0 0 1 6 15.8V8.2c0-1.12.05-1.54.1-1.65a1 1 0 0 1 .45-.44C6.66 6.05 7.08 6 8.2 6"
+                                        style="touch-action: none;"></path>
+                                </svg>
+
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.53 3.53a.67.67 0 0 1 .94 0L8 7.06l3.53-3.53a.67.67 0 1 1 .94.94L8.94 8l3.53 3.53a.67.67 0 1 1-.94.94L8 8.94l-3.53 3.53a.67.67 0 1 1-.94-.94L7.06 8 3.53 4.47a.67.67 0 0 1 0-.94"
+                                        style="touch-action: none;"></path>
+                                </svg>
                             </div>
-                            <div class="dots-slideshow-waagerecht"></div>
+                            <div class="thumbnail">
+                                <img class="thumbnail-img selectDisable" src="" alt="" draggable="false"
+                                    oncontextmenu="return false;">
+                            </div>
                         </div>
-                        
-                        <div class="steam"></div>
+                    </template>
 
-                        <h3 class="project-name"></h3>
-                        <p class="lightbox-description"></p>
-                        <div class="app-icons"></div>
-                        <div style="display: flex">
-                            <a class="website-button selectDisable" href="" target="_blank">öffnen</a>
-                            <a class="project-button selectDisable" href="" target="_blank">projektseite</a>
+                    <div id="featured-projects-container"></div>
+
+                    <template id="lightbox-template">
+                        <div class="lightbox">
+                            <span class="close selectDisable">&times;</span>
+
+                            <div class="wrapper-waagerecht">
+                                <div class="container-waagerecht">
+                                    <div class="navigation">
+                                        <a class="prev selectDisable" onclick="plusSlides(-1)">❮</a>
+                                        <a class="next selectDisable" onclick="plusSlides(1)">❯</a>
+                                    </div>
+                                    <div class="dots-slideshow-waagerecht"></div>
+                                </div>
+
+                                <div class="steam"></div>
+
+                                <h3 class="project-name"></h3>
+                                <p class="lightbox-description"></p>
+                                <div class="app-icons"></div>
+                                <div style="display: flex">
+                                    <a class="website-button selectDisable" href="" target="_blank">öffnen</a>
+                                    <a class="project-button selectDisable" href="" target="_blank">projektseite</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+
+                    <div style="display: flex; justify-content: center;">
+                        <a class="all-projects-button selectDisable" href="projekt-galerie"
+                            target="_blank">alle-projekte</a>
+                    </div>
+                </section>
+
+                <section id="about">
+
+                    <div class="box aboutBox" id="about-me">
+                        <div class="label">
+                            <p>über-mich</p>
+
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path d="M2.67 8c0-.37.3-.67.66-.67h9.34a.67.67 0 1 1 0 1.34H3.33A.67.67 0 0 1 2.67 8"
+                                    style="touch-action: none;"></path>
+                            </svg>
+
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M8.2 4c-1.12 0-1.82-.05-2.56.33a3 3 0 0 0-1.31 1.3C3.95 6.39 4 7.09 4 8.2v7.6c0 1.12-.05 1.82.33 2.56a3 3 0 0 0 1.3 1.31c.75.38 1.45.33 2.57.33h7.6c1.12 0 1.82.05 2.56-.33a3 3 0 0 0 1.31-1.3c.38-.75.33-1.45.33-2.57V8.2c0-1.12.05-1.82-.33-2.56a3 3 0 0 0-1.3-1.31C17.61 3.95 16.91 4 15.8 4Zm0 2h7.6c1.12 0 1.54.05 1.65.1a1 1 0 0 1 .44.45c.06.11.11.53.11 1.65v7.6c0 1.12-.05 1.54-.1 1.65a1 1 0 0 1-.45.44c-.11.06-.53.11-1.65.11H8.2a6 6 0 0 1-1.65-.1 1 1 0 0 1-.44-.45A6 6 0 0 1 6 15.8V8.2c0-1.12.05-1.54.1-1.65a1 1 0 0 1 .45-.44C6.66 6.05 7.08 6 8.2 6"
+                                    style="touch-action: none;"></path>
+                            </svg>
+
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path
+                                    d="M3.53 3.53a.67.67 0 0 1 .94 0L8 7.06l3.53-3.53a.67.67 0 1 1 .94.94L8.94 8l3.53 3.53a.67.67 0 1 1-.94.94L8 8.94l-3.53 3.53a.67.67 0 1 1-.94-.94L7.06 8 3.53 4.47a.67.67 0 0 1 0-.94"
+                                    style="touch-action: none;"></path>
+                            </svg>
 
                         </div>
-                    </div>
-                </div>
-            </template>
-
-            <div style="display: flex; justify-content: center;">
-                <a class="all-projects-button selectDisable" href="projekt-galerie" target="_blank">alle-projekte</a>
-            </div>
-        </section>
-
-        <section id="about">
-
-            <div class="box aboutBox" id="about-me">
-                <div class="label">
-                    <p>über-mich</p>
-
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                        <path d="M2.67 8c0-.37.3-.67.66-.67h9.34a.67.67 0 1 1 0 1.34H3.33A.67.67 0 0 1 2.67 8"
-                            style="touch-action: none;"></path>
-                    </svg>
-
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path
-                            d="M8.2 4c-1.12 0-1.82-.05-2.56.33a3 3 0 0 0-1.31 1.3C3.95 6.39 4 7.09 4 8.2v7.6c0 1.12-.05 1.82.33 2.56a3 3 0 0 0 1.3 1.31c.75.38 1.45.33 2.57.33h7.6c1.12 0 1.82.05 2.56-.33a3 3 0 0 0 1.31-1.3c.38-.75.33-1.45.33-2.57V8.2c0-1.12.05-1.82-.33-2.56a3 3 0 0 0-1.3-1.31C17.61 3.95 16.91 4 15.8 4Zm0 2h7.6c1.12 0 1.54.05 1.65.1a1 1 0 0 1 .44.45c.06.11.11.53.11 1.65v7.6c0 1.12-.05 1.54-.1 1.65a1 1 0 0 1-.45.44c-.11.06-.53.11-1.65.11H8.2a6 6 0 0 1-1.65-.1 1 1 0 0 1-.44-.45A6 6 0 0 1 6 15.8V8.2c0-1.12.05-1.54.1-1.65a1 1 0 0 1 .45-.44C6.66 6.05 7.08 6 8.2 6"
-                            style="touch-action: none;"></path>
-                    </svg>
-
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                        <path
-                            d="M3.53 3.53a.67.67 0 0 1 .94 0L8 7.06l3.53-3.53a.67.67 0 1 1 .94.94L8.94 8l3.53 3.53a.67.67 0 1 1-.94.94L8 8.94l-3.53 3.53a.67.67 0 1 1-.94-.94L7.06 8 3.53 4.47a.67.67 0 0 1 0-.94"
-                            style="touch-action: none;"></path>
-                    </svg>
-
-                </div>
-                <ol>
-                    <li>
-                        <p>Hallo, ich bin <span class="gr">Karl</span> und studiere <span class="b">Medieninformatik und
-                            Mediendesign</span> an der Fachhochschule Dresden.</p>
-                    </li>
-                    <li>
-                        <p>Aktuell arbeite ich vorrangig an interaktiven Medien wie
-                            <span class="p">Videospielen</span> und <span class="l">Webseiten</span>. Aber habe auch Erfahrung
-                            mit <span class="ge">filmischen Umsetzungen</span>.
-                        </p>
-                    </li>
-                    <li>
-                        <p>Mein Hauptinteresse liegt dabei immer bei der Nutzer-
-                            erfahrung, der <span class="gr">User Experience</span> – und im Detail bei der
-                            Verschränkung von <span class="b">User Interface</span> und tiefer <span class="o">Immersion</span>.</p>
-                    </li>
-                    <li>
-                        <p>Primär arbeite ich mit <span class="b">Unity</span>, <span class="ge">Premiere</span> und <span class="l">Photoshop</span>.
-                        </p>
-                    </li>
-                    <li>
-                        <p>Je nach Projekt arbeite ich gern im <span class="p">Team</span> als auch <span class="o">allein</span>.</p>
-                    </li>
-                    <li>
-                        <p>Ich freue mich auf <span class="ge">gemeinsame</span> Visionen und Projekte!</p>
-                    </li>
-                </ol>
+                        <ol>
+                            <li>
+                                <p>Hallo, ich bin <span class="gr">Karl</span> und studiere <span
+                                        class="b">Medieninformatik und
+                                        Mediendesign</span> an der Fachhochschule Dresden.</p>
+                            </li>
+                            <li>
+                                <p>Aktuell arbeite ich vorrangig an interaktiven Medien wie
+                                    <span class="p">Videospielen</span> und <span class="l">Webseiten</span>. Aber habe
+                                    auch Erfahrung
+                                    mit <span class="ge">filmischen Umsetzungen</span>.
+                                </p>
+                            </li>
+                            <li>
+                                <p>Mein Hauptinteresse liegt dabei immer bei der Nutzer-
+                                    erfahrung, der <span class="gr">User Experience</span> – und im Detail bei der
+                                    Verschränkung von <span class="b">User Interface</span> und tiefer <span
+                                        class="o">Immersion</span>.</p>
+                            </li>
+                            <li>
+                                <p>Primär arbeite ich mit <span class="b">Unity</span>, <span class="ge">Premiere</span>
+                                    und <span class="l">Photoshop</span>.
+                                </p>
+                            </li>
+                            <li>
+                                <p>Je nach Projekt arbeite ich gern im <span class="p">Team</span> als auch <span
+                                        class="o">allein</span>.</p>
+                            </li>
+                            <li>
+                                <p>Ich freue mich auf <span class="ge">gemeinsame</span> Visionen und Projekte!</p>
+                            </li>
+                        </ol>
 
 
 
 
 
 
-            </div>
-
-            <div class="box aboutBox" id="languages">
-                <div class="label">
-                    <p>sprachkenntnisse</p>
-
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                        <path d="M2.67 8c0-.37.3-.67.66-.67h9.34a.67.67 0 1 1 0 1.34H3.33A.67.67 0 0 1 2.67 8"
-                            style="touch-action: none;"></path>
-                    </svg>
-
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path
-                            d="M8.2 4c-1.12 0-1.82-.05-2.56.33a3 3 0 0 0-1.31 1.3C3.95 6.39 4 7.09 4 8.2v7.6c0 1.12-.05 1.82.33 2.56a3 3 0 0 0 1.3 1.31c.75.38 1.45.33 2.57.33h7.6c1.12 0 1.82.05 2.56-.33a3 3 0 0 0 1.31-1.3c.38-.75.33-1.45.33-2.57V8.2c0-1.12.05-1.82-.33-2.56a3 3 0 0 0-1.3-1.31C17.61 3.95 16.91 4 15.8 4Zm0 2h7.6c1.12 0 1.54.05 1.65.1a1 1 0 0 1 .44.45c.06.11.11.53.11 1.65v7.6c0 1.12-.05 1.54-.1 1.65a1 1 0 0 1-.45.44c-.11.06-.53.11-1.65.11H8.2a6 6 0 0 1-1.65-.1 1 1 0 0 1-.44-.45A6 6 0 0 1 6 15.8V8.2c0-1.12.05-1.54.1-1.65a1 1 0 0 1 .45-.44C6.66 6.05 7.08 6 8.2 6"
-                            style="touch-action: none;"></path>
-                    </svg>
-
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                        <path
-                            d="M3.53 3.53a.67.67 0 0 1 .94 0L8 7.06l3.53-3.53a.67.67 0 1 1 .94.94L8.94 8l3.53 3.53a.67.67 0 1 1-.94.94L8 8.94l-3.53 3.53a.67.67 0 1 1-.94-.94L7.06 8 3.53 4.47a.67.67 0 0 1 0-.94"
-                            style="touch-action: none;"></path>
-                    </svg>
-
-                </div>
-                <ol>
-                    <li>
-                        <p>Deutsch - native</p>
-                    </li>
-                    <li>
-                        <p>Englisch - fließend</p>
-                    </li>
-                    <li>
-                        <p>Schwedisch - lernend</p>
-                    </li>
-                </ol>
-            </div>
-
-            <div class="box aboutBox" id="hobbys">
-                <div class="label">
-                    <p>hobbys</p>
-
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                        <path d="M2.67 8c0-.37.3-.67.66-.67h9.34a.67.67 0 1 1 0 1.34H3.33A.67.67 0 0 1 2.67 8"
-                            style="touch-action: none;"></path>
-                    </svg>
-
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path
-                            d="M8.2 4c-1.12 0-1.82-.05-2.56.33a3 3 0 0 0-1.31 1.3C3.95 6.39 4 7.09 4 8.2v7.6c0 1.12-.05 1.82.33 2.56a3 3 0 0 0 1.3 1.31c.75.38 1.45.33 2.57.33h7.6c1.12 0 1.82.05 2.56-.33a3 3 0 0 0 1.31-1.3c.38-.75.33-1.45.33-2.57V8.2c0-1.12.05-1.82-.33-2.56a3 3 0 0 0-1.3-1.31C17.61 3.95 16.91 4 15.8 4Zm0 2h7.6c1.12 0 1.54.05 1.65.1a1 1 0 0 1 .44.45c.06.11.11.53.11 1.65v7.6c0 1.12-.05 1.54-.1 1.65a1 1 0 0 1-.45.44c-.11.06-.53.11-1.65.11H8.2a6 6 0 0 1-1.65-.1 1 1 0 0 1-.44-.45A6 6 0 0 1 6 15.8V8.2c0-1.12.05-1.54.1-1.65a1 1 0 0 1 .45-.44C6.66 6.05 7.08 6 8.2 6"
-                            style="touch-action: none;"></path>
-                    </svg>
-
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                        <path
-                            d="M3.53 3.53a.67.67 0 0 1 .94 0L8 7.06l3.53-3.53a.67.67 0 1 1 .94.94L8.94 8l3.53 3.53a.67.67 0 1 1-.94.94L8 8.94l-3.53 3.53a.67.67 0 1 1-.94-.94L7.06 8 3.53 4.47a.67.67 0 0 1 0-.94"
-                            style="touch-action: none;"></path>
-                    </svg>
-
-                </div>
-                <ol>
-                    <li>
-                        <p>🎮 Gaming</p>
-                    </li>
-                    <li>
-                        <p>🏋️‍♂️ Gewichtheben</p>
-                    </li>
-                    <li>
-                        <p>👨‍💻 Programmieren</p>
-                    </li>
-                </ol>
-            </div>
-
-            <div class="box aboutBox" id="degrees">
-                <div class="label">
-                    <p>abschlüsse</p>
-
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                        <path d="M2.67 8c0-.37.3-.67.66-.67h9.34a.67.67 0 1 1 0 1.34H3.33A.67.67 0 0 1 2.67 8"
-                            style="touch-action: none;"></path>
-                    </svg>
-
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path
-                            d="M8.2 4c-1.12 0-1.82-.05-2.56.33a3 3 0 0 0-1.31 1.3C3.95 6.39 4 7.09 4 8.2v7.6c0 1.12-.05 1.82.33 2.56a3 3 0 0 0 1.3 1.31c.75.38 1.45.33 2.57.33h7.6c1.12 0 1.82.05 2.56-.33a3 3 0 0 0 1.31-1.3c.38-.75.33-1.45.33-2.57V8.2c0-1.12.05-1.82-.33-2.56a3 3 0 0 0-1.3-1.31C17.61 3.95 16.91 4 15.8 4Zm0 2h7.6c1.12 0 1.54.05 1.65.1a1 1 0 0 1 .44.45c.06.11.11.53.11 1.65v7.6c0 1.12-.05 1.54-.1 1.65a1 1 0 0 1-.45.44c-.11.06-.53.11-1.65.11H8.2a6 6 0 0 1-1.65-.1 1 1 0 0 1-.44-.45A6 6 0 0 1 6 15.8V8.2c0-1.12.05-1.54.1-1.65a1 1 0 0 1 .45-.44C6.66 6.05 7.08 6 8.2 6"
-                            style="touch-action: none;"></path>
-                    </svg>
-
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                        <path
-                            d="M3.53 3.53a.67.67 0 0 1 .94 0L8 7.06l3.53-3.53a.67.67 0 1 1 .94.94L8.94 8l3.53 3.53a.67.67 0 1 1-.94.94L8 8.94l-3.53 3.53a.67.67 0 1 1-.94-.94L7.06 8 3.53 4.47a.67.67 0 0 1 0-.94"
-                            style="touch-action: none;"></path>
-                    </svg>
-
-                </div>
-                <ol>
-                    <li>
-                        <p><span class="o">Abitur</span> <br> Evangelisches Kreuzgymnasium Dresden</p>
-                    </li>
-                    <li>
-                        <p><span class="b">Bachelor of Arts</span> [fortlaufend] <br> Medieninformatik und Mediendesign,
-                            FHD</p>
-                    </li>
-                </ol>
-            </div>
-
-            <div class="box aboutBox" id="portrait">
-                <div class="label">
-                    <p>portrait</p>
-
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                        <path d="M2.67 8c0-.37.3-.67.66-.67h9.34a.67.67 0 1 1 0 1.34H3.33A.67.67 0 0 1 2.67 8"
-                            style="touch-action: none;"></path>
-                    </svg>
-
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path
-                            d="M8.2 4c-1.12 0-1.82-.05-2.56.33a3 3 0 0 0-1.31 1.3C3.95 6.39 4 7.09 4 8.2v7.6c0 1.12-.05 1.82.33 2.56a3 3 0 0 0 1.3 1.31c.75.38 1.45.33 2.57.33h7.6c1.12 0 1.82.05 2.56-.33a3 3 0 0 0 1.31-1.3c.38-.75.33-1.45.33-2.57V8.2c0-1.12.05-1.82-.33-2.56a3 3 0 0 0-1.3-1.31C17.61 3.95 16.91 4 15.8 4Zm0 2h7.6c1.12 0 1.54.05 1.65.1a1 1 0 0 1 .44.45c.06.11.11.53.11 1.65v7.6c0 1.12-.05 1.54-.1 1.65a1 1 0 0 1-.45.44c-.11.06-.53.11-1.65.11H8.2a6 6 0 0 1-1.65-.1 1 1 0 0 1-.44-.45A6 6 0 0 1 6 15.8V8.2c0-1.12.05-1.54.1-1.65a1 1 0 0 1 .45-.44C6.66 6.05 7.08 6 8.2 6"
-                            style="touch-action: none;"></path>
-                    </svg>
-
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                        <path
-                            d="M3.53 3.53a.67.67 0 0 1 .94 0L8 7.06l3.53-3.53a.67.67 0 1 1 .94.94L8.94 8l3.53 3.53a.67.67 0 1 1-.94.94L8 8.94l-3.53 3.53a.67.67 0 1 1-.94-.94L7.06 8 3.53 4.47a.67.67 0 0 1 0-.94"
-                            style="touch-action: none;"></path>
-                    </svg>
-
-                </div>
-
-                <img src="Ressources/Portrait.avif" alt="Portrait of Karl" class="selectDisable" draggable="false" loading="lazy">
-            </div>
-
-        </section>
-
-
-
-
-
-        <section id="contact">
-
-            <div class="box" id="contact-form">
-                <div class="label">
-                    <p>kontaktformular</p>
-
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                        <path d="M2.67 8c0-.37.3-.67.66-.67h9.34a.67.67 0 1 1 0 1.34H3.33A.67.67 0 0 1 2.67 8"
-                            style="touch-action: none;"></path>
-                    </svg>
-
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path
-                            d="M8.2 4c-1.12 0-1.82-.05-2.56.33a3 3 0 0 0-1.31 1.3C3.95 6.39 4 7.09 4 8.2v7.6c0 1.12-.05 1.82.33 2.56a3 3 0 0 0 1.3 1.31c.75.38 1.45.33 2.57.33h7.6c1.12 0 1.82.05 2.56-.33a3 3 0 0 0 1.31-1.3c.38-.75.33-1.45.33-2.57V8.2c0-1.12.05-1.82-.33-2.56a3 3 0 0 0-1.3-1.31C17.61 3.95 16.91 4 15.8 4Zm0 2h7.6c1.12 0 1.54.05 1.65.1a1 1 0 0 1 .44.45c.06.11.11.53.11 1.65v7.6c0 1.12-.05 1.54-.1 1.65a1 1 0 0 1-.45.44c-.11.06-.53.11-1.65.11H8.2a6 6 0 0 1-1.65-.1 1 1 0 0 1-.44-.45A6 6 0 0 1 6 15.8V8.2c0-1.12.05-1.54.1-1.65a1 1 0 0 1 .45-.44C6.66 6.05 7.08 6 8.2 6"
-                            style="touch-action: none;"></path>
-                    </svg>
-
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                        <path
-                            d="M3.53 3.53a.67.67 0 0 1 .94 0L8 7.06l3.53-3.53a.67.67 0 1 1 .94.94L8.94 8l3.53 3.53a.67.67 0 1 1-.94.94L8 8.94l-3.53 3.53a.67.67 0 1 1-.94-.94L7.06 8 3.53 4.47a.67.67 0 0 1 0-.94"
-                            style="touch-action: none;"></path>
-                    </svg>
-
-                </div>
-
-                <form id="form" action="https://formspree.io/f/xnnqzbbk" method="POST">
-
-                    <ol>
-                        <li>
-                            <label for="nameInput">Name</label> <br>
-                            <input id="nameInput" type="text" name="name" required>
-                        </li>
-
-                        <li>
-                            <label for="emailInput">E-Mail-Adresse</label> <br>
-                            <input id="emailInput" type="email" name="email" required>
-                        </li>
-
-                        <li>
-                            <label for="messageInput">Nachricht</label> <br>
-                            <textarea id="messageInput" name="message" rows="1" style="resize: none;"
-                                oninput='this.style.height = ""; this.style.height = this.scrollHeight + "px";'
-                                required></textarea>
-                        </li>
-
-                    </ol>
-
-                    <div class="checkbox-container">
-                        <input id ="consentCheckbox" type="checkbox" required>
-                        <label id ="checkbox-text" for="consentCheckbox">
-                            Ich erkläre mich mit der Speicherung und Verarbeitung der angegebenen Daten einverstanden.
-                        </label>
                     </div>
 
-                    <div id="button-container">
-                        <input id="sendButton" type="submit" value="senden">
+                    <div class="box aboutBox" id="languages">
+                        <div class="label">
+                            <p>sprachkenntnisse</p>
+
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path d="M2.67 8c0-.37.3-.67.66-.67h9.34a.67.67 0 1 1 0 1.34H3.33A.67.67 0 0 1 2.67 8"
+                                    style="touch-action: none;"></path>
+                            </svg>
+
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M8.2 4c-1.12 0-1.82-.05-2.56.33a3 3 0 0 0-1.31 1.3C3.95 6.39 4 7.09 4 8.2v7.6c0 1.12-.05 1.82.33 2.56a3 3 0 0 0 1.3 1.31c.75.38 1.45.33 2.57.33h7.6c1.12 0 1.82.05 2.56-.33a3 3 0 0 0 1.31-1.3c.38-.75.33-1.45.33-2.57V8.2c0-1.12.05-1.82-.33-2.56a3 3 0 0 0-1.3-1.31C17.61 3.95 16.91 4 15.8 4Zm0 2h7.6c1.12 0 1.54.05 1.65.1a1 1 0 0 1 .44.45c.06.11.11.53.11 1.65v7.6c0 1.12-.05 1.54-.1 1.65a1 1 0 0 1-.45.44c-.11.06-.53.11-1.65.11H8.2a6 6 0 0 1-1.65-.1 1 1 0 0 1-.44-.45A6 6 0 0 1 6 15.8V8.2c0-1.12.05-1.54.1-1.65a1 1 0 0 1 .45-.44C6.66 6.05 7.08 6 8.2 6"
+                                    style="touch-action: none;"></path>
+                            </svg>
+
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path
+                                    d="M3.53 3.53a.67.67 0 0 1 .94 0L8 7.06l3.53-3.53a.67.67 0 1 1 .94.94L8.94 8l3.53 3.53a.67.67 0 1 1-.94.94L8 8.94l-3.53 3.53a.67.67 0 1 1-.94-.94L7.06 8 3.53 4.47a.67.67 0 0 1 0-.94"
+                                    style="touch-action: none;"></path>
+                            </svg>
+
+                        </div>
+                        <ol>
+                            <li>
+                                <p>Deutsch - native</p>
+                            </li>
+                            <li>
+                                <p>Englisch - fließend</p>
+                            </li>
+                            <li>
+                                <p>Schwedisch - lernend</p>
+                            </li>
+                        </ol>
                     </div>
-                </form>
 
-            </div>
+                    <div class="box aboutBox" id="hobbys">
+                        <div class="label">
+                            <p>hobbys</p>
 
-        </section>
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path d="M2.67 8c0-.37.3-.67.66-.67h9.34a.67.67 0 1 1 0 1.34H3.33A.67.67 0 0 1 2.67 8"
+                                    style="touch-action: none;"></path>
+                            </svg>
 
-    </main>
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M8.2 4c-1.12 0-1.82-.05-2.56.33a3 3 0 0 0-1.31 1.3C3.95 6.39 4 7.09 4 8.2v7.6c0 1.12-.05 1.82.33 2.56a3 3 0 0 0 1.3 1.31c.75.38 1.45.33 2.57.33h7.6c1.12 0 1.82.05 2.56-.33a3 3 0 0 0 1.31-1.3c.38-.75.33-1.45.33-2.57V8.2c0-1.12.05-1.82-.33-2.56a3 3 0 0 0-1.3-1.31C17.61 3.95 16.91 4 15.8 4Zm0 2h7.6c1.12 0 1.54.05 1.65.1a1 1 0 0 1 .44.45c.06.11.11.53.11 1.65v7.6c0 1.12-.05 1.54-.1 1.65a1 1 0 0 1-.45.44c-.11.06-.53.11-1.65.11H8.2a6 6 0 0 1-1.65-.1 1 1 0 0 1-.44-.45A6 6 0 0 1 6 15.8V8.2c0-1.12.05-1.54.1-1.65a1 1 0 0 1 .45-.44C6.66 6.05 7.08 6 8.2 6"
+                                    style="touch-action: none;"></path>
+                            </svg>
 
-    <footer>
-        <div id="footer-content">
-            <p><b>©2024 Karl Kuhne</b></p>
-            <div style="display: flex; justify-content: center; gap: 1rem;">
-                <a href="https://github.com/karlkuhne" target="_blank">
-                    <img src="Ressources/Icons/GitHub.avif" alt="GitHub Icon" class="footer-icon" draggable="false" loading="lazy">
-                </a>
-                <a href="https://www.linkedin.com/mynetwork/discovery-see-all/?usecase=PEOPLE_FOLLOWS&followMember=karl-kuhne loading="lazy""
-                    target="_blank">
-                    <img src="Ressources/Icons/LinkedIn.avif" alt="LinkedIn Icon" class="footer-icon" draggable="false">
-                </a>
-                <a href="https://www.youtube.com/@klwrpa" target="_blank">
-                    <img src="Ressources/Icons/YouTube.avif" alt="YouTube Icon" class="footer-icon" draggable="false" loading="lazy">
-                </a>
-            </div>
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path
+                                    d="M3.53 3.53a.67.67 0 0 1 .94 0L8 7.06l3.53-3.53a.67.67 0 1 1 .94.94L8.94 8l3.53 3.53a.67.67 0 1 1-.94.94L8 8.94l-3.53 3.53a.67.67 0 1 1-.94-.94L7.06 8 3.53 4.47a.67.67 0 0 1 0-.94"
+                                    style="touch-action: none;"></path>
+                            </svg>
+
+                        </div>
+                        <ol>
+                            <li>
+                                <p>🎮 Gaming</p>
+                            </li>
+                            <li>
+                                <p>🏋️‍♂️ Gewichtheben</p>
+                            </li>
+                            <li>
+                                <p>👨‍💻 Programmieren</p>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="box aboutBox" id="degrees">
+                        <div class="label">
+                            <p>abschlüsse</p>
+
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path d="M2.67 8c0-.37.3-.67.66-.67h9.34a.67.67 0 1 1 0 1.34H3.33A.67.67 0 0 1 2.67 8"
+                                    style="touch-action: none;"></path>
+                            </svg>
+
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M8.2 4c-1.12 0-1.82-.05-2.56.33a3 3 0 0 0-1.31 1.3C3.95 6.39 4 7.09 4 8.2v7.6c0 1.12-.05 1.82.33 2.56a3 3 0 0 0 1.3 1.31c.75.38 1.45.33 2.57.33h7.6c1.12 0 1.82.05 2.56-.33a3 3 0 0 0 1.31-1.3c.38-.75.33-1.45.33-2.57V8.2c0-1.12.05-1.82-.33-2.56a3 3 0 0 0-1.3-1.31C17.61 3.95 16.91 4 15.8 4Zm0 2h7.6c1.12 0 1.54.05 1.65.1a1 1 0 0 1 .44.45c.06.11.11.53.11 1.65v7.6c0 1.12-.05 1.54-.1 1.65a1 1 0 0 1-.45.44c-.11.06-.53.11-1.65.11H8.2a6 6 0 0 1-1.65-.1 1 1 0 0 1-.44-.45A6 6 0 0 1 6 15.8V8.2c0-1.12.05-1.54.1-1.65a1 1 0 0 1 .45-.44C6.66 6.05 7.08 6 8.2 6"
+                                    style="touch-action: none;"></path>
+                            </svg>
+
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path
+                                    d="M3.53 3.53a.67.67 0 0 1 .94 0L8 7.06l3.53-3.53a.67.67 0 1 1 .94.94L8.94 8l3.53 3.53a.67.67 0 1 1-.94.94L8 8.94l-3.53 3.53a.67.67 0 1 1-.94-.94L7.06 8 3.53 4.47a.67.67 0 0 1 0-.94"
+                                    style="touch-action: none;"></path>
+                            </svg>
+
+                        </div>
+                        <ol>
+                            <li>
+                                <p><span class="o">Abitur</span> <br> Evangelisches Kreuzgymnasium Dresden</p>
+                            </li>
+                            <li>
+                                <p><span class="b">Bachelor of Arts</span> [fortlaufend] <br> Medieninformatik und
+                                    Mediendesign,
+                                    FHD</p>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="box aboutBox" id="portrait">
+                        <div class="label">
+                            <p>portrait</p>
+
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path d="M2.67 8c0-.37.3-.67.66-.67h9.34a.67.67 0 1 1 0 1.34H3.33A.67.67 0 0 1 2.67 8"
+                                    style="touch-action: none;"></path>
+                            </svg>
+
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M8.2 4c-1.12 0-1.82-.05-2.56.33a3 3 0 0 0-1.31 1.3C3.95 6.39 4 7.09 4 8.2v7.6c0 1.12-.05 1.82.33 2.56a3 3 0 0 0 1.3 1.31c.75.38 1.45.33 2.57.33h7.6c1.12 0 1.82.05 2.56-.33a3 3 0 0 0 1.31-1.3c.38-.75.33-1.45.33-2.57V8.2c0-1.12.05-1.82-.33-2.56a3 3 0 0 0-1.3-1.31C17.61 3.95 16.91 4 15.8 4Zm0 2h7.6c1.12 0 1.54.05 1.65.1a1 1 0 0 1 .44.45c.06.11.11.53.11 1.65v7.6c0 1.12-.05 1.54-.1 1.65a1 1 0 0 1-.45.44c-.11.06-.53.11-1.65.11H8.2a6 6 0 0 1-1.65-.1 1 1 0 0 1-.44-.45A6 6 0 0 1 6 15.8V8.2c0-1.12.05-1.54.1-1.65a1 1 0 0 1 .45-.44C6.66 6.05 7.08 6 8.2 6"
+                                    style="touch-action: none;"></path>
+                            </svg>
+
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path
+                                    d="M3.53 3.53a.67.67 0 0 1 .94 0L8 7.06l3.53-3.53a.67.67 0 1 1 .94.94L8.94 8l3.53 3.53a.67.67 0 1 1-.94.94L8 8.94l-3.53 3.53a.67.67 0 1 1-.94-.94L7.06 8 3.53 4.47a.67.67 0 0 1 0-.94"
+                                    style="touch-action: none;"></path>
+                            </svg>
+
+                        </div>
+
+                        <img src="Ressources/Portrait.avif" alt="Portrait of Karl" class="selectDisable"
+                            draggable="false" loading="lazy">
+                    </div>
+
+                </section>
+
+
+
+
+
+                <section id="contact">
+
+                    <div class="box" id="contact-form">
+                        <div class="label">
+                            <p>kontaktformular</p>
+
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path d="M2.67 8c0-.37.3-.67.66-.67h9.34a.67.67 0 1 1 0 1.34H3.33A.67.67 0 0 1 2.67 8"
+                                    style="touch-action: none;"></path>
+                            </svg>
+
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M8.2 4c-1.12 0-1.82-.05-2.56.33a3 3 0 0 0-1.31 1.3C3.95 6.39 4 7.09 4 8.2v7.6c0 1.12-.05 1.82.33 2.56a3 3 0 0 0 1.3 1.31c.75.38 1.45.33 2.57.33h7.6c1.12 0 1.82.05 2.56-.33a3 3 0 0 0 1.31-1.3c.38-.75.33-1.45.33-2.57V8.2c0-1.12.05-1.82-.33-2.56a3 3 0 0 0-1.3-1.31C17.61 3.95 16.91 4 15.8 4Zm0 2h7.6c1.12 0 1.54.05 1.65.1a1 1 0 0 1 .44.45c.06.11.11.53.11 1.65v7.6c0 1.12-.05 1.54-.1 1.65a1 1 0 0 1-.45.44c-.11.06-.53.11-1.65.11H8.2a6 6 0 0 1-1.65-.1 1 1 0 0 1-.44-.45A6 6 0 0 1 6 15.8V8.2c0-1.12.05-1.54.1-1.65a1 1 0 0 1 .45-.44C6.66 6.05 7.08 6 8.2 6"
+                                    style="touch-action: none;"></path>
+                            </svg>
+
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path
+                                    d="M3.53 3.53a.67.67 0 0 1 .94 0L8 7.06l3.53-3.53a.67.67 0 1 1 .94.94L8.94 8l3.53 3.53a.67.67 0 1 1-.94.94L8 8.94l-3.53 3.53a.67.67 0 1 1-.94-.94L7.06 8 3.53 4.47a.67.67 0 0 1 0-.94"
+                                    style="touch-action: none;"></path>
+                            </svg>
+
+                        </div>
+
+                        <form id="form" action="https://formspree.io/f/xnnqzbbk" method="POST">
+
+                            <ol>
+                                <li>
+                                    <label for="nameInput">Name</label> <br>
+                                    <input id="nameInput" type="text" name="name" required>
+                                </li>
+
+                                <li>
+                                    <label for="emailInput">E-Mail-Adresse</label> <br>
+                                    <input id="emailInput" type="email" name="email" required>
+                                </li>
+
+                                <li>
+                                    <label for="messageInput">Nachricht</label> <br>
+                                    <textarea id="messageInput" name="message" rows="1" style="resize: none;"
+                                        oninput='this.style.height = ""; this.style.height = this.scrollHeight + "px";'
+                                        required></textarea>
+                                </li>
+
+                            </ol>
+
+                            <div class="checkbox-container">
+                                <input id="consentCheckbox" type="checkbox" required>
+                                <label id="checkbox-text" for="consentCheckbox">
+                                    Ich erkläre mich mit der Speicherung und Verarbeitung der angegebenen Daten
+                                    einverstanden.
+                                </label>
+                            </div>
+
+                            <div id="button-container">
+                                <input id="sendButton" type="submit" value="senden">
+                            </div>
+                        </form>
+
+                    </div>
+
+                </section>
+
+            </main>
         </div>
-    </footer>
-
+        <footer>
+            <div id="footer-content">
+                <p><b>©2024 Karl Kuhne</b></p>
+                <div style="display: flex; justify-content: center; gap: 1rem;">
+                    <a href="https://github.com/karlkuhne" target="_blank">
+                        <img src="Ressources/Icons/GitHub.avif" alt="GitHub Icon" class="footer-icon" draggable="false"
+                            loading="lazy">
+                    </a>
+                    <a href="https://www.linkedin.com/mynetwork/discovery-see-all/?usecase=PEOPLE_FOLLOWS&followMember=karl-kuhne loading="
+                        lazy"" target="_blank">
+                        <img src="Ressources/Icons/LinkedIn.avif" alt="LinkedIn Icon" class="footer-icon"
+                            draggable="false">
+                    </a>
+                    <a href="https://www.youtube.com/@klwrpa" target="_blank">
+                        <img src="Ressources/Icons/YouTube.avif" alt="YouTube Icon" class="footer-icon"
+                            draggable="false" loading="lazy">
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 
 </html>

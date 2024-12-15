@@ -1071,11 +1071,21 @@ textarea {
 
 /* FOOTER */
 
-footer {
-    width: 100%;
-    height: 7rem;
-    background-color: rgb(30, 30, 30);
+#page-container {
     position: relative;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    padding-bottom: 7rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 7rem; 
+    background-color: rgb(30, 30, 30);
 }
 
 #footer-content {
