@@ -807,8 +807,8 @@ ol li p {
 
 
 #about-me {
-    transform: translateX(-3rem);
-    width: 35.5rem;
+    transform: translateX(-2rem);
+    width: 34rem;
 }
 
 #portrait {
@@ -915,7 +915,7 @@ ol li p {
 }
 
 .o {
-    color: rgb(242, 150, 29);
+    color: rgb(248, 156, 36);
 }
 
 .l {
