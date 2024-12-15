@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: 'Work Sans';
     src: url('fonts/Work_Sans/WorkSans-VariableFont_wght.ttf') format('truetype');
@@ -45,8 +44,9 @@ h1 {
 }
 
 h2 {
-    font-size: calc(var(--main-width) / 30);
-    margin-top: 0.5rem;
+    font-size: 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 0;
 
     font-family: Work Sans;
     font-style: italic;
@@ -57,10 +57,9 @@ h2 {
     h1 {
         font-size: 8.1vw;
     }
-} 
+}
 
-@media (max-width: 78rem)
-{
+@media (max-width: 78rem) {
     #title {
         font-size: 7.7vw;
     }
@@ -69,7 +68,7 @@ h2 {
         font-size: 3.65vw;
     }
 }
-    
+
 h3 {
     font-family: Work Sans;
     font-size: 1.25rem;
@@ -80,6 +79,10 @@ h3 {
     margin-bottom: 1rem;
 }
 
+.project-description h3 {
+    margin-top: 1.5rem;
+}
+
 h4 {
     font-family: Work Sans;
     font-size: 1.5rem;
@@ -88,7 +91,8 @@ h4 {
     margin-bottom: 1rem;
 }
 
-p , label {
+p,
+label {
     font-family: Work Sans;
     font-size: 1.1rem;
     color: white;
@@ -132,7 +136,7 @@ p , label {
 
 #karl {
     width: var(--main-width);
-    
+
     position: absolute;
     top: 50%;
     left: 50%;
@@ -161,15 +165,17 @@ p , label {
 }
 
 @keyframes moveUpDown {
-  0% {
-    bottom: -1rem;
-  }
-  50% {
-    bottom: 0rem;
-  }
-  100% {
-    bottom: -1rem;
-  }
+    0% {
+        bottom: -1rem;
+    }
+
+    50% {
+        bottom: 0rem;
+    }
+
+    100% {
+        bottom: -1rem;
+    }
 }
 
 @media (max-width: 40.9rem) {
@@ -410,7 +416,7 @@ body {
 }
 
 .filter-active {
-    background-color: rgb(85, 85, 90); 
+    background-color: rgb(85, 85, 90);
     cursor: pointer;
 }
 
@@ -469,7 +475,7 @@ body {
         object-fit: cover;
     }
 
-    
+
 }
 
 @media (max-width: 45rem) {
@@ -629,7 +635,7 @@ iframe {
 .lightbox-description {
     align-self: center;
     width: var(--main-width);
-    margin-bottom: 0!important;
+    margin-bottom: 0 !important;
 }
 
 .lightbox p {
@@ -637,7 +643,9 @@ iframe {
     margin-top: 0 !important;
 }
 
-.project-button , .website-button , .all-projects-button{
+.project-button,
+.website-button,
+.all-projects-button {
     background-color: rgb(11, 102, 194);
     transition: background-color 0.15s;
     width: fit-content;
@@ -660,7 +668,9 @@ iframe {
     font-size: 1.5rem;
 }
 
-.project-button:hover , .website-button:hover ,.all-projects-button:hover{
+.project-button:hover,
+.website-button:hover,
+.all-projects-button:hover {
     background-color: rgb(5, 79, 155);
     cursor: pointer;
 }
@@ -680,7 +690,8 @@ iframe {
     align-items: center;
 }
 
-.app-icons img , .footer-icon{
+.app-icons img,
+.footer-icon {
     width: 2.5rem;
     height: 2.5rem;
     object-fit: contain;
@@ -990,7 +1001,9 @@ textarea {
     }
 }
 
-label:nth-of-type(1) , label:nth-of-type(2) , label:nth-of-type(3) {
+label:nth-of-type(1),
+label:nth-of-type(2),
+label:nth-of-type(3) {
     margin-bottom: 1rem;
 }
 
@@ -1055,12 +1068,12 @@ footer {
 }
 
 #footer-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  padding-bottom: 0.3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding-bottom: 0.3rem;
 }
 
 #footer-content img {
@@ -1197,6 +1210,20 @@ pre {
     border-radius: 0.5rem;
 }
 
+pre::-webkit-scrollbar , html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+pre::-webkit-scrollbar-thumb , html::-webkit-scrollbar-thumb {
+    background-color: var(--border-color);
+    border-radius: 5px;
+}
+
+pre::-webkit-scrollbar-track , html::-webkit-scrollbar-track {
+    background-color: #303030;
+    border-radius: 5px;
+}
+
 code[class="language-javascript"] {
     font-size: 1.1rem !important;
 }
@@ -1217,33 +1244,33 @@ code[class="language-javascript"] {
 
     justify-content: space-between;
     gap: 0.75rem;
-  }
-  
-  .column {
+}
+
+.column {
     display: flex;
     flex-direction: column;
-  }
+}
 
-  .column p {
+.column p {
     margin-top: 0.1rem;
     margin-bottom: 0.1rem;
-  }
+}
 
-  .column h3 {
+.column h3 {
     margin-bottom: 0.5rem;
-  }
+}
 
-  @media (max-width: 40.9rem) {
+@media (max-width: 40.9rem) {
     .table {
         flex-direction: column;
     }
-  }
+}
 
-  .separator {
+.separator {
     margin-top: 3.2rem;
     margin-bottom: 3.2rem;
-    border-color:rgb(122, 122, 122);
-  }
+    border-color: rgb(122, 122, 122);
+}
 
 /* RESPONSIVE */
 

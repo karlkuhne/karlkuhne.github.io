@@ -80,13 +80,37 @@
 
             <hr class="separator">
 
+            <h2>Überblick</h2>
+
+            <p>Diese Webseite ist mein persönliches Projektportfolio und dient als Präsentation meiner Fähigkeiten in
+                der Webentwicklung. Sie entstand ursprünglich im Rahmen meines Studiums und wird seitdem kontinuierlich
+                erweitert und verbessert. Die Seite wurde mit HTML, CSS und JavaScript umgesetzt, wodurch ich ein solides Verständnis für die
+                grundlegenden Webtechnologien erlangen konnte.</p>
+
             <h2>Key Features</h2>
+
+            <h3>Animiertes Cover-Bild</h3>
+            <p>Bei der Landing-Page kommt ein animiertes SVG-Design zum Einsatz. Dabei ist jeder Buchstabe separat
+                in einem path-Element definiert und mit dem "+"-Pattern gefüllt. Zuerst wird nur das Logo eingeblendet,
+                und dann fliegen [bei einem ausreichend großem Bildschirm] leicht zeitversetzt die einzelnen
+                Buchstabenpaare ein.
+            </p>
+
+            <pre style="background-color: #222222;"><code class="language-javascript">&lt;path class="letter1" d="M 1120 490 l 80 0 l 0 -200 l -20 -20 l -157 0 l -20 20 l 0 169 l 30 30 l 68 0 l 0 -60 l -20 0 l 0 -80 l 40 0 Z" fill="url(#plus)"&gt;&lt;/path&gt;
+&lt;path class="letter1" d="M 1180 580 l 80 0 l 0 200 l -20 20 l -157 0 l -20 -20 l -3 -200 l 80 0 l 0 140 l 40 0 Z" fill="url(#plus)"&gt;&lt;/path&gt;
+
+.letter1 {
+            opacity: 0;
+            animation: fade-in 3s forwards, fly-in 1s linear forwards;
+            animation-delay: 1.3s;
+         }</code></pre>
+
             <h3>Textbasiertes Content Management System</h3>
             <p>Um das Portfolio effizient aktuell zu halten, muss das Einpflegen neuer Projekte schnell und einfach
                 sein.
                 Dafür wurde ein textbasiertes CMS entwickelt: Man muss lediglich die Projektinhalte in die
-                <i>projectsData.js</i> schreiben, beim Laden der Seite werden dann automatisch anhand zweier Templates
-                für jedes Projekt
+                <i>projectsData.js</i> schreiben, beim Laden der Seite werden dann automatisch
+                für jedes Projekt anhand zweier Templates
                 das Vorschaubild und die Lightbox generiert.
 
             <pre style="background-color: #222222;"><code class="language-javascript">const projectsData = {
@@ -98,20 +122,19 @@
             "thumbnail": "Ressources/Portfolio_Website/Thumbnail.avif",
             ...</code></pre>
 
-            <h3>Animiertes Cover-Bild</h3>
-            <p>Bei der Landing-Page kommt ein animiertes SVG-Design zum Einsatz. Dabei ist jeder Buchstabe separat 
-                in einem path-Element definiert und mit dem "+"-Pattern gefüllt. Zuerst wird nur das Logo eingeblendet, 
-                und dann fliegen [bei einem ausreichend großem Bildschirm] nacheinander die einzelnen Buchstaben ein.
-            </p>
+            <h3>Responsive Hauptbreite</h3>
+            <p>Die Seite nutzt die Variable "main-width" zum Definieren der Breite von Projektgalerie, Lightbox etc.
+                Damit diese bei jedem Gerät gleich ist, werden weder px noch rem als Einheit
+                verwendet, da diese bei unterschiedlichen Bildschirmgrößen unterschiedlich sind. Stattdessen wird ein
+                Prozentwert verwendet, welcher auf die jeweilige Bildschirmbreite angwendet
+                wird.</p>
 
-            <pre style="background-color: #222222;"><code class="language-javascript">&lt;path class="letter1" d="M 1120 490 l 80 0 l 0 -200 l -20 -20 l -157 0 l -20 20 l 0 169 l 30 30 l 68 0 l 0 -60 l -20 0 l 0 -80 l 40 0 Z" fill="url(#plus)"&gt;&lt;/path&gt;
-
-.letter1 {
-            opacity: 0;
-            animation: fade-in 3s forwards, fly-in 1s linear forwards;
-            animation-delay: 1.3s;
-         }</code></pre>
-
+            <pre style="background-color: #222222;"><code class="language-javascript">function setInitialMainWidth() {
+    const screenWidth = window.screen.width;
+    const InitialMainWidthPercentage = parseInt(getCSSVariable('--main-width'), 10);
+    InitialMainWidth = (screenWidth * InitialMainWidthPercentage) / 100;
+    document.documentElement.style.setProperty('--main-width', `${InitialMainWidth}px`);
+}</code></pre>
 
         </section>
     </main>

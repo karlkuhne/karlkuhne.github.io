@@ -33,9 +33,7 @@ const projectsData = {
             "square": "Ressources/Portfolio_Website/Thumbnail_Square.avif",
             "type": "slideshow",
             "images": [
-                "Ressources/Portfolio_Website/1.avif",
-                "Ressources/Portfolio_Website/2.avif",
-                "Ressources/Portfolio_Website/3.avif"
+                "Ressources/Portfolio_Website/Name.avif",
             ],
             "apps": [
                 "Ressources/Icons/VisualStudio.avif",
