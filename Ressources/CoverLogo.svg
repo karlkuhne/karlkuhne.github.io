@@ -67,7 +67,7 @@
     <path d="M 760 160 l 80 0 l 0 180 l 77 -77 l 78 0 l -109 109 l 108 108 l -78 -1 l -69 -69 l -7 7 l 0 62 l -80 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
     <path d="M 820 480 l 80 0 l 0 180 l 77 -77 l 78 0 l -109 109 l 108 108 l -78 -1 l -69 -69 l -7 7 l 0 62 l -80 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
 
-    <path class="letter1" d="M 1120 490 l 80 0 l 0 -200 l -20 -20 l -157 0 l -20 20 l 0 169 l 30 30 l 68 0 l 0 -60 l -20 0 l 0 -80 l 40 0 Z" fill="url(#plus)"></path>
+    <path class="letter1" d="M 1120 490 l 80 0 l 0 -200 l -20 -20 l -157 0 l -20 20 l 0 169 l 30 30 l 68 0 l 0 -80 l -20 0 l 0 -60 l 40 0 Z" fill="url(#plus)"></path>
     <path class="letter1" d="M 1180 580 l 80 0 l 0 200 l -20 20 l -157 0 l -20 -20 l -3 -200 l 80 0 l 0 140 l 40 0 Z" fill="url(#plus)"></path>
 
     <path class="letter2" d="M 1220 480 l 0 -170 l 25 -50 l 140 0 l 0 80 l -80 0 l 0 140 Z" fill="url(#plus)"></path>
