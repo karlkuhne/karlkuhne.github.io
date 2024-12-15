@@ -43,6 +43,13 @@ h1 {
     text-align: center;
 }
 
+@media (max-width: 49rem) {
+    h1 {
+        font-size: 8.1vw;
+    }
+}
+
+
 h2 {
     font-size: 2rem;
     margin-top: 2.5rem;
@@ -53,11 +60,6 @@ h2 {
     color: white;
 }
 
-@media (max-width: 49rem) {
-    h1 {
-        font-size: 8.1vw;
-    }
-}
 
 h3 {
     font-family: Work Sans;
