@@ -59,16 +59,6 @@ h2 {
     }
 }
 
-@media (max-width: 78rem) {
-    #title {
-        font-size: 7.7vw;
-    }
-
-    h2 {
-        font-size: 3.65vw;
-    }
-}
-
 h3 {
     font-family: Work Sans;
     font-size: 1.25rem;
@@ -1206,7 +1196,7 @@ footer {
     margin-bottom: 1.1rem;
 }
 
-@media (max-width: 40.9rem) {
+@media (max-width: 60rem) {
     .project-description img {
         width: 100%;
     }

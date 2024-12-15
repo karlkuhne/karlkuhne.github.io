@@ -79,90 +79,35 @@
 
             <hr class="separator">
 
-            <h3>Konzept</h3>
-            <p>Das Konzept besteht darin, häufige menschliche Phobien auf alltägliche Haushalts- gegenstände
-                zu übertragen. Diese Objekte entwickeln Ängste, die normalerweise nur Menschen betreffen.
-                Dabei besteht die unglückliche Ironie, dass ihre spezifischen Phobien genau mit ihrem
-                vorgesehenem Verwendungszweck in Konflikt stehen. So wie Menschen oft in Lebensumständen
-                gefangen sind, die ihre Ängste verstärken, sind auch diese Objekte gezwungen, täglich ihren
-                angstauslösenden Aufgaben nachzugehen.<br><br>
-                Um dieses Konzept audiovisuell umzusetzen, sollen fünf Gegenstände in derem jeweiligen Raum
-                monologartig über deren Ängste sprechen. Der Sprechakt soll authentisch wirken, als wäre eine
-                reale Person interviewt worden.</p>
-            <h3>Umsetzung</h3>
-            <p>Zuerst erfolgte eine Sammlung der darzustellenden Gegenstände. Ausgehend von einer
-                Computermaus mit Berührungsängsten, diese Idee bestand schon seit einer frühen Idee im
-                Seminar, kamen durch Brainstorming noch eine Glühbirne mit Höhenangst, ein Wecker mit Angst
-                im Dunkeln, ein Stift mit Sozialängsten und eine Kerze mit Angst vor Feuer hinzu.<br><br>
-                Diese Gegenstände wurden dann in Blender 4.2 anhand von Referenzbildern modelliert.
-                Besondere Aufmerksamkeit wurde dabei auf die Topologie des Modells gelegt, um eine saubere
-                Geometrie zu gewährleisten, die sich gut für die spätere Animation eignet. Danach wurden die Objekte
-                mit diversen Materialien besehen, um deren Farben und Reflektivität zu bestimmen.<br><br>
-                Nach selbigem Vorgehen wurden anschließend die Umgebungen [Wände, andere Gegenstände und
-                Möbelstücke] erstellt. Dann wurden die fünf “Protagonisten” mit je einer Kamera in deren jeweiliges
-                Umfeld platziert. Anhand des Blicks durch die Kameras wurde dann jeweils ein Beleuchtungssetup
-                erstellt, wobei immer ein Hauptlicht und ein Fülllicht verwendet wurde, und ein kleines Mikrofon
-                eingefügt, um den Eindruck eines Interviews zu vermitteln.<br></p>
+            <h2>Konzept</h2>
+            <p>Das Projekt überträgt häufige menschliche Phobien auf alltägliche Haushaltsgegenstände, die Ängste
+                entwickeln, die ihrem Verwendungszweck widersprechen. So wie Menschen in ihren Ängsten gefangen sind,
+                sind auch diese Objekte gezwungen, ihren angstauslösenden Aufgaben nachzugehen. Fünf Gegenstände
+                sprechen in monologartigen Szenen über ihre Ängste, wobei der Dialog authentisch wie ein echtes
+                Interview wirken soll.</p>
+            <h2>Umsetzung</h2>
+            <p>Die Auswahl der Gegenstände erfolgte nach einem Brainstorming, beginnend mit einer Computermaus mit
+                Berührungsängsten. Weitere Gegenstände wurden mit ähnlichen, ironischen Phobien hinzugefügt, wie eine
+                Glühbirne mit Höhenangst und ein Wecker mit Angst vor der Dunkelheit.
+
+                Die Modelle wurden in Blender 4.2 erstellt, mit Fokus auf saubere Geometrie für Animationen. Danach
+                wurden die Umgebungen und Lichtsetups angelegt, um die Interviewatmosphäre zu erzeugen.<br></p>
             <img src="../Ressources/Object_Terrors/Room.avif" alt="Room" class="selectDisable" draggable="false">
             <p>
-                Bevor mit der Animation begonnen werden konnte, musste zunächst der Text für jedes Objekt
-                geschrieben werden. Dazu wurde ChatGPT 4o bzw. 4o mini verwendet, um fünf mal jeweilszwei kurze
-                Monologe zu generieren. Hier bestand die Schwierigkeit darin, den Text einerseits so klingen zu
-                lassen, als käme er von einem Menschen, dabei aber andererseits den Gegenstand durch allzu
-                spezifische menschliche Aussagen nicht auszuschließen. So sind beispielsweise Füllwörter und
-                Phrasen wie “You know?” zuträglich, aber Erlebnisse die nur Menschen haben können abträglich.
-                [Diese Gratwanderung hat das 3.5 Modell übrigens nicht geschafft.]<br><br>
-                Anschließend sollten diese Zeilen vertont werden, auf Englisch, um den Film zugänglicher zu machen.
-                Damit dort allerdings nicht ein deutscher Akzent oder unsaubere Aussprache ablenkt, wurde die Artlist
-                VoiceOver AI benutzt. Diese hat überzeugende Tonspuren geliefert, indem sie sogar Atemgeräusche
-                eingebaut hat.<br><br>
-                Nun erfolgte die Zusammenführung der Monologe und der 3D-Szenen, die zu diesem Zeitpunkt noch
-                statisch waren. Um eine Sprechanimation für die Gegenstände zu erstellen, wurde zunächst die
-                Position eines derer Teile bzw. deren Skalierung an den Ausschlag der Tonspur geknüpft. So sind die
-                Charaktermodelle nicht statisch, sondern bewegen sich leicht gemäß der Tonlage.<br></p>
-            <img src="../Ressources/Object_Terrors/Anim.avif" alt="Animation" class="selectDisable"
-                draggable="false">
+                Für die Texte der Monologe wurde ChatGPT 4.0 genutzt, um menschenähnliche, aber objekt-spezifische
+                Aussagen zu generieren. Die Monologe wurden von der Artlist VoiceOverAI in Englisch vertont, um eine breitere Zielgruppe zu
+                erreichen und eine saubere Aussprache zu gewährleisten.<br></p>
+            <img src="../Ressources/Object_Terrors/Anim.avif" alt="Animation" class="selectDisable" draggable="false">
             <p>
-                Weiterhin sollte ein übergelagerter Mund hinzugefügt werden. Nach ettlichen Stunden Arbeit an
-                Planes für Lippen, Zähne und Zunge, alle jeweils gerigged und durch ein aufwendiges Node Setup
-                gefärbt, hat sich dann beim Versuch einer Animation herausgestellt, dass Blender [bzw. Die Version
-                4.2] dafür nicht geeignet ist: Nch dem Anpassen aller Keyframes im Pose Mode waren dann nach dem
-                Wechsel zurück in den Object Mode alle Planes seltsam verzerrt.<br><br>
-                Also wurden alle zehn Szenen im bisherigen Zustand exportiert und in After Effects geladen. Dort
-                wurde das bisherige Plane Setup wieder ähnlich umgesetzt, die dann allerdings nicht über Keyframes,
-                sondern wieder über eine Knüpfung der Öffnung von Lippen und Zähnen an den Ausschlag der
-                Tonspur. Anschließend wurde jeweils der Mund durch Skalierung und Rotation den Gegenständen
-                “aufgesetzt”.<br><br>
-                [Es wurde sich bewusst gegen das Hinzugügen von Augen entschieden, da diese an Wackel-augen
-                erinntert hätten, was dem wichtigen Thema die Ernsthaftigkeit genimmen hätte.]<br><br>
-                Abschließend wurden wiederum aus After Effects alle Szenen exportiert und in Premiere Pro
-                zusammengefügt. Dort wurde in der Reihenfolge darauf geachtet, dass immer ein neuer Gegen-stand
-                eingeführt wird, bevor ein bereits bekannter seinen zweiten Auftritt hat, damit es kurz-weilig bleibt.
-                Weiterhin wurden für alle Szenen statische Hintergrundgeräusche ergänzt, um die Atmosphäre eines
-                leeren Raumes zu untermalen. Finalisierend wurden ein Intro mit Titel und ein Outro mit Credits
-                hinzugefügt. Diese Sequenzen wurden ebenfalls in After Effects erstellt, um den Buchstaben durch
-                eine animierte Noise Map einen seltsam zuckenden Effekt zu geben, der zum Thema Phobien beiträgt.</p>
+                Die 3D-Szenen wurden mit den Monologen kombiniert und die Objekte bewegten sich entsprechend der
+                Tonspur. Die Lippenanimation war technisch herausfordernd, da Blender nicht geeignet war, sodass die
+                Szenen in After Effects weiterbearbeitet wurden. Augen wurden bewusst weggelassen, um die Ernsthaftigkeit zu wahren.
+                <br>
+                Final wurde das Projekt in Premiere Pro geschnitten und mit statischen Hintergrundgeräuschen sowie einem
+                Intro und Outro versehen. Ein animierter Noise-Effekt bei den Titeln verstärkte das Thema der Phobien.
+            </p>
             <img src="../Ressources/Object_Terrors/Timeline.avif" alt="Premiere Timeline" class="selectDisable"
                 draggable="false">
-            <h3>Reflektion</h3>
-            <p>Die Umsetzung des Konzepts verlief erfolgreich. Insbesondere das generierte Voice-Over hat mich
-                beeindruckt, da es den Charakteren eine authentische Stimme verliehen hat. Ich hätte vorher
-                nicht gedacht, dass so etwas mit frei verfügbarer AI bereits möglich ist. Der Rückschlag bei der
-                Mundanimation in Blender war unerwartet und schmerzhaft, denn er hat mich drei Arbeitstage
-                gekostet, jedoch bot das auch die Chance, After Effects als leistungsstarkes Tool für Animationen
-                kennenzulernen. Trotz dieser Hürden bin ich zufrieden mit dem Ergebnis und der durchlaufenen
-                Lernkurve, die mir wichtige Einblicke in verschiedene Softwaretools und kreative Techniken
-                ermöglicht hat.</p>
-            <h3>Verweise</h3>
-            <p>https://artlist.io/voice-over<br>
-                https://chatgpt.com/</p>
-            <h3>Soundeffekte</h3>
-            <p>https://youtu.be/AeyJGNzEr5k?si=_SszEQbXp7FjZSAM<br>
-                https://www.youtube.com/watch?v=8m91-gu-x8U<br>
-                https://www.youtube.com/watch?v=VvK2WIQHw44<br>
-                https://youtu.be/awx9ATjPm6k?si=p-5TprDivJSjkt8J<br>
-                https://www.youtube.com/watch?v=CidaRNaKK1M<br>
-                https://www.youtube.com/watch?v=J0wg1YLhXi8</p>
 
         </section>
 
