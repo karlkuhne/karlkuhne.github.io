@@ -45,6 +45,21 @@ const projectsData = {
             "projectPage": "./projekte/portfolio-webseite"
         },
         {
+            "label": "designing-for-immersion",
+            "category": "forschungsprojekt",
+            "featured": true,
+            "thumbnail": "Ressources/Term_Paper/Thumbnail.avif",
+            "square": "Ressources/Term_Paper/Thumbnail_Square.avif",
+            "type": "iframe",
+            "apps": [
+                "Ressources/Icons/Word.avif"
+            ],
+            "src": "projekte/designing-for-immersion.pdf",
+            "name": "Designing for immersion: The influence of diegetic player guidance on the gaming experience",
+            "description": "Gemäß des Grundsatzes „Designing for immersion“ ergründet diese Hausarbeit, ob Spielerführungsmechaniken in Videospielen besser Teil der erzählten Welt oder externes Spielelement sein sollten.",
+            "website": "projekte/designing-for-immersion.pdf"
+        },
+        {
             "label": "character-design",
             "category": "illustration",
             "featured": false,
@@ -61,21 +76,6 @@ const projectsData = {
             ],
             "name": "Character Design",
             "description": "Mein erstes Character Design „Hosbol Pogronop“, inspiriert von der Myconid-Rasse aus Dungeons and Dragons."
-        },
-        {
-            "label": "designing-for-immersion",
-            "category": "forschungsprojekt",
-            "featured": true,
-            "thumbnail": "Ressources/Term_Paper/Thumbnail.avif",
-            "square": "Ressources/Term_Paper/Thumbnail_Square.avif",
-            "type": "iframe",
-            "apps": [
-                "Ressources/Icons/Word.avif"
-            ],
-            "src": "projekte/designing-for-immersion.pdf",
-            "name": "Designing for immersion: The influence of diegetic player guidance on the gaming experience",
-            "description": "Gemäß des Grundsatzes „Designing for immersion“ ergründet diese Hausarbeit, ob Spielerführungsmechaniken in Videospielen besser Teil der erzählten Welt oder externes Spielelement sein sollten.",
-            "website": "projekte/designing-for-immersion.pdf"
         },
         {
             "label": "vorspann",
