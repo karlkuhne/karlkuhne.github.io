@@ -92,7 +92,9 @@ label {
 }
 
 @media (max-width: 40.9rem) {
-    p, label {
+
+    p,
+    label {
         font-size: 1rem;
     }
 }
@@ -964,6 +966,21 @@ textarea {
     padding-left: 1rem;
 }
 
+@media (max-width: 40.9rem) {
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 1rem;
+    }
+}
+
+#nameInput,
+#emailInput,
+#messageInput {
+    margin-top: 1rem;
+}
+
 textarea {
     height: 2.85rem;
     overflow: hidden;
@@ -1002,6 +1019,10 @@ textarea {
     margin-top: 0;
     margin-bottom: 1rem;
 
+}
+
+#checkbox-text {
+    padding-right: 1rem;
 }
 
 .checkbox-container input[type="checkbox"] {
@@ -1204,16 +1225,19 @@ pre {
     border-radius: 0.5rem;
 }
 
-pre::-webkit-scrollbar , html::-webkit-scrollbar {
+pre::-webkit-scrollbar,
+html::-webkit-scrollbar {
     width: 1rem;
 }
 
-pre::-webkit-scrollbar-thumb , html::-webkit-scrollbar-thumb {
+pre::-webkit-scrollbar-thumb,
+html::-webkit-scrollbar-thumb {
     background-color: var(--border-color);
     border-radius: 5px;
 }
 
-pre::-webkit-scrollbar-track , html::-webkit-scrollbar-track {
+pre::-webkit-scrollbar-track,
+html::-webkit-scrollbar-track {
     background-color: #303030;
     border-radius: 5px;
 }
