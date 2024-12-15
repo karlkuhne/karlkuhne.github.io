@@ -117,7 +117,7 @@ const projectsData = {
             "thumbnail": "Ressources/Kuh/Thumbnail.avif",
             "square": "Ressources/Kuh/Thumbnail_Square.avif",
             "type": "iframe",
-            "src": "https://youtube.com/embed/J7LF3Q7Vtjg?rel=0",
+            "src": "https://youtube.com/embed/tydYfFgj4q0?rel=0",
             "apps": [
                 "Ressources/Icons/Blender.avif",
                 "Ressources/Icons/Premiere.avif"

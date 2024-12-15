@@ -108,12 +108,12 @@ label {
 .hyperlink {
     font-family: Work Sans;
     font-size: 1.1rem;
-    color: #5252ff;
+    color: #79aaff;
     line-height: 1.2;
 }
 
 .hyperlink:hover {
-    color: #8080ff;
+    color: #478bff;
 }
 
 
@@ -1200,10 +1200,16 @@ footer {
 .project-description img {
     display: block;
     margin: 0 auto;
-    width: 50%;
+    width: 75%;
     border-radius: 0.7rem;
     margin-top: 1.1rem;
     margin-bottom: 1.1rem;
+}
+
+@media (max-width: 40.9rem) {
+    .project-description img {
+        width: 100%;
+    }
 }
 
 pre {
