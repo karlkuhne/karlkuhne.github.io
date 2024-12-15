@@ -183,7 +183,7 @@ function openLightbox(project) {
         lightbox.remove();
 
         // Entferne den Event Listener für Escape, wenn die Lightbox geschlossen wird
-        document.removeEventListener('keydown', closeOnEscape);
+        document.removeEventListener('keydown', closeLightbox);
     }
 
     // Event Listener für das Klicken außerhalb der Lightbox (zum Schließen)
@@ -199,7 +199,7 @@ function openLightbox(project) {
 
 let currentIndex = 1; // Standardmäßig auf das erste Bild setzen
 
-function plusSlides(n) {
+window.plusSlides = function(n) {
     showSlides(currentIndex += n);
 }
 
