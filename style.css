@@ -102,12 +102,12 @@ label {
 .hyperlink {
     font-family: Work Sans;
     font-size: 1.1rem;
-    color: #79aaff;
+    color: #478bff;
     line-height: 1.2;
 }
 
 .hyperlink:hover {
-    color: #478bff;
+    color: #79aaff;
 }
 
 
@@ -256,7 +256,7 @@ nav {
 }
 
 #linkedIn-button button:hover {
-    background-color: rgb(40, 40, 40);
+    background-color: rgb(60, 60, 60);
     cursor: pointer;
 }
 
@@ -1235,6 +1235,10 @@ footer {
     border-radius: 0.7rem;
     margin-top: 1.1rem;
     margin-bottom: 1.1rem;
+}
+
+.project-description iframe {
+   height: 12rem;
 }
 
 @media (max-width: 60rem) {
