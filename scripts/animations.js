@@ -72,15 +72,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     elements.forEach(element => {
       const rect = element.getBoundingClientRect();
-      const offsetPx = offsetRem * rootFontSize; // Umrechnung von rem in px
+      const offsetPx = offsetRem * rootFontSize;
       if (rect.top < window.innerHeight - offsetPx && rect.bottom > offsetPx) {
         element.classList.add('fade-in');
-      } else {
-        // Entferne die Klasse `fade-in`, wenn das Element den Viewport verlassen hat und vollständig unterhalb des Viewports ist
+      } /* else {
         if (rect.top >= window.innerHeight  && rect.bottom > window.innerHeight) {
           element.classList.remove('fade-in');
         }
-      }
+      } */
 
     });
   };
