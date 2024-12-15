@@ -85,6 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   fadeInOnScroll('.project', 0);
+  fadeInOnScroll('.all-projects-button', 0);
   fadeInOnScroll('#contact-form', 7.5);
   fadeInOnScroll('.aboutBox', 7.5);
   fadeInOnScroll('#about-header', 20);
@@ -93,6 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener('scroll', () => {
     fadeInOnScroll('.project', 0);
+    fadeInOnScroll('.all-projects-button', 0);
     fadeInOnScroll('#contact-form', 7.5);
     fadeInOnScroll('.aboutBox', 7.5);
     fadeInOnScroll('#about-header', 20);

@@ -655,13 +655,22 @@ iframe {
 
     padding: 0.4rem 0.75rem 0.4rem 0.75rem;
     margin-top: 1.3rem;
-    margin-right: 1.3rem;
 
     z-index: 12;
 }
 
-.allproject-button {
-    font-size: 1.5rem;
+.project-button , 
+.website-button {
+    margin-right: 1.3rem;
+}
+
+.all-projects-button {
+    opacity: 0;
+    margin-right: 0.3rem;
+}
+
+.all-projects-button.fade-in {
+    opacity: 1;
 }
 
 .project-button:hover,
