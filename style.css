@@ -374,6 +374,8 @@ body {
     padding-top: 1rem;
 
     justify-content: center;
+
+    margin-bottom: 7rem;
 }
 
 .filter-container {
@@ -1186,6 +1188,7 @@ footer {
 .project-description {
     width: calc(var(--main-width) / 1.325);
     margin: 0 auto;
+    margin-bottom: 7rem;
 }
 
 @media (max-width: 40.9rem) {

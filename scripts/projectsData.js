@@ -93,24 +93,6 @@ const projectsData = {
 
         },
         {
-            "label": "kubistische-portraits",
-            "category": "illustration",
-            "featured": false,
-            "thumbnail": "Ressources/Experimentelles_Projekt/Thumbnail.avif",
-            "square": "Ressources/Experimentelles_Projekt/Thumbnail_Square.avif",
-            "type": "slideshow",
-            "images": [
-                "Ressources/Experimentelles_Projekt/3.avif",
-                "Ressources/Experimentelles_Projekt/1.avif",
-                "Ressources/Experimentelles_Projekt/2.avif"
-            ],
-            "apps": [
-                "Ressources/Icons/Hand.avif"
-            ],
-            "name": "Cubism",
-            "description": "Eine Reihe von kubistischen Portraits, fiktive Personen, Pastellkreide auf Papier."
-        },
-        {
             "label": "animationsfilm-kuh",
             "category": "film",
             "featured": false,
@@ -143,22 +125,6 @@ const projectsData = {
             "description": "Das Konzept besteht darin, häufige menschliche Phobien auf alltägliche Haushalts- gegenstände zu übertragen. Um dieses Konzept audiovisuell umzusetzen, sollen fünf Gegenstände in derem jeweiligen Raum monologartig über deren Ängste sprechen. Der Sprechakt soll authentisch wirken, als wäre eine reale Person interviewt worden.",
             "projectPage": "./projekte/object-terrors"
         },
-        {
-            "label": "isometrischer-raum",
-            "category": "illustration",
-            "featured": false,
-            "thumbnail": "Ressources/iso_room/Thumbnail.avif",
-            "square": "Ressources/iso_room/Thumbnail_Square.avif",
-            "type": "slideshow",
-            "images": [
-                "Ressources/iso_room/Render.avif"
-            ],
-            "apps": [
-                "Ressources/Icons/Blender.avif"
-            ],
-            "name": "Isometrischer Raum",
-            "description": "Mein erstes Projekt in Blender, rendered in Cycles."
-        }
     ]
 }
 
