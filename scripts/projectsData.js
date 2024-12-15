@@ -28,6 +28,7 @@ const projectsData = {
         },
         {
             "label": "portfolio-webseite",
+            "category": "spiel",
             "featured": true,
             "thumbnail": "Ressources/Portfolio_Website/Thumbnail.avif",
             "square": "Ressources/Portfolio_Website/Thumbnail_Square.avif",
