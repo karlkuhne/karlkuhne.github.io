@@ -119,7 +119,7 @@ function openLightbox(project) {
         iframe.src = project.src;
         iframe.classList.add('pdf-viewer');
         iframe.frameBorder = "0";
-        iframe.allowfullscreen = "true";
+        iframe.setAttribute('allowfullscreen', '');
         iframe.style.width = "100%"; // Setze die Breite auf 100%
 
         // Füge den iFrame zum Container hinzu, bevor wir die Höhe berechnen
