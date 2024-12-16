@@ -34,8 +34,7 @@ a:hover {
 h1 {
     font-family: Work Sans;
     font-size: calc(var(--main-width) / 14.5);
-    font-weight: 900;
-    font-style: italic;
+    font-weight: 800;
     color: white;
 
     margin-top: 5rem;
@@ -370,8 +369,6 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-
-    padding-top: 1rem;
 
     justify-content: center;
 
@@ -775,6 +772,7 @@ iframe {
     justify-items: center;
 
     margin-top: 10.5rem;
+    margin-bottom: 9.1rem;
 }
 
 .box {
@@ -884,7 +882,7 @@ ol li p {
 }
 
 #about {
-    height: 44.3rem;
+    height: 39rem;
 }
 
 @media (max-width: 65rem) {
@@ -980,8 +978,8 @@ ol li p {
     width: 100%;
     margin: 0 auto;
 
-    margin-top: 5.75rem;
-    margin-bottom: 7rem;
+    margin-top: 10.5rem;
+    margin-bottom: 10.5rem;
 }
 
 #contact-form {
@@ -1179,7 +1177,7 @@ footer {
 }
 
 #galery-header {
-    margin-top: 8rem !important;
+    margin-top: 0rem !important;
     margin-bottom: 0rem !important;
     opacity: 0;
 }
