@@ -888,7 +888,8 @@ ol li p {
 }
 
 #degrees {
-    transform: translateX(9.4rem) translateY(-18.2rem);
+    transform: translateX(9.4rem) translateY(-18.6rem);
+    height: 13.2rem;
 }
 
 #hobbys {
@@ -905,7 +906,7 @@ ol li p {
     }
 
     #portrait {
-        transform: translateX(8.9rem) translateY(-30.4rem);
+        transform: translateX(8.9rem) translateY(-32.9rem);
     }
 
     #languages {
@@ -922,7 +923,7 @@ ol li p {
     }
 
     #about {
-        height: 60.7rem;
+        height: 57.9rem;
     }
 }
 
@@ -951,6 +952,7 @@ ol li p {
     #degrees {
         transform: translateX(0rem) translateY(0rem);
         margin-bottom: 0.78rem;
+        height: 14.2rem;
     }
 
 
