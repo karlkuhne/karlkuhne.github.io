@@ -33,9 +33,13 @@ function generateAllProjects() {
         openLightbox(project);
     });
 
-      minimizeIcon.addEventListener('click', () => {
-        thumbnailContainer.style.display = 'none';
-      });
+    minimizeIcon.addEventListener('click', () => {
+        if (thumbnailContainer.style.display === 'none') {
+            thumbnailContainer.style.display = 'block';
+          } else {
+            thumbnailContainer.style.display = 'none';
+          }
+        });
     });
   }
   

@@ -39,8 +39,12 @@ function generateFeaturedProjects() {
         });
 
         minimizeIcon.addEventListener('click', () => {
-            thumbnailContainer.style.display = 'none';
-        });
+            if (thumbnailContainer.style.display === 'none') {
+                thumbnailContainer.style.display = 'block';
+              } else {
+                thumbnailContainer.style.display = 'none';
+              }
+            });
         }
 
     });
