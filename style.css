@@ -432,6 +432,11 @@ body {
     transform: translateY(0);
 }
 
+.project.shrink {
+    transform: scale(0.5);
+    opacity: 0;
+}
+
 .project .thumbnail {
     position: relative;
     z-index: 1;

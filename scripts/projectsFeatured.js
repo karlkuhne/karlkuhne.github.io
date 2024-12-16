@@ -2,48 +2,56 @@
 import projectsData from './projectsData.js';
 
 function generateFeaturedProjects() {
-    
+
     const featuredProjectsContainer = document.getElementById('featured-projects-container');
 
     const template = document.getElementById('project-template');
 
     projectsData.projects.forEach(project => {
         if (project.featured === true) {
-            
-        const clone = template.content.cloneNode(true);
-        
-        // Setze die Projektdaten aus der JSON
-        const projectDiv = clone.querySelector('.project');
-        const labelText = clone.querySelector('.label-text');
-        const thumbnailImg = clone.querySelector('.thumbnail-img');
 
-        const thumbnailContainer = clone.querySelector('.thumbnail');
-        const minimizeIcon = clone.querySelector('.minimize-icon');
-        const windowIcon = clone.querySelector('.window-icon');
-        
-        projectDiv.setAttribute('data-project-id', project.label);
-        labelText.textContent = project.label;
-        thumbnailImg.src = project.thumbnail;
-        thumbnailImg.alt = project.label;
-        
-        // Füge das Projekt in den Container ein
-        featuredProjectsContainer.appendChild(clone);
-        
-        // Event Listener für das Öffnen der Lightbox
-        thumbnailImg.addEventListener('click', () => {
-            openLightbox(project);
-        });
+            const clone = template.content.cloneNode(true);
 
-        windowIcon.addEventListener('click', () => {
-            openLightbox(project);
-        });
+            // Setze die Projektdaten aus der JSON
+            const projectDiv = clone.querySelector('.project');
+            const labelText = clone.querySelector('.label-text');
+            const thumbnailImg = clone.querySelector('.thumbnail-img');
 
-        minimizeIcon.addEventListener('click', () => {
-            if (thumbnailContainer.style.display === 'none') {
-                thumbnailContainer.style.display = 'block';
-              } else {
-                thumbnailContainer.style.display = 'none';
-              }
+            const thumbnailContainer = clone.querySelector('.thumbnail');
+            const minimizeIcon = clone.querySelector('.minimize-icon');
+            const windowIcon = clone.querySelector('.window-icon');
+            const closeIcon = clone.querySelector('.close-icon');
+
+            projectDiv.setAttribute('data-project-id', project.label);
+            labelText.textContent = project.label;
+            thumbnailImg.src = project.thumbnail;
+            thumbnailImg.alt = project.label;
+
+            // Füge das Projekt in den Container ein
+            featuredProjectsContainer.appendChild(clone);
+
+            // Event Listener für das Öffnen der Lightbox
+            thumbnailImg.addEventListener('click', () => {
+                openLightbox(project);
+            });
+
+            windowIcon.addEventListener('click', () => {
+                openLightbox(project);
+            });
+
+            minimizeIcon.addEventListener('click', () => {
+                if (thumbnailContainer.style.display === 'none') {
+                    thumbnailContainer.style.display = 'block';
+                } else {
+                    thumbnailContainer.style.display = 'none';
+                }
+            });
+
+            closeIcon.addEventListener('click', () => {
+                projectDiv.classList.add('shrink');
+                setTimeout(() => {
+                    projectDiv.classList.remove('shrink');
+                }, 500);
             });
         }
 
@@ -113,7 +121,7 @@ function openLightbox(project) {
         iframe.frameBorder = "0";
         iframe.allowfullscreen = "true";
         iframe.style.width = "100%"; // Setze die Breite auf 100%
-        
+
         // Füge den iFrame zum Container hinzu, bevor wir die Höhe berechnen
         imagesContainer.appendChild(iframe);
 
@@ -215,7 +223,7 @@ function openLightbox(project) {
 
 let currentIndex = 1; // Standardmäßig auf das erste Bild setzen
 
-window.plusSlides = function(n) {
+window.plusSlides = function (n) {
     showSlides(currentIndex += n);
 }
 

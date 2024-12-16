@@ -5,45 +5,53 @@ function generateAllProjects() {
 
     const allProjectsContainer = document.getElementById('all-projects-container');
     const template = document.getElementById('project-template');
-    
+
     projectsData.projects.forEach(project => {
-      const clone = template.content.cloneNode(true);
-      const projectDiv = clone.querySelector('.project');
-      const labelText = clone.querySelector('.label-text');
-      const thumbnailImg = clone.querySelector('.thumbnail-img');
+        const clone = template.content.cloneNode(true);
+        const projectDiv = clone.querySelector('.project');
+        const labelText = clone.querySelector('.label-text');
+        const thumbnailImg = clone.querySelector('.thumbnail-img');
 
-      const thumbnailContainer = clone.querySelector('.thumbnail');
-      const minimizeIcon = clone.querySelector('.minimize-icon');
-      const windowIcon = clone.querySelector('.window-icon');
-  
-      projectDiv.setAttribute('data-project-id', project.label);
-      projectDiv.setAttribute('data-category', project.category);
-      labelText.textContent = project.label;
-      thumbnailImg.src = project.thumbnail;
-      thumbnailImg.alt = project.label;
-  
-      allProjectsContainer.appendChild(clone);
-  
-      // Event Listener für das Öffnen der Lightbox
-      thumbnailImg.addEventListener('click', () => {
-        openLightbox(project);
-      });
+        const thumbnailContainer = clone.querySelector('.thumbnail');
+        const minimizeIcon = clone.querySelector('.minimize-icon');
+        const windowIcon = clone.querySelector('.window-icon');
+        const closeIcon = clone.querySelector('.close-icon');
 
-      windowIcon.addEventListener('click', () => {
-        openLightbox(project);
-    });
+        projectDiv.setAttribute('data-project-id', project.label);
+        projectDiv.setAttribute('data-category', project.category);
+        labelText.textContent = project.label;
+        thumbnailImg.src = project.thumbnail;
+        thumbnailImg.alt = project.label;
 
-    minimizeIcon.addEventListener('click', () => {
-        if (thumbnailContainer.style.display === 'none') {
-            thumbnailContainer.style.display = 'block';
-          } else {
-            thumbnailContainer.style.display = 'none';
-          }
+        allProjectsContainer.appendChild(clone);
+
+        // Event Listener für das Öffnen der Lightbox
+        thumbnailImg.addEventListener('click', () => {
+            openLightbox(project);
+        });
+
+        windowIcon.addEventListener('click', () => {
+            openLightbox(project);
+        });
+
+        minimizeIcon.addEventListener('click', () => {
+            if (thumbnailContainer.style.display === 'none') {
+                thumbnailContainer.style.display = 'block';
+            } else {
+                thumbnailContainer.style.display = 'none';
+            }
+        });
+
+        closeIcon.addEventListener('click', () => {
+            projectDiv.classList.add('shrink');
+            setTimeout(() => {
+                projectDiv.classList.remove('shrink');
+            }, 500);
         });
     });
-  }
-  
-  
+}
+
+
 function openLightbox(project) {
     const template = document.getElementById('lightbox-template');
     const clone = template.content.cloneNode(true);
@@ -106,7 +114,7 @@ function openLightbox(project) {
         iframe.frameBorder = "0";
         iframe.allowfullscreen = "true";
         iframe.style.width = "100%"; // Setze die Breite auf 100%
-        
+
         // Füge den iFrame zum Container hinzu, bevor wir die Höhe berechnen
         imagesContainer.appendChild(iframe);
 
@@ -208,7 +216,7 @@ function openLightbox(project) {
 
 let currentIndex = 1; // Standardmäßig auf das erste Bild setzen
 
-window.plusSlides = function(n) {
+window.plusSlides = function (n) {
     showSlides(currentIndex += n);
 }
 
@@ -260,5 +268,5 @@ window.addEventListener('resize', updateThumbnails);
 updateThumbnails();
 
 document.querySelector('#nav-buttons:first-child').addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 });
