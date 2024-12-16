@@ -16,6 +16,8 @@ function generateFeaturedProjects() {
         const projectDiv = clone.querySelector('.project');
         const labelText = clone.querySelector('.label-text');
         const thumbnailImg = clone.querySelector('.thumbnail-img');
+
+        const windowIcon = clone.querySelector('.window-icon');
         
         projectDiv.setAttribute('data-project-id', project.label);
         labelText.textContent = project.label;
@@ -27,6 +29,10 @@ function generateFeaturedProjects() {
         
         // Event Listener für das Öffnen der Lightbox
         thumbnailImg.addEventListener('click', () => {
+            openLightbox(project);
+        });
+
+        windowIcon.addEventListener('click', () => {
             openLightbox(project);
         });
         }
