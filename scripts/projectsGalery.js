@@ -21,7 +21,7 @@ function generateAllProjects() {
       allProjectsContainer.appendChild(clone);
   
       // Event Listener für das Öffnen der Lightbox
-      projectDiv.addEventListener('click', () => {
+      thumbnailImg.addEventListener('click', () => {
         openLightbox(project);
       });
     });

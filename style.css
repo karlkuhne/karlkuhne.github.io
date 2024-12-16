@@ -446,7 +446,7 @@ body {
     transition: transform 0.4s ease;
 }
 
-.project:hover .thumbnail img {
+.thumbnail:not(.label):hover img {
     transform: scale(1.025);
 }
 
@@ -845,6 +845,10 @@ ol li p {
     stroke-width: 1.1;
     stroke: var(--border-color);
     fill: var(--border-color);
+}
+
+.icon:hover path {
+    stroke: rgb(142, 142, 142);
 }
 
 
