@@ -375,6 +375,20 @@ body {
     margin-bottom: 7rem;
 }
 
+#project-galery {
+    width: var(--main-width);
+    /* 103rem */
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    margin-bottom: 3.75rem;
+}
+
 .filter-container {
     display: flex;
     justify-content: center;
@@ -1257,7 +1271,7 @@ footer {
 .project-description {
     width: calc(var(--main-width) / 1.325);
     margin: 0 auto;
-    margin-bottom: 7rem;
+    margin-bottom: 10.5rem;
 }
 
 @media (max-width: 40.9rem) {
