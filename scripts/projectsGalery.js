@@ -12,6 +12,8 @@ function generateAllProjects() {
       const labelText = clone.querySelector('.label-text');
       const thumbnailImg = clone.querySelector('.thumbnail-img');
 
+      const thumbnailContainer = clone.querySelector('.thumbnail');
+      const minimizeIcon = clone.querySelector('.minimize-icon');
       const windowIcon = clone.querySelector('.window-icon');
   
       projectDiv.setAttribute('data-project-id', project.label);
@@ -30,6 +32,10 @@ function generateAllProjects() {
       windowIcon.addEventListener('click', () => {
         openLightbox(project);
     });
+
+      minimizeIcon.addEventListener('click', () => {
+        thumbnailContainer.style.display = 'none';
+      });
     });
   }
   
