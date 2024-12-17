@@ -1152,14 +1152,14 @@ textarea {
 }
 
 #content-wrap {
-    padding-bottom: 7rem;
+    padding-bottom: 10rem;
 }
 
 footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 7rem; 
+    height: 10rem; 
     background-color: rgb(30, 30, 30);
 }
 
@@ -1174,8 +1174,35 @@ footer {
 
 #footer-content img {
     filter: grayscale(100%);
+    margin-top: 1.5rem;
 }
 
+footer a {
+    font-family: Work Sans;
+    font-size: 1.1rem;
+    color: white;
+    line-height: 1.2;
+}
+
+
+#legal {
+    width: calc(var(--main-width) / 1.325);
+    margin: 0 auto;
+    margin-bottom: 10.5rem;;
+}
+
+@media (max-width: 40.9rem) {
+    #legaln {
+        width: 91.8vw;
+    }
+}
+
+#legal p {
+    text-align: justify;
+    hyphens: auto;
+    hyphenate-limit-chars: 7 auto auto;
+    line-height: 1.75rem;
+}
 
 /* ANIMATIONS */
 

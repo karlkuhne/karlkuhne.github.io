@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>Karl Kuhne | Projekt Galerie</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts/animations.js" defer></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="scripts/layout.js" defer></script>
+    <script src="scripts/lightbox.js" defer></script>
+    <script src="scripts/projectsGalery.js" type="module" defer></script>
+</head>
+
+<body>
+    
+            <header>
+                <nav>
+                    <div>
+                        <a href="./" id="logo" class="selectDisable">karl-kuhne-portfolio</a>
+                    </div>
+                    <div id="main-nav">
+                        <div id="nav-buttons">
+                            <a class="main-nav-item selectDisable">projekte</a>
+                            <a href="index#about" class="main-nav-item selectDisable">über-mich</a>
+                            <a href="index#contact" class="main-nav-item selectDisable">kontakt</a>
+                        </div>
+                        <div id="linkedIn-button" class="selectDisable">
+                            <button
+                                onclick="window.open('https://www.linkedin.com/mynetwork/discovery-see-all/?usecase=PEOPLE_FOLLOWS&followMember=karl-kuhne', '_blank');">
+                                <svg fill="white" class="button-icon" width="21" preserveAspectRatio="xMidYMid meet"
+                                    viewBox="0 0 100 100" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
+                                    <path
+                                        d="M92.86,0H7.12A7.17,7.17,0,0,0,0,7.21V92.79A7.17,7.17,0,0,0,7.12,100H92.86A7.19,7.19,0,0,0,100,92.79V7.21A7.19,7.19,0,0,0,92.86,0ZM30.22,85.71H15.4V38H30.25V85.71ZM22.81,31.47a8.59,8.59,0,1,1,8.6-8.59A8.6,8.6,0,0,1,22.81,31.47Zm63,54.24H71V62.5c0-5.54-.11-12.66-7.7-12.66s-8.91,6-8.91,12.26V85.71H39.53V38H53.75v6.52H54c2-3.75,6.83-7.7,14-7.7,15,0,17.79,9.89,17.79,22.74Z">
+                                    </path>
+                                </svg>
+                                <span>Kontakt auf LinkedIn</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="hamburger" class="selectDisable">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </nav>
+            </header>
+
+
+            <main>
+                <section id="legal">
+                    <h3 class="project-title" >Impressum</h3>
+                    <p>Dies ist eine rein private Webseite zur Präsentation persönlicher Projekte.
+                        Es bestehen keine kommerziellen Absichten, keine Werbung/Affiliate-Links und kein
+                        journalistischer Inhalt.
+                        Demnach besteht gemäß § 5 TMG keine Impressumspflicht.</p>
+
+                    <h3 class="project-title" style="margin-top: 2rem;">Datenschutz</h3>
+                    <p>Diese Website steht in Übereinstimmung mit der Allgemeinen Datenschutzverordnung (DSGVO). Diese
+                        Datenschutzrichtlinie gilt nur für diese Website. Externe Links zu anderen Websites (Hyperlinks,
+                        eingebettete YouTube-Videos) werden davon nicht erfasst. Bitte lesen Sie zur weiteren
+                        Information
+                        die Datenschutzrichtlinien dieser Websites.</p>
+
+                    <h3 class="project-title" style="margin-top: 2rem;">Kontaktformular</h3>
+                    <p>Wenn Sie unser Kontaktformular verwenden, erhebe ich die folgenden persönlichen Daten, die Sie
+                        freiwillig angeben: Name, E-Mail-Adresse und andere Informationen, die Sie angeben möchten.
+                        Diese Daten werden nur zum Zweck der Beantwortung Ihrer Anfragen, der Bereitstellung von
+                        Kundensupport oder anderer von Ihnen initiierter Mitteilungen erfasst.</p>
+
+                    <p>Die Rechtsgrundlage für die Verarbeitung dieser Daten ist Ihre Einwilligung beim Absenden des
+                        Kontaktformulars oder unser berechtigtes Interesse an der Beantwortung Ihrer Anfragen.
+                        Personenbezogene Daten, die über das Kontaktformular erhoben werden, werden so lange aufbewahrt,
+                        wie es zur Erfüllung der oben genannten Zwecke erforderlich ist oder wie es die geltenden
+                        Gesetze vorschreiben. Ich gebe die über das Kontaktformular gesammelten personenbezogenen Daten
+                        nicht an Dritte weiter, es sei denn, dies ist erforderlich, um Ihre Anfrage zu erfüllen oder
+                        gesetzlichen Verpflichtungen nachzukommen.</p>
+
+                </section>
+            </main>
+        
+        <footer>
+            <div id="footer-content">
+                <p><b>©2024 Karl Kuhne</b></p>
+
+                <a href="legal" class="selectDisable">Impressum</a>
+                <span style="margin: 0 0.5rem; color: white;">·</span>
+                <a href="legal" class="selectDisable">Datenschutz</a>
+
+                <div style="display: flex; justify-content: center; gap: 1rem;">
+                    <a href="https://github.com/karlkuhne" target="_blank">
+                        <img src="Ressources/Icons/GitHub.avif" alt="GitHub Icon" class="footer-icon" draggable="false"
+                            loading="lazy">
+                    </a>
+                    <a href="https://www.linkedin.com/mynetwork/discovery-see-all/?usecase=PEOPLE_FOLLOWS&followMember=karl-kuhne loading="
+                        lazy"" target="_blank">
+                        <img src="Ressources/Icons/LinkedIn.avif" alt="LinkedIn Icon" class="footer-icon"
+                            draggable="false">
+                    </a>
+                    <a href="https://www.youtube.com/@klwrpa" target="_blank">
+                        <img src="Ressources/Icons/YouTube.avif" alt="YouTube Icon" class="footer-icon"
+                            draggable="false" loading="lazy">
+                    </a>
+                </div>
+            </div>
+        </footer>
+    
+</body>
+
+</html>
