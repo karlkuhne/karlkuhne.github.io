@@ -1184,6 +1184,12 @@ footer a {
     line-height: 1.2;
 }
 
+@media (max-width: 30rem) {
+    footer span {
+        display: none;
+    }
+}
+
 
 #legal {
     width: calc(var(--main-width) / 1.325);
