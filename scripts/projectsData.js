@@ -20,9 +20,9 @@ const projectsData = {
                 "Ressources/Icons/Procreate.avif",
                 "Ressources/Icons/GitHub.avif"
             ],
-            "steam": "https://store.steampowered.com/widget/3381780/%22%20frameborder=%220%22%20width=%22646%22%20height=%22190",
+            /* "steam": "https://store.steampowered.com/widget/3381780/%22%20frameborder=%220%22%20width=%22646%22%20height=%22190", */
             "name": "Caveman hits Giraffe in a Car",
-            "description": "Ein rasantes Action-Roguelike, das aus einem 5-tägigen Game Jam entstanden ist. Kämpfe gegen abwechslungsreiche Gegnerwellen, verbessere deine Fähigkeiten und verewige dich auf der Bestenliste.",
+            "description": "Ein rasantes Action-Roguelike im handgezeichneten Stil. Kämpfe gegen abwechslungsreiche Gegnerwellen, verbessere deine Fähigkeiten und verewige dich auf der Bestenliste.",
             "website": "https://cavemanhitsgiraffeinacar.github.io/",
             "projectPage": "./projekte/cavemanhitsgiraffe"
         },
@@ -42,7 +42,7 @@ const projectsData = {
                 "Ressources/Icons/XAMPP.avif"
             ],
             "name": "Portfolio Webseite",
-            "description": "Meine eigene Webseite, umgesetzt mit HTML, CSS und JavaScript mit einem textbasierten CMS zum Hochladen der Projekte. Die Seite wird als GitHub Page mit einer Custom Domain gehostet. Weiterhin habe ich diese bei Google indexiert und nach Pagespeed optimiert.",
+            "description": "Meine eigene Webseite, umgesetzt mit HTML, CSS und JavaScript mit einem textbasierten CMS zum Hochladen der Projekte. Gehostet als GitHub Page mit einer Custom Domain.",
             "projectPage": "./projekte/portfolio-webseite"
         },
         {
@@ -56,8 +56,8 @@ const projectsData = {
                 "Ressources/Icons/Word.avif"
             ],
             "src": "projekte/designing-for-immersion.pdf",
-            "name": "Designing for immersion: The influence of diegetic player guidance on the gaming experience",
-            "description": "Gemäß des Grundsatzes „Designing for immersion“ ergründet diese Hausarbeit, ob Spielerführungsmechaniken in Videospielen besser Teil der erzählten Welt oder externes Spielelement sein sollten.",
+            "name": "Designing for immersion",
+            "description": "Diese Hausarbeit ergründet, ob Spielerführungsmechaniken in Videospielen besser Teil der erzählten Welt oder externes Spielelement sein sollten.",
             "website": "projekte/designing-for-immersion.pdf"
         },
         {
@@ -90,7 +90,7 @@ const projectsData = {
                 "Ressources/Icons/Premiere.avif"
             ],
             "name": "Opening Credits",
-            "description": "Ein Vorspann für eine fiktive Serie, welcher die einzigartige Stimmung einer nächtlichen Stadt einfangen soll."
+            "description": "Ein Vorspann für eine fiktive Serie, der die Stimmung einer nächtlichen Stadt einfangen soll."
 
         },
         {
@@ -106,7 +106,7 @@ const projectsData = {
                 "Ressources/Icons/Premiere.avif"
             ],
             "name": "Animationsfilm: Kuh",
-            "description": "In diesem Film wurde die Integration eines CGI-Elements in ein reales Video durchgeführt. Das Projekt umfasst die Erstellung und Animation eines 3D-Elements sowie das Tracking und die Integration dieses Objekts in ein selbst aufgenommenes Video.",
+            "description": "In diesem Film wurde die Integration eines CGI-Elements in ein reales Video durchgeführt.",
             "projectPage": "./projekte/cow"
         },
         {
@@ -123,7 +123,7 @@ const projectsData = {
                 "Ressources/Icons/AfterEffects.avif"
             ],
             "name": "Animationsfilm: Object Terrors",
-            "description": "Das Konzept besteht darin, häufige menschliche Phobien auf alltägliche Haushalts- gegenstände zu übertragen. Um dieses Konzept audiovisuell umzusetzen, sollen fünf Gegenstände in derem jeweiligen Raum monologartig über deren Ängste sprechen. Der Sprechakt soll authentisch wirken, als wäre eine reale Person interviewt worden.",
+            "description": "Das Konzept besteht darin, häufige menschliche Phobien auf alltägliche Gegenstände zu übertragen. Die Sprache soll authentisch wirken, als wäre eine reale Person interviewt worden.",
             "projectPage": "./projekte/object-terrors"
         },
     ]
