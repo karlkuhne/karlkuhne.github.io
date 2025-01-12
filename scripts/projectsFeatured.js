@@ -1,5 +1,7 @@
 
 import projectsData from './projectsData.js';
+let currentProjectIndex = 0;
+const featuredProjects = projectsData.projects.filter(project => project.featured);
 
 function generateFeaturedProjects() {
 
@@ -63,6 +65,7 @@ function generateFeaturedProjects() {
 }
 
 function openLightbox(project) {
+    currentProjectIndex = projectsData.projects.findIndex(p => p.label === project.label);
     const template = document.getElementById('lightbox-template');
     const clone = template.content.cloneNode(true);
 
@@ -203,16 +206,6 @@ function openLightbox(project) {
         }
     });
 
-    // Funktion zum Schließen der Lightbox
-    function closeLightbox(lightbox) {
-        lightbox.style.display = 'none';
-        document.body.classList.remove('no-scroll');
-        lightbox.remove();
-
-        // Entferne den Event Listener für Escape, wenn die Lightbox geschlossen wird
-        document.removeEventListener('keydown', closeLightbox);
-    }
-
     // Event Listener für das Klicken außerhalb der Lightbox (zum Schließen)
     lightbox.addEventListener('click', (event) => {
         // Wenn der Klick außerhalb des Inhaltsbereichs der Lightbox erfolgt
@@ -220,6 +213,41 @@ function openLightbox(project) {
             closeLightbox(lightbox);
         }
     });
+}
+
+
+// Funktion zum Schließen der Lightbox
+function closeLightbox(lightbox) {
+    lightbox.style.display = 'none';
+    document.body.classList.remove('no-scroll');
+    lightbox.remove();
+
+    // Entferne den Event Listener für Escape, wenn die Lightbox geschlossen wird
+    document.removeEventListener('keydown', closeLightbox);
+}
+
+function handleKeyDown(event) {
+    if (event.key === 'ArrowRight') {
+        navigateToProject(1);
+    } else if (event.key === 'ArrowLeft') {
+        navigateToProject(-1);
+    }
+}
+
+// In der navigateToProject Funktion
+function navigateToProject(direction) {
+    currentProjectIndex += direction;
+
+    if (currentProjectIndex >= featuredProjects.length) {
+        currentProjectIndex = 0; // Zurück zum ersten Projekt
+    } else if (currentProjectIndex < 0) {
+        currentProjectIndex = featuredProjects.length - 1; // Zum letzten Projekt
+    }
+
+    const nextProject = featuredProjects[currentProjectIndex];
+    const lightbox = document.querySelector('.lightbox');
+    closeLightbox(lightbox);
+    openLightbox(nextProject);
 }
 
 
@@ -257,7 +285,7 @@ function showSlides(n) {
 
 
 generateFeaturedProjects();
-
+document.addEventListener('keydown', handleKeyDown);
 
 
 // Dynamischer Wechsel zwischen Thumbnails basierend auf der Bildschirmgröße
