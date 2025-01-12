@@ -13,6 +13,7 @@ function generateAllProjects() {
         const thumbnailImg = clone.querySelector('.thumbnail-img');
 
         const thumbnailContainer = clone.querySelector('.thumbnail');
+        const label = clone.querySelector('.label');
         const minimizeIcon = clone.querySelector('.minimize-icon');
         const windowIcon = clone.querySelector('.window-icon');
         const closeIcon = clone.querySelector('.close-icon');
@@ -37,8 +38,10 @@ function generateAllProjects() {
         minimizeIcon.addEventListener('click', () => {
             if (thumbnailContainer.style.display === 'none') {
                 thumbnailContainer.style.display = 'block';
+                label.style.borderBottom = '0.185rem solid rgb(82, 82, 82)';
             } else {
                 thumbnailContainer.style.display = 'none';
+                label.style.borderBottom = 'none';
             }
         });
 
