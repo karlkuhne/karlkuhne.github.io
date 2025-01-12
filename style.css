@@ -1318,11 +1318,11 @@ footer a {
 
 @media (max-width: 40.9rem) {
     .project-description {
-        width: 91.8vw;
+        width: 91vw;
     }
 
     .project-cover {
-        width: 91.8vw;
+        width: 91vw;
     }
 }
 
@@ -1428,6 +1428,10 @@ code[class="language-javascript"] {
     width: var(--responsive-main-width);
 }
 
+.responsive #project-galery {
+    width: var(--responsive-main-width);
+}
+
 .responsive .wrapper-waagerecht {
     width: var(--responsive-main-width);
 }
@@ -1446,4 +1450,10 @@ code[class="language-javascript"] {
 
 .responsive .project-description {
     width: calc(var(--responsive-main-width) / 1.325);
+}
+
+@media (max-width: 40.9rem) {
+    #project-galery {
+        width: 91vw;
+    }
 }
