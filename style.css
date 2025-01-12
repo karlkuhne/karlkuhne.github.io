@@ -126,7 +126,7 @@ label {
     background-position: center;
 }
 
-@media (max-width: 105rem) {
+@media (max-width: 94.3rem) {
     .parallax {
         background-image: url('Ressources/CoverMobile.svg');
     }
@@ -1206,7 +1206,7 @@ footer a {
 
 @media (max-width: 40.9rem) {
     #legal {
-        width: 91.8vw;
+        width: 91vw;
     }
 }
 
