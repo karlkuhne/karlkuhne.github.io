@@ -109,6 +109,12 @@ label {
     color: #79aaff;
 }
 
+@media (max-width: 40.9rem) {
+    .hyperlink {
+        font-size: 1rem;
+    }
+}
+
 
 /* COVER */
 
