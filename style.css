@@ -8,8 +8,7 @@
 :root {
     --border-color: rgb(82, 82, 82);
     --main-width: 55;
-    --responsive-main-width: 92%;
-    --mobile-width: 37.5rem;
+    --responsive-main-width: 96.75%;
 }
 
 a {
@@ -91,7 +90,8 @@ label {
     line-height: 1.2;
 }
 
-@media (max-width: var(--mobile-width)) {
+@media (max-width: 40.9rem) {
+
     p,
     label {
         font-size: 1rem;
@@ -109,7 +109,7 @@ label {
     color: #79aaff;
 }
 
-@media (max-width: var(--mobile-width)) {
+@media (max-width: 40.9rem) {
     .hyperlink {
         font-size: 1rem;
     }
@@ -177,7 +177,7 @@ label {
     }
 }
 
-@media (max-width: var(--mobile-width)) {
+@media (max-width: 40.9rem) {
     #arrow {
         left: 39.5%;
     }
@@ -482,12 +482,13 @@ body {
     overflow: hidden;
 }
 
-@media (max-width: var(--mobile-width)) {
+@media (max-width: 40.9rem) {
     #galery {
         width: 95vw;
     }
 
     .thumbnail-img {
+        height: 85.5vw;
         aspect-ratio: 1 / 1;
         object-fit: cover;
     }
@@ -574,7 +575,7 @@ iframe {
     margin-bottom: 0.5rem;
 }
 
-@media (max-width: var(--mobile-width)) {
+@media (max-width: 40.9rem) {
     .steam {
         height: 11.7rem;
     }
@@ -607,7 +608,7 @@ iframe {
     padding-right: 20px;
 }
 
-@media (max-width: var(--mobile-width)) {
+@media (max-width: 40.9rem) {
     .navigation {
         width: 90vw;
     }
@@ -745,7 +746,7 @@ iframe {
 
 
 
-@media (max-width: var(--mobile-width)) {
+@media (max-width: 40.9rem) {
     .wrapper-waagerecht {
         width: 95vw;
     }
@@ -1047,7 +1048,7 @@ textarea {
     padding-left: 1rem;
 }
 
-@media (max-width: var(--mobile-width)) {
+@media (max-width: 40.9rem) {
 
     input[type="text"],
     input[type="email"],
@@ -1202,7 +1203,7 @@ footer a {
     margin-bottom: 10.5rem;;
 }
 
-@media (max-width: var(--mobile-width)) {
+@media (max-width: 40.9rem) {
     #legal {
         width: 91.8vw;
     }
@@ -1314,7 +1315,7 @@ footer a {
     margin-bottom: 10.5rem;
 }
 
-@media (max-width: var(--mobile-width)) {
+@media (max-width: 40.9rem) {
     .project-description {
         width: 91.8vw;
     }
@@ -1376,7 +1377,7 @@ code[class="language-javascript"] {
     font-size: 1.1rem !important;
 }
 
-@media (max-width: var(--mobile-width)) {
+@media (max-width: 40.9rem) {
     code[class="language-javascript"] {
         font-size: 0.8rem !important;
     }
@@ -1408,7 +1409,7 @@ code[class="language-javascript"] {
     margin-bottom: 0.5rem;
 }
 
-@media (max-width: var(--mobile-width)) {
+@media (max-width: 40.9rem) {
     .table {
         flex-direction: column;
     }
