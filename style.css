@@ -8,7 +8,7 @@
 :root {
     --border-color: rgb(82, 82, 82);
     --main-width: 55;
-    --responsive-main-width: 96.75%;
+    --responsive-main-width: calc(100vw - 3.5rem);
 }
 
 a {
@@ -484,7 +484,7 @@ body {
 
 @media (max-width: 40.9rem) {
     #galery {
-        width: 95vw;
+        width: 91vw;
     }
 
     .thumbnail-img {
@@ -933,10 +933,10 @@ ol li p {
     }
 }
 
-@media (max-width: 44em) {
+@media (max-width: 40.9rem) {
     #about-me {
         transform: translateX(0rem) translateY(0rem);
-        width: 24rem;
+        width: 89.5vw;
         margin-bottom: 0.78rem;
     }
 
@@ -958,7 +958,8 @@ ol li p {
     #degrees {
         transform: translateX(0rem) translateY(0rem);
         margin-bottom: 0.78rem;
-        height: 14.2rem;
+        height: 15.5rem;
+        width: 89.5vw
     }
 
 
@@ -1077,7 +1078,7 @@ textarea {
 
 @media (max-width: 47.3rem) {
     #form {
-        width: 95vw;
+        width: 89vw;
         align-self: center;
     }
 
