@@ -1404,6 +1404,7 @@ code[class="language-javascript"] {
 .column p {
     margin-top: 0.1rem;
     margin-bottom: 0.1rem;
+    text-align: left;
 }
 
 .column h3 {
