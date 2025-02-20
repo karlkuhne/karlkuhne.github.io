@@ -24,7 +24,7 @@ const projectsData = {
             "name": "Caveman hits Giraffe in a Car",
             "description": "Ein rasantes Action-Roguelike im handgezeichneten Stil. Kämpfe gegen abwechslungsreiche Gegnerwellen, verbessere deine Fähigkeiten und verewige dich auf der Bestenliste.",
             "website": "https://cavemanhitsgiraffeinacar.github.io/",
-            "projectPage": "./projekte/cavemanhitsgiraffe"
+            "projectPage": "./projekt/caveman-hits-giraffe-in-a-car"
         },
         {
             "label": "portfolio-webseite",
@@ -43,7 +43,7 @@ const projectsData = {
             ],
             "name": "Portfolio Webseite",
             "description": "Meine eigene Webseite, umgesetzt mit HTML, CSS und JavaScript mit einem textbasierten CMS zum Hochladen der Projekte. Gehostet als GitHub Page mit einer Custom Domain.",
-            "projectPage": "./projekte/portfolio-webseite"
+            "projectPage": "./projekt/portfolio-webseite"
         },
         {
             "label": "designing-for-immersion",
@@ -107,7 +107,7 @@ const projectsData = {
             ],
             "name": "Animationsfilm: Kuh",
             "description": "In diesem Film wurde die Integration eines CGI-Elements in ein reales Video durchgeführt.",
-            "projectPage": "./projekte/cow"
+            "projectPage": "./projekt/animationsfilm-kuh"
         },
         {
             "label": "animationsfilm-object-terrors",
@@ -124,7 +124,7 @@ const projectsData = {
             ],
             "name": "Animationsfilm: Object Terrors",
             "description": "Das Konzept besteht darin, häufige menschliche Phobien auf alltägliche Gegenstände zu übertragen. Die Sprache soll authentisch wirken, als wäre eine reale Person interviewt worden.",
-            "projectPage": "./projekte/object-terrors"
+            "projectPage": "./projekt/animationsfilm-object-terrors"
         },
     ]
 }
