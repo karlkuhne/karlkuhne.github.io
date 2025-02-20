@@ -15,145 +15,140 @@
 </head>
 
 <body>
-    <div id="page-container">
-        <div id="content-wrap">
-            <header>
-                <nav>
-                    <div>
-                        <a href="./" id="logo" class="selectDisable">karl-kuhne-portfolio</a>
+    <header>
+        <nav>
+            <div>
+                <a href="./" id="logo" class="selectDisable">karl-kuhne-portfolio</a>
+            </div>
+            <div id="main-nav">
+                <div id="nav-buttons">
+                    <a class="main-nav-item selectDisable">projekte</a>
+                    <a href="index#about" class="main-nav-item selectDisable">über-mich</a>
+                    <a href="index#contact" class="main-nav-item selectDisable">kontakt</a>
+                </div>
+                <div id="linkedIn-button" class="selectDisable">
+                    <button onclick="window.open('https://www.linkedin.com/in/karl-kuhne', '_blank');">
+                        <svg fill="white" class="button-icon" width="21" preserveAspectRatio="xMidYMid meet"
+                            viewBox="0 0 100 100" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
+                            <path
+                                d="M92.86,0H7.12A7.17,7.17,0,0,0,0,7.21V92.79A7.17,7.17,0,0,0,7.12,100H92.86A7.19,7.19,0,0,0,100,92.79V7.21A7.19,7.19,0,0,0,92.86,0ZM30.22,85.71H15.4V38H30.25V85.71ZM22.81,31.47a8.59,8.59,0,1,1,8.6-8.59A8.6,8.6,0,0,1,22.81,31.47Zm63,54.24H71V62.5c0-5.54-.11-12.66-7.7-12.66s-8.91,6-8.91,12.26V85.71H39.53V38H53.75v6.52H54c2-3.75,6.83-7.7,14-7.7,15,0,17.79,9.89,17.79,22.74Z">
+                            </path>
+                        </svg>
+                        <span>Kontakt auf LinkedIn</span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="hamburger" class="selectDisable">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <section id="project-galery">
+
+            <h1 class="project-title">projekt-galerie</h1>
+
+            <template id="project-template">
+                <div class="box project" data-project-id="">
+                    <div class="label">
+                        <p class="label-text"></p>
+
+                        <svg class="icon minimize-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                            <path d="M2.67 8c0-.37.3-.67.66-.67h9.34a.67.67 0 1 1 0 1.34H3.33A.67.67 0 0 1 2.67 8"
+                                style="touch-action: none;"></path>
+                        </svg>
+
+                        <svg class="icon window-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M8.2 4c-1.12 0-1.82-.05-2.56.33a3 3 0 0 0-1.31 1.3C3.95 6.39 4 7.09 4 8.2v7.6c0 1.12-.05 1.82.33 2.56a3 3 0 0 0 1.3 1.31c.75.38 1.45.33 2.57.33h7.6c1.12 0 1.82.05 2.56-.33a3 3 0 0 0 1.31-1.3c.38-.75.33-1.45.33-2.57V8.2c0-1.12.05-1.82-.33-2.56a3 3 0 0 0-1.3-1.31C17.61 3.95 16.91 4 15.8 4Zm0 2h7.6c1.12 0 1.54.05 1.65.1a1 1 0 0 1 .44.45c.06.11.11.53.11 1.65v7.6c0 1.12-.05 1.54-.1 1.65a1 1 0 0 1-.45.44c-.11.06-.53.11-1.65.11H8.2a6 6 0 0 1-1.65-.1 1 1 0 0 1-.44-.45A6 6 0 0 1 6 15.8V8.2c0-1.12.05-1.54.1-1.65a1 1 0 0 1 .45-.44C6.66 6.05 7.08 6 8.2 6"
+                                style="touch-action: none;"></path>
+                        </svg>
+
+                        <svg class="icon close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                            <path
+                                d="M3.53 3.53a.67.67 0 0 1 .94 0L8 7.06l3.53-3.53a.67.67 0 1 1 .94.94L8.94 8l3.53 3.53a.67.67 0 1 1-.94.94L8 8.94l-3.53 3.53a.67.67 0 1 1-.94-.94L7.06 8 3.53 4.47a.67.67 0 0 1 0-.94"
+                                style="touch-action: none;"></path>
+                        </svg>
                     </div>
-                    <div id="main-nav">
-                        <div id="nav-buttons">
-                            <a class="main-nav-item selectDisable">projekte</a>
-                            <a href="index#about" class="main-nav-item selectDisable">über-mich</a>
-                            <a href="index#contact" class="main-nav-item selectDisable">kontakt</a>
-                        </div>
-                        <div id="linkedIn-button" class="selectDisable">
-                            <button
-                                onclick="window.open('https://www.linkedin.com/in/karl-kuhne', '_blank');">
-                                <svg fill="white" class="button-icon" width="21" preserveAspectRatio="xMidYMid meet"
-                                    viewBox="0 0 100 100" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
-                                    <path
-                                        d="M92.86,0H7.12A7.17,7.17,0,0,0,0,7.21V92.79A7.17,7.17,0,0,0,7.12,100H92.86A7.19,7.19,0,0,0,100,92.79V7.21A7.19,7.19,0,0,0,92.86,0ZM30.22,85.71H15.4V38H30.25V85.71ZM22.81,31.47a8.59,8.59,0,1,1,8.6-8.59A8.6,8.6,0,0,1,22.81,31.47Zm63,54.24H71V62.5c0-5.54-.11-12.66-7.7-12.66s-8.91,6-8.91,12.26V85.71H39.53V38H53.75v6.52H54c2-3.75,6.83-7.7,14-7.7,15,0,17.79,9.89,17.79,22.74Z">
-                                    </path>
-                                </svg>
-                                <span>Kontakt auf LinkedIn</span>
-                            </button>
-                        </div>
+                    <div class="thumbnail">
+                        <img class="thumbnail-img selectDisable" src="" alt="" draggable="false"
+                            oncontextmenu="return false;">
                     </div>
+                </div>
+            </template>
 
-                    <div id="hamburger" class="selectDisable">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                    </div>
-                </nav>
-            </header>
+            <div class="filter-container">
+                <a class="filter-button filter-active selectDisable" data-category="alle">📂-alle</a>
+                <a class="filter-button selectDisable" data-category="spiel">👨‍💻-interaktiv</a>
+                <a class="filter-button selectDisable" data-category="film">🎞️-filme</a>
+                <a class="filter-button selectDisable" data-category="illustration">✍️-illustrationen</a>
+                <a class="filter-button selectDisable" data-category="forschungsprojekt">📚-forschungsprojekte</a>
+            </div>
 
+            <div id="all-projects-container"></div>
 
-            <main>
-                <section id="project-galery">
+            <template id="lightbox-template">
+                <div class="lightbox">
+                    <span class="close selectDisable">&times;</span>
 
-                    <h1 class="project-title">projekt-galerie</h1>
-
-                    <template id="project-template">
-                        <div class="box project" data-project-id="">
-                            <div class="label">
-                                <p class="label-text"></p>
-
-                                <svg class="icon minimize-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                                    <path
-                                        d="M2.67 8c0-.37.3-.67.66-.67h9.34a.67.67 0 1 1 0 1.34H3.33A.67.67 0 0 1 2.67 8"
-                                        style="touch-action: none;"></path>
-                                </svg>
-
-                                <svg class="icon window-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path
-                                        d="M8.2 4c-1.12 0-1.82-.05-2.56.33a3 3 0 0 0-1.31 1.3C3.95 6.39 4 7.09 4 8.2v7.6c0 1.12-.05 1.82.33 2.56a3 3 0 0 0 1.3 1.31c.75.38 1.45.33 2.57.33h7.6c1.12 0 1.82.05 2.56-.33a3 3 0 0 0 1.31-1.3c.38-.75.33-1.45.33-2.57V8.2c0-1.12.05-1.82-.33-2.56a3 3 0 0 0-1.3-1.31C17.61 3.95 16.91 4 15.8 4Zm0 2h7.6c1.12 0 1.54.05 1.65.1a1 1 0 0 1 .44.45c.06.11.11.53.11 1.65v7.6c0 1.12-.05 1.54-.1 1.65a1 1 0 0 1-.45.44c-.11.06-.53.11-1.65.11H8.2a6 6 0 0 1-1.65-.1 1 1 0 0 1-.44-.45A6 6 0 0 1 6 15.8V8.2c0-1.12.05-1.54.1-1.65a1 1 0 0 1 .45-.44C6.66 6.05 7.08 6 8.2 6"
-                                        style="touch-action: none;"></path>
-                                </svg>
-
-                                <svg class="icon close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                                    <path
-                                        d="M3.53 3.53a.67.67 0 0 1 .94 0L8 7.06l3.53-3.53a.67.67 0 1 1 .94.94L8.94 8l3.53 3.53a.67.67 0 1 1-.94.94L8 8.94l-3.53 3.53a.67.67 0 1 1-.94-.94L7.06 8 3.53 4.47a.67.67 0 0 1 0-.94"
-                                        style="touch-action: none;"></path>
-                                </svg>
+                    <div class="wrapper-waagerecht">
+                        <div class="container-waagerecht">
+                            <div class="navigation">
+                                <a class="prev selectDisable" onclick="plusSlides(-1)">❮</a>
+                                <a class="next selectDisable" onclick="plusSlides(1)">❯</a>
                             </div>
-                            <div class="thumbnail">
-                                <img class="thumbnail-img selectDisable" src="" alt="" draggable="false"
-                                    oncontextmenu="return false;">
-                            </div>
+                            <div class="dots-slideshow-waagerecht"></div>
                         </div>
-                    </template>
 
-                    <div class="filter-container">
-                        <a class="filter-button filter-active selectDisable" data-category="alle">📂-alle</a>
-                        <a class="filter-button selectDisable" data-category="spiel">👨‍💻-interaktiv</a>
-                        <a class="filter-button selectDisable" data-category="film">🎞️-filme</a>
-                        <a class="filter-button selectDisable" data-category="illustration">✍️-illustrationen</a>
-                        <a class="filter-button selectDisable"
-                            data-category="forschungsprojekt">📚-forschungsprojekte</a>
+                        <div class="steam"></div>
+
+                        <h3 class="project-name"></h3>
+                        <p class="lightbox-description"></p>
+                        <div class="app-icons"><!-- <span>Erstellt in</span> --></div>
+                        <div style="display: flex">
+                            <a class="website-button selectDisable" href="" target="_blank">öffnen</a>
+                            <a class="project-button selectDisable" href="" target="_blank">projektseite</a>
+
+                        </div>
                     </div>
+                </div>
+            </template>
 
-                    <div id="all-projects-container"></div>
+            <br><br><br><br><br><br>
+        </section>
+    </main>
 
-                    <template id="lightbox-template">
-                        <div class="lightbox">
-                            <span class="close selectDisable">&times;</span>
+    <footer>
+        <div id="footer-content">
+            <p><b>©2025 Karl Kuhne</b></p>
 
-                            <div class="wrapper-waagerecht">
-                                <div class="container-waagerecht">
-                                    <div class="navigation">
-                                        <a class="prev selectDisable" onclick="plusSlides(-1)">❮</a>
-                                        <a class="next selectDisable" onclick="plusSlides(1)">❯</a>
-                                    </div>
-                                    <div class="dots-slideshow-waagerecht"></div>
-                                </div>
-
-                                <div class="steam"></div>
-
-                                <h3 class="project-name"></h3>
-                                <p class="lightbox-description"></p>
-                                <div class="app-icons"><!-- <span>Erstellt in</span> --></div>
-                                <div style="display: flex">
-                                    <a class="website-button selectDisable" href="" target="_blank">öffnen</a>
-                                    <a class="project-button selectDisable" href="" target="_blank">projektseite</a>
-
-                                </div>
-                            </div>
-                        </div>
-                    </template>
-
-                    <br><br><br><br><br><br>
-                </section>
-            </main>
-        </div>
-        <footer>
-            <div id="footer-content">
-                <p><b>©2025 Karl Kuhne</b></p>
-                
+            <div>
                 <a href="legal" class="selectDisable">Impressum</a>
                 <span style="margin: 0 0.5rem; color: white;">·</span>
                 <a href="legal" class="selectDisable">Datenschutz</a>
-
-                <div style="display: flex; justify-content: center; gap: 1rem;">
-                    <a href="https://github.com/karlkuhne" target="_blank">
-                        <img src="Ressources/Icons/GitHub.avif" alt="GitHub Icon" class="footer-icon" draggable="false"
-                            loading="lazy">
-                    </a>
-                    <a href="https://www.linkedin.com/mynetwork/discovery-see-all/?usecase=PEOPLE_FOLLOWS&followMember=karl-kuhne loading="
-                        lazy"" target="_blank">
-                        <img src="Ressources/Icons/LinkedIn.avif" alt="LinkedIn Icon" class="footer-icon"
-                            draggable="false">
-                    </a>
-                    <a href="https://www.youtube.com/@klwrpa" target="_blank">
-                        <img src="Ressources/Icons/YouTube.avif" alt="YouTube Icon" class="footer-icon"
-                            draggable="false" loading="lazy">
-                    </a>
-                </div>
             </div>
-        </footer>
-    </div>
+
+            <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 0.25rem;">
+                <a href="https://github.com/karlkuhne" target="_blank">
+                    <img src="Ressources/Icons/GitHub.avif" alt="GitHub Icon" class="footer-icon" draggable="false"
+                        loading="lazy">
+                </a>
+                <a href="https://www.linkedin.com/mynetwork/discovery-see-all/?usecase=PEOPLE_FOLLOWS&followMember=karl-kuhne loading="
+                    lazy"" target="_blank">
+                    <img src="Ressources/Icons/LinkedIn.avif" alt="LinkedIn Icon" class="footer-icon" draggable="false">
+                </a>
+                <a href="https://www.youtube.com/@klwrpa" target="_blank">
+                    <img src="Ressources/Icons/YouTube.avif" alt="YouTube Icon" class="footer-icon" draggable="false"
+                        loading="lazy">
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
