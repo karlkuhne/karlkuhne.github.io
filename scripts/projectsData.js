@@ -55,10 +55,10 @@ const projectsData = {
             "apps": [
                 "Ressources/Icons/Word.avif"
             ],
-            "src": "projekte/designing-for-immersion.pdf",
+            "src": "projekt/designing-for-immersion.pdf",
             "name": "Designing for immersion",
             "description": "Diese Hausarbeit ergründet, ob Spielerführungsmechaniken in Videospielen besser Teil der erzählten Welt oder externes Spielelement sein sollten.",
-            "website": "projekte/designing-for-immersion.pdf"
+            "website": "projekt/designing-for-immersion.pdf"
         },
         {
             "label": "character-design",
