@@ -33,10 +33,10 @@ jobs:
           cache: "pnpm"
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
 
       - name: Generate static site
-        run: pnpm generate
+        run: pnpm run generate
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
