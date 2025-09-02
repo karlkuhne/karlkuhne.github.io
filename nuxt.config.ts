@@ -56,11 +56,19 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'de',
       },
-    }
+    },
+    baseURL: '/karlkuhne.github.io/',
+    buildAssetsDir: 'assets'
   },
   runtimeConfig: {
     public: {
       apiEndpoint: process.env.API_ENDPOINT
     }
-  }
+  },
+  nitro: {
+    prerender: {
+      routes: ['/sitemap.xml']
+    }
+  },
+  ssr: false,
 })
