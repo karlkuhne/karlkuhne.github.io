@@ -1,0 +1,66 @@
+import svgLoader from 'vite-svg-loader'
+
+export default defineNuxtConfig({
+  compatibilityDate: '2025-05-15',
+  devtools: { enabled: false },
+  modules: [
+    '@nuxt/fonts',
+    '@pinia/nuxt',
+    '@pinia/colada-nuxt',
+    '@nuxt/image',
+    'nuxt-anchorscroll',
+    '@nuxtjs/i18n',
+    '@pinia/colada-nuxt',
+    '@nuxt/test-utils/module'
+  ],
+  css: [
+    '@/assets/css/fonts.css',
+    '@/assets/css/main.css'
+  ],
+  vite: {
+    plugins: [svgLoader()]
+  },
+  /* vitest: {
+    environment: 'jsdom',
+  }, */
+  image: {
+    provider: 'none'
+  },
+  i18n: {
+    locales: [
+      { code: 'en', iso: 'en-US', name: 'English', file: "en.json" },
+      { code: 'de', iso: 'de-DE', name: 'Deutsch', file: "de.json" },
+      { code: 'sv', iso: 'sv-SE', name: 'Svenska', file: "sv.json" },
+    ],
+    defaultLocale: 'de',
+    strategy: 'prefix_except_default',
+    langDir: 'locales/'
+  },
+  app: {
+    head: {
+      title: 'Karl Kuhne | Portfolio',
+      meta: [
+        // Primary Meta
+        { name: 'description', content: 'Willkommen auf meiner Portfolio-Seite. Entdecke meine Projekte und erfahre mehr über mich.' },
+        { name: 'author', content: 'Karl Kuhne' },
+        { name: 'copyright', content: 'Karl Kuhne' },
+
+        // Open Graph
+        { property: 'og:title', content: 'Karl Kuhne | Portfolio' },
+        { property: 'og:description', content: 'Willkommen auf meiner Portfolio-Seite. Entdecke meine Projekte und erfahre mehr über mich.' },
+        { property: 'og:image', content: '/img/Portrait.avif' },
+        { property: 'og:url', content: 'https://karlkuhne.me' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:site_name', content: 'Karl Kuhne' }
+      ],
+      htmlAttrs: {
+        lang: 'de',
+      },
+    }
+  },
+  runtimeConfig: {
+    public: {
+      apiEndpoint: process.env.API_ENDPOINT
+    }
+  }
+})

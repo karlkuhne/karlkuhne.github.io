@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Work Sans';
+    src: url('../fonts/Work_Sans/WorkSans-VariableFont_wght.ttf') format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('../fonts/Work_Sans/WorkSans-VariableFont_wght.ttf') format('truetype');
+    font-weight: 800;
+}
+
+p,
+label {
+    font-family: Work Sans;
+    font-size: 1rem;
+    color: white;
+}
