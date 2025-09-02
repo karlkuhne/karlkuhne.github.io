@@ -1,0 +1,1 @@
+import{_ as n,c as t,a as o,o as a}from"./agoWs2wV.js";const r={};function l(s,e){return a(),t("div",null,e[0]||(e[0]=[o("h1",null,"404 - Page Not Found",-1),o("p",null,"The page you are looking for does not exist.",-1)]))}const _=n(r,[["render",l]]);export{_ as default};

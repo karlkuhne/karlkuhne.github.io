@@ -57,8 +57,8 @@ export default defineNuxtConfig({
         lang: 'de',
       },
     },
-    baseURL: '/karlkuhne.github.io/',
-    buildAssetsDir: 'assets'
+    baseURL: '/',
+    buildAssetsDir: '/_nuxt/'
   },
   runtimeConfig: {
     public: {
