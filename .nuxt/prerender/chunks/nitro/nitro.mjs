@@ -1,42 +1,24 @@
-import process from 'node:process';globalThis._importMeta_={url:import.meta.url,env:process.env};import { tmpdir } from 'node:os';
-import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send as send$3, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, setCookie, removeResponseHeader, createError, getRouterParam, getQuery as getQuery$1, readBody, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getResponseStatus, getResponseStatusText } from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/h3@1.15.3/node_modules/h3/dist/index.mjs';
-import { Server } from 'node:http';
-import { resolve, dirname, join } from 'node:path';
-import nodeCrypto from 'node:crypto';
-import { parentPort, threadId } from 'node:worker_threads';
-import { escapeHtml } from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/@vue+shared@3.5.17/node_modules/@vue/shared/dist/shared.cjs.js';
-import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/vue-bundle-renderer@2.1.1/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import { renderToString } from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/vue@3.5.17_typescript@5.8.3/node_modules/vue/server-renderer/index.mjs';
-import destr, { destr as destr$1 } from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/destr@2.0.5/node_modules/destr/dist/index.mjs';
+import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, setCookie, removeResponseHeader, createError, getRouterParam, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getResponseStatus } from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/h3@1.15.3/node_modules/h3/dist/index.mjs';
+import destr from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/destr@2.0.5/node_modules/destr/dist/index.mjs';
 import { createHooks } from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/hookable@5.5.3/node_modules/hookable/dist/index.mjs';
 import { createFetch, Headers as Headers$1 } from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/ofetch@1.4.1/node_modules/ofetch/dist/node.mjs';
 import { fetchNodeRequestHandler, callNodeRequestHandler } from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/node-mock-http@1.0.1/node_modules/node-mock-http/dist/index.mjs';
-import { createStorage, prefixStorage } from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/unstorage@1.16.1_@netlify+blobs@9.1.2_db0@0.3.2_ioredis@5.6.1/node_modules/unstorage/dist/index.mjs';
+import { createStorage, defineDriver, prefixStorage } from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/unstorage@1.16.1_@netlify+blobs@9.1.2_db0@0.3.2_ioredis@5.6.1/node_modules/unstorage/dist/index.mjs';
 import unstorage_47drivers_47fs from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/unstorage@1.16.1_@netlify+blobs@9.1.2_db0@0.3.2_ioredis@5.6.1/node_modules/unstorage/drivers/fs.mjs';
+import fsDriver from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/unstorage@1.16.1_@netlify+blobs@9.1.2_db0@0.3.2_ioredis@5.6.1/node_modules/unstorage/drivers/fs-lite.mjs';
+import lruCache from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/unstorage@1.16.1_@netlify+blobs@9.1.2_db0@0.3.2_ioredis@5.6.1/node_modules/unstorage/drivers/lru-cache.mjs';
 import { digest } from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/ohash@2.0.11/node_modules/ohash/dist/index.mjs';
 import { klona } from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/klona@2.0.6/node_modules/klona/dist/index.mjs';
 import defu, { defuFn } from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/defu@6.1.4/node_modules/defu/dist/defu.mjs';
 import { snakeCase } from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/scule@1.3.0/node_modules/scule/dist/index.mjs';
 import { getContext } from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/unctx@2.4.1/node_modules/unctx/dist/index.mjs';
 import { toRouteMatcher, createRouter } from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/radix3@1.1.2/node_modules/radix3/dist/index.mjs';
-import { readFile } from 'node:fs/promises';
-import consola, { consola as consola$1 } from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/consola@3.4.2/node_modules/consola/dist/index.mjs';
-import { ErrorParser } from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/youch-core@0.3.3/node_modules/youch-core/build/index.js';
-import { Youch } from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/youch@4.1.0-beta.8/node_modules/youch/build/index.js';
-import { SourceMapConsumer } from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/source-map@0.7.4/node_modules/source-map/source-map.js';
-import { AsyncLocalStorage } from 'node:async_hooks';
-import { stringify, uneval } from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/devalue@5.1.1/node_modules/devalue/index.js';
-import { captureRawStackTrace, parseRawStackTrace } from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/errx@0.1.0/node_modules/errx/dist/index.js';
-import { isVNode, toValue, isRef } from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/vue@3.5.17_typescript@5.8.3/node_modules/vue/index.mjs';
 import { createPathIndexLanguageParser, parseAcceptLanguage } from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/@intlify+utils@0.13.0/node_modules/@intlify/utils/dist/index.mjs';
 import { parse } from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/cookie-es@2.0.0/node_modules/cookie-es/dist/index.mjs';
 import { createRouterMatcher } from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/vue-router@4.5.1_vue@3.5.17_typescript@5.8.3_/node_modules/vue-router/dist/vue-router.node.mjs';
 import { promises } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { dirname as dirname$1, resolve as resolve$1 } from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/pathe@2.0.3/node_modules/pathe/dist/index.mjs';
-import { createHead as createHead$1, propsToString, renderSSRHead } from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/unhead@2.0.12/node_modules/unhead/dist/server.mjs';
-import { DeprecationsPlugin, PromisesPlugin, TemplateParamsPlugin, AliasSortingPlugin } from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/unhead@2.0.12/node_modules/unhead/dist/plugins.mjs';
-import { walkResolver } from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/unhead@2.0.12/node_modules/unhead/dist/utils.mjs';
+import { dirname, resolve } from 'file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/pathe@2.0.3/node_modules/pathe/dist/index.mjs';
 
 const HASH_RE = /#/g;
 const AMPERSAND_RE = /&/g;
@@ -296,15 +278,48 @@ for (const asset of serverAssets) {
   assets$1.mount(asset.baseName, unstorage_47drivers_47fs({ base: asset.dir, ignore: (asset?.ignore || []) }));
 }
 
+// @ts-check
+
+
+/**
+ * @param {string} item
+ */
+const normalizeFsKey = item => decodeURIComponent(item.replaceAll(':', '_'));
+
+/**
+ * @param {{ base: string }} opts
+ */
+const _47Users_47karlkuhne_47Nuxt_47karlkuhne_46github_46io_47node_modules_47_46pnpm_47nuxt_643_4617_467__64netlify_43blobs_649_461_462__64parcel_43watcher_642_465_461__64types_43node_6424_462_461__64vue_43compiler_1337a81a4c05807c9a0b02ca474ed76f_47node_modules_47nuxt_47dist_47core_47runtime_47nitro_47utils_47cache_45driver_46js = defineDriver((opts) => {
+  const fs = fsDriver({ base: opts.base });
+  const lru = lruCache({ max: 1000 });
+
+  return {
+    ...fs, // fall back to file system - only the bottom three methods are used in renderer
+    async setItem (key, value, opts) {
+      await Promise.all([
+        fs.setItem?.(normalizeFsKey(key), value, opts),
+        lru.setItem?.(key, value, opts),
+      ]);
+    },
+    async hasItem (key, opts) {
+      return await lru.hasItem(key, opts) || await fs.hasItem(normalizeFsKey(key), opts)
+    },
+    async getItem (key, opts) {
+      return await lru.getItem(key, opts) || await fs.getItem(normalizeFsKey(key), opts)
+    },
+  }
+});
+
 const storage$1 = createStorage({});
 
 storage$1.mount('/assets', assets$1);
 
+storage$1.mount('internal:nuxt:prerender', _47Users_47karlkuhne_47Nuxt_47karlkuhne_46github_46io_47node_modules_47_46pnpm_47nuxt_643_4617_467__64netlify_43blobs_649_461_462__64parcel_43watcher_642_465_461__64types_43node_6424_462_461__64vue_43compiler_1337a81a4c05807c9a0b02ca474ed76f_47node_modules_47nuxt_47dist_47core_47runtime_47nitro_47utils_47cache_45driver_46js({"driver":"/Users/karlkuhne/Nuxt/karlkuhne.github.io/node_modules/.pnpm/nuxt@3.17.7_@netlify+blobs@9.1.2_@parcel+watcher@2.5.1_@types+node@24.2.1_@vue+compiler_1337a81a4c05807c9a0b02ca474ed76f/node_modules/nuxt/dist/core/runtime/nitro/utils/cache-driver.js","base":"/Users/karlkuhne/Nuxt/karlkuhne.github.io/.nuxt/cache/nitro/prerender"}));
+storage$1.mount('data', fsDriver({"driver":"fsLite","base":"./.data/kv"}));
 storage$1.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/Users/karlkuhne/Nuxt/karlkuhne.github.io","watchOptions":{"ignored":[null]}}));
 storage$1.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/Users/karlkuhne/Nuxt/karlkuhne.github.io/server","watchOptions":{"ignored":[null]}}));
 storage$1.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/Users/karlkuhne/Nuxt/karlkuhne.github.io/.nuxt"}));
 storage$1.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/Users/karlkuhne/Nuxt/karlkuhne.github.io/.nuxt/cache"}));
-storage$1.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"/Users/karlkuhne/Nuxt/karlkuhne.github.io/.data/kv"}));
 
 function useStorage(base = "") {
   return base ? prefixStorage(storage$1, base) : storage$1;
@@ -876,9 +891,9 @@ function _expandFromEnv(value) {
 
 const _inlineRuntimeConfig = {
   "app": {
-    "baseURL": "/",
-    "buildId": "dev",
-    "buildAssetsDir": "/_nuxt/",
+    "baseURL": "/karlkuhne.github.io/",
+    "buildId": "3bd1bab7-a31d-491a-90e0-2f22d05a2374",
+    "buildAssetsDir": "assets",
     "cdnURL": ""
   },
   "nitro": {
@@ -887,22 +902,24 @@ const _inlineRuntimeConfig = {
       "/__nuxt_error": {
         "cache": false
       },
+      "/assets/builds/meta/**": {
+        "headers": {
+          "cache-control": "public, max-age=31536000, immutable"
+        }
+      },
+      "/assets/builds/**": {
+        "headers": {
+          "cache-control": "public, max-age=1, immutable"
+        }
+      },
       "/_fonts/**": {
         "headers": {
           "cache-control": "public, max-age=31536000, immutable"
-        },
-        "cache": {
-          "maxAge": 31536000
         }
       },
-      "/_nuxt/builds/meta/**": {
+      "/assets/**": {
         "headers": {
           "cache-control": "public, max-age=31536000, immutable"
-        }
-      },
-      "/_nuxt/builds/**": {
-        "headers": {
-          "cache-control": "public, max-age=1, immutable"
         }
       }
     }
@@ -1147,10 +1164,7 @@ const errorHandler$0 = (async function errorhandler(error, event, { defaultHandl
   if (statusCode === 404 && defaultRes.status === 302) {
     setResponseHeaders(event, defaultRes.headers);
     setResponseStatus(event, defaultRes.status, defaultRes.statusText);
-    return send$3(event, JSON.stringify(defaultRes.body, null, 2));
-  }
-  if (typeof defaultRes.body !== "string" && Array.isArray(defaultRes.body.stack)) {
-    defaultRes.body.stack = defaultRes.body.stack.join("\n");
+    return send(event, JSON.stringify(defaultRes.body, null, 2));
   }
   const errorObject = defaultRes.body;
   const url = new URL(errorObject.url);
@@ -1174,12 +1188,9 @@ const errorHandler$0 = (async function errorhandler(error, event, { defaultHandl
     return;
   }
   if (!res) {
-    const { template } = await Promise.resolve().then(function () { return errorDev; }) ;
-    {
-      errorObject.description = errorObject.message;
-    }
+    const { template } = await import('../_/error-500.mjs');
     setResponseHeader(event, "Content-Type", "text/html;charset=UTF-8");
-    return send$3(event, template(errorObject));
+    return send(event, template(errorObject));
   }
   const html = await res.text();
   for (const [header, value] of res.headers.entries()) {
@@ -1190,7 +1201,7 @@ const errorHandler$0 = (async function errorhandler(error, event, { defaultHandl
     setResponseHeader(event, header, value);
   }
   setResponseStatus(event, res.status && res.status !== 200 ? res.status : defaultRes.status, res.statusText || defaultRes.statusText);
-  return send$3(event, html);
+  return send(event, html);
 });
 
 function defineNitroErrorHandler(handler) {
@@ -1198,25 +1209,20 @@ function defineNitroErrorHandler(handler) {
 }
 
 const errorHandler$1 = defineNitroErrorHandler(
-  async function defaultNitroErrorHandler(error, event) {
-    const res = await defaultHandler(error, event);
-    if (!event.node?.res.headersSent) {
-      setResponseHeaders(event, res.headers);
-    }
+  function defaultNitroErrorHandler(error, event) {
+    const res = defaultHandler(error, event);
+    setResponseHeaders(event, res.headers);
     setResponseStatus(event, res.status, res.statusText);
-    return send$3(
-      event,
-      typeof res.body === "string" ? res.body : JSON.stringify(res.body, null, 2)
-    );
+    return send(event, JSON.stringify(res.body, null, 2));
   }
 );
-async function defaultHandler(error, event, opts) {
+function defaultHandler(error, event, opts) {
   const isSensitive = error.unhandled || error.fatal;
   const statusCode = error.statusCode || 500;
   const statusMessage = error.statusMessage || "Server Error";
   const url = getRequestURL(event, { xForwardedHost: true, xForwardedProto: true });
   if (statusCode === 404) {
-    const baseURL = "/";
+    const baseURL = "/karlkuhne.github.io/";
     if (/^\/[^/]/.test(baseURL) && !url.pathname.startsWith(baseURL)) {
       const redirectTo = `${baseURL}${url.pathname.slice(1)}${url.search}`;
       return {
@@ -1227,21 +1233,13 @@ async function defaultHandler(error, event, opts) {
       };
     }
   }
-  await loadStackTrace(error).catch(consola.error);
-  const youch = new Youch();
   if (isSensitive && !opts?.silent) {
     const tags = [error.unhandled && "[unhandled]", error.fatal && "[fatal]"].filter(Boolean).join(" ");
-    const ansiError = await (await youch.toANSI(error)).replaceAll(process.cwd(), ".");
-    consola.error(
-      `[request error] ${tags} [${event.method}] ${url}
-
-`,
-      ansiError
-    );
+    console.error(`[request error] ${tags} [${event.method}] ${url}
+`, error);
   }
-  const useJSON = opts?.json || !getRequestHeader(event, "accept")?.includes("text/html");
   const headers = {
-    "content-type": useJSON ? "application/json" : "text/html",
+    "content-type": "application/json",
     // Prevent browser from guessing the MIME types of resources.
     "x-content-type-options": "nosniff",
     // Prevent error page from being embedded in an iframe
@@ -1249,71 +1247,26 @@ async function defaultHandler(error, event, opts) {
     // Prevent browsers from sending the Referer header
     "referrer-policy": "no-referrer",
     // Disable the execution of any js
-    "content-security-policy": "script-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self';"
+    "content-security-policy": "script-src 'none'; frame-ancestors 'none';"
   };
+  setResponseStatus(event, statusCode, statusMessage);
   if (statusCode === 404 || !getResponseHeader(event, "cache-control")) {
     headers["cache-control"] = "no-cache";
   }
-  const body = useJSON ? {
+  const body = {
     error: true,
-    url,
+    url: url.href,
     statusCode,
     statusMessage,
-    message: error.message,
-    data: error.data,
-    stack: error.stack?.split("\n").map((line) => line.trim())
-  } : await youch.toHTML(error, {
-    request: {
-      url: url.href,
-      method: event.method,
-      headers: getRequestHeaders(event)
-    }
-  });
+    message: isSensitive ? "Server Error" : error.message,
+    data: isSensitive ? void 0 : error.data
+  };
   return {
     status: statusCode,
     statusText: statusMessage,
     headers,
     body
   };
-}
-async function loadStackTrace(error) {
-  if (!(error instanceof Error)) {
-    return;
-  }
-  const parsed = await new ErrorParser().defineSourceLoader(sourceLoader).parse(error);
-  const stack = error.message + "\n" + parsed.frames.map((frame) => fmtFrame(frame)).join("\n");
-  Object.defineProperty(error, "stack", { value: stack });
-  if (error.cause) {
-    await loadStackTrace(error.cause).catch(consola.error);
-  }
-}
-async function sourceLoader(frame) {
-  if (!frame.fileName || frame.fileType !== "fs" || frame.type === "native") {
-    return;
-  }
-  if (frame.type === "app") {
-    const rawSourceMap = await readFile(`${frame.fileName}.map`, "utf8").catch(() => {
-    });
-    if (rawSourceMap) {
-      const consumer = await new SourceMapConsumer(rawSourceMap);
-      const originalPosition = consumer.originalPositionFor({ line: frame.lineNumber, column: frame.columnNumber });
-      if (originalPosition.source && originalPosition.line) {
-        frame.fileName = resolve(dirname(frame.fileName), originalPosition.source);
-        frame.lineNumber = originalPosition.line;
-        frame.columnNumber = originalPosition.column || 0;
-      }
-    }
-  }
-  const contents = await readFile(frame.fileName, "utf8").catch(() => {
-  });
-  return contents ? { contents } : void 0;
-}
-function fmtFrame(frame) {
-  if (frame.type === "native") {
-    return frame.raw;
-  }
-  const src = `${frame.fileName || ""}:${frame.lineNumber}:${frame.columnNumber})`;
-  return frame.functionName ? `at ${frame.functionName} (${src}` : `at ${src}`;
 }
 
 const errorHandlers = [errorHandler$0, errorHandler$1];
@@ -1333,94 +1286,6 @@ async function errorHandler(error, event) {
   // H3 will handle fallback
 }
 
-const rootDir = "/Users/karlkuhne/Nuxt/karlkuhne.github.io";
-
-const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"},{"name":"description","content":"Willkommen auf meiner Portfolio-Seite. Entdecke meine Projekte und erfahre mehr über mich."},{"name":"author","content":"Karl Kuhne"},{"name":"copyright","content":"Karl Kuhne"},{"property":"og:title","content":"Karl Kuhne | Portfolio"},{"property":"og:description","content":"Willkommen auf meiner Portfolio-Seite. Entdecke meine Projekte und erfahre mehr über mich."},{"property":"og:image","content":"/img/Portrait.avif"},{"property":"og:url","content":"https://karlkuhne.me"},{"property":"og:type","content":"website"},{"property":"og:site_name","content":"Karl Kuhne"}],"link":[],"style":[],"script":[],"noscript":[],"title":"Karl Kuhne | Portfolio","htmlAttrs":{"lang":"de"}};
-
-const appRootTag = "div";
-
-const appRootAttrs = {"id":"__nuxt"};
-
-const appTeleportTag = "div";
-
-const appTeleportAttrs = {"id":"teleports"};
-
-const appId = "nuxt-app";
-
-const devReducers = {
-  VNode: (data) => isVNode(data) ? { type: data.type, props: data.props } : void 0,
-  URL: (data) => data instanceof URL ? data.toString() : void 0
-};
-const asyncContext = getContext("nuxt-dev", { asyncContext: true, AsyncLocalStorage });
-const _rRgje5go8Ghi406B0TTY5qIhqDjpqOPItD_xAGYtKr4 = (nitroApp) => {
-  const handler = nitroApp.h3App.handler;
-  nitroApp.h3App.handler = (event) => {
-    return asyncContext.callAsync({ logs: [], event }, () => handler(event));
-  };
-  onConsoleLog((_log) => {
-    const ctx = asyncContext.tryUse();
-    if (!ctx) {
-      return;
-    }
-    const rawStack = captureRawStackTrace();
-    if (!rawStack || rawStack.includes("runtime/vite-node.mjs")) {
-      return;
-    }
-    const trace = [];
-    let filename = "";
-    for (const entry of parseRawStackTrace(rawStack)) {
-      if (entry.source === globalThis._importMeta_.url) {
-        continue;
-      }
-      if (EXCLUDE_TRACE_RE.test(entry.source)) {
-        continue;
-      }
-      filename ||= entry.source.replace(withTrailingSlash(rootDir), "");
-      trace.push({
-        ...entry,
-        source: entry.source.startsWith("file://") ? entry.source.replace("file://", "") : entry.source
-      });
-    }
-    const log = {
-      ..._log,
-      // Pass along filename to allow the client to display more info about where log comes from
-      filename,
-      // Clean up file names in stack trace
-      stack: trace
-    };
-    ctx.logs.push(log);
-  });
-  nitroApp.hooks.hook("afterResponse", () => {
-    const ctx = asyncContext.tryUse();
-    if (!ctx) {
-      return;
-    }
-    return nitroApp.hooks.callHook("dev:ssr-logs", { logs: ctx.logs, path: ctx.event.path });
-  });
-  nitroApp.hooks.hook("render:html", (htmlContext) => {
-    const ctx = asyncContext.tryUse();
-    if (!ctx) {
-      return;
-    }
-    try {
-      const reducers = Object.assign(/* @__PURE__ */ Object.create(null), devReducers, ctx.event.context._payloadReducers);
-      htmlContext.bodyAppend.unshift(`<script type="application/json" data-nuxt-logs="${appId}">${stringify(ctx.logs, reducers)}<\/script>`);
-    } catch (e) {
-      const shortError = e instanceof Error && "toString" in e ? ` Received \`${e.toString()}\`.` : "";
-      console.warn(`[nuxt] Failed to stringify dev server logs.${shortError} You can define your own reducer/reviver for rich types following the instructions in https://nuxt.com/docs/api/composables/use-nuxt-app#payload.`);
-    }
-  });
-};
-const EXCLUDE_TRACE_RE = /\/node_modules\/(?:.*\/)?(?:nuxt|nuxt-nightly|nuxt-edge|nuxt3|consola|@vue)\/|core\/runtime\/nitro/;
-function onConsoleLog(callback) {
-  consola$1.addReporter({
-    log(logObj) {
-      callback(logObj);
-    }
-  });
-  consola$1.wrapConsole();
-}
-
 function useI18nContext(event) {
   if (event.context.nuxtI18n == null) {
     throw new Error("Nuxt I18n server context has not been set up yet.");
@@ -1430,10 +1295,7 @@ function useI18nContext(event) {
 function tryUseI18nContext(event) {
   return event.context.nuxtI18n;
 }
-const headers = new Headers({ "x-nuxt-i18n": "internal" });
-{
-  headers.set("Cache-Control", "no-cache");
-}
+new Headers({ "x-nuxt-i18n": "internal" });
 function createI18nContext() {
   return {
     messages: {},
@@ -1548,21 +1410,21 @@ const localeLoaders = {
   en: [
     {
       key: "locale_en_46json_770b9c0f",
-      load: () => Promise.resolve().then(function () { return en$1; }),
+      load: () => import('../_/en.mjs' /* webpackChunkName: "locale_en_46json_770b9c0f" */),
       cache: true
     }
   ],
   de: [
     {
       key: "locale_de_46json_51fda646",
-      load: () => Promise.resolve().then(function () { return de$1; }),
+      load: () => import('../_/de.mjs' /* webpackChunkName: "locale_de_46json_51fda646" */),
       cache: true
     }
   ],
   sv: [
     {
       key: "locale_sv_46json_bfe5e93c",
-      load: () => Promise.resolve().then(function () { return sv$1; }),
+      load: () => import('../_/sv.mjs' /* webpackChunkName: "locale_sv_46json_bfe5e93c" */),
       cache: true
     }
   ]
@@ -1669,6 +1531,18 @@ const setupVueI18nOptions = async (defaultLocale) => {
   }
   return options;
 };
+
+const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"},{"name":"description","content":"Willkommen auf meiner Portfolio-Seite. Entdecke meine Projekte und erfahre mehr über mich."},{"name":"author","content":"Karl Kuhne"},{"name":"copyright","content":"Karl Kuhne"},{"property":"og:title","content":"Karl Kuhne | Portfolio"},{"property":"og:description","content":"Willkommen auf meiner Portfolio-Seite. Entdecke meine Projekte und erfahre mehr über mich."},{"property":"og:image","content":"/img/Portrait.avif"},{"property":"og:url","content":"https://karlkuhne.me"},{"property":"og:type","content":"website"},{"property":"og:site_name","content":"Karl Kuhne"}],"link":[],"style":[],"script":[],"noscript":[],"title":"Karl Kuhne | Portfolio","htmlAttrs":{"lang":"de"}};
+
+const appRootTag = "div";
+
+const appRootAttrs = {"id":"__nuxt"};
+
+const appTeleportTag = "div";
+
+const appTeleportAttrs = {"id":"teleports"};
+
+const appId = "nuxt-app";
 
 function useRuntimeI18n(nuxtApp) {
   {
@@ -1858,7 +1732,6 @@ const _jhm2GO46YLU6zHfLA8RJ4YtrnRpvTLsB0i02pEuNVI = defineNitroPlugin(async (nit
   const createBaseUrlGetter = () => {
     isFunction(runtimeI18n.baseUrl) ? "" : runtimeI18n.baseUrl || "";
     if (isFunction(runtimeI18n.baseUrl)) {
-      console.warn("[nuxt-i18n] Configuring baseUrl as a function is deprecated and will be removed in v11.");
       return () => "";
     }
     return (event, defaultLocale) => {
@@ -1940,18 +1813,17 @@ const _jhm2GO46YLU6zHfLA8RJ4YtrnRpvTLsB0i02pEuNVI = defineNitroPlugin(async (nit
 });
 
 const plugins = [
-  _rRgje5go8Ghi406B0TTY5qIhqDjpqOPItD_xAGYtKr4,
-_jhm2GO46YLU6zHfLA8RJ4YtrnRpvTLsB0i02pEuNVI
+  _jhm2GO46YLU6zHfLA8RJ4YtrnRpvTLsB0i02pEuNVI
 ];
 
 const assets = {};
 
 function readAsset (id) {
-  const serverDir = dirname$1(fileURLToPath(globalThis._importMeta_.url));
-  return promises.readFile(resolve$1(serverDir, assets[id].path))
+  const serverDir = dirname(fileURLToPath(globalThis._importMeta_.url));
+  return promises.readFile(resolve(serverDir, assets[id].path))
 }
 
-const publicAssetBases = {"/_nuxt/builds/meta/":{"maxAge":31536000},"/_nuxt/builds/":{"maxAge":1},"/_fonts/":{"maxAge":31536000}};
+const publicAssetBases = {"/assets/builds/meta/":{"maxAge":31536000},"/assets/builds/":{"maxAge":1},"/_fonts/":{"maxAge":31536000},"/assets/":{"maxAge":31536000}};
 
 function isPublicAssetURL(id = '') {
   if (assets[id]) {
@@ -2068,13 +1940,13 @@ function cachedFunctionI18n(fn, opts) {
 const _getMessages = async (locale) => {
   return { [locale]: await getLocaleMessagesMerged(locale, localeLoaders[locale]) };
 };
-cachedFunctionI18n(_getMessages, {
+const _getMessagesCached = cachedFunctionI18n(_getMessages, {
   name: "messages",
-  maxAge: -1 ,
+  maxAge: 60 * 60 * 24,
   getKey: (locale) => locale,
   shouldBypassCache: (locale) => !isLocaleCacheable(locale)
 });
-const getMessages = _getMessages ;
+const getMessages = _getMessagesCached;
 const _getMergedMessages = async (locale, fallbackLocales) => {
   const merged = {};
   try {
@@ -2093,7 +1965,7 @@ const _getMergedMessages = async (locale, fallbackLocales) => {
 };
 const getMergedMessages = cachedFunctionI18n(_getMergedMessages, {
   name: "merged-single",
-  maxAge: -1 ,
+  maxAge: 60 * 60 * 24,
   getKey: (locale, fallbackLocales) => `${locale}-[${[...new Set(fallbackLocales)].sort().join("-")}]`,
   shouldBypassCache: (locale, fallbackLocales) => !isLocaleWithFallbacksCacheable(locale, fallbackLocales)
 });
@@ -2111,7 +1983,7 @@ const _getAllMergedMessages = async (locales) => {
 };
 cachedFunctionI18n(_getAllMergedMessages, {
   name: "merged-all",
-  maxAge: -1 ,
+  maxAge: 60 * 60 * 24,
   getKey: (locales) => locales.join("-"),
   shouldBypassCache: (locales) => !locales.every((locale) => isLocaleCacheable(locale))
 });
@@ -2131,7 +2003,7 @@ const _messagesHandler = defineEventHandler(async (event) => {
 });
 const _cachedMessageLoader = defineCachedFunction(_messagesHandler, {
   name: "i18n:messages-internal",
-  maxAge: -1 ,
+  maxAge: 60 * 60 * 24,
   getKey: (event) => getRouterParam(event, "locale") ?? "null",
   shouldBypassCache(event) {
     const locale = getRouterParam(event, "locale");
@@ -2139,340 +2011,22 @@ const _cachedMessageLoader = defineCachedFunction(_messagesHandler, {
     return !useI18nContext(event).localeConfigs?.[locale]?.cacheable;
   }
 });
-defineCachedEventHandler(_cachedMessageLoader, {
+const _messagesHandlerCached = defineCachedEventHandler(_cachedMessageLoader, {
   name: "i18n:messages",
-  maxAge: -1 ,
+  maxAge: 10,
   swr: false,
   getKey: (event) => getRouterParam(event, "locale") ?? "null"
 });
-const _rZXZPn = _messagesHandler ;
+const _rZXZPn = _messagesHandlerCached;
 
-const VueResolver = (_, value) => {
-  return isRef(value) ? toValue(value) : value;
-};
+const _SxA8c9 = defineEventHandler(() => {});
 
-const headSymbol = "usehead";
-function vueInstall(head) {
-  const plugin = {
-    install(app) {
-      app.config.globalProperties.$unhead = head;
-      app.config.globalProperties.$head = head;
-      app.provide(headSymbol, head);
-    }
-  };
-  return plugin.install;
-}
-
-function resolveUnrefHeadInput(input) {
-  return walkResolver(input, VueResolver);
-}
-
-function createHead(options = {}) {
-  const head = createHead$1({
-    ...options,
-    propResolvers: [VueResolver]
-  });
-  head.install = vueInstall(head);
-  return head;
-}
-
-const unheadOptions = {
-  disableDefaults: true,
-  disableCapoSorting: false,
-  plugins: [DeprecationsPlugin, PromisesPlugin, TemplateParamsPlugin, AliasSortingPlugin],
-};
-
-function createSSRContext(event) {
-  const ssrContext = {
-    url: event.path,
-    event,
-    runtimeConfig: useRuntimeConfig(event),
-    noSSR: event.context.nuxt?.noSSR || (false),
-    head: createHead(unheadOptions),
-    error: false,
-    nuxt: void 0,
-    /* NuxtApp */
-    payload: {},
-    _payloadReducers: /* @__PURE__ */ Object.create(null),
-    modules: /* @__PURE__ */ new Set()
-  };
-  return ssrContext;
-}
-function setSSRError(ssrContext, error) {
-  ssrContext.error = true;
-  ssrContext.payload = { error };
-  ssrContext.url = error.url;
-}
-
-function buildAssetsDir() {
-  return useRuntimeConfig().app.buildAssetsDir;
-}
-function buildAssetsURL(...path) {
-  return joinRelativeURL(publicAssetsURL(), buildAssetsDir(), ...path);
-}
-function publicAssetsURL(...path) {
-  const app = useRuntimeConfig().app;
-  const publicBase = app.cdnURL || app.baseURL;
-  return path.length ? joinRelativeURL(publicBase, ...path) : publicBase;
-}
-
-const APP_ROOT_OPEN_TAG = `<${appRootTag}${propsToString(appRootAttrs)}>`;
-const APP_ROOT_CLOSE_TAG = `</${appRootTag}>`;
-const getServerEntry = () => import('file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/.nuxt/dist/server/server.mjs').then((r) => r.default || r);
-const getClientManifest = () => import('file:///Users/karlkuhne/Nuxt/karlkuhne.github.io/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
-const getSSRRenderer = lazyCachedFunction(async () => {
-  const manifest = await getClientManifest();
-  if (!manifest) {
-    throw new Error("client.manifest is not available");
-  }
-  const createSSRApp = await getServerEntry();
-  if (!createSSRApp) {
-    throw new Error("Server bundle is not available");
-  }
-  const options = {
-    manifest,
-    renderToString: renderToString$1,
-    buildAssetsURL
-  };
-  const renderer = createRenderer(createSSRApp, options);
-  async function renderToString$1(input, context) {
-    const html = await renderToString(input, context);
-    if (process.env.NUXT_VITE_NODE_OPTIONS) {
-      renderer.rendererContext.updateManifest(await getClientManifest());
-    }
-    return APP_ROOT_OPEN_TAG + html + APP_ROOT_CLOSE_TAG;
-  }
-  return renderer;
-});
-const getSPARenderer = lazyCachedFunction(async () => {
-  const manifest = await getClientManifest();
-  const spaTemplate = await Promise.resolve().then(function () { return _virtual__spaTemplate; }).then((r) => r.template).catch(() => "").then((r) => {
-    {
-      return APP_ROOT_OPEN_TAG + r + APP_ROOT_CLOSE_TAG;
-    }
-  });
-  const options = {
-    manifest,
-    renderToString: () => spaTemplate,
-    buildAssetsURL
-  };
-  const renderer = createRenderer(() => () => {
-  }, options);
-  const result = await renderer.renderToString({});
-  const renderToString = (ssrContext) => {
-    const config = useRuntimeConfig(ssrContext.event);
-    ssrContext.modules ||= /* @__PURE__ */ new Set();
-    ssrContext.payload.serverRendered = false;
-    ssrContext.config = {
-      public: config.public,
-      app: config.app
-    };
-    return Promise.resolve(result);
-  };
-  return {
-    rendererContext: renderer.rendererContext,
-    renderToString
-  };
-});
-function lazyCachedFunction(fn) {
-  let res = null;
-  return () => {
-    if (res === null) {
-      res = fn().catch((err) => {
-        res = null;
-        throw err;
-      });
-    }
-    return res;
-  };
-}
-function getRenderer(ssrContext) {
-  return ssrContext.noSSR ? getSPARenderer() : getSSRRenderer();
-}
-const getSSRStyles = lazyCachedFunction(() => Promise.resolve().then(function () { return styles$1; }).then((r) => r.default || r));
-
-async function renderInlineStyles(usedModules) {
-  const styleMap = await getSSRStyles();
-  const inlinedStyles = /* @__PURE__ */ new Set();
-  for (const mod of usedModules) {
-    if (mod in styleMap && styleMap[mod]) {
-      for (const style of await styleMap[mod]()) {
-        inlinedStyles.add(style);
-      }
-    }
-  }
-  return Array.from(inlinedStyles).map((style) => ({ innerHTML: style }));
-}
-
-const ROOT_NODE_REGEX = new RegExp(`^<${appRootTag}[^>]*>([\\s\\S]*)<\\/${appRootTag}>$`);
-function getServerComponentHTML(body) {
-  const match = body.match(ROOT_NODE_REGEX);
-  return match?.[1] || body;
-}
-const SSR_SLOT_TELEPORT_MARKER = /^uid=([^;]*);slot=(.*)$/;
-const SSR_CLIENT_TELEPORT_MARKER = /^uid=([^;]*);client=(.*)$/;
-const SSR_CLIENT_SLOT_MARKER = /^island-slot=([^;]*);(.*)$/;
-function getSlotIslandResponse(ssrContext) {
-  if (!ssrContext.islandContext || !Object.keys(ssrContext.islandContext.slots).length) {
-    return void 0;
-  }
-  const response = {};
-  for (const [name, slot] of Object.entries(ssrContext.islandContext.slots)) {
-    response[name] = {
-      ...slot,
-      fallback: ssrContext.teleports?.[`island-fallback=${name}`]
-    };
-  }
-  return response;
-}
-function getClientIslandResponse(ssrContext) {
-  if (!ssrContext.islandContext || !Object.keys(ssrContext.islandContext.components).length) {
-    return void 0;
-  }
-  const response = {};
-  for (const [clientUid, component] of Object.entries(ssrContext.islandContext.components)) {
-    const html = ssrContext.teleports?.[clientUid]?.replaceAll("<!--teleport start anchor-->", "") || "";
-    response[clientUid] = {
-      ...component,
-      html,
-      slots: getComponentSlotTeleport(clientUid, ssrContext.teleports ?? {})
-    };
-  }
-  return response;
-}
-function getComponentSlotTeleport(clientUid, teleports) {
-  const entries = Object.entries(teleports);
-  const slots = {};
-  for (const [key, value] of entries) {
-    const match = key.match(SSR_CLIENT_SLOT_MARKER);
-    if (match) {
-      const [, id, slot] = match;
-      if (!slot || clientUid !== id) {
-        continue;
-      }
-      slots[slot] = value;
-    }
-  }
-  return slots;
-}
-function replaceIslandTeleports(ssrContext, html) {
-  const { teleports, islandContext } = ssrContext;
-  if (islandContext || !teleports) {
-    return html;
-  }
-  for (const key in teleports) {
-    const matchClientComp = key.match(SSR_CLIENT_TELEPORT_MARKER);
-    if (matchClientComp) {
-      const [, uid, clientId] = matchClientComp;
-      if (!uid || !clientId) {
-        continue;
-      }
-      html = html.replace(new RegExp(` data-island-uid="${uid}" data-island-component="${clientId}"[^>]*>`), (full) => {
-        return full + teleports[key];
-      });
-      continue;
-    }
-    const matchSlot = key.match(SSR_SLOT_TELEPORT_MARKER);
-    if (matchSlot) {
-      const [, uid, slot] = matchSlot;
-      if (!uid || !slot) {
-        continue;
-      }
-      html = html.replace(new RegExp(` data-island-uid="${uid}" data-island-slot="${slot}"[^>]*>`), (full) => {
-        return full + teleports[key];
-      });
-    }
-  }
-  return html;
-}
-
-const ISLAND_SUFFIX_RE = /\.json(\?.*)?$/;
-const _SxA8c9 = defineEventHandler(async (event) => {
-  const nitroApp = useNitroApp();
-  setResponseHeaders(event, {
-    "content-type": "application/json;charset=utf-8",
-    "x-powered-by": "Nuxt"
-  });
-  const islandContext = await getIslandContext(event);
-  const ssrContext = {
-    ...createSSRContext(event),
-    islandContext,
-    noSSR: false,
-    url: islandContext.url
-  };
-  const renderer = await getSSRRenderer();
-  const renderResult = await renderer.renderToString(ssrContext).catch(async (error) => {
-    await ssrContext.nuxt?.hooks.callHook("app:error", error);
-    throw error;
-  });
-  const inlinedStyles = await renderInlineStyles(ssrContext.modules ?? []);
-  await ssrContext.nuxt?.hooks.callHook("app:rendered", { ssrContext, renderResult });
-  if (inlinedStyles.length) {
-    ssrContext.head.push({ style: inlinedStyles });
-  }
-  {
-    const { styles } = getRequestDependencies(ssrContext, renderer.rendererContext);
-    const link = [];
-    for (const resource of Object.values(styles)) {
-      if ("inline" in getQuery(resource.file)) {
-        continue;
-      }
-      if (resource.file.includes("scoped") && !resource.file.includes("pages/")) {
-        link.push({ rel: "stylesheet", href: renderer.rendererContext.buildAssetsURL(resource.file), crossorigin: "" });
-      }
-    }
-    if (link.length) {
-      ssrContext.head.push({ link }, { mode: "server" });
-    }
-  }
-  const islandHead = {};
-  for (const entry of ssrContext.head.entries.values()) {
-    for (const [key, value] of Object.entries(resolveUnrefHeadInput(entry.input))) {
-      const currentValue = islandHead[key];
-      if (Array.isArray(currentValue)) {
-        currentValue.push(...value);
-      }
-      islandHead[key] = value;
-    }
-  }
-  islandHead.link ||= [];
-  islandHead.style ||= [];
-  const islandResponse = {
-    id: islandContext.id,
-    head: islandHead,
-    html: getServerComponentHTML(renderResult.html),
-    components: getClientIslandResponse(ssrContext),
-    slots: getSlotIslandResponse(ssrContext)
-  };
-  await nitroApp.hooks.callHook("render:island", islandResponse, { event, islandContext });
-  return islandResponse;
-});
-async function getIslandContext(event) {
-  let url = event.path || "";
-  const componentParts = url.substring("/__nuxt_island".length + 1).replace(ISLAND_SUFFIX_RE, "").split("_");
-  const hashId = componentParts.length > 1 ? componentParts.pop() : void 0;
-  const componentName = componentParts.join("_");
-  const context = event.method === "GET" ? getQuery$1(event) : await readBody(event);
-  const ctx = {
-    url: "/",
-    ...context,
-    id: hashId,
-    name: componentName,
-    props: destr$1(context.props) || {},
-    slots: {},
-    components: {}
-  };
-  return ctx;
-}
-
-const _lazy_Ewh7Ok = () => Promise.resolve().then(function () { return renderer$1; });
+const _lazy_Ewh7Ok = () => import('../_/renderer.mjs');
 
 const handlers = [
   { route: '', handler: _94fLfq, lazy: false, middleware: true, method: undefined },
-  { route: '/__nuxt_error', handler: _lazy_Ewh7Ok, lazy: true, middleware: false, method: undefined },
   { route: '/_i18n/:locale/messages.json', handler: _rZXZPn, lazy: false, middleware: false, method: undefined },
   { route: '/__nuxt_island/**', handler: _SxA8c9, lazy: false, middleware: false, method: undefined },
-  { route: '/_fonts/**', handler: _lazy_Ewh7Ok, lazy: true, middleware: false, method: undefined },
   { route: '/**', handler: _lazy_Ewh7Ok, lazy: true, middleware: false, method: undefined }
 ];
 
@@ -2494,7 +2048,7 @@ function createNitroApp() {
     }
   };
   const h3App = createApp({
-    debug: destr(true),
+    debug: destr(false),
     onError: (error, event) => {
       captureError(error, { event, tags: ["request"] });
       return errorHandler(error, event);
@@ -2627,7 +2181,7 @@ function defineRenderHandler(render) {
     if (!ctx.response) {
       if (event.path === `${runtimeConfig.app.baseURL}favicon.ico`) {
         setResponseHeader(event, "Content-Type", "image/x-icon");
-        return send$3(
+        return send(
           event,
           "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
         );
@@ -2636,7 +2190,7 @@ function defineRenderHandler(render) {
       if (!ctx.response) {
         const _currentStatus = getResponseStatus(event);
         setResponseStatus(event, _currentStatus === 200 ? 500 : _currentStatus);
-        return send$3(
+        return send(
           event,
           "No response returned from render handler: " + event.path
         );
@@ -2657,556 +2211,10 @@ function defineRenderHandler(render) {
   });
 }
 
-const scheduledTasks = false;
-
-const tasks = {
-  
-};
-
-const __runningTasks__ = {};
-async function runTask(name, {
-  payload = {},
-  context = {}
-} = {}) {
-  if (__runningTasks__[name]) {
-    return __runningTasks__[name];
-  }
-  if (!(name in tasks)) {
-    throw createError({
-      message: `Task \`${name}\` is not available!`,
-      statusCode: 404
-    });
-  }
-  if (!tasks[name].resolve) {
-    throw createError({
-      message: `Task \`${name}\` is not implemented!`,
-      statusCode: 501
-    });
-  }
-  const handler = await tasks[name].resolve();
-  const taskEvent = { name, payload, context };
-  __runningTasks__[name] = handler.run(taskEvent);
-  try {
-    const res = await __runningTasks__[name];
-    return res;
-  } finally {
-    delete __runningTasks__[name];
-  }
-}
-
-if (!globalThis.crypto) {
-  globalThis.crypto = nodeCrypto;
-}
-const { NITRO_NO_UNIX_SOCKET, NITRO_DEV_WORKER_ID } = process.env;
-trapUnhandledNodeErrors();
-parentPort?.on("message", (msg) => {
-  if (msg && msg.event === "shutdown") {
-    shutdown();
-  }
-});
 const nitroApp = useNitroApp();
-const server = new Server(toNodeListener(nitroApp.h3App));
-let listener;
-listen().catch(() => listen(
-  true
-  /* use random port */
-)).catch((error) => {
-  console.error("Dev worker failed to listen:", error);
-  return shutdown();
-});
-nitroApp.router.get(
-  "/_nitro/tasks",
-  defineEventHandler(async (event) => {
-    const _tasks = await Promise.all(
-      Object.entries(tasks).map(async ([name, task]) => {
-        const _task = await task.resolve?.();
-        return [name, { description: _task?.meta?.description }];
-      })
-    );
-    return {
-      tasks: Object.fromEntries(_tasks),
-      scheduledTasks
-    };
-  })
-);
-nitroApp.router.use(
-  "/_nitro/tasks/:name",
-  defineEventHandler(async (event) => {
-    const name = getRouterParam(event, "name");
-    const payload = {
-      ...getQuery$1(event),
-      ...await readBody(event).then((r) => r?.payload).catch(() => ({}))
-    };
-    return await runTask(name, { payload });
-  })
-);
-function listen(useRandomPort = Boolean(
-  NITRO_NO_UNIX_SOCKET || process.versions.webcontainer || "Bun" in globalThis && process.platform === "win32"
-)) {
-  return new Promise((resolve, reject) => {
-    try {
-      listener = server.listen(useRandomPort ? 0 : getSocketAddress(), () => {
-        const address = server.address();
-        parentPort?.postMessage({
-          event: "listen",
-          address: typeof address === "string" ? { socketPath: address } : { host: "localhost", port: address?.port }
-        });
-        resolve();
-      });
-    } catch (error) {
-      reject(error);
-    }
-  });
-}
-function getSocketAddress() {
-  const socketName = `nitro-worker-${process.pid}-${threadId}-${NITRO_DEV_WORKER_ID}-${Math.round(Math.random() * 1e4)}.sock`;
-  if (process.platform === "win32") {
-    return join(String.raw`\\.\pipe`, socketName);
-  }
-  if (process.platform === "linux") {
-    const nodeMajor = Number.parseInt(process.versions.node.split(".")[0], 10);
-    if (nodeMajor >= 20) {
-      return `\0${socketName}`;
-    }
-  }
-  return join(tmpdir(), socketName);
-}
-async function shutdown() {
-  server.closeAllConnections?.();
-  await Promise.all([
-    new Promise((resolve) => listener?.close(resolve)),
-    nitroApp.hooks.callHook("close").catch(console.error)
-  ]);
-  parentPort?.postMessage({ event: "exit" });
-}
+const localFetch = nitroApp.localFetch;
+const closePrerenderer = () => nitroApp.hooks.callHook("close");
+trapUnhandledNodeErrors();
 
-const _messages = { "appName": "Nuxt", "version": "", "statusCode": 500, "statusMessage": "Server error", "description": "An error occurred in the application and the page could not be served. If you are the application owner, check your server logs for details.", "stack": "" };
-const template$1 = (messages) => {
-  messages = { ..._messages, ...messages };
-  return '<!DOCTYPE html><html lang="en"><head><title>' + escapeHtml(messages.statusCode) + " - " + escapeHtml(messages.statusMessage || "Internal Server Error") + `</title><meta charset="utf-8"><meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0" name="viewport"><style>.spotlight{background:linear-gradient(45deg,#00dc82,#36e4da 50%,#0047e1);bottom:-40vh;filter:blur(30vh);height:60vh;opacity:.8}*,:after,:before{border-color:var(--un-default-border-color,#e5e7eb);border-style:solid;border-width:0;box-sizing:border-box}:after,:before{--un-content:""}html{line-height:1.5;-webkit-text-size-adjust:100%;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-moz-tab-size:4;tab-size:4;-webkit-tap-highlight-color:transparent}body{line-height:inherit;margin:0}h1{font-size:inherit;font-weight:inherit}h1,p{margin:0}*,:after,:before{--un-rotate:0;--un-rotate-x:0;--un-rotate-y:0;--un-rotate-z:0;--un-scale-x:1;--un-scale-y:1;--un-scale-z:1;--un-skew-x:0;--un-skew-y:0;--un-translate-x:0;--un-translate-y:0;--un-translate-z:0;--un-pan-x: ;--un-pan-y: ;--un-pinch-zoom: ;--un-scroll-snap-strictness:proximity;--un-ordinal: ;--un-slashed-zero: ;--un-numeric-figure: ;--un-numeric-spacing: ;--un-numeric-fraction: ;--un-border-spacing-x:0;--un-border-spacing-y:0;--un-ring-offset-shadow:0 0 transparent;--un-ring-shadow:0 0 transparent;--un-shadow-inset: ;--un-shadow:0 0 transparent;--un-ring-inset: ;--un-ring-offset-width:0px;--un-ring-offset-color:#fff;--un-ring-width:0px;--un-ring-color:rgba(147,197,253,.5);--un-blur: ;--un-brightness: ;--un-contrast: ;--un-drop-shadow: ;--un-grayscale: ;--un-hue-rotate: ;--un-invert: ;--un-saturate: ;--un-sepia: ;--un-backdrop-blur: ;--un-backdrop-brightness: ;--un-backdrop-contrast: ;--un-backdrop-grayscale: ;--un-backdrop-hue-rotate: ;--un-backdrop-invert: ;--un-backdrop-opacity: ;--un-backdrop-saturate: ;--un-backdrop-sepia: }.pointer-events-none{pointer-events:none}.fixed{position:fixed}.left-0{left:0}.right-0{right:0}.z-10{z-index:10}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.h-auto{height:auto}.min-h-screen{min-height:100vh}.flex{display:flex}.flex-1{flex:1 1 0%}.flex-col{flex-direction:column}.overflow-y-auto{overflow-y:auto}.rounded-t-md{border-top-left-radius:.375rem;border-top-right-radius:.375rem}.bg-black\\/5{background-color:#0000000d}.bg-white{--un-bg-opacity:1;background-color:rgb(255 255 255/var(--un-bg-opacity))}.p-8{padding:2rem}.px-10{padding-left:2.5rem;padding-right:2.5rem}.pt-14{padding-top:3.5rem}.text-6xl{font-size:3.75rem;line-height:1}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-black{--un-text-opacity:1;color:rgb(0 0 0/var(--un-text-opacity))}.font-light{font-weight:300}.font-medium{font-weight:500}.leading-tight{line-height:1.25}.font-sans{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}@media (prefers-color-scheme:dark){.dark\\:bg-black{--un-bg-opacity:1;background-color:rgb(0 0 0/var(--un-bg-opacity))}.dark\\:bg-white\\/10{background-color:#ffffff1a}.dark\\:text-white{--un-text-opacity:1;color:rgb(255 255 255/var(--un-text-opacity))}}@media (min-width:640px){.sm\\:text-2xl{font-size:1.5rem;line-height:2rem}.sm\\:text-8xl{font-size:6rem;line-height:1}}</style><script>!function(){const e=document.createElement("link").relList;if(!(e&&e.supports&&e.supports("modulepreload"))){for(const e of document.querySelectorAll('link[rel="modulepreload"]'))r(e);new MutationObserver((e=>{for(const o of e)if("childList"===o.type)for(const e of o.addedNodes)"LINK"===e.tagName&&"modulepreload"===e.rel&&r(e)})).observe(document,{childList:!0,subtree:!0})}function r(e){if(e.ep)return;e.ep=!0;const r=function(e){const r={};return e.integrity&&(r.integrity=e.integrity),e.referrerPolicy&&(r.referrerPolicy=e.referrerPolicy),"use-credentials"===e.crossOrigin?r.credentials="include":"anonymous"===e.crossOrigin?r.credentials="omit":r.credentials="same-origin",r}(e);fetch(e.href,r)}}();<\/script></head><body class="antialiased bg-white dark:bg-black dark:text-white flex flex-col font-sans min-h-screen pt-14 px-10 text-black"><div class="fixed left-0 pointer-events-none right-0 spotlight"></div><h1 class="font-medium mb-6 sm:text-8xl text-6xl">` + escapeHtml(messages.statusCode) + '</h1><p class="font-light leading-tight mb-8 sm:text-2xl text-xl">' + escapeHtml(messages.description) + '</p><div class="bg-black/5 bg-white dark:bg-white/10 flex-1 h-auto overflow-y-auto rounded-t-md"><div class="font-light leading-tight p-8 text-xl z-10">' + escapeHtml(messages.stack) + "</div></div></body></html>";
-};
-
-const errorDev = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-  __proto__: null,
-  template: template$1
-}, Symbol.toStringTag, { value: 'Module' }));
-
-var title$2 = "karl-kuhne-portfolio";
-var resume$2 = "Resume";
-var contact$2 = "contact";
-var linkedin$2 = "Contact on LinkedIn";
-var featured_projects$2 = "featured-projects";
-var all_projects_button$2 = "all-projects";
-var contact_form$2 = "contact-form";
-var e_mail_address$2 = "e-mail-address";
-var message$2 = "message";
-var consent_1$2 = "I agree to the processing of my personal data in accordance with the ";
-var privacy_policy$2 = "privacy policy";
-var consent_2$2 = "";
-var send$2 = "send";
-var imprint$2 = "Imprint";
-var privacy$2 = "Privacy";
-var all$2 = "📂-all";
-var web$2 = "🖥️-web";
-var app$2 = "📱-app";
-var game$2 = "🎮-game";
-var open$2 = "open";
-const en = {
-	title: title$2,
-	"project-galery": "project-galery",
-	resume: resume$2,
-	"about-me": "about-me",
-	contact: contact$2,
-	linkedin: linkedin$2,
-	featured_projects: featured_projects$2,
-	all_projects_button: all_projects_button$2,
-	contact_form: contact_form$2,
-	e_mail_address: e_mail_address$2,
-	message: message$2,
-	consent_1: consent_1$2,
-	privacy_policy: privacy_policy$2,
-	consent_2: consent_2$2,
-	send: send$2,
-	imprint: imprint$2,
-	privacy: privacy$2,
-	all: all$2,
-	web: web$2,
-	app: app$2,
-	game: game$2,
-	open: open$2,
-	"project-page": "project-page"
-};
-
-const en$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-  __proto__: null,
-  all: all$2,
-  all_projects_button: all_projects_button$2,
-  app: app$2,
-  consent_1: consent_1$2,
-  consent_2: consent_2$2,
-  contact: contact$2,
-  contact_form: contact_form$2,
-  default: en,
-  e_mail_address: e_mail_address$2,
-  featured_projects: featured_projects$2,
-  game: game$2,
-  imprint: imprint$2,
-  linkedin: linkedin$2,
-  message: message$2,
-  open: open$2,
-  privacy: privacy$2,
-  privacy_policy: privacy_policy$2,
-  resume: resume$2,
-  send: send$2,
-  title: title$2,
-  web: web$2
-}, Symbol.toStringTag, { value: 'Module' }));
-
-var title$1 = "karl-kuhne-portfolio";
-var resume$1 = "Lebenslauf";
-var contact$1 = "kontakt";
-var linkedin$1 = "Kontakt auf LinkedIn";
-var featured_projects$1 = "vorgestellte-projekte";
-var all_projects_button$1 = "alle-projekte";
-var contact_form$1 = "kontaktformular";
-var e_mail_address$1 = "e-mail-adresse";
-var message$1 = "nachricht";
-var consent_1$1 = "Ich erkläre mich mit der Verarbeitung meiner personenbezogenen Daten gemäß der ";
-var privacy_policy$1 = "Datenschutzrichtlinie";
-var consent_2$1 = " einverstanden";
-var send$1 = "senden";
-var imprint$1 = "Impressum";
-var privacy$1 = "Datenschutz";
-var all$1 = "📂-alle";
-var web$1 = "🖥️-web";
-var app$1 = "📱-app";
-var game$1 = "🎮-spiel";
-var open$1 = "öffnen";
-const de = {
-	title: title$1,
-	"project-galery": "projekt-galerie",
-	"about-me": "über-mich",
-	resume: resume$1,
-	contact: contact$1,
-	linkedin: linkedin$1,
-	featured_projects: featured_projects$1,
-	all_projects_button: all_projects_button$1,
-	contact_form: contact_form$1,
-	e_mail_address: e_mail_address$1,
-	message: message$1,
-	consent_1: consent_1$1,
-	privacy_policy: privacy_policy$1,
-	consent_2: consent_2$1,
-	send: send$1,
-	imprint: imprint$1,
-	privacy: privacy$1,
-	all: all$1,
-	web: web$1,
-	app: app$1,
-	game: game$1,
-	open: open$1,
-	"project-page": "projektseite"
-};
-
-const de$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-  __proto__: null,
-  all: all$1,
-  all_projects_button: all_projects_button$1,
-  app: app$1,
-  consent_1: consent_1$1,
-  consent_2: consent_2$1,
-  contact: contact$1,
-  contact_form: contact_form$1,
-  default: de,
-  e_mail_address: e_mail_address$1,
-  featured_projects: featured_projects$1,
-  game: game$1,
-  imprint: imprint$1,
-  linkedin: linkedin$1,
-  message: message$1,
-  open: open$1,
-  privacy: privacy$1,
-  privacy_policy: privacy_policy$1,
-  resume: resume$1,
-  send: send$1,
-  title: title$1,
-  web: web$1
-}, Symbol.toStringTag, { value: 'Module' }));
-
-var title = "karl-kuhne-portfölj";
-var resume = "Livslopp";
-var contact = "kontakt";
-var linkedin = "Kontakta via LinkedIn";
-var featured_projects = "utvalda-projekt";
-var all_projects_button = "alla-projekt";
-var contact_form = "kontaktformulär";
-var e_mail_address = "e-postadress";
-var message = "meddelande";
-var consent_1 = "Jag samtycker till behandlingen av mina personuppgifter i enlighet med ";
-var privacy_policy = "integritetspolicyn";
-var consent_2 = "";
-var send = "skicka";
-var imprint = "Impressum";
-var privacy = "Integritet";
-var all = "📂-alla";
-var web = "🖥️-webb";
-var app = "📱-app";
-var game = "🎮-spel";
-var open = "öppna";
-const sv = {
-	title: title,
-	"project-galery": "projektgalleri",
-	resume: resume,
-	"about-me": "om-mig",
-	contact: contact,
-	linkedin: linkedin,
-	featured_projects: featured_projects,
-	all_projects_button: all_projects_button,
-	contact_form: contact_form,
-	e_mail_address: e_mail_address,
-	message: message,
-	consent_1: consent_1,
-	privacy_policy: privacy_policy,
-	consent_2: consent_2,
-	send: send,
-	imprint: imprint,
-	privacy: privacy,
-	all: all,
-	web: web,
-	app: app,
-	game: game,
-	open: open,
-	"project-page": "projekt-sida"
-};
-
-const sv$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-  __proto__: null,
-  all: all,
-  all_projects_button: all_projects_button,
-  app: app,
-  consent_1: consent_1,
-  consent_2: consent_2,
-  contact: contact,
-  contact_form: contact_form,
-  default: sv,
-  e_mail_address: e_mail_address,
-  featured_projects: featured_projects,
-  game: game,
-  imprint: imprint,
-  linkedin: linkedin,
-  message: message,
-  open: open,
-  privacy: privacy,
-  privacy_policy: privacy_policy,
-  resume: resume,
-  send: send,
-  title: title,
-  web: web
-}, Symbol.toStringTag, { value: 'Module' }));
-
-const template = "";
-
-const _virtual__spaTemplate = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-  __proto__: null,
-  template: template
-}, Symbol.toStringTag, { value: 'Module' }));
-
-const styles = {};
-
-const styles$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-  __proto__: null,
-  default: styles
-}, Symbol.toStringTag, { value: 'Module' }));
-
-function renderPayloadResponse(ssrContext) {
-  return {
-    body: stringify(splitPayload(ssrContext).payload, ssrContext._payloadReducers) ,
-    statusCode: getResponseStatus(ssrContext.event),
-    statusMessage: getResponseStatusText(ssrContext.event),
-    headers: {
-      "content-type": "application/json;charset=utf-8" ,
-      "x-powered-by": "Nuxt"
-    }
-  };
-}
-function renderPayloadJsonScript(opts) {
-  const contents = opts.data ? stringify(opts.data, opts.ssrContext._payloadReducers) : "";
-  const payload = {
-    "type": "application/json",
-    "innerHTML": contents,
-    "data-nuxt-data": appId,
-    "data-ssr": !(opts.ssrContext.noSSR)
-  };
-  {
-    payload.id = "__NUXT_DATA__";
-  }
-  if (opts.src) {
-    payload["data-src"] = opts.src;
-  }
-  const config = uneval(opts.ssrContext.config);
-  return [
-    payload,
-    {
-      innerHTML: `window.__NUXT__={};window.__NUXT__.config=${config}`
-    }
-  ];
-}
-function splitPayload(ssrContext) {
-  const { data, prerenderedAt, ...initial } = ssrContext.payload;
-  return {
-    initial: { ...initial, prerenderedAt },
-    payload: { data, prerenderedAt }
-  };
-}
-
-const renderSSRHeadOptions = {"omitLineBreaks":false};
-
-globalThis.__buildAssetsURL = buildAssetsURL;
-globalThis.__publicAssetsURL = publicAssetsURL;
-const HAS_APP_TELEPORTS = !!(appTeleportAttrs.id);
-const APP_TELEPORT_OPEN_TAG = HAS_APP_TELEPORTS ? `<${appTeleportTag}${propsToString(appTeleportAttrs)}>` : "";
-const APP_TELEPORT_CLOSE_TAG = HAS_APP_TELEPORTS ? `</${appTeleportTag}>` : "";
-const PAYLOAD_URL_RE = /^[^?]*\/_payload.json(?:\?.*)?$/ ;
-const renderer = defineRenderHandler(async (event) => {
-  const nitroApp = useNitroApp();
-  const ssrError = event.path.startsWith("/__nuxt_error") ? getQuery$1(event) : null;
-  if (ssrError && !("__unenv__" in event.node.req)) {
-    throw createError({
-      statusCode: 404,
-      statusMessage: "Page Not Found: /__nuxt_error"
-    });
-  }
-  const ssrContext = createSSRContext(event);
-  const headEntryOptions = { mode: "server" };
-  ssrContext.head.push(appHead, headEntryOptions);
-  if (ssrError) {
-    ssrError.statusCode &&= Number.parseInt(ssrError.statusCode);
-    setSSRError(ssrContext, ssrError);
-  }
-  const isRenderingPayload = PAYLOAD_URL_RE.test(ssrContext.url);
-  if (isRenderingPayload) {
-    const url = ssrContext.url.substring(0, ssrContext.url.lastIndexOf("/")) || "/";
-    ssrContext.url = url;
-    event._path = event.node.req.url = url;
-  }
-  const routeOptions = getRouteRules(event);
-  if (routeOptions.ssr === false) {
-    ssrContext.noSSR = true;
-  }
-  const renderer = await getRenderer(ssrContext);
-  const _rendered = await renderer.renderToString(ssrContext).catch(async (error) => {
-    if (ssrContext._renderResponse && error.message === "skipping render") {
-      return {};
-    }
-    const _err = !ssrError && ssrContext.payload?.error || error;
-    await ssrContext.nuxt?.hooks.callHook("app:error", _err);
-    throw _err;
-  });
-  const inlinedStyles = [];
-  await ssrContext.nuxt?.hooks.callHook("app:rendered", { ssrContext, renderResult: _rendered });
-  if (ssrContext._renderResponse) {
-    return ssrContext._renderResponse;
-  }
-  if (ssrContext.payload?.error && !ssrError) {
-    throw ssrContext.payload.error;
-  }
-  if (isRenderingPayload) {
-    const response = renderPayloadResponse(ssrContext);
-    return response;
-  }
-  const NO_SCRIPTS = routeOptions.noScripts;
-  const { styles, scripts } = getRequestDependencies(ssrContext, renderer.rendererContext);
-  if (ssrContext._preloadManifest && !NO_SCRIPTS) {
-    ssrContext.head.push({
-      link: [
-        { rel: "preload", as: "fetch", fetchpriority: "low", crossorigin: "anonymous", href: buildAssetsURL(`builds/meta/${ssrContext.runtimeConfig.app.buildId}.json`) }
-      ]
-    }, { ...headEntryOptions, tagPriority: "low" });
-  }
-  if (inlinedStyles.length) {
-    ssrContext.head.push({ style: inlinedStyles });
-  }
-  const link = [];
-  for (const resource of Object.values(styles)) {
-    if ("inline" in getQuery(resource.file)) {
-      continue;
-    }
-    link.push({ rel: "stylesheet", href: renderer.rendererContext.buildAssetsURL(resource.file), crossorigin: "" });
-  }
-  if (link.length) {
-    ssrContext.head.push({ link }, headEntryOptions);
-  }
-  if (!NO_SCRIPTS) {
-    ssrContext.head.push({
-      link: getPreloadLinks(ssrContext, renderer.rendererContext)
-    }, headEntryOptions);
-    ssrContext.head.push({
-      link: getPrefetchLinks(ssrContext, renderer.rendererContext)
-    }, headEntryOptions);
-    ssrContext.head.push({
-      script: renderPayloadJsonScript({ ssrContext, data: ssrContext.payload }) 
-    }, {
-      ...headEntryOptions,
-      // this should come before another end of body scripts
-      tagPosition: "bodyClose",
-      tagPriority: "high"
-    });
-  }
-  if (!routeOptions.noScripts) {
-    const tagPosition = "head";
-    ssrContext.head.push({
-      script: Object.values(scripts).map((resource) => ({
-        type: resource.module ? "module" : null,
-        src: renderer.rendererContext.buildAssetsURL(resource.file),
-        defer: resource.module ? null : true,
-        // if we are rendering script tag payloads that import an async payload
-        // we need to ensure this resolves before executing the Nuxt entry
-        tagPosition,
-        crossorigin: ""
-      }))
-    }, headEntryOptions);
-  }
-  const { headTags, bodyTags, bodyTagsOpen, htmlAttrs, bodyAttrs } = await renderSSRHead(ssrContext.head, renderSSRHeadOptions);
-  const htmlContext = {
-    htmlAttrs: htmlAttrs ? [htmlAttrs] : [],
-    head: normalizeChunks([headTags]),
-    bodyAttrs: bodyAttrs ? [bodyAttrs] : [],
-    bodyPrepend: normalizeChunks([bodyTagsOpen, ssrContext.teleports?.body]),
-    body: [
-      replaceIslandTeleports(ssrContext, _rendered.html) ,
-      APP_TELEPORT_OPEN_TAG + (HAS_APP_TELEPORTS ? joinTags([ssrContext.teleports?.[`#${appTeleportAttrs.id}`]]) : "") + APP_TELEPORT_CLOSE_TAG
-    ],
-    bodyAppend: [bodyTags]
-  };
-  await nitroApp.hooks.callHook("render:html", htmlContext, { event });
-  return {
-    body: renderHTMLDocument(htmlContext),
-    statusCode: getResponseStatus(event),
-    statusMessage: getResponseStatusText(event),
-    headers: {
-      "content-type": "text/html;charset=utf-8",
-      "x-powered-by": "Nuxt"
-    }
-  };
-});
-function normalizeChunks(chunks) {
-  return chunks.filter(Boolean).map((i) => i.trim());
-}
-function joinTags(tags) {
-  return tags.join("");
-}
-function joinAttrs(chunks) {
-  if (chunks.length === 0) {
-    return "";
-  }
-  return " " + chunks.join(" ");
-}
-function renderHTMLDocument(html) {
-  return `<!DOCTYPE html><html${joinAttrs(html.htmlAttrs)}><head>${joinTags(html.head)}</head><body${joinAttrs(html.bodyAttrs)}>${joinTags(html.bodyPrepend)}${joinTags(html.body)}${joinTags(html.bodyAppend)}</body></html>`;
-}
-
-const renderer$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-  __proto__: null,
-  default: renderer
-}, Symbol.toStringTag, { value: 'Module' }));
-//# sourceMappingURL=index.mjs.map
+export { appRootTag as a, appRootAttrs as b, useStorage as c, appId as d, defineRenderHandler as e, appTeleportTag as f, appTeleportAttrs as g, appHead as h, getRouteRules as i, joinRelativeURL as j, joinURL as k, useNitroApp as l, localFetch as m, closePrerenderer as n, useRuntimeConfig as u, withoutTrailingSlash as w };
+//# sourceMappingURL=nitro.mjs.map
