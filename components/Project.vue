@@ -135,7 +135,8 @@
 
 <style scoped>
     .project {
-        width: 74.7rem;
+        width: var(--main-width);
+        max-width: 84.9rem;
 
         background-color: rgb(30, 30, 30);
         border: var(--border);

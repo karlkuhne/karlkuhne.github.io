@@ -119,16 +119,26 @@
         justify-content: center;
     }
 
+    /* responsive width */
+
     .embla {
         position: relative;
         overflow: hidden;
-        width: 74.7rem;
+        width: var(--main-width);
         border-radius: 0.5rem;
     }
 
-    @media (max-width: 1210px) {
+    #text-container {
+        width: var(--main-width);
+    }
+
+    @media (max-width: 134vh) {
         .embla {
-            width: 100%;
+            width: 100vw;
+        }
+
+        #text-container {
+            width: 100vw;
         }
     }
 
@@ -145,17 +155,6 @@
         width: 100%;
         height: auto;
         display: block;
-    }
-
-    /* text container */
-    #text-container {
-        width: 74.7rem;
-    }
-
-    @media (max-width: 1210px) {
-        #text-container {
-            width: 100%;
-        }
     }
 
     /* NAVIGATION */
