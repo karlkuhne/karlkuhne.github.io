@@ -38,7 +38,7 @@
         overflow: hidden;
     }
 
-    @media (max-width: 95rem) {
+    @media (max-width: 89rem) {
         #parallax {
             background-image: url('~/assets/svg/CoverMobile.svg');
         }

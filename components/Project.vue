@@ -150,9 +150,7 @@
     }
 
     #thumbnail-container {
-        width: 100%;
-        height: 26rem;
-        max-height: calc(100vw - 5.2rem);
+        aspect-ratio: 2390 / 832;
         overflow: hidden;
     }
 
