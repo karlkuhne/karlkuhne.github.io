@@ -156,6 +156,7 @@
 
     #thumbnail-container {
         overflow: hidden;
+        height: 100%;
     }
 
     .label {
