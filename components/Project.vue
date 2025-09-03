@@ -1,5 +1,6 @@
 <template>
-    <div class="project" :class="{ 'fadeInUp': isVisible, 'shrink': isClosed, 'mobile': isMobile }">
+    <div class="project" :class="{ 'fadeInUp': isVisible, 'shrink': isClosed }"
+        :style="isMobile ? `width: 98vw; height: ${projectHeight}px` : ''">
         <div class="label" :style="{ borderBottom: isMinimized ? 'none' : '0.15rem solid rgb(70, 70, 70)' }">
             <p>{{ projectLabel }}</p>
 
@@ -74,6 +75,7 @@
     const isClosed = ref(false)
     const isMobile = ref(false);
     const projectWidth = ref(0);
+    const projectHeight = ref(0);
 
     let observer: IntersectionObserver | null = null;
 
@@ -106,7 +108,8 @@
 
     // lifecycle hooks
     onMounted(() => {
-        projectWidth.value = document.querySelector('.project').clientWidth;
+        projectWidth.value = document.querySelector('.project').clientWidth + 20;
+        projectHeight.value = document.querySelector('.project').clientHeight;
 
         handleResize();
         window.addEventListener('resize', handleResize);
@@ -153,10 +156,6 @@
 
     #thumbnail-container {
         overflow: hidden;
-    }
-
-    .mobile {
-        width: 98vw;
     }
 
     .label {
