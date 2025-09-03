@@ -1,6 +1,6 @@
 <template>
     <div class="project" :class="{ 'fadeInUp': isVisible, 'shrink': isClosed }"
-        :style="isMobile ? `width: calc(100vw - 1rem); height: ${projectHeight}px` : ''">
+        :style="isMobile ? `width: calc(100vw - 1rem); height: ${projectHeight}px` : `height: ${projectHeight}px`">
         <div class="label" :style="{ borderBottom: isMinimized ? 'none' : '0.15rem solid rgb(70, 70, 70)' }">
             <p>{{ projectLabel }}</p>
 
@@ -25,7 +25,7 @@
                 </svg>
             </div>
         </div>
-        <div id="thumbnail-container" v-show="!isMinimized">
+        <div id="thumbnail-container" v-show="!isMinimized" :style="`height: ${thumbnailContainerHeight}px`">
             <NuxtImg id="thumbnail-img" class="selectDisable" :src="isMobile ? thumbnailMobile : thumbnail"
                 @error="handleThumbnailError" draggable="false" oncontextmenu="return false"
                 @click="openLightbox(projectName, projectDescription, images, projectHasPage, projectLink)" />
@@ -76,6 +76,7 @@
     const isMobile = ref(false);
     const projectWidth = ref(0);
     const projectHeight = ref(0);
+    const thumbnailContainerHeight = ref(0);
 
     let observer: IntersectionObserver | null = null;
 
@@ -110,6 +111,7 @@
     onMounted(() => {
         projectWidth.value = document.querySelector('.project').clientWidth;
         projectHeight.value = projectWidth.value * 0.39;
+        thumbnailContainerHeight.value = projectHeight.value - document.querySelector('.label')?.clientHeight;
 
         handleResize();
         window.addEventListener('resize', handleResize);
@@ -156,7 +158,6 @@
 
     #thumbnail-container {
         overflow: hidden;
-        height: 100%;
     }
 
     .label {
