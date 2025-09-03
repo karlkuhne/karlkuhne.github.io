@@ -1,0 +1,1 @@
+import{_ as t,c as n,E as o,o as _}from"./CkRum_YB.js";const c={},r={id:"content-wrap"};function s(e,a){return _(),n("div",r,[o(e.$slots,"default",{},void 0,!0)])}const f=t(c,[["render",s],["__scopeId","data-v-2aa92537"]]);export{f as _};
