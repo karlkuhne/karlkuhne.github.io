@@ -1,5 +1,5 @@
 <template>
-    <div class="project" :class="{ 'fadeInUp': isVisible, 'shrink': isClosed }">
+    <div class="project" :class="{ 'fadeInUp': isVisible, 'shrink': isClosed, 'mobile': isMobile }">
         <div class="label" :style="{ borderBottom: isMinimized ? 'none' : '0.15rem solid rgb(70, 70, 70)' }">
             <p>{{ projectLabel }}</p>
 
@@ -80,7 +80,7 @@
     // methods
     const handleResize = () => {
         windowWidth.value = window.innerWidth;
-        isMobile.value = window.innerWidth <= 1225
+        isMobile.value = window.innerWidth <= 1300
     };
 
     const handleIntersect = (entries: IntersectionObserverEntry[]) => {
@@ -136,7 +136,7 @@
 <style scoped>
     .project {
         width: var(--main-width);
-        max-width: 84.9rem;
+        max-width: 80rem;
 
         background-color: rgb(30, 30, 30);
         border: var(--border);
@@ -151,14 +151,11 @@
     }
 
     #thumbnail-container {
-        aspect-ratio: 2390 / 832;
         overflow: hidden;
     }
 
-    @media (max-width: 76.7rem) {
-        .project {
-            width: calc(100vw - 2rem);
-        }
+    .mobile {
+        width: 98vw;
     }
 
     .label {
