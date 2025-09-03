@@ -1,6 +1,6 @@
 <template>
     <div class="project" :class="{ 'fadeInUp': isVisible, 'shrink': isClosed }"
-        :style="isMobile ? `width: calc(100vw - 1rem); height: ${projectHeight}px` : `height: ${projectHeight}px`">
+        :style="{ width: isMobile ? 'calc(100vw - 1rem)' : '', height: isMinimized ? '3.2rem' : `${projectHeight}px` }">
         <div class="label" :style="{ borderBottom: isMinimized ? 'none' : '0.15rem solid rgb(70, 70, 70)' }">
             <p>{{ projectLabel }}</p>
 
@@ -111,7 +111,7 @@
     onMounted(() => {
         projectWidth.value = document.querySelector('.project').clientWidth;
         projectHeight.value = projectWidth.value * 0.39;
-        thumbnailContainerHeight.value = projectHeight.value - document.querySelector('.label')?.clientHeight;
+        thumbnailContainerHeight.value = projectHeight.value - document.querySelector('.label').clientHeight;
 
         handleResize();
         window.addEventListener('resize', handleResize);
