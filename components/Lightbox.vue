@@ -125,13 +125,13 @@
         position: relative;
         overflow: hidden;
         width: var(--main-width);
-        max-width: 95rem;
+        max-width: 90rem;
         border-radius: 0.5rem;
     }
 
     #text-container {
         width: var(--main-width);
-        max-width: 95rem;
+        max-width: 90rem;
     }
 
     @media (max-width: 134vh) {
