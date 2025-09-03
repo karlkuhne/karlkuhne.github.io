@@ -1,6 +1,6 @@
 <template>
     <div class="project" :class="{ 'fadeInUp': isVisible, 'shrink': isClosed }"
-        :style="isMobile ? `width: 98vw; height: ${projectHeight}px` : ''">
+        :style="isMobile ? `width: calc(100vw - 1rem); height: ${projectHeight}px` : ''">
         <div class="label" :style="{ borderBottom: isMinimized ? 'none' : '0.15rem solid rgb(70, 70, 70)' }">
             <p>{{ projectLabel }}</p>
 
@@ -108,8 +108,8 @@
 
     // lifecycle hooks
     onMounted(() => {
-        projectWidth.value = document.querySelector('.project').clientWidth + 20;
-        projectHeight.value = document.querySelector('.project').clientHeight;
+        projectWidth.value = document.querySelector('.project').clientWidth;
+        projectHeight.value = projectWidth.value * 0.39;
 
         handleResize();
         window.addEventListener('resize', handleResize);
