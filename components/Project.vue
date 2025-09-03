@@ -69,18 +69,17 @@
     };
 
     // reactive states
-    const windowWidth = ref(0);
     const isVisible = ref(false);
     const isMinimized = ref(false);
     const isClosed = ref(false)
     const isMobile = ref(false);
+    const projectWidth = ref(0);
 
     let observer: IntersectionObserver | null = null;
 
     // methods
     const handleResize = () => {
-        windowWidth.value = window.innerWidth;
-        isMobile.value = window.innerWidth <= 1300
+        isMobile.value = window.innerWidth <= projectWidth.value;
     };
 
     const handleIntersect = (entries: IntersectionObserverEntry[]) => {
@@ -107,6 +106,8 @@
 
     // lifecycle hooks
     onMounted(() => {
+        projectWidth.value = document.querySelector('.project').clientWidth;
+
         handleResize();
         window.addEventListener('resize', handleResize);
 
