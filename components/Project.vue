@@ -1,5 +1,5 @@
 <template>
-    <div class="project" :class="{ 'fadeInUp': isVisible, 'shrink': isClosed }"
+    <div ref="projectElement" class="project" :class="{ 'fadeInUp': isVisible, 'shrink': isClosed }"
         :style="{ width: isMobile ? 'calc(100vw - 1rem)' : '', height: isMinimized ? '3.2rem' : `${projectHeight}px` }">
         <div class="label" :style="{ borderBottom: isMinimized ? 'none' : '0.15rem solid rgb(70, 70, 70)' }">
             <p>{{ projectLabel }}</p>
@@ -49,6 +49,8 @@
         projectThumbnailMobile: { type: String, required: true },
         projectImages: { type: Array, required: true },
     });
+
+    const projectElement = ref<HTMLElement | null>(null);
 
     const thumbnail = `https://admin.karlkuhne.me/images/projects/${props.projectThumbnail}`;
     const thumbnailMobile = ref(`https://admin.karlkuhne.me/images/projects/${props.projectThumbnailMobile}`);
@@ -109,7 +111,7 @@
 
     // lifecycle hooks
     onMounted(() => {
-        projectWidth.value = document.querySelector('.project').clientWidth;
+        projectWidth.value = projectElement.value!.clientWidth;
         projectHeight.value = projectWidth.value * 0.39;
         thumbnailContainerHeight.value = projectHeight.value - document.querySelector('.label').clientHeight;
 
