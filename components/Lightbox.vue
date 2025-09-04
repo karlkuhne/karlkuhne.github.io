@@ -124,13 +124,13 @@
     .embla {
         position: relative;
         overflow: hidden;
-        width: var(--main-width);
+        width: 134vh;
         max-width: 90rem;
         border-radius: 0.5rem;
     }
 
     #text-container {
-        width: var(--main-width);
+        width: 134vh;
         max-width: 90rem;
     }
 

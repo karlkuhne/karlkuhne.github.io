@@ -1,6 +1,5 @@
 <template>
-    <div ref="projectElement" class="project" :class="{ 'fadeInUp': isVisible, 'shrink': isClosed }"
-        :style="{ width: isMobile ? 'calc(100vw - 1rem)' : '', height: isMinimized ? '3.2rem' : `${projectHeight}px` }">
+    <div class="project" :class="{ 'fadeInUp': isVisible, 'shrink': isClosed }">
         <div class="label" :style="{ borderBottom: isMinimized ? 'none' : '0.15rem solid rgb(70, 70, 70)' }">
             <p>{{ projectLabel }}</p>
 
@@ -25,7 +24,7 @@
                 </svg>
             </div>
         </div>
-        <div id="thumbnail-container" v-show="!isMinimized" :style="`height: ${thumbnailContainerHeight}px`">
+        <div id="thumbnail-container" v-show="!isMinimized">
             <NuxtImg id="thumbnail-img" class="selectDisable" :src="isMobile ? thumbnailMobile : thumbnail"
                 @error="handleThumbnailError" draggable="false" oncontextmenu="return false"
                 @click="openLightbox(projectName, projectDescription, images, projectHasPage, projectLink)" />
@@ -50,8 +49,6 @@
         projectImages: { type: Array, required: true },
     });
 
-    const projectElement = ref<HTMLElement | null>(null);
-
     const thumbnail = `https://admin.karlkuhne.me/images/projects/${props.projectThumbnail}`;
     const thumbnailMobile = ref(`https://admin.karlkuhne.me/images/projects/${props.projectThumbnailMobile}`);
     const images = props.projectImages?.map(image => `https://admin.karlkuhne.me/images/projects/${image}`) || [];
@@ -72,19 +69,18 @@
     };
 
     // reactive states
+    const windowWidth = ref(0);
     const isVisible = ref(false);
     const isMinimized = ref(false);
     const isClosed = ref(false)
     const isMobile = ref(false);
-    const projectWidth = ref(0);
-    const projectHeight = ref(0);
-    const thumbnailContainerHeight = ref(0);
 
     let observer: IntersectionObserver | null = null;
 
     // methods
     const handleResize = () => {
-        isMobile.value = window.innerWidth <= projectWidth.value;
+        windowWidth.value = window.innerWidth;
+        isMobile.value = window.innerWidth <= 1225
     };
 
     const handleIntersect = (entries: IntersectionObserverEntry[]) => {
@@ -111,10 +107,6 @@
 
     // lifecycle hooks
     onMounted(() => {
-        projectWidth.value = projectElement.value!.clientWidth;
-        projectHeight.value = projectWidth.value * 0.39;
-        thumbnailContainerHeight.value = projectHeight.value - document.querySelector('.label').clientHeight;
-
         handleResize();
         window.addEventListener('resize', handleResize);
 
@@ -143,8 +135,7 @@
 
 <style scoped>
     .project {
-        width: var(--main-width);
-        max-width: 80rem;
+        width: 74.7rem;
 
         background-color: rgb(30, 30, 30);
         border: var(--border);
@@ -158,8 +149,14 @@
         overflow: hidden;
     }
 
+    @media (max-width: 76.7rem) {
+        .project {
+            width: calc(100vw - 2rem);
+        }
+    }
+
     #thumbnail-container {
-        overflow: hidden;
+        height: 26rem;
     }
 
     .label {
