@@ -29,6 +29,8 @@ jobs:
         run: pnpm install --no-frozen-lockfile
       - name: Generate static site
         run: pnpm run generate
+        env:
+          API_ENDPOINT: ${{ secrets.API_ENDPOINT }}
       - name: Add .nojekyll file
         run: touch ./.output/public/.nojekyll
       - name: Verify build output
