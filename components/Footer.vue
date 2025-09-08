@@ -1,7 +1,7 @@
 <template>
     <footer>
         <div id="footer-content">
-            <p><b>©2025 Karl Kuhne</b></p>
+            <p><b>© {{ new Date().getFullYear() }} Karl Kuhne</b></p>
 
             <div id="footer-links">
                 <NuxtLink :to="localePath('/legal')" class="link selectDisable">{{ $t('imprint') }}</NuxtLink>
