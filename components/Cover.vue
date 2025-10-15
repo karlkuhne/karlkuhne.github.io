@@ -6,21 +6,10 @@
 
     const handleScroll = () => {
         const scrollPosition = window.scrollY;
-        
-        // Hintergrund (Minus-Pattern) bewegt sich langsamer
-        if (parallaxBackgroundRef.value) {
-            parallaxBackgroundRef.value.style.backgroundPositionY = `${scrollPosition * 0.1}px`;
-        }
-        
-        // Buchstaben bewegen sich schneller für mehr Tiefe
-        if (parallaxLettersRef.value) {
-            parallaxLettersRef.value.style.backgroundPositionY = `${scrollPosition * 0.15}px`;
-        }
-
+        parallaxBackgroundRef.value!.style.backgroundPositionY = `${scrollPosition * 0.15}px`;
+        parallaxLettersRef.value!.style.backgroundPositionY = `${scrollPosition * 0.15}px`;
         const langSwitcher = parallaxLettersRef.value?.querySelector('#languageSwitcher') as HTMLElement | null;
-        if (langSwitcher) {
-            langSwitcher.style.transform = `translateY(${scrollPosition * 0.15}px)`;
-        }
+        langSwitcher!.style.transform = `translateY(${scrollPosition * 0.15}px)`;
     };
 
     onMounted(() => {
