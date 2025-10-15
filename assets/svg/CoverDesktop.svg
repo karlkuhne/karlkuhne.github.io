@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 100vh" preserveAspectRatio="xMidYMid slice">
     <defs>
-        <pattern id="minus" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-             <rect x="11" y="13" width="6" height="2" fill="#444444"></rect>
+        <pattern id="minus" x="0" y="0" width="22.23" height="22.23" patternUnits="userSpaceOnUse">
+             <rect y="13" width="6" height="2" fill="#444444"></rect>
         </pattern>
-        <pattern id="plus" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+        <pattern id="plus" x="0" y="0" width="22.23" height="22.23" patternUnits="userSpaceOnUse">
             <rect x="11" y="13" width="6" height="2" fill="#ffffff"></rect>
             <rect x="13" y="11" width="2" height="6" fill="#ffffff"></rect>
         </pattern>
