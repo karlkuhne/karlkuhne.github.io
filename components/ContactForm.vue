@@ -47,7 +47,7 @@
 </script>
 
 
-<style scoped>
+<style scoped lang="scss">
 
     #contact-form {
         margin: 0 auto;
@@ -59,7 +59,8 @@
     }
 
     #form {
-        width: 45rem;
+        width: $screen-md;
+        margin: 0 auto;
     }
 
     #form>ol {
@@ -70,7 +71,7 @@
     input[type="text"],
     input[type="email"],
     textarea {
-        width: 38.7rem;
+        width: 100%;
         height: 3rem;
         background-color: rgb(18, 18, 18);
 
@@ -94,7 +95,7 @@
     textarea {
         height: 2.85rem;
         overflow: hidden;
-        width: 40.2rem;
+        width: 100%;
 
         padding-top: 0.8rem;
         padding-bottom: 2.3rem;

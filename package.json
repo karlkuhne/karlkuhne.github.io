@@ -32,6 +32,7 @@
     "@vue/test-utils": "^2.4.6",
     "happy-dom": "^18.0.1",
     "nuxt-anchorscroll": "^1.0.5",
+    "sass": "^1.93.2",
     "vite-svg-loader": "^5.1.0",
     "vitest": "^3.2.4"
   }

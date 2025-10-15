@@ -107,7 +107,8 @@
     </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+
     #container {
         display: flex;
         flex-direction: column;
@@ -194,7 +195,7 @@
         }
     }
 
-    @media (max-width: 64rem) {
+    @include md {
         #about-me {
             transform: translateX(0rem);
         }
@@ -231,7 +232,7 @@
         }
     }
 
-    @media (max-width: 36rem) {
+    @include sm {
 
         #about-me,
         #languages,
@@ -255,5 +256,32 @@
         #container {
             height: fit-content;
         }
+    }
+</style>
+
+<style lang="scss">
+
+    .gr {
+        color: $green;
+    }
+
+    .b {
+        color: $blue;
+    }
+
+    .p {
+        color: $pink;
+    }
+
+    .ge {
+        color: $yellow;
+    }
+
+    .o {
+        color: $orange;
+    }
+
+    .l {
+        color: $purple;
     }
 </style>

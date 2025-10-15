@@ -15,43 +15,6 @@ main {
     flex-direction: column;
 }
 
-h1 {
-    font-family: Work Sans;
-    font-size: 4rem;
-    font-weight: 800;
-    color: white;
-
-    margin-top: 0;
-    margin-bottom: 0;
-    text-align: center;
-
-    line-height: 4rem;
-}
-
-@media (max-width: 76.7rem) {
-    h1 {
-        font-size: clamp(3rem, 5.25vw, 6rem);
-    }
-}
-
-h2 {
-    font-size: 1.7rem;
-    margin-top: 2.5rem;
-    margin-bottom: 0;
-
-    font-family: Work Sans;
-    font-weight: 600;
-    color: white;
-}
-
-h3 {
-    font-family: Work Sans;
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: white;
-    margin-bottom: 1rem;
-}
-
 .box {
     background-color: rgb(30, 30, 30);
     border: var(--border);
@@ -100,30 +63,4 @@ h3 {
 
 .fade-in-invisible {
     opacity: 0;
-}
-
-/* COLORS */
-
-.gr {
-    color: rgb(99, 245, 131);
-}
-
-.b {
-    color: rgb(107, 214, 237);
-}
-
-.p {
-    color: rgb(234, 132, 171);
-}
-
-.ge {
-    color: rgb(242, 249, 133);
-}
-
-.o {
-    color: rgb(248, 156, 36);
-}
-
-.l {
-    color: rgb(182, 150, 245);
 }

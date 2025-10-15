@@ -1,0 +1,57 @@
+@import '@/assets/scss/breakpoints';
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('../fonts/Work_Sans/WorkSans-VariableFont_wght.ttf') format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('../fonts/Work_Sans/WorkSans-VariableFont_wght.ttf') format('truetype');
+    font-weight: 800;
+}
+
+h1 {
+    font-family: Work Sans;
+    font-size: 4rem;
+    font-weight: 800;
+    color: white;
+
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 4rem;
+    text-align: center;
+}
+
+@include lg {
+    h1 {
+        font-size: clamp(3rem, 5.25vw, 6rem);
+    }
+}
+
+h2 {
+    font-family: Work Sans;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: white;
+
+    margin-top: 2.5rem;
+    margin-bottom: 0;
+
+}
+
+h3 {
+    font-family: Work Sans;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: white;
+
+    margin-bottom: 1rem;
+}
+
+p, label {
+    font-family: Work Sans;
+    font-size: 1rem;
+    color: white;
+}
