@@ -33,17 +33,13 @@
 <style scoped lang="scss">
     #parallax-container {
         position: relative;
-        width: $screen-xl;
-        margin: 0 auto;
         height: calc(100vh - 4rem);
         overflow: hidden;
     }
 
     #parallax-background {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
+        width: 100vw;
         height: 100%;
         background-image: url('~/assets/svg/CoverDesktopBackground.svg');
         background-size: cover;
@@ -54,10 +50,10 @@
 
     #parallax-letters {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
+        width: $screen-xl;
         height: 100%;
+        left: 50%;
+        transform: translateX(-50%);
         background-image: url('~/assets/svg/CoverDesktopLetters.svg');
         background-size: cover;
         background-position: center;
