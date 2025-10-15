@@ -46,9 +46,15 @@
 
     #languageSwitcher {
         position: absolute;
-        right: 1rem;
+        right: calc(50% - 640px);
         bottom: 1rem;
         will-change: transform;
         transition: transform 0.001s;
+    }
+
+    @include xl {
+        #languageSwitcher {
+            right: 1rem;
+        }
     }
 </style>
