@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3200 900" preserveAspectRatio="xMidYMid slice">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 100vh" preserveAspectRatio="xMidYMid slice">
     <defs>
         <pattern id="minus" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
              <rect x="11" y="13" width="6" height="2" fill="#444444"></rect>
@@ -10,7 +10,7 @@
     </defs>
                 
     <mask id="fade">
-        <rect x="0" y="0" width="3200" height="900" fill="black">
+        <rect x="0" y="0" width="1280" height="100vh" fill="black">
             <animate attributeName="fill" values="black; black; white; white; black" keyTimes="0; 0.5; 0.501; 0.99; 1" dur="6s" repeatCount="0"></animate>
             <set attributeName="fill" to="white" begin="5.9s"></set>
         </rect>
@@ -62,19 +62,19 @@
         }
     </style>
 
-    <rect x="0" y="0" width="3200" height="900" fill="url(#minus)"></rect>
+    <rect x="0" y="0" width="1280" height="100vh" fill="url(#minus)"></rect>
                 
-    <path class="letter0" d="M 1460 120 l 80 0 l 0 180 l 77 -77 l 78 0 l -109 109 l 108 108 l -78 -1 l -69 -69 l -7 7 l 0 62 l -80 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
-    <path class="letter0" d="M 1520 440 l 80 0 l 0 180 l 77 -77 l 78 0 l -109 109 l 108 108 l -78 -1 l -69 -69 l -7 7 l 0 62 l -80 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
+    <path class="letter0" d="M 500 120 l 80 0 l 0 180 l 77 -77 l 78 0 l -109 109 l 108 108 l -78 -1 l -69 -69 l -7 7 l 0 62 l -80 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
+    <path class="letter0" d="M 560 440 l 80 0 l 0 180 l 77 -77 l 78 0 l -109 109 l 108 108 l -78 -1 l -69 -69 l -7 7 l 0 62 l -80 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
 
-    <path class="letter1" d="M 1820 450 l 80 0 l 0 -200 l -20 -20 l -157 0 l -20 20 l 0 169 l 30 30 l 68 0 l 0 -80 l -20 0 l 0 -60 l 40 0 Z" fill="url(#plus)"></path>
-    <path class="letter1" d="M 1880 540 l 80 0 l 0 200 l -20 20 l -157 0 l -20 -20 l -3 -200 l 80 0 l 0 140 l 40 0 Z" fill="url(#plus)"></path>
+    <path class="letter1" d="M 860 450 l 80 0 l 0 -200 l -20 -20 l -157 0 l -20 20 l 0 169 l 30 30 l 68 0 l 0 -80 l -20 0 l 0 -60 l 40 0 Z" fill="url(#plus)"></path>
+    <path class="letter1" d="M 920 540 l 80 0 l 0 200 l -20 20 l -157 0 l -20 -20 l -3 -200 l 80 0 l 0 140 l 40 0 Z" fill="url(#plus)"></path>
 
-    <path class="letter2" d="M 1920 440 l 0 -170 l 25 -50 l 140 0 l 0 80 l -80 0 l 0 140 Z" fill="url(#plus)"></path>
-    <path class="letter2" d="M 1980 440 l 80 0 l 0 100 l 83 0 l 35 37 l 1 190 l -77 0 l 0 -140 l -45 0 l 0 140 l -76 0 Z" fill="url(#plus)"></path>
+    <path class="letter2" d="M 960 440 l 0 -170 l 25 -50 l 140 0 l 0 80 l -80 0 l 0 140 Z" fill="url(#plus)"></path>
+    <path class="letter2" d="M 1020 440 l 80 0 l 0 100 l 83 0 l 35 37 l 1 190 l -77 0 l 0 -140 l -45 0 l 0 140 l -76 0 Z" fill="url(#plus)"></path>
 
-    <path class="letter3" d="M 2100 120 l 80 0 l 0 320 l -80 0 Z" fill="url(#plus)"></path>
-    <path class="letter3" d="M 2320 770 l 80 0 l 0 -200 l -20 -20 l -157 0 l -20 20 l -3 200 l 80 0 l 0 -140 l 40 0 Z" fill="url(#plus)"></path>
+    <path class="letter3" d="M 1140 120 l 80 0 l 0 320 l -80 0 Z" fill="url(#plus)"></path>
+    <path class="letter3" d="M 1360 770 l 80 0 l 0 -200 l -20 -20 l -157 0 l -20 20 l -3 200 l 80 0 l 0 -140 l 40 0 Z" fill="url(#plus)"></path>
 
-    <path class="letter4" d="M 2420 738 l 0 -147 l 26 -48 l 144 0 l 29 31 l 0 87 l -110 0 l 0 30 l 110 0 l 0 66 l -173 0 Z" fill="url(#plus)"></path>
+    <path class="letter4" d="M 1460 738 l 0 -147 l 26 -48 l 144 0 l 29 31 l 0 87 l -110 0 l 0 30 l 110 0 l 0 66 l -173 0 Z" fill="url(#plus)"></path>
 </svg>

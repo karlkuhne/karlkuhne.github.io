@@ -29,8 +29,9 @@
 <style scoped lang="scss">
     #parallax {
         position: relative;
+        width: $screen-xl;
+        margin: 0 auto;
         height: calc(100vh - 4rem);
-        width: auto;
         background-image: url('~/assets/svg/CoverDesktop.svg');
         background-size: cover;
         background-position: center;
