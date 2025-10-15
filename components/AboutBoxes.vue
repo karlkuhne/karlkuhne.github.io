@@ -195,7 +195,7 @@
         }
     }
 
-    @include md {
+    @include lg {
         #about-me {
             transform: translateX(0rem);
         }

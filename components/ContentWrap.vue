@@ -4,9 +4,9 @@
     </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
     #content-wrap {
-        width: 45rem;
+        width: $screen-md;
         margin: 0 auto;
         text-align: justify;
         line-height: 1.5rem;
@@ -15,7 +15,7 @@
         margin-bottom: 7rem;
     }
 
-    @media (max-width: 47rem) {
+    @include md {
         #content-wrap {
             width: calc(100vw - 2rem);
         }

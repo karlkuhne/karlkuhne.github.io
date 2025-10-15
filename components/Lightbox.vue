@@ -103,7 +103,7 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
     .lightbox {
         position: fixed;
         z-index: 1000;
@@ -134,7 +134,7 @@
         max-width: 90rem;
     }
 
-    @media (max-width: 134vh) {
+    @include xl {
         .embla {
             width: 100vw;
         }

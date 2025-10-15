@@ -26,7 +26,7 @@
     });
 </script>
 
-<style scoped>
+<style scoped lang="scss">
     #parallax {
         position: relative;
         height: calc(100vh - 4rem);
@@ -38,7 +38,7 @@
         overflow: hidden;
     }
 
-    @media (max-width: 89rem) {
+    @include xl {
         #parallax {
             background-image: url('~/assets/svg/CoverMobile.svg');
         }

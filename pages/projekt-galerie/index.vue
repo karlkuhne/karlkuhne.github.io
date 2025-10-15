@@ -57,11 +57,20 @@
     });
 </script>
 
-<style scoped>
+<style scoped lang="scss">
     #main {
+        width: $screen-xl;
+        margin: 0 auto;
         padding-top: 4.5rem;
         padding-bottom: 7rem;
         gap: 1rem
+    }
+
+    @include xl {
+        #main {
+            width: calc(100vw - 2rem);
+            margin: 0 auto;
+        }
     }
 
     .button-container {
