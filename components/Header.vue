@@ -96,7 +96,7 @@
     }
 
     nav {
-        max-width: $screen-xxxl;
+        max-width: $screen-xl;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
@@ -110,7 +110,16 @@
         font-size: 1.25rem;
         font-weight: 600;
         text-decoration: none;
-        margin-left: 1rem;
+    }
+
+    @include xl {
+        nav a {
+            margin-left: 1rem;
+        }
+
+        #linkedIn-button {
+            margin-right: 1rem;
+        }
     }
 
     nav a:hover {
@@ -140,11 +149,6 @@
 
     .main-nav-item:hover {
         color: white;
-    }
-
-    /* LinkedIn Button */
-    #linkedIn-button {
-        margin-right: 0.65rem;
     }
 
     #linkedIn-button button {

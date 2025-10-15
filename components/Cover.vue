@@ -1,9 +1,3 @@
-<template>
-    <div id="parallax" ref="parallaxRef">
-        <LanguageSwitcher id="languageSwitcher" />
-    </div>
-</template>
-
 <script setup lang="ts">
     import { ref, onMounted, onUnmounted } from 'vue';
 
@@ -25,6 +19,12 @@
         window.removeEventListener('scroll', handleScroll);
     });
 </script>
+
+<template>
+    <div id="parallax" ref="parallaxRef">
+        <LanguageSwitcher id="languageSwitcher" />
+    </div>
+</template>
 
 <style scoped lang="scss">
     #parallax {
