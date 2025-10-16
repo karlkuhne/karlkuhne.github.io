@@ -1,23 +1,42 @@
 <script setup lang="ts">
-    import { onMounted, ref } from 'vue';
+    import { onMounted, onBeforeUnmount, ref } from 'vue';
 
     const coverDesktopRef = ref<HTMLObjectElement | null>(null);
+    let letters: SVGElement | null = null;
+
+    const handleResize = () => {
+        if (!letters) return;
+
+        const windowWidth = window.innerWidth;
+        const windowHeight = window.innerHeight;
+
+        const rawXPosition = (windowWidth / 2) - 644.67;
+        const xPosition = Math.round(rawXPosition / 22.23) * 22.23;
+
+        const rawYPosition = (windowHeight / 2) - 377.91;
+        const yPosition = Math.round(rawYPosition / 22.23) * 22.23;
+
+        letters.setAttribute('transform', `translate(${xPosition}, ${yPosition})`);
+    };
 
     onMounted(() => {
-        coverDesktopRef.value?.addEventListener('load', () => {
-            const svgDoc = coverDesktopRef.value?.contentDocument;
-            const letters = svgDoc?.querySelector<SVGElement>('#letters');
+        const objectEl = coverDesktopRef.value;
+        if (!objectEl) return;
 
-            const windowWidth = window.innerWidth;
-            const windowHeight = window.innerHeight;
-            const rawXPosition = (windowWidth / 2) - 644.67;
-            const xPosition = Math.round(rawXPosition / 22.23) * 22.23;
-            const rawYPosition = (windowHeight / 2) - 377.91;
-            const yPosition = Math.round(rawYPosition / 22.23) * 22.23;
-            letters?.setAttribute('transform', `translate(${xPosition}, ${yPosition})`);
+        objectEl.addEventListener('load', () => {
+            const svgDoc = objectEl.contentDocument;
+            letters = svgDoc?.querySelector<SVGElement>('#letters') || null;
+
+            handleResize();
+            window.addEventListener('resize', handleResize);
         });
     });
+
+    onBeforeUnmount(() => {
+        window.removeEventListener('resize', handleResize);
+    });
 </script>
+
 
 <template>
     <div id="cover">
