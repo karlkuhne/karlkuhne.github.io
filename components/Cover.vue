@@ -1,12 +1,10 @@
 <script setup lang="ts">
     import { ref, onMounted, onUnmounted } from 'vue';
 
-    const parallaxBackgroundRef = ref<HTMLElement | null>(null);
     const parallaxLettersRef = ref<HTMLElement | null>(null);
 
     const handleScroll = () => {
         const scrollPosition = window.scrollY;
-        parallaxBackgroundRef.value!.style.backgroundPositionY = `${scrollPosition * 0.15}px`;
         parallaxLettersRef.value!.style.backgroundPositionY = `${scrollPosition * 0.15}px`;
         const langSwitcher = parallaxLettersRef.value?.querySelector('#languageSwitcher') as HTMLElement | null;
         langSwitcher!.style.transform = `translateY(${scrollPosition * 0.15}px)`;
@@ -22,48 +20,25 @@
 </script>
 
 <template>
-    <div id="parallax-container">
-        <div id="parallax-background" ref="parallaxBackgroundRef"></div>
-        <div id="parallax-letters" ref="parallaxLettersRef">
-            <LanguageSwitcher id="languageSwitcher" />
-        </div>
+    <div id="parallax" ref="parallaxRef">
+        <LanguageSwitcher id="languageSwitcher" />
     </div>
 </template>
 
 <style scoped lang="scss">
-    #parallax-container {
-        position: relative;
+    #parallax {
+        width: 100%;
         height: calc(100vh - 4rem);
+        background-image: url('~/assets/svg/CoverDesktop.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        will-change: background-position;
         overflow: hidden;
     }
 
-    #parallax-background {
-        position: absolute;
-        width: 100vw;
-        height: 100%;
-        background-image: url('~/assets/svg/CoverDesktopBackground.svg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        will-change: background-position;
-    }
-
-    #parallax-letters {
-        position: absolute;
-        width: $screen-xl;
-        height: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        background-image: url('~/assets/svg/CoverDesktopLetters.svg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        will-change: background-position;
-    }
-
     @include xl {
-        #parallax-background,
-        #parallax-letters {
+        #parallax {
             background-image: url('~/assets/svg/CoverMobile.svg');
         }
     }
