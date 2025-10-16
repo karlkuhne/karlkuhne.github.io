@@ -133,9 +133,10 @@
     });
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+
     .project {
-        width: 74.7rem;
+        width: 100%;
 
         background-color: rgb(30, 30, 30);
         border: var(--border);
@@ -149,9 +150,9 @@
         overflow: hidden;
     }
 
-    @media (max-width: 76.7rem) {
+    @include sm {
         .project {
-            width: calc(100vw - 2rem);
+            height: calc(100vw + 1rem);
         }
     }
 

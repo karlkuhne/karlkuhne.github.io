@@ -48,7 +48,7 @@
     const localePath = useLocalePath()
 </script>
 
-<style scoped>
+<style scoped lang="scss">
     footer {
         width: 100%;
         height: 10rem;
@@ -92,7 +92,11 @@
         line-height: 1.2;
     }
 
-    @media (max-width: 30rem) {
+    @include sm {
+        footer {
+            height: 11.5rem;
+        }
+
         footer span {
             display: none;
         }

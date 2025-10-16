@@ -1,19 +1,14 @@
-<template>
-    <div id="parallax" ref="parallaxRef">
-        <LanguageSwitcher id="languageSwitcher" />
-    </div>
-</template>
-
 <script setup lang="ts">
     import { ref, onMounted, onUnmounted } from 'vue';
 
-    const parallaxRef = ref<HTMLElement | null>(null);
+    const parallaxBackgroundRef = ref<HTMLElement | null>(null);
+    const parallaxLettersRef = ref<HTMLElement | null>(null);
 
     const handleScroll = () => {
         const scrollPosition = window.scrollY;
-        parallaxRef.value!.style.backgroundPositionY = `${scrollPosition * 0.15}px`;
-
-        const langSwitcher = parallaxRef.value!.querySelector('#languageSwitcher') as HTMLElement | null;
+        parallaxBackgroundRef.value!.style.backgroundPositionY = `${scrollPosition * 0.15}px`;
+        parallaxLettersRef.value!.style.backgroundPositionY = `${scrollPosition * 0.15}px`;
+        const langSwitcher = parallaxLettersRef.value?.querySelector('#languageSwitcher') as HTMLElement | null;
         langSwitcher!.style.transform = `translateY(${scrollPosition * 0.15}px)`;
     };
 
@@ -26,29 +21,64 @@
     });
 </script>
 
-<style scoped>
-    #parallax {
+<template>
+    <div id="parallax-container">
+        <div id="parallax-background" ref="parallaxBackgroundRef"></div>
+        <div id="parallax-letters" ref="parallaxLettersRef">
+            <LanguageSwitcher id="languageSwitcher" />
+        </div>
+    </div>
+</template>
+
+<style scoped lang="scss">
+    #parallax-container {
         position: relative;
         height: calc(100vh - 4rem);
-        width: auto;
-        background-image: url('~/assets/svg/CoverDesktop.svg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
         overflow: hidden;
     }
 
-    @media (max-width: 89rem) {
-        #parallax {
+    #parallax-background {
+        position: absolute;
+        width: 100vw;
+        height: 100%;
+        background-image: url('~/assets/svg/CoverDesktopBackground.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        will-change: background-position;
+    }
+
+    #parallax-letters {
+        position: absolute;
+        width: $screen-xl;
+        height: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-image: url('~/assets/svg/CoverDesktopLetters.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        will-change: background-position;
+    }
+
+    @include xl {
+        #parallax-background,
+        #parallax-letters {
             background-image: url('~/assets/svg/CoverMobile.svg');
         }
     }
 
     #languageSwitcher {
         position: absolute;
-        right: 1rem;
+        right: calc(50% - 640px);
         bottom: 1rem;
         will-change: transform;
         transition: transform 0.001s;
+    }
+
+    @include xl {
+        #languageSwitcher {
+            right: 1rem;
+        }
     }
 </style>

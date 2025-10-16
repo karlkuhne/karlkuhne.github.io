@@ -26,12 +26,3 @@
         </ContentWrap>
     </main>
 </template>
-
-<style scoped>
-
-    @media (max-width: 75rem) {
-        #main {
-            margin-top: 0;
-        }
-    }
-</style>

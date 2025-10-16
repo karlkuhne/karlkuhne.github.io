@@ -45,7 +45,7 @@
     })
 </script>
 
-<style scoped>
+<style scoped lang="scss">
     #main {
         padding-top: 7rem;
         padding-bottom: 7rem;
@@ -53,9 +53,18 @@
     }
 
     #project-container {
+        width: $screen-xl;
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
         gap: 1rem;
+    }
+
+    @include xl {
+        #project-container {
+            width: calc(100vw - 2rem);
+            margin: 0 auto;
+        }
     }
 
     .typing-fade-visible {

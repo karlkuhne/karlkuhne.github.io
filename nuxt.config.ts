@@ -14,11 +14,20 @@ export default defineNuxtConfig({
     '@nuxt/test-utils/module'
   ],
   css: [
-    '@/assets/css/fonts.css',
-    '@/assets/css/main.css'
+    '@/assets/scss/main.scss'
   ],
   vite: {
-    plugins: [svgLoader()]
+    plugins: [svgLoader()],
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `
+            @use "@/assets/scss/breakpoints" as *;
+            @use "@/assets/scss/variables" as *;
+          `
+        }
+      }
+    }
   },
   /* vitest: {
     environment: 'jsdom',

@@ -47,10 +47,16 @@
 </script>
 
 
-<style scoped>
-
+<style scoped lang="scss">
     #contact-form {
+        width: $screen-md;
         margin: 0 auto;
+    }
+
+    @include md {
+        #contact-form {
+            width: calc(100vw - 2rem);
+        }
     }
 
     .label {
@@ -59,7 +65,7 @@
     }
 
     #form {
-        width: 45rem;
+        padding-right: 3rem;
     }
 
     #form>ol {
@@ -70,7 +76,7 @@
     input[type="text"],
     input[type="email"],
     textarea {
-        width: 38.7rem;
+        width: 100%;
         height: 3rem;
         background-color: rgb(18, 18, 18);
 
@@ -82,7 +88,6 @@
         border-radius: 0.5rem;
 
         margin-bottom: 1rem;
-        padding-left: 1rem;
     }
 
     #nameInput,
@@ -92,9 +97,9 @@
     }
 
     textarea {
+        width: calc(100% + 0.5rem);
         height: 2.85rem;
         overflow: hidden;
-        width: 40.2rem;
 
         padding-top: 0.8rem;
         padding-bottom: 2.3rem;
@@ -107,29 +112,9 @@
         font-size: 1rem;
     }
 
-    @media (max-width: 48rem) {
-        #form {
-            width: calc(100vw - 2rem);
-            margin: 0 auto;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        textarea {
-            width: calc(100% - 3.7rem);
-            height: 2.55rem;
-        }
-
-        textarea {
-            width: calc(100% - 2.3rem);
-            height: 1rem;
-        }
-    }
-
     .checkbox-container {
         display: flex;
         margin-left: 1rem;
-        margin-right: 1rem;
         margin-bottom: 1rem;
     }
 
@@ -170,7 +155,6 @@
         padding: 0.4rem 0.75rem 0.4rem 0.75rem;
 
         margin-bottom: 1.5rem;
-        margin-right: 2.4rem;
     }
 
     #sendButton:hover {
