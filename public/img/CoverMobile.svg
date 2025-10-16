@@ -24,7 +24,7 @@
     <rect x="0" y="0" width="100vw" height="100vh" fill="url(#minus)"></rect>
     
     <g id="logo">
-        <path d="M 0 0 l 88.92 0 l 0 177.84 l 66.69 -66.89 l 88.92 0 l -111.15 111.15 l 111.15 111.15 l -88.92 0 l -66.21 -66.69 l -5 0 l 0 66.69 l -88.92 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
+        <path d="M -0.2 0 l 88.92 0 l 0 177.84 l 66.69 -66.89 l 88.92 0 l -111.15 111.15 l 111.15 111.15 l -88.92 0 l -66.21 -66.69 l -5 0 l 0 66.69 l -88.92 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
         <path d="M 66.69 333.45 l 88.92 0 l 0 177.84 l 66.69 -66.89 l 88.92 0 l -111.15 111.15 l 111.15 111.15 l -88.92 0 l -66.21 -66.69 l -5 0 l 0 66.69 l -88.92 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
     </g>
 </svg>
