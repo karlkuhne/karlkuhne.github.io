@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3200 900" preserveAspectRatio="xMidYMid slice">
     <defs>
-        <pattern id="minus" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-             <rect x="11" y="13" width="6" height="2" fill="#444444"></rect>
+        <pattern id="minus" x="0" y="0" width="22.23" height="22.23" patternUnits="userSpaceOnUse">
+             <rect y="13" width="6" height="2" fill="#444444"></rect>
         </pattern>
-        <pattern id="plus" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-            <rect x="11" y="13" width="6" height="2" fill="#ffffff"></rect>
-            <rect x="13" y="11" width="2" height="6" fill="#ffffff"></rect>
+        <pattern id="plus" x="0" y="0" width="22.23" height="22.23" patternUnits="userSpaceOnUse">
+            <rect y="13" width="6" height="2" fill="#ffffff"></rect>
+            <rect y="13" width="2" height="6" fill="#ffffff"></rect>
         </pattern>
     </defs>
                 
@@ -23,6 +23,6 @@
 
     <rect x="0" y="0" width="3200" height="900" fill="url(#minus)"></rect>
                 
-    <path d="M 1460 120 l 80 0 l 0 180 l 77 -77 l 78 0 l -109 109 l 108 108 l -78 -1 l -69 -69 l -7 7 l 0 62 l -80 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
-    <path d="M 1520 440 l 80 0 l 0 180 l 77 -77 l 78 0 l -109 109 l 108 108 l -78 -1 l -69 -69 l -7 7 l 0 62 l -80 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
+    <path d="M 1467.18 111.15 l 88.92 0 l 0 177.84 l 66.69 -66.89 l 88.92 0 l -111.15 111.15 l 111.15 111.15 l -88.92 0 l -66.21 -66.69 l -5 0 l 0 66.69 l -88.92 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
+    <path d="M 1511.64 444.6 l 88.92 0 l 0 177.84 l 66.69 -66.89 l 88.92 0 l -111.15 111.15 l 111.15 111.15 l -88.92 0 l -66.21 -66.69 l -5 0 l 0 66.69 l -88.92 0 Z" fill="url(#plus)" mask="url(#fade)"></path>
 </svg>

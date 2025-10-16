@@ -77,6 +77,6 @@
         <path class="letter3" d="M 1120 8.85 l 100 0 l 0 320 l -100 0 Z" fill="url(#plus)"></path>
         <path class="letter3" d="M 1372 669.85 l 80 0 l 0 -200 l -20 -19 l -173 0 l -20 27 l -4 193 l 81 -2 l 1 -139 l 51 0 Z" fill="url(#plus)"></path>
 
-        <path class="letter4" d="M 1480 650.85 l 0 -147 l 26 -48 l 167 0 l 29 31 l 0 87 l -133 1 l 0 30 l 133 0 l 0 66 l -173 0 Z" fill="url(#plus)"></path>
+        <path class="letter4" d="M 1480 650.85 l 0 -163.85 l 26 -31 l 167 0 l 29 31 l 0 87 l -133 1 l 0 30 l 133 0 l 0 66 l -173 0 Z" fill="url(#plus)"></path>
     </g>
 </svg>
