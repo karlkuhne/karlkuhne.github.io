@@ -2,30 +2,46 @@
     import { onMounted, onBeforeUnmount, ref } from 'vue';
 
     const coverDesktopRef = ref<HTMLObjectElement | null>(null);
+    const coverMobileRef = ref<HTMLObjectElement | null>(null);
+
     let letters: SVGElement | null = null;
+    let logo: SVGElement | null = null;
 
     const handleResize = () => {
-        if (!letters) return;
-
         const windowWidth = window.innerWidth;
         const windowHeight = window.innerHeight;
 
-        const rawXPosition = (windowWidth / 2) - 644.67;
-        const xPosition = Math.round(rawXPosition / 22.23) * 22.23;
+        const rawXPositionDesktop = (windowWidth / 2) - 644.67;
+        const xPositionDesktop = Math.round(rawXPositionDesktop / 22.23) * 22.23;
 
-        const rawYPosition = (windowHeight / 2) - 377.91;
-        const yPosition = Math.round(rawYPosition / 22.23) * 22.23;
+        const rawXPositionMobile = (windowWidth / 2) - 144.5;
+        const xPositionMobile = Math.round(rawXPositionMobile / 22.23) * 22.23;
 
-        letters.setAttribute('transform', `translate(${xPosition}, ${yPosition})`);
+        const rawYPositionDesktop = (windowHeight / 2) - 377.91;
+        const yPositionDesktop = Math.round(rawYPositionDesktop / 22.23) * 22.23;
+
+        const rawYPositionMobile = (windowHeight / 2) - 377.91;
+        const yPositionMobile = Math.round(rawYPositionMobile / 22.23) * 22.23;
+
+        letters?.setAttribute('transform', `translate(${xPositionDesktop}, ${yPositionDesktop})`);
+        logo?.setAttribute('transform', `translate(${xPositionMobile}, ${yPositionMobile})`);
     };
 
     onMounted(() => {
-        const objectEl = coverDesktopRef.value;
-        if (!objectEl) return;
+        const objectElDesktop = coverDesktopRef.value;
+        const objectElMobile = coverMobileRef.value;
 
-        objectEl.addEventListener('load', () => {
-            const svgDoc = objectEl.contentDocument;
+        objectElDesktop?.addEventListener('load', () => {
+            const svgDoc = objectElDesktop.contentDocument;
             letters = svgDoc?.querySelector<SVGElement>('#letters') || null;
+
+            handleResize();
+            window.addEventListener('resize', handleResize);
+        });
+
+        objectElMobile?.addEventListener('load', () => {
+            const svgDoc = objectElMobile.contentDocument;
+            logo = svgDoc?.querySelector<SVGElement>('#logo') || null;
 
             handleResize();
             window.addEventListener('resize', handleResize);
@@ -41,7 +57,7 @@
 <template>
     <div id="cover">
         <object :data="'/img/CoverDesktop.svg'" type="image/svg+xml" id="cover-desktop" ref="coverDesktopRef"></object>
-        <NuxtImg src="img/CoverMobile.svg" id="cover-mobile" />
+        <object :data="'/img/CoverMobile.svg'" type="image/svg+xml" id="cover-mobile" ref="coverMobileRef"></object>
         <LanguageSwitcher id="languageSwitcher" />
     </div>
 </template>
