@@ -20,26 +20,37 @@
 </script>
 
 <template>
-    <div id="parallax" ref="parallaxRef">
+    <div id="cover">
+        <NuxtImg src="img/CoverDesktop.svg" id="cover-desktop" />
+        <NuxtImg src="img/CoverMobile.svg" id="cover-mobile" />
         <LanguageSwitcher id="languageSwitcher" />
     </div>
 </template>
 
 <style scoped lang="scss">
-    #parallax {
+    #cover {
         width: 100%;
         height: calc(100vh - 4rem);
-        background-image: url('~/assets/svg/CoverDesktop.svg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        will-change: background-position;
-        overflow: hidden;
+    }
+
+    #cover-desktop {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    #cover-mobile {
+        width: 100%;
+        height: 100%;
+        display: none;
     }
 
     @include xl {
-        #parallax {
-            background-image: url('~/assets/svg/CoverMobile.svg');
+        #cover-desktop {
+            display: none;
+        }
+        #cover-mobile {
+            display: block;
         }
     }
 
