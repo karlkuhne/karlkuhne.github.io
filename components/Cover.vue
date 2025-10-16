@@ -1,27 +1,27 @@
 <script setup lang="ts">
-    import { ref, onMounted, onUnmounted } from 'vue';
+    import { onMounted, ref } from 'vue';
 
-    const parallaxLettersRef = ref<HTMLElement | null>(null);
-
-    const handleScroll = () => {
-        const scrollPosition = window.scrollY;
-        parallaxLettersRef.value!.style.backgroundPositionY = `${scrollPosition * 0.15}px`;
-        const langSwitcher = parallaxLettersRef.value?.querySelector('#languageSwitcher') as HTMLElement | null;
-        langSwitcher!.style.transform = `translateY(${scrollPosition * 0.15}px)`;
-    };
+    const coverDesktopRef = ref<HTMLObjectElement | null>(null);
 
     onMounted(() => {
-        window.addEventListener('scroll', handleScroll);
-    });
+        coverDesktopRef.value?.addEventListener('load', () => {
+            const svgDoc = coverDesktopRef.value?.contentDocument;
+            const letters = svgDoc?.querySelector<SVGElement>('#letters');
 
-    onUnmounted(() => {
-        window.removeEventListener('scroll', handleScroll);
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+            const rawXPosition = (windowWidth / 2) - 644.67;
+            const xPosition = Math.round(rawXPosition / 22.23) * 22.23;
+            const rawYPosition = (windowHeight / 2) - 377.91;
+            const yPosition = Math.round(rawYPosition / 22.23) * 22.23;
+            letters?.setAttribute('transform', `translate(${xPosition}, ${yPosition})`);
+        });
     });
 </script>
 
 <template>
     <div id="cover">
-        <NuxtImg src="img/CoverDesktop.svg" id="cover-desktop" />
+        <object :data="'/img/CoverDesktop.svg'" type="image/svg+xml" id="cover-desktop" ref="coverDesktopRef"></object>
         <NuxtImg src="img/CoverMobile.svg" id="cover-mobile" />
         <LanguageSwitcher id="languageSwitcher" />
     </div>
