@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 100vh" preserveAspectRatio="xMidYMid slice">
+<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
     <defs>
         <pattern id="minus" x="0" y="0" width="22.23" height="22.23" patternUnits="userSpaceOnUse">
              <rect y="13" width="6" height="2" fill="#444444"></rect>
@@ -10,13 +10,8 @@
     </defs>
                 
     <mask id="fade">
-        <rect x="0" y="0" width="1280" height="100vh" fill="black">
-            <animate attributeName="fill" values="black; black; white; white; black" keyTimes="0; 0.5; 0.501; 0.99; 1" dur="6s" repeatCount="0"></animate>
-            <set attributeName="fill" to="white" begin="5.9s"></set>
-        </rect>
-
         <circle cx="150" cy="350" r="0" fill="white">
-            <animate attributeName="r" values="0; 2500; 0; 0" keyTimes="0; 0.5; 0.501; 1" dur="6s" repeatCount="0"></animate>
+            <animate attributeName="r" values="0; 2500; 2500; 2500" keyTimes="0; 0.5; 0.501; 1" dur="6s" repeatCount="0"></animate>
             <set attributeName="r" to="2500" begin="5.9s"></set>
         </circle>
     </mask>
