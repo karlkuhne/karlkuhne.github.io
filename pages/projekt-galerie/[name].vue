@@ -1,17 +1,16 @@
 <script setup lang="ts">
     import { useRoute } from 'vue-router'
+    import markdownit from 'markdown-it'
+    
     const route = useRoute()
     const name = route.params.name
+    const md = markdownit()
 
     const { getPageIdByLangAndName, getPageContentByIdAndLang } = useDatabaseOperations();
     const { locale } = useI18n();
 
     const pageId = await getPageIdByLangAndName(locale.value, name);
-    const content = await getPageContentByIdAndLang(pageId, locale.value);
-
-    function formatNewlines(text: string): string {
-        return text.replace(/(\r\n|\r|\n)/g, '<br>');
-    }
+    const content = await md.render(await getPageContentByIdAndLang(pageId, locale.value));
 
     useHead({
         title: `Karl Kuhne | Projekt ${name}`
@@ -22,7 +21,7 @@
     <main>
         <ContentWrap>
             <h1>{{ name }}</h1>
-            <p v-html="formatNewlines(content)" />
+            <p v-html="content" />
         </ContentWrap>
     </main>
 </template>
