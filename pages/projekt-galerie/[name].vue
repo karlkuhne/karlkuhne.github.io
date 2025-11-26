@@ -9,11 +9,13 @@
     const { getPageIdByLangAndName, getPageContentByIdAndLang } = useDatabaseOperations();
     const { locale } = useI18n();
 
+    const pageLabel = locale.value === 'en' ? 'Project' : 'Projekt';
+
     const pageId = await getPageIdByLangAndName(locale.value, name);
     const content = await md.render(await getPageContentByIdAndLang(pageId, locale.value));
 
     useHead({
-        title: `Karl Kuhne | Projekt ${name}`
+        title: `Karl Kuhne | ${pageLabel} ${name}`
     })
 </script>
 
