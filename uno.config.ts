@@ -5,55 +5,41 @@ export default defineConfig({
         fontFamily: {
             sans: 'Work Sans',
         },
-    },
-    screens: {
-        'sm': '640px',
-        'md': '768px',
-        'lg': '1024px',
-        'xl': '1280px',
-        '2xl': '1536px',
-        '3xl': '1920px',
-    },
-    breakpoints: {
-        'sm': '640px',
-        'md': '768px',
-        'lg': '1024px',
-        'xl': '1280px',
-        '2xl': '1536px',
-        '3xl': '1920px',
-    },
-    colors: {
-        'primary': 'rgb(18, 18, 18)',
-        'primary-1': 'rgb(30, 30, 30)',
-        'primary-2': 'rgb(70, 70, 70)',
-
-        'accent': 'rgb(45, 101, 188)',
-        'accent-1': 'rgb(55, 121, 218)',
-
-        'green': 'rgb(99, 245, 131)',
-        'blue': 'rgb(107, 214, 237)',
-        'pink': 'rgb(234, 132, 171)',
-        'yellow': 'rgb(242, 249, 133)',
-        'orange': 'rgb(248, 156, 36)',
-        'purple': 'rgb(182, 150, 245)',
+        screens: {
+            'sm': '640px',
+            'md': '768px',
+            'lg': '1024px',
+            'xl': '1280px',
+            '2xl': '1536px',
+            '3xl': '1920px',
+        },
+        breakpoints: {
+            'sm': '640px',
+            'md': '768px',
+            'lg': '1024px',
+            'xl': '1280px',
+            '2xl': '1536px',
+            '3xl': '1920px',
+        },
+        colors: {
+            'primary': 'rgb(18, 18, 18)',
+            'primary-1': 'rgb(30, 30, 30)',
+            'primary-2': 'rgb(70, 70, 70)',
+    
+            'accent': 'rgb(45, 101, 188)',
+            'accent-1': 'rgb(55, 121, 218)',
+    
+            'green': 'rgb(99, 245, 131)',
+            'blue': 'rgb(107, 214, 237)',
+            'pink': 'rgb(234, 132, 171)',
+            'yellow': 'rgb(242, 249, 133)',
+            'orange': 'rgb(248, 156, 36)',
+            'purple': 'rgb(182, 150, 245)',
+        },
     },
     preflights: [
         {
             getCSS: () => `
-                @font-face {
-                    font-family: 'Work Sans';
-                    src: url('/assets/fonts/Work_Sans/WorkSans-VariableFont_wght.ttf') format('truetype');
-                    font-weight: 100 900;
-                    font-style: normal;
-                    font-display: swap;
-                }
-                @font-face {
-                    font-family: 'Work Sans';
-                    src: url('/assets/fonts/Work_Sans/WorkSans-Italic-VariableFont_wght.ttf') format('truetype');
-                    font-weight: 100 900;
-                    font-style: italic;
-                    font-display: swap;
-                }
                 body {
                     margin: 0;
                     padding: 0;
@@ -114,4 +100,3 @@ export default defineConfig({
         '.fade-in-invisible': 'opacity-0 transition-opacity duration-500',
     },
 });
-
