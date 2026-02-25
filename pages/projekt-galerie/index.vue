@@ -13,7 +13,7 @@
         </div>
 
 
-        <Project v-for="project in projects" :key="project.id + '-' + activeCategory" :projectId="project.id"
+        <Project v-for="project in filteredProjects" :key="project.id + '-' + activeCategory" :projectId="project.id"
             :projectLabel="project.label" :projectName="project.name" :projectDescription="project.description"
             :projectHasPage="project.hasPage" :projectLink="project.link" :projectThumbnail="project.thumbnail"
             :projectThumbnailMobile="project.thumbnailMobile" :projectImages="project.images" />
@@ -33,23 +33,17 @@
 
     const activeCategory = ref('all');
 
+    const filteredProjects = computed(() => {
+        if (activeCategory.value === 'all') return projects.value;
+        return projects.value.filter(project => project.category === activeCategory.value);
+    });
+
     const setSelectedCategory = (category: string) => {
         activeCategory.value = category;
     };
 
     onMounted(() => {
         refreshProjects();
-    });
-
-    watch(activeCategory, (newCategory) => {
-        if (newCategory === 'all') {
-            refreshProjects();
-        } else {
-            refreshProjects();
-            setTimeout(() => {
-                projects.value = projects.value.filter(project => project.category === newCategory);
-            }, 50);
-        }
     });
 
     useHead({
