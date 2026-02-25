@@ -1,4 +1,4 @@
-const projects = ref([]);
+import { useQuery } from '@pinia/colada';
 
 export const useDatabaseOperations = () => {
 
@@ -14,17 +14,17 @@ export const useDatabaseOperations = () => {
   const getAllProjectsByLang = (lang: string) => {
     const config = useRuntimeConfig();
 
-    const fetchProjects = async () => {
-      const response = await fetch(`${config.public.apiEndpoint}/projects/lang/${lang}`, { method: 'GET' })
-      const data = await response.json();
-      projects.value = data.projects;
-    };
+    const { data: projects, isLoading, refresh } = useQuery({
+        key: ['projects', lang],
+        query: async () => {
+            const response = await fetch(`${config.public.apiEndpoint}/projects/lang/${lang}`, { method: 'GET' });
+            const data = await response.json();
+            return data.projects;
+        }
+    });
 
-    return {
-      projects: projects,
-      refreshProjects: fetchProjects
-    };
-  };
+    return { projects, isLoading, refreshProjects: refresh };
+};
 
   // =====================================
   //   ██████╗  █████╗  ██████╗ ███████╗

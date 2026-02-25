@@ -2,34 +2,34 @@
     <main id="main">
         <h1>{{ $t('project-galery') }}</h1>
         <div class='button-container'>
-            <button @click="setSelectedCategory('all')" :class="{ active: activeCategory === 'all' }">{{ $t('all')
-                }}</button>
-            <button @click="setSelectedCategory('web')" :class="{ active: activeCategory === 'web' }">{{ $t('web')
-            }}</button>
-            <button @click="setSelectedCategory('app')" :class="{ active: activeCategory === 'app' }">{{ $t('app')
-                }}</button>
-            <button @click="setSelectedCategory('game')" :class="{ active: activeCategory === 'game' }">{{ $t('game')
-            }}</button>
+            <button @click="setSelectedCategory('all')" :class="{ active: activeCategory === 'all' }">{{ $t('all') }}</button>
+            <button @click="setSelectedCategory('web')" :class="{ active: activeCategory === 'web' }">{{ $t('web') }}</button>
+            <button @click="setSelectedCategory('app')" :class="{ active: activeCategory === 'app' }">{{ $t('app') }}</button>
+            <button @click="setSelectedCategory('game')" :class="{ active: activeCategory === 'game' }">{{ $t('game') }}</button>
         </div>
 
+        <div v-if="isLoading">
+            <Loader />
+        </div>
 
-        <Project v-for="project in filteredProjects" :key="project.id + '-' + activeCategory" :projectId="project.id"
-            :projectLabel="project.label" :projectName="project.name" :projectDescription="project.description"
-            :projectHasPage="project.hasPage" :projectLink="project.link" :projectThumbnail="project.thumbnail"
-            :projectThumbnailMobile="project.thumbnailMobile" :projectImages="project.images" />
+        <template v-else>
+            <Project v-for="project in filteredProjects" :key="project.id + '-' + activeCategory" :projectId="project.id"
+                :projectLabel="project.label" :projectName="project.name" :projectDescription="project.description"
+                :projectHasPage="project.hasPage" :projectLink="project.link" :projectThumbnail="project.thumbnail"
+                :projectThumbnailMobile="project.thumbnailMobile" :projectImages="project.images" />
+        </template>
     </main>
 </template>
 
 <script setup lang="ts">
     import { ref, computed } from 'vue';
-    import { useQuery } from '@pinia/colada';
     import Project from '~/components/Project.vue';
     import Loader from '~/components/Loader.vue';
 
     const { locale } = useI18n();
 
     const { getAllProjectsByLang } = useDatabaseOperations();
-    const { projects, refreshProjects } = getAllProjectsByLang(locale.value);
+    const { projects, isLoading, refreshProjects } = getAllProjectsByLang(locale.value);
 
     const activeCategory = ref('all');
 
