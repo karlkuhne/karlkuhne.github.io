@@ -11,11 +11,14 @@ export default defineNuxtConfig({
     'nuxt-anchorscroll',
     '@nuxtjs/i18n',
     '@pinia/colada-nuxt',
-    '@nuxt/test-utils/module'
+    '@nuxt/test-utils/module',
+    '@unocss/nuxt'
   ],
-  css: [
-    '@/assets/scss/main.scss'
-  ],
+  fonts: {
+    families: [
+      { name: 'Work Sans', provider: 'local', src: '/fonts/Work_Sans/WorkSans-VariableFont_wght.ttf' },
+    ],
+  },
   vite: {
     plugins: [svgLoader()],
     css: {
