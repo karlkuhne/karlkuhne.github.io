@@ -113,7 +113,7 @@
                     <p v-html="formatNewlines(column)"></p>
                 </li>
             </ol>
-            <a href="/Lebenslauf.pdf" download target="_blank" class="blue-button" style="margin-left: 2.5rem;">{{
+            <a href="/Lebenslauf.pdf" download target="_blank" class="primary-btn" style="margin-left: 2.5rem;">{{
                 $t('resume') }}</a>
         </div>
 
