@@ -1,6 +1,7 @@
 import { defineConfig } from 'unocss';
 
 export default defineConfig({
+    safelist: ['gr', 'b', 'p', 'ge', 'o', 'l'],
     theme: {
         fontFamily: {
             sans: 'Work Sans',

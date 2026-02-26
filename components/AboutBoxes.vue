@@ -45,17 +45,17 @@
 </script>
 
 <template>
-    <div id="container" class="h-fit md:h-[53.7rem] xl:h-[34.75rem]">
+    <div class="flex flex-col items-center h-fit md:h-[53.7rem] lg:h-[34.75rem]">
         <div ref="aboutMeRef"
             class="box
                 translate-x-[0] translate-y-[0] w-[calc(100vw-2rem)] mx-auto mb-3
                 md:w-[34rem] md:m-0
-                xl:translate-x-[-2rem]"
+                lg:translate-x-[-2rem]"
             
             :class="`${isAboutMeVisible ? 'fade-in-visible' : 'fade-in-invisible'}`"
             id="about-me">
-            <div class="label border-b-solid border-b-2 border-b-primary-70">
-                <p>{{ aboutBoxes[0].headline }}</p>
+            <div class="pl-2 border-b-solid border-b-2 border-b-primary-70">
+                <p class="ml-2 my-3">{{ aboutBoxes[0].headline }}</p>
             </div>
             <ol>
                 <li v-for="(column, index) in getColumns(aboutBoxes[0])" :key="index">
@@ -67,12 +67,12 @@
         <div ref="languagesRef"
             class="box aboutBox
                 translate-x-[0] translate-y-[0] w-[calc(100vw-6rem)] mx-auto mb-3
-                md:translate-x-[-9.4rem] md:translate-y-[-0.7rem] md:w-fit md:m-0
-                xl:translate-x-[-22.5rem] xl:translate-y-[-0.95rem]"
+                md:translate-x-[-9.4rem] md:translate-y-[0.8rem] md:w-fit md:m-0
+                lg:translate-x-[-22.5rem] lg:translate-y-[-0.95rem]"
 
             :class="`${isLanguagesVisible ? 'fade-in-visible' : 'fade-in-invisible'}`" id="languages">
-            <div class="label border-b-solid border-b-2 border-b-primary-70">
-                <p>{{ aboutBoxes[1].headline }}</p>
+            <div class="pl-2 border-b-solid border-b-2 border-b-primary-70">
+                <p class="ml-2 my-3">{{ aboutBoxes[1].headline }}</p>
             </div>
             <ol>
                 <li v-for="(column, index) in getColumns(aboutBoxes[1])" :key="index">
@@ -84,12 +84,12 @@
         <div ref="hobbysRef" 
             class="box aboutBox
                 translate-x-[0] translate-y-[0] w-[calc(100vw-6rem)] mx-auto mb-3
-                md:translate-x-[-10.4rem] md:translate-y-[1.4rem] md:w-fit md:m-0
-                xl:translate-x-[-9rem] xl:translate-y-[-3rem]"
+                md:translate-x-[-10.4rem] md:translate-y-[1.6rem] md:w-fit md:m-0
+                lg:translate-x-[-9rem] lg:translate-y-[-3rem]"
             
             :class="`${isHobbysVisible ? 'fade-in-visible' : 'fade-in-invisible'}`" id="hobbys">
-            <div class="label border-b-solid border-b-2 border-b-primary-70">
-                <p>{{ aboutBoxes[2].headline }}</p>
+            <div class="pl-2 border-b-solid border-b-2 border-b-primary-70">
+                <p class="ml-2 my-3">{{ aboutBoxes[2].headline }}</p>
             </div>
             <ol>
                 <li v-for="(column, index) in getColumns(aboutBoxes[2])" :key="index">
@@ -101,12 +101,12 @@
         <div ref="degreesRef"
             class="box aboutBox pb-6
                 translate-x-[0] translate-y-[0] w-[calc(100vw-2rem)] mx-auto mb-3
-                md:translate-x-[4.7rem] md:translate-y-[3.2rem] md:w-fit md:m-0
-                xl:translate-x-[9.4rem] xl:translate-y-[-18.4rem]"
+                md:translate-x-[4.7rem] md:translate-y-[3.6rem] md:w-fit md:m-0
+                lg:translate-x-[9.4rem] lg:translate-y-[-18.4rem]"
             
             :class="`${isDegreesVisible ? 'fade-in-visible' : 'fade-in-invisible'}`" id="degrees">
-            <div class="label border-b-solid border-b-2 border-b-primary-70">
-                <p>{{ aboutBoxes[3].headline }}</p>
+            <div class="pl-2 border-b-solid border-b-2 border-b-primary-70">
+                <p class="ml-2 my-3">{{ aboutBoxes[3].headline }}</p>
             </div>
             <ol>
                 <li v-for="(column, index) in getColumns(aboutBoxes[3])" :key="index">
@@ -121,11 +121,11 @@
             class="box aboutBox
                 translate-x-[0] translate-y-[0] w-[calc(100vw-6rem)] mx-auto mb-3
                 md:translate-x-[8.3rem] md:translate-y-[-30.8rem] md:w-[17.5rem] md:m-0
-                xl:translate-x-[22rem] xl:translate-y-[-47.2rem]"
+                lg:translate-x-[22rem] lg:translate-y-[-47.2rem]"
 
             :class="`${isPortraitVisible ? 'fade-in-visible' : 'fade-in-invisible'}`" id="portrait">
-            <div class="label border-b-solid border-b-2 border-b-primary-70">
-                <p>portrait</p>
+            <div class="pl-2 border-b-solid border-b-2 border-b-primary-70">
+                <p class="ml-2 my-3">portrait</p>
             </div>
             <NuxtImg src="/img/Portrait.avif" alt="Portrait of Karl" class="selectDisable" draggable="false"
                 loading="lazy" style="width: 100%; aspect-ratio: 1/1;" />
@@ -134,30 +134,6 @@
 </template>
 
 <style scoped>
-
-    #container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 35.8rem;
-    }
-
-    .box {
-        transition: transform 0.5s ease-out, opacity 0.5s;
-    }
-
-    .label {
-        padding-left: 0.5rem;
-    }
-
-    .label p {
-        padding-left: 0.5rem;
-        margin-top: 0.75rem;
-        margin-bottom: 0.75rem;
-    }
-
-    /* LIST */
-
     ul,
     ol {
         margin-top: 0.75rem;
@@ -180,14 +156,5 @@
     ol li p {
         margin-top: 0;
         margin-bottom: 0;
-    }
-
-    /* POSITIONS + WIDTH */
-
-
-    @supports (-webkit-appearance: none) and (stroke-color: transparent) {
-        #degrees {
-            transform: translateX(9.4rem) translateY(-19.7rem);
-        }
     }
 </style>
