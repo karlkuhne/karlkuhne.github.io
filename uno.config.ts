@@ -30,6 +30,7 @@ export default defineConfig({
             'primary-80': 'rgb(80, 80, 80)',
             'primary-140': 'rgb(140, 140, 140)',
             'primary-180': 'rgb(180, 180, 180)',
+            'primary-230': 'rgb(230, 230, 230)',
     
             'accent': 'rgb(45, 101, 188)',
             'accent-1': 'rgb(55, 121, 218)',
@@ -114,6 +115,7 @@ export default defineConfig({
         'hyperlink': 'text-accent hover:text-accent-1',
         'primary-btn': 'bg-accent hover:bg-accent-1 text-white text-center rounded-md p-2',
         'filter-btn': 'bg-primary-50 hover:bg-primary-60 border-none px-2.7 py-1.8 rounded-lg',
+        'embla-arrows': 'absolute top-1/2 translate-y-[-50%] z-10 border-none cursor-pointer pointer-events-auto bg-transparent',
         'project-icon': 'w-4.4 h-4.4 fill-primary-80 stroke-primary-80 hover:fill-primary-140 hover:stroke-primary-140 cursor-pointer mr-2',
         'fade-in-visible': 'opacity-100 transition-opacity duration-500',
         'fade-in-invisible': 'opacity-0 transition-opacity duration-500',

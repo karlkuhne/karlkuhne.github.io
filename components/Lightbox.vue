@@ -50,50 +50,50 @@
 </script>
 
 <template>
-    <div class="lightbox" @click="lightbox.close()">
+    <div class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-92 z-1000 overflow-auto flex flex-col items-center justify-center" @click="lightbox.close()">
         <div @click.stop>
-            <div class="w-full 2xl:w-auto">
+            <div class="w-full xl:w-[134vh] max-w-[90rem] overflow-hidden relative rounded-xl">
                 <div class="embla__viewport" ref="emblaRef">
-                    <div class="embla__container">
+                    <div class="flex">
                         <div class="embla__slide" v-for="(image, index) in lightbox.projectImages" :key="index">
-                            <NuxtImg :src="image" :alt="`Slide ${index + 1}`" />
+                            <NuxtImg class="w-full h-auto block" :src="image" :alt="`Slide ${index + 1}`" />
                         </div>
                     </div>
                 </div>
 
-                <div id="nav_container" v-if="(lightbox.projectImages ?? []).length > 1">
-                    <button v-if="emblaApi?.canScrollPrev()" class="embla__prev" @click="scrollPrev">
-                        <ArrowLeft class="arrow-icon" />
+                <div id="absolute top-0 left-0 w-full h-full pointer-events-none" v-if="(lightbox.projectImages ?? []).length > 1">
+                    <button v-if="emblaApi?.canScrollPrev()" class="embla-arrows left-2.5 embla__prev" @click="scrollPrev">
+                        <ArrowLeft class="w-6 h-6" />
                     </button>
-                    <div class="embla__dots">
+                    <div class="absolute bottom-2.5 left-1/2 transform -translate-x-1/2 flex gap-2.5 justify-center pointer-events-auto">
                         <button v-for="(image, index) in lightbox.projectImages" :key="index"
-                            :class="['embla__dot', { 'is-selected': selectedIndex === index }]"
+                            class="embla__dot w-[10px] h-[12px] rounded-full border-none bg-primary-230 cursor-pointer transition-colors duration-300"
+                            :class="{ 'bg-white': selectedIndex === index }"
                             @click="scrollTo(index)" />
                     </div>
-                    <button v-if="emblaApi?.canScrollNext()" class="embla__next" @click="scrollNext">
-                        <ArrowLeft class="arrow-icon" style="transform: rotate(180deg);" />
+                    <button v-if="emblaApi?.canScrollNext()" class="embla-arrows right-2.5 embla__next" @click="scrollNext">
+                        <ArrowLeft class="w-6 h-6" style="transform: rotate(180deg);" />
                     </button>
                 </div>
             </div>
 
-            <div class="w-full 2xl:w-auto">
+            <div class="w-full xl:w-[134vh] max-w-[90rem]">
                 <h3>{{ lightbox.projectName }}</h3>
                 <p>{{ lightbox.projectDescription }}</p>
 
                 <div style="margin-top: 1.5rem; display: flex; gap: 0.75rem">
-                    <a v-if="lightbox.projectLink" :href="`${lightbox.projectLink}`" target="_blank"
-                        class="blue-button">
+                    <a v-if="lightbox.projectLink" :href="`${lightbox.projectLink}`" target="_blank" class="primary-btn">
                         {{ $t('open') }}
                     </a>
                     <NuxtLink v-if="lightbox.projectHasPage"
-                        :to="localePath(`/projekt-galerie/${lightbox.projectName}`)" class="blue-button"
+                        :to="localePath(`/projekt-galerie/${lightbox.projectName}`)" class="primary-btn"
                         @click="lightbox.close">
                         {{ $t('project-page') }}
                     </NuxtLink>
                 </div>
             </div>
 
-            <svg class="icon" @click="lightbox.close" id="close-button" xmlns="http://www.w3.org/2000/svg"
+            <svg class="absolute top-5 right-5 w-8 h-8 cursor-pointer fill-white hover:fill-primary-180" @click="lightbox.close" xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16">
                 <path
                     d="M3.53 3.53a.67.67 0 0 1 .94 0L8 7.06l3.53-3.53a.67.67 0 1 1 .94.94L8.94 8l3.53 3.53a.67.67 0 1 1-.94.94L8 8.94l-3.53 3.53a.67.67 0 1 1-.94-.94L7.06 8 3.53 4.47a.67.67 0 0 1 0-.94"
@@ -104,79 +104,9 @@
 </template>
 
 <style scoped>
-    .lightbox {
-        position: fixed;
-        z-index: 1000;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgba(0, 0, 0, 0.92);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    /* responsive width */
-
-    .embla {
-        position: relative;
-        overflow: hidden;
-        width: 134vh;
-        max-width: 90rem;
-        border-radius: 0.5rem;
-    }
-
-    #text-container {
-        width: 134vh;
-        max-width: 90rem;
-    }
-
-    .embla__container {
-        display: flex;
-    }
-
     .embla__slide {
         flex: 0 0 100%;
         min-width: 0;
-    }
-
-    .embla__slide img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-
-    /* NAVIGATION */
-    #nav_container {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-    }
-
-    .embla__prev,
-    .embla__next {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 10;
-        border: none;
-        cursor: pointer;
-        pointer-events: auto;
-        background: transparent;
-    }
-
-    .embla__prev {
-        left: 10px;
-    }
-
-    .embla__next {
-        right: 10px;
     }
 
     .embla__prev::before,
@@ -193,33 +123,6 @@
         pointer-events: none;
     }
 
-    .arrow-icon {
-        width: 24px;
-        height: 24px;
-    }
-
-    /* Dots */
-    .embla__dots {
-        position: absolute;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        gap: 9px;
-        justify-content: center;
-        pointer-events: auto;
-    }
-
-    .embla__dot {
-        width: 10px;
-        height: 12px;
-        border-radius: 50%;
-        background-color: rgb(225, 225, 225);
-        border: none;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-
     .embla__dot::before {
         content: '';
         position: absolute;
@@ -230,24 +133,5 @@
         background: rgba(0, 0, 0, 0.25);
         filter: blur(3px);
         z-index: -1;
-    }
-
-    .embla__dot.is-selected {
-        background-color: white;
-    }
-
-    /* close button  */
-    #close-button {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        width: 2rem;
-        height: 2rem;
-        cursor: pointer;
-        fill: white;
-    }
-
-    #close-button:hover {
-        fill: rgb(185, 185, 185);
     }
 </style>
