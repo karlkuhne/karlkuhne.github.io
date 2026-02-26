@@ -45,7 +45,7 @@
 </script>
 
 <template>
-    <div class="flex flex-col items-center h-fit md:h-[53.7rem] lg:h-[34.75rem]">
+    <div class="flex flex-col items-center h-fit md:h-[53.7rem] lg:h-[34.75rem] transition-[height] duration-650 ease">
         <div ref="aboutMeRef"
             class="box
                 translate-x-[0] translate-y-[0] w-[calc(100vw-2rem)] mx-auto mb-3
@@ -65,7 +65,7 @@
         </div>
 
         <div ref="languagesRef"
-            class="box aboutBox
+            class="box
                 translate-x-[0] translate-y-[0] w-[calc(100vw-6rem)] mx-auto mb-3
                 md:translate-x-[-9.4rem] md:translate-y-[0.8rem] md:w-fit md:m-0
                 lg:translate-x-[-22.5rem] lg:translate-y-[-0.95rem]"
@@ -82,7 +82,7 @@
         </div>
 
         <div ref="hobbysRef" 
-            class="box aboutBox
+            class="box
                 translate-x-[0] translate-y-[0] w-[calc(100vw-6rem)] mx-auto mb-3
                 md:translate-x-[-10.4rem] md:translate-y-[1.6rem] md:w-fit md:m-0
                 lg:translate-x-[-9rem] lg:translate-y-[-3rem]"
@@ -99,7 +99,7 @@
         </div>
 
         <div ref="degreesRef"
-            class="box aboutBox pb-6
+            class="box pb-6
                 translate-x-[0] translate-y-[0] w-[calc(100vw-2rem)] mx-auto mb-3
                 md:translate-x-[4.7rem] md:translate-y-[3.6rem] md:w-fit md:m-0
                 lg:translate-x-[9.4rem] lg:translate-y-[-18.4rem]"
@@ -118,7 +118,7 @@
         </div>
 
         <div ref="portraitRef"
-            class="box aboutBox
+            class="box
                 translate-x-[0] translate-y-[0] w-[calc(100vw-6rem)] mx-auto mb-3
                 md:translate-x-[8.3rem] md:translate-y-[-30.8rem] md:w-[17.5rem] md:m-0
                 lg:translate-x-[22rem] lg:translate-y-[-47.2rem]"
@@ -134,6 +134,12 @@
 </template>
 
 <style scoped>
+    .box {
+        transition: transform 0.65s ease,
+                    width 0.65s ease,
+                    margin 0.65s ease;
+    }
+
     ul,
     ol {
         margin-top: 0.75rem;
