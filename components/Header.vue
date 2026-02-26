@@ -1,20 +1,16 @@
 <script setup lang="ts">
     import { ref } from 'vue';
 
-    const burgerMenu = ref<HTMLElement | null>(null);
-    const mainNav = ref<HTMLElement | null>(null);
-
+    const isMenuOpen = ref(false);
     const router = useRouter();
     const localePath = useLocalePath()
 
     const toggleMenu = () => {
-        burgerMenu.value!.classList.toggle('active');
-        mainNav.value!.classList.toggle('active');
+        isMenuOpen.value = !isMenuOpen.value;
     };
 
     const closeMenu = () => {
-        burgerMenu.value!.classList.remove('active');
-        mainNav.value!.classList.remove('active');
+        isMenuOpen.value = false;
     };
 
     const { scrollToAnchor, scrollToTop } = useAnchorScroll({
@@ -51,151 +47,38 @@
 </script>
 
 <template>
-    <header class="w-full bg-primary-1 fixed top-0 z-50">
+    <header class="w-full bg-primary-30 fixed top-0 z-50">
         <nav class="max-w-screen-xl mx-auto flex justify-between items-center h-16">
-            <NuxtLink :to="localePath('/')" class="ml-4 2xl:ml-0 selectDisable" @click="closeAndScrollToTop">{{ $t('title') }}</NuxtLink>
-            <div class="hidden xl:flex justify-between items-center flex-grow" id="main-nav" ref="mainNav">
-                <div id="nav-buttons">
-                    <NuxtLink :to="localePath('/projekt-galerie')" class="main-nav-item selectDisable"
-                        @click="closeAndScrollToTop">{{ $t('project-galery') }}</NuxtLink>
-                    <NuxtLink class="main-nav-item selectDisable" @click="handleAbout">{{ $t('about-me') }}</NuxtLink>
-                    <NuxtLink class="main-nav-item selectDisable" @click="handleContact">{{ $t('contact') }}</NuxtLink>
+            <NuxtLink :to="localePath('/')" class="text-5 font-semibold text-white hover:text-primary-180 ml-4 xl:ml-0 selectDisable" @click="closeAndScrollToTop">{{ $t('title') }}</NuxtLink>
+            
+            <div :class="isMenuOpen ? 'block lg:flex lg:flex-grow absolute lg:relative top-16 lg:top-auto w-full lg:w-auto bg-primary-30 lg:bg-transparent' : 'hidden lg:flex flex-grow'" ref="mainNav">
+                <div class="flex gap-12 mx-auto items-center" :class="{ 'flex-col gap-4 lg:flex-row lg:gap-12': isMenuOpen }">
+                    <NuxtLink :to="localePath('/projekt-galerie')" class="text-primary-180 hover:text-white font-medium selectDisable" @click="closeAndScrollToTop">{{ $t('project-galery') }}</NuxtLink>
+                    <NuxtLink class="text-primary-180 hover:text-white font- selectDisable" @click="handleAbout">{{ $t('about-me') }}</NuxtLink>
+                    <NuxtLink class="text-primary-180 hover:text-white font-medium selectDisable" @click="handleContact">{{ $t('contact') }}</NuxtLink>
                 </div>
-                <div class="ml-4 2xl:ml-0 selectDisable">
-                    <button onclick="window.open('https://www.linkedin.com/in/karl-kuhne', '_blank');"
-                        @click="closeMenu">
-                        <svg fill="white" class="button-icon" width="21" preserveAspectRatio="xMidYMid meet"
+                <div class="mr-4 xl:mr-0 selectDisable" :class="{ 'pt-4 lg:pt-0 pb-6 lg:pb-0': isMenuOpen }">
+                    <button class="flex gap-2 items-center bg-primary-50 hover:bg-primary-60 hover:cursor-pointer border-none rounded-lg p-2.5" :class="{ 'mx-auto': isMenuOpen }"
+                        onclick="window.open('https://www.linkedin.com/in/karl-kuhne', '_blank');" @click="closeMenu">
+                        <svg fill="white" width="21" preserveAspectRatio="xMidYMid meet"
                             viewBox="0 0 100 100" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
                             <path
                                 d="M92.86,0H7.12A7.17,7.17,0,0,0,0,7.21V92.79A7.17,7.17,0,0,0,7.12,100H92.86A7.19,7.19,0,0,0,100,92.79V7.21A7.19,7.19,0,0,0,92.86,0ZM30.22,85.71H15.4V38H30.25V85.71ZM22.81,31.47a8.59,8.59,0,1,1,8.6-8.59A8.6,8.6,0,0,1,22.81,31.47Zm63,54.24H71V62.5c0-5.54-.11-12.66-7.7-12.66s-8.91,6-8.91,12.26V85.71H39.53V38H53.75v6.52H54c2-3.75,6.83-7.7,14-7.7,15,0,17.79,9.89,17.79,22.74Z">
                             </path>
                         </svg>
-                        <span>{{ $t('linkedin') }}</span>
+                        <span class="text-5 font-semibold border-l-solid border-3 pl-1.4">{{ $t('linkedin') }}</span>
                     </button>
                 </div>
             </div>
 
-            <div id="burgerMenu" class="xl:hidden selectDisable" ref="burgerMenu" @click="toggleMenu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <div id="burgerMenu" class="lg:hidden cursor-pointer pr-6 selectDisable" ref="burgerMenu" @click="toggleMenu">
+                <span class="bar block w-[25px] h-[3px] mx-auto my-[5px] transition-all duration-300 ease-in-out bg-white"
+                    :class="{ 'translate-y-[8px] rotate-45': isMenuOpen }"/>
+                <span class="bar block w-[25px] h-[3px] mx-auto my-[5px] transition-all duration-300 ease-in-out bg-white"
+                    :class="{ 'opacity-0': isMenuOpen }"/>
+                <span class="bar block w-[25px] h-[3px] mx-auto my-[5px] transition-all duration-300 ease-in-out bg-white"
+                    :class="{ '-translate-y-[8px] -rotate-45': isMenuOpen }"/>
             </div>
         </nav>
     </header>
 </template>
-
-<style scoped>
-
-    nav a {
-        font-size: 1.25rem;
-        font-weight: 600;
-    }
-
-    nav a:hover {
-        color: rgb(181, 181, 181);
-    }
-
-    /* Nav Buttons */
-    #nav-buttons {
-        display: flex;
-        gap: 3rem;
-        margin: 0 auto;
-        align-items: center;
-    }
-
-    .main-nav-item {
-        font-family: Work Sans;
-        font-size: 1rem;
-        font-weight: 500;
-        color: rgb(181, 181, 181);
-    }
-
-    .main-nav-item:hover {
-        color: white;
-    }
-
-    #linkedIn-button button {
-        background-color: rgb(50, 50, 50);
-        border-radius: 0.5rem;
-        padding: 0.7rem;
-        display: flex;
-        justify-content: flex-start;
-        gap: 0.5rem;
-        align-items: center;
-        position: relative;
-        border: none;
-        font-family: "SF Pro Text", Helvetica, sans-serif;
-    }
-
-    #linkedIn-button button:hover {
-        background-color: rgb(65, 65, 65);
-        cursor: pointer;
-    }
-
-    #linkedIn-button span {
-        margin-top: 0;
-        margin-bottom: 0;
-        border-left: 0.18rem solid white;
-        padding-left: 0.35rem;
-        color: white;
-        font-size: 1.1rem;
-        font-weight: 600;
-    }
-
-    #burgerMenu {
-        display: none;
-        cursor: pointer;
-        margin-right: 1.55rem;
-    }
-
-    .bar {
-        display: block;
-        width: 25px;
-        height: 3px;
-        margin: 5px auto;
-        -webkit-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-        background-color: white;
-    }
-
-    #burgerMenu.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    #burgerMenu.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    #burgerMenu.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-   
-
-        #main-nav.active {
-            display: block;
-            position: absolute;
-            top: 4rem;
-            width: 100%;
-            background-color: rgb(30, 30, 30);
-
-            transition: opacity 1s ease-in-out;
-        }
-
-        #main-nav.active #nav-buttons {
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem
-        }
-
-        #main-nav.active #linkedIn-button {
-            padding-top: 0.5rem;
-            padding-bottom: 1rem;
-        }
-
-        #main-nav.active #linkedIn-button button {
-            margin: 0 auto;
-        }
-
-        
-</style>

@@ -54,7 +54,7 @@
             
             :class="`${isAboutMeVisible ? 'fade-in-visible' : 'fade-in-invisible'}`"
             id="about-me">
-            <div class="label">
+            <div class="label border-b-solid border-b-2 border-b-primary-70">
                 <p>{{ aboutBoxes[0].headline }}</p>
             </div>
             <ol>
@@ -71,7 +71,7 @@
                 xl:translate-x-[-22.5rem] xl:translate-y-[-0.95rem]"
 
             :class="`${isLanguagesVisible ? 'fade-in-visible' : 'fade-in-invisible'}`" id="languages">
-            <div class="label">
+            <div class="label border-b-solid border-b-2 border-b-primary-70">
                 <p>{{ aboutBoxes[1].headline }}</p>
             </div>
             <ol>
@@ -88,7 +88,7 @@
                 xl:translate-x-[-9rem] xl:translate-y-[-3rem]"
             
             :class="`${isHobbysVisible ? 'fade-in-visible' : 'fade-in-invisible'}`" id="hobbys">
-            <div class="label">
+            <div class="label border-b-solid border-b-2 border-b-primary-70">
                 <p>{{ aboutBoxes[2].headline }}</p>
             </div>
             <ol>
@@ -105,7 +105,7 @@
                 xl:translate-x-[9.4rem] xl:translate-y-[-18.4rem]"
             
             :class="`${isDegreesVisible ? 'fade-in-visible' : 'fade-in-invisible'}`" id="degrees">
-            <div class="label">
+            <div class="label border-b-solid border-b-2 border-b-primary-70">
                 <p>{{ aboutBoxes[3].headline }}</p>
             </div>
             <ol>
@@ -124,7 +124,7 @@
                 xl:translate-x-[22rem] xl:translate-y-[-47.2rem]"
 
             :class="`${isPortraitVisible ? 'fade-in-visible' : 'fade-in-invisible'}`" id="portrait">
-            <div class="label">
+            <div class="label border-b-solid border-b-2 border-b-primary-70">
                 <p>portrait</p>
             </div>
             <NuxtImg src="/img/Portrait.avif" alt="Portrait of Karl" class="selectDisable" draggable="false"
@@ -147,7 +147,6 @@
     }
 
     .label {
-        border-bottom: var(--border);
         padding-left: 0.5rem;
     }
 

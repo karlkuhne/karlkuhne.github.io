@@ -3,14 +3,14 @@
 </script>
 
 <template>
-    <footer class="w-full h-46 md:h-40 bg-primary-2 flex items-center justify-center">
-        <div id="footer-content" class="text-center flex flex-col gap-4">
-            <span class="font-bold my-0">© {{ new Date().getFullYear() }} Karl Kuhne</span>
+    <footer class="w-full h-53 md:h-46 bg-primary-30 flex items-center justify-center">
+        <div class="flex flex-col gap-4 text-center">
+            <span class="font-bold">© {{ new Date().getFullYear() }} Karl Kuhne</span>
 
-            <div id="flex flex-col md:flex-row gap-2">
-                <NuxtLink :to="localePath('/legal')" class="hover:text-primary-3 selectDisable">{{ $t('imprint') }}</NuxtLink>
+            <div class="flex flex-col md:flex-row gap-2">
+                <NuxtLink :to="localePath('/legal')" class="text-white hover:text-primary-180 selectDisable">{{ $t('imprint') }}</NuxtLink>
                 <span class="hidden md:inline">·</span>
-                <NuxtLink :to="localePath('/legal')" class="hover:text-primary-3 selectDisable">{{ $t('privacy') }}</NuxtLink>
+                <NuxtLink :to="localePath('/legal')" class="text-white hover:text-primary-180 selectDisable">{{ $t('privacy') }}</NuxtLink>
             </div>
 
             <div class="flex justify-center gap-4 mt-2">

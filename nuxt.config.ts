@@ -22,6 +22,9 @@ export default defineNuxtConfig({
   vite: {
     plugins: [svgLoader()],
   },
+  css: [
+    '@/assets/css/fonts.css'
+  ],
   /* vitest: {
     environment: 'jsdom',
   }, */

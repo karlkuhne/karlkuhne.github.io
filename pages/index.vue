@@ -31,7 +31,7 @@
     <Cover />
     <main id="main">
         <AboutBoxes />
-        <div id="project-container" class="w-[calc(100vw-2rem)] 2xl:w-screen-xl mx-auto">
+        <div id="project-container">
             <h1 ref="elementRef" id="galery-header"
                 :class="`${hasFaded ? 'typing-fade-visible' : 'typing-fade-invisible'}`">
                 {{ $t('featured_projects') }}</h1>
