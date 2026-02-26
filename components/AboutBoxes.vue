@@ -135,9 +135,7 @@
 
 <style scoped>
     .box {
-        transition: transform 0.65s ease,
-                    width 0.65s ease,
-                    margin 0.65s ease;
+        transition: transform 0.65s ease, width 0.65s ease, opacity 0.6s ease;
     }
 
     ul,
