@@ -1,5 +1,5 @@
 <template>
-    <div id="content-wrap" class="w-[calc(100vw-2rem)] lg:w-screen-md">
+    <div id="content-wrap" class="w-full md:w-screen-md">
         <slot />
     </div>
 </template>
