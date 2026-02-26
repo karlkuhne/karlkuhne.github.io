@@ -32,7 +32,7 @@
 </script>
 
 <template>
-  <div class="relative w-fit h-fit flex bg-primary-50 rounded-lg py-1">
+  <div class="absolute w-fit h-fit flex bg-primary-50 rounded-lg py-1">
     <div class="absolute top-0 bottom-0 bg-primary-70 rounded-lg" :style="highlightStyle" />
 
     <button v-for="(lang, index) in languages" :key="lang.code" @click="changeLanguage(lang.code, index)"
