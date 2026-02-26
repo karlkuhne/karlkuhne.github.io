@@ -21,16 +21,6 @@ export default defineNuxtConfig({
   },
   vite: {
     plugins: [svgLoader()],
-    css: {
-      preprocessorOptions: {
-        scss: {
-          additionalData: `
-            @use "@/assets/scss/breakpoints" as *;
-            @use "@/assets/scss/variables" as *;
-          `
-        }
-      }
-    }
   },
   /* vitest: {
     environment: 'jsdom',

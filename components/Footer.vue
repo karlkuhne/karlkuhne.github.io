@@ -1,17 +1,21 @@
-<template>
-    <footer>
-        <div id="footer-content">
-            <p><b>© {{ new Date().getFullYear() }} Karl Kuhne</b></p>
+<script setup lang="ts">
+    const localePath = useLocalePath()
+</script>
 
-            <div id="footer-links">
-                <NuxtLink :to="localePath('/legal')" class="link selectDisable">{{ $t('imprint') }}</NuxtLink>
-                <span style="margin: 0 0.5rem; color: white;">·</span>
-                <NuxtLink :to="localePath('/legal')" class="link selectDisable">{{ $t('privacy') }}</NuxtLink>
+<template>
+    <footer class="w-full h-46 md:h-40 bg-primary-2 flex items-center justify-center">
+        <div id="footer-content" class="text-center flex flex-col gap-4">
+            <span class="font-bold my-0">© {{ new Date().getFullYear() }} Karl Kuhne</span>
+
+            <div id="flex flex-col md:flex-row gap-2">
+                <NuxtLink :to="localePath('/legal')" class="hover:text-primary-3 selectDisable">{{ $t('imprint') }}</NuxtLink>
+                <span class="hidden md:inline">·</span>
+                <NuxtLink :to="localePath('/legal')" class="hover:text-primary-3 selectDisable">{{ $t('privacy') }}</NuxtLink>
             </div>
 
-            <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 0.25rem;">
+            <div class="flex justify-center gap-4 mt-2">
                 <a href="https://github.com/karlkuhne" target="_blank" aria-label="Visit my GitHub">
-                    <svg width="35" height="35" viewBox="0 0 496 512" style="cursor: pointer"
+                    <svg width="35" height="35" viewBox="0 0 496 512" style="cursor: pointer; filter: grayscale(100%);"
                         onmouseover="this.querySelector('path').style.fill='rgb(140, 140, 140)'"
                         onmouseout="this.querySelector('path').style.fill='rgb(82, 82, 82)'">
                         <path fill="rgb(82, 82, 82)"
@@ -21,7 +25,7 @@
                 </a>
 
                 <a href="https://www.linkedin.com/in/karl-kuhne/" target="_blank" aria-label="Visit my LinkedIn">
-                    <svg width="35" height="35" viewBox="0 0 448 512" style="cursor: pointer"
+                    <svg width="35" height="35" viewBox="0 0 448 512" style="cursor: pointer; filter: grayscale(100%);"
                         onmouseover="this.querySelector('path').style.fill='rgb(140, 140, 140)'"
                         onmouseout="this.querySelector('path').style.fill='rgb(82, 82, 82)'">
                         <path fill="rgb(82, 82, 82)"
@@ -32,7 +36,7 @@
 
                 <a href="https://www.researchgate.net/profile/Karl-Kuhne" target="_blank"
                     aria-label="Visit my ResearchGate">
-                    <svg width="30" height="30" viewBox="0 0 24 24" style="cursor: pointer"
+                    <svg width="30" height="30" viewBox="0 0 24 24" style="cursor: pointer; filter: grayscale(100%);"
                         onmouseover="this.querySelector('path').style.fill='rgb(140, 140, 140)'"
                         onmouseout="this.querySelector('path').style.fill='rgb(82, 82, 82)'">
                         <path fill="rgb(82, 82, 82)"
@@ -43,68 +47,3 @@
         </div>
     </footer>
 </template>
-
-<script setup lang="ts">
-    const localePath = useLocalePath()
-</script>
-
-<style scoped lang="scss">
-    footer {
-        width: 100%;
-        height: 10rem;
-        background-color: rgb(30, 30, 30);
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #footer-content {
-        text-align: center;
-
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .link {
-        color: white;
-        text-decoration: none;
-    }
-
-    .link:hover {
-        color: rgb(181, 181, 181);
-    }
-
-    #footer-content img {
-        filter: grayscale(100%);
-    }
-
-    footer p {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-
-    footer a {
-        font-family: Work Sans;
-        font-size: 1rem;
-        color: white;
-        line-height: 1.2;
-    }
-
-    @include sm {
-        footer {
-            height: 11.5rem;
-        }
-
-        footer span {
-            display: none;
-        }
-
-        #footer-links {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-    }
-</style>

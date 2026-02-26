@@ -45,8 +45,14 @@
 </script>
 
 <template>
-    <div id="container">
-        <div ref="aboutMeRef" class="box" :class="`${isAboutMeVisible ? 'fade-in-visible' : 'fade-in-invisible'}`"
+    <div id="container" class="h-fit md:h-[53.7rem] xl:h-[34.75rem]">
+        <div ref="aboutMeRef"
+            class="box
+                translate-x-[0] translate-y-[0] w-[calc(100vw-2rem)] mx-auto mb-3
+                md:w-[34rem] md:m-0
+                xl:translate-x-[-2rem]"
+            
+            :class="`${isAboutMeVisible ? 'fade-in-visible' : 'fade-in-invisible'}`"
             id="about-me">
             <div class="label">
                 <p>{{ aboutBoxes[0].headline }}</p>
@@ -58,7 +64,12 @@
             </ol>
         </div>
 
-        <div ref="languagesRef" class="box aboutBox"
+        <div ref="languagesRef"
+            class="box aboutBox
+                translate-x-[0] translate-y-[0] w-[calc(100vw-6rem)] mx-auto mb-3
+                md:translate-x-[-9.4rem] md:translate-y-[-0.7rem] md:w-fit md:m-0
+                xl:translate-x-[-22.5rem] xl:translate-y-[-0.95rem]"
+
             :class="`${isLanguagesVisible ? 'fade-in-visible' : 'fade-in-invisible'}`" id="languages">
             <div class="label">
                 <p>{{ aboutBoxes[1].headline }}</p>
@@ -70,7 +81,12 @@
             </ol>
         </div>
 
-        <div ref="hobbysRef" class="box aboutBox"
+        <div ref="hobbysRef" 
+            class="box aboutBox
+                translate-x-[0] translate-y-[0] w-[calc(100vw-6rem)] mx-auto mb-3
+                md:translate-x-[-10.4rem] md:translate-y-[1.4rem] md:w-fit md:m-0
+                xl:translate-x-[-9rem] xl:translate-y-[-3rem]"
+            
             :class="`${isHobbysVisible ? 'fade-in-visible' : 'fade-in-invisible'}`" id="hobbys">
             <div class="label">
                 <p>{{ aboutBoxes[2].headline }}</p>
@@ -82,7 +98,12 @@
             </ol>
         </div>
 
-        <div ref="degreesRef" class="box aboutBox"
+        <div ref="degreesRef"
+            class="box aboutBox pb-6
+                translate-x-[0] translate-y-[0] w-[calc(100vw-2rem)] mx-auto mb-3
+                md:translate-x-[4.7rem] md:translate-y-[3.2rem] md:w-fit md:m-0
+                xl:translate-x-[9.4rem] xl:translate-y-[-18.4rem]"
+            
             :class="`${isDegreesVisible ? 'fade-in-visible' : 'fade-in-invisible'}`" id="degrees">
             <div class="label">
                 <p>{{ aboutBoxes[3].headline }}</p>
@@ -96,7 +117,12 @@
                 $t('resume') }}</a>
         </div>
 
-        <div ref="portraitRef" class="box aboutBox"
+        <div ref="portraitRef"
+            class="box aboutBox
+                translate-x-[0] translate-y-[0] w-[calc(100vw-6rem)] mx-auto mb-3
+                md:translate-x-[8.3rem] md:translate-y-[-30.8rem] md:w-[17.5rem] md:m-0
+                xl:translate-x-[22rem] xl:translate-y-[-47.2rem]"
+
             :class="`${isPortraitVisible ? 'fade-in-visible' : 'fade-in-invisible'}`" id="portrait">
             <div class="label">
                 <p>portrait</p>
@@ -107,7 +133,7 @@
     </div>
 </template>
 
-<style scoped lang="scss">
+<style scoped>
 
     #container {
         display: flex;
@@ -159,129 +185,10 @@
 
     /* POSITIONS + WIDTH */
 
-    #about-me {
-        transform: translateX(-2rem);
-        width: 34rem;
-    }
-
-    #portrait {
-        width: 17.5rem;
-        transform: translateX(22rem) translateY(-47.2rem);
-    }
-
-    #languages {
-        transform: translateX(-22.5rem) translateY(-0.95rem);
-        width: fit-content;
-    }
-
-    #degrees {
-        transform: translateX(9.4rem) translateY(-18.4rem);
-        padding-bottom: 1.5rem;
-        width: fit-content;
-    }
-
-    #hobbys {
-        transform: translateX(-9rem) translateY(-3rem);
-        width: fit-content;
-    }
-
-    #container {
-        height: 34.75rem;
-    }
 
     @supports (-webkit-appearance: none) and (stroke-color: transparent) {
         #degrees {
             transform: translateX(9.4rem) translateY(-19.7rem);
         }
-    }
-
-    @include lg {
-        #about-me {
-            transform: translateX(0rem);
-        }
-
-        #portrait {
-            transform: translateX(8.3rem) translateY(-30.8rem);
-        }
-
-        #languages {
-            transform: translateX(-9.4rem) translateY(0.7rem);
-        }
-
-        #degrees {
-            transform: translateX(4.7rem) translateY(3.2rem);
-        }
-
-        #hobbys {
-            transform: translateX(-10.4rem) translateY(1.4rem);
-        }
-
-        #container {
-            height: 53.7rem;
-        }
-
-
-        @supports (-webkit-appearance: none) and (stroke-color: transparent) {
-            #portrait {
-                transform: translateX(8.3rem) translateY(-32.4rem);
-            }
-
-            #degrees {
-                transform: translateX(4.8rem) translateY(2.2rem);
-            }
-        }
-    }
-
-    @include sm {
-
-        #about-me,
-        #languages,
-        #degrees,
-        #hobbys,
-        #portrait {
-            transform: translateX(0rem) translateY(0rem);
-
-
-            width: calc(100vw - 2rem);
-            margin: 0 auto;
-            margin-bottom: 0.78rem;
-        }
-
-        #languages,
-        #hobbys,
-        #portrait {
-            width: calc(100vw - 6rem);
-        }
-
-        #container {
-            height: fit-content;
-        }
-    }
-</style>
-
-<style lang="scss">
-
-    .gr {
-        color: $green;
-    }
-
-    .b {
-        color: $blue;
-    }
-
-    .p {
-        color: $pink;
-    }
-
-    .ge {
-        color: $yellow;
-    }
-
-    .o {
-        color: $orange;
-    }
-
-    .l {
-        color: $purple;
     }
 </style>

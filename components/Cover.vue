@@ -56,13 +56,13 @@
 
 <template>
     <div id="cover">
-        <object :data="'/img/CoverDesktop.svg'" type="image/svg+xml" id="cover-desktop" ref="coverDesktopRef"></object>
-        <object :data="'/img/CoverMobile.svg'" type="image/svg+xml" id="cover-mobile" ref="coverMobileRef"></object>
-        <LanguageSwitcher id="languageSwitcher" />
+        <object :data="'/img/CoverDesktop.svg'" type="image/svg+xml" id="cover-desktop" class="hidden 2xl:block" ref="coverDesktopRef"></object>
+        <object :data="'/img/CoverMobile.svg'" type="image/svg+xml" id="cover-mobile" class="block 2xl:hidden" ref="coverMobileRef"></object>
+        <LanguageSwitcher class="right-4 2xl:right-0" />
     </div>
 </template>
 
-<style scoped lang="scss">
+<style scoped>
     #cover {
         width: 100%;
         height: calc(100vh - 4rem);
@@ -80,26 +80,11 @@
         display: none;
     }
 
-    @include xl {
-        #cover-desktop {
-            display: none;
-        }
-        #cover-mobile {
-            display: block;
-        }
-    }
-
     #languageSwitcher {
         position: absolute;
         right: calc(50% - 640px);
         bottom: 1rem;
         will-change: transform;
         transition: transform 0.001s;
-    }
-
-    @include xl {
-        #languageSwitcher {
-            right: 1rem;
-        }
     }
 </style>

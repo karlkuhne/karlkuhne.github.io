@@ -1,3 +1,7 @@
+<script setup lang="ts">
+    const localePath = useLocalePath()
+</script>
+
 <template>
     <div style="display: flex; justify-content: center;">
         <NuxtLink :to="localePath('/projekt-galerie')" class="all-projects-button selectDisable">
@@ -11,10 +15,6 @@
         </NuxtLink>
     </div>
 </template>
-
-<script setup lang="ts">
-    const localePath = useLocalePath()
-</script>
 
 <style scoped>
     .all-projects-button {

@@ -1,23 +1,16 @@
 <template>
-    <div id="content-wrap">
+    <div id="content-wrap" class="w-[calc(100vw-2rem)] lg:w-screen-md">
         <slot />
     </div>
 </template>
 
-<style scoped lang="scss">
+<style scoped>
     #content-wrap {
-        width: $screen-md;
         margin: 0 auto;
         text-align: justify;
         line-height: 1.5rem;
 
         margin-top: 5rem;
         margin-bottom: 7rem;
-    }
-
-    @include md {
-        #content-wrap {
-            width: calc(100vw - 2rem);
-        }
     }
 </style>

@@ -1,26 +1,3 @@
-<template>
-    <main id="main">
-        <h1>{{ $t('project-galery') }}</h1>
-        <div class='button-container'>
-            <button @click="setSelectedCategory('all')" :class="{ active: activeCategory === 'all' }">{{ $t('all') }}</button>
-            <button @click="setSelectedCategory('web')" :class="{ active: activeCategory === 'web' }">{{ $t('web') }}</button>
-            <button @click="setSelectedCategory('app')" :class="{ active: activeCategory === 'app' }">{{ $t('app') }}</button>
-            <button @click="setSelectedCategory('game')" :class="{ active: activeCategory === 'game' }">{{ $t('game') }}</button>
-        </div>
-
-        <div v-if="isLoading">
-            <Loader />
-        </div>
-
-        <template v-else>
-            <Project v-for="project in filteredProjects" :key="project.id + '-' + activeCategory" :projectId="project.id"
-                :projectLabel="project.label" :projectName="project.name" :projectDescription="project.description"
-                :projectHasPage="project.hasPage" :projectLink="project.link" :projectThumbnail="project.thumbnail"
-                :projectThumbnailMobile="project.thumbnailMobile" :projectImages="project.images" />
-        </template>
-    </main>
-</template>
-
 <script setup lang="ts">
     import { ref, computed } from 'vue';
     import Project from '~/components/Project.vue';
@@ -51,20 +28,34 @@
     });
 </script>
 
-<style scoped lang="scss">
+<template>
+    <main id="main" class="w-[calc(100vw-2rem)] 2xl:w-screen-xl mx-auto">
+        <h1>{{ $t('project-galery') }}</h1>
+        <div class='button-container'>
+            <button @click="setSelectedCategory('all')" :class="{ active: activeCategory === 'all' }">{{ $t('all') }}</button>
+            <button @click="setSelectedCategory('web')" :class="{ active: activeCategory === 'web' }">{{ $t('web') }}</button>
+            <button @click="setSelectedCategory('app')" :class="{ active: activeCategory === 'app' }">{{ $t('app') }}</button>
+            <button @click="setSelectedCategory('game')" :class="{ active: activeCategory === 'game' }">{{ $t('game') }}</button>
+        </div>
+
+        <div v-if="isLoading">
+            <Loader />
+        </div>
+
+        <template v-else>
+            <Project v-for="project in filteredProjects" :key="project.id + '-' + activeCategory" :projectId="project.id"
+                :projectLabel="project.label" :projectName="project.name" :projectDescription="project.description"
+                :projectHasPage="project.hasPage" :projectLink="project.link" :projectThumbnail="project.thumbnail"
+                :projectThumbnailMobile="project.thumbnailMobile" :projectImages="project.images" />
+        </template>
+    </main>
+</template>
+
+<style scoped>
     #main {
-        width: $screen-xl;
-        margin: 0 auto;
         padding-top: 4.5rem;
         padding-bottom: 7rem;
         gap: 1rem
-    }
-
-    @include xl {
-        #main {
-            width: calc(100vw - 2rem);
-            margin: 0 auto;
-        }
     }
 
     .button-container {

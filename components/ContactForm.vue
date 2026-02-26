@@ -1,5 +1,5 @@
 <template>
-    <div ref="elementRef" :class="`box ${isVisible ? 'fade-in-visible' : 'fade-in-invisible'}`" id="contact-form">
+    <div ref="elementRef" :class="`box ${isVisible ? 'fade-in-visible' : 'fade-in-invisible'}`" id="contact-form" class="w-[calc(100vw-2rem)] lg:w-screen-md">
         <div class="label">
             <p>{{ $t('contact_form') }}</p>
         </div>
@@ -47,16 +47,9 @@
 </script>
 
 
-<style scoped lang="scss">
+<style scoped>
     #contact-form {
-        width: $screen-md;
         margin: 0 auto;
-    }
-
-    @include md {
-        #contact-form {
-            width: calc(100vw - 2rem);
-        }
     }
 
     .label {

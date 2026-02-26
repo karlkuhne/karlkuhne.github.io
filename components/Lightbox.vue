@@ -1,57 +1,3 @@
-<template>
-    <div class="lightbox" @click="lightbox.close()">
-        <div @click.stop>
-            <div class="embla">
-                <div class="embla__viewport" ref="emblaRef">
-                    <div class="embla__container">
-                        <div class="embla__slide" v-for="(image, index) in lightbox.projectImages" :key="index">
-                            <NuxtImg :src="image" :alt="`Slide ${index + 1}`" />
-                        </div>
-                    </div>
-                </div>
-
-                <div id="nav_container" v-if="(lightbox.projectImages ?? []).length > 1">
-                    <button v-if="emblaApi?.canScrollPrev()" class="embla__prev" @click="scrollPrev">
-                        <ArrowLeft class="arrow-icon" />
-                    </button>
-                    <div class="embla__dots">
-                        <button v-for="(image, index) in lightbox.projectImages" :key="index"
-                            :class="['embla__dot', { 'is-selected': selectedIndex === index }]"
-                            @click="scrollTo(index)" />
-                    </div>
-                    <button v-if="emblaApi?.canScrollNext()" class="embla__next" @click="scrollNext">
-                        <ArrowLeft class="arrow-icon" style="transform: rotate(180deg);" />
-                    </button>
-                </div>
-            </div>
-
-            <div id="text-container">
-                <h3>{{ lightbox.projectName }}</h3>
-                <p>{{ lightbox.projectDescription }}</p>
-
-                <div style="margin-top: 1.5rem; display: flex; gap: 0.75rem">
-                    <a v-if="lightbox.projectLink" :href="`${lightbox.projectLink}`" target="_blank"
-                        class="blue-button">
-                        {{ $t('open') }}
-                    </a>
-                    <NuxtLink v-if="lightbox.projectHasPage"
-                        :to="localePath(`/projekt-galerie/${lightbox.projectName}`)" class="blue-button"
-                        @click="lightbox.close">
-                        {{ $t('project-page') }}
-                    </NuxtLink>
-                </div>
-            </div>
-
-            <svg class="icon" @click="lightbox.close" id="close-button" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 16 16">
-                <path
-                    d="M3.53 3.53a.67.67 0 0 1 .94 0L8 7.06l3.53-3.53a.67.67 0 1 1 .94.94L8.94 8l3.53 3.53a.67.67 0 1 1-.94.94L8 8.94l-3.53 3.53a.67.67 0 1 1-.94-.94L7.06 8 3.53 4.47a.67.67 0 0 1 0-.94"
-                    style="touch-action: none;" stroke-width="1.55"></path>
-            </svg>
-        </div>
-    </div>
-</template>
-
 <script setup lang="ts">
     import { ref, onMounted, onBeforeUnmount } from 'vue';
     import emblaCarouselVue from 'embla-carousel-vue';
@@ -103,7 +49,61 @@
     }
 </script>
 
-<style scoped lang="scss">
+<template>
+    <div class="lightbox" @click="lightbox.close()">
+        <div @click.stop>
+            <div class="w-full 2xl:w-auto">
+                <div class="embla__viewport" ref="emblaRef">
+                    <div class="embla__container">
+                        <div class="embla__slide" v-for="(image, index) in lightbox.projectImages" :key="index">
+                            <NuxtImg :src="image" :alt="`Slide ${index + 1}`" />
+                        </div>
+                    </div>
+                </div>
+
+                <div id="nav_container" v-if="(lightbox.projectImages ?? []).length > 1">
+                    <button v-if="emblaApi?.canScrollPrev()" class="embla__prev" @click="scrollPrev">
+                        <ArrowLeft class="arrow-icon" />
+                    </button>
+                    <div class="embla__dots">
+                        <button v-for="(image, index) in lightbox.projectImages" :key="index"
+                            :class="['embla__dot', { 'is-selected': selectedIndex === index }]"
+                            @click="scrollTo(index)" />
+                    </div>
+                    <button v-if="emblaApi?.canScrollNext()" class="embla__next" @click="scrollNext">
+                        <ArrowLeft class="arrow-icon" style="transform: rotate(180deg);" />
+                    </button>
+                </div>
+            </div>
+
+            <div class="w-full 2xl:w-auto">
+                <h3>{{ lightbox.projectName }}</h3>
+                <p>{{ lightbox.projectDescription }}</p>
+
+                <div style="margin-top: 1.5rem; display: flex; gap: 0.75rem">
+                    <a v-if="lightbox.projectLink" :href="`${lightbox.projectLink}`" target="_blank"
+                        class="blue-button">
+                        {{ $t('open') }}
+                    </a>
+                    <NuxtLink v-if="lightbox.projectHasPage"
+                        :to="localePath(`/projekt-galerie/${lightbox.projectName}`)" class="blue-button"
+                        @click="lightbox.close">
+                        {{ $t('project-page') }}
+                    </NuxtLink>
+                </div>
+            </div>
+
+            <svg class="icon" @click="lightbox.close" id="close-button" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16">
+                <path
+                    d="M3.53 3.53a.67.67 0 0 1 .94 0L8 7.06l3.53-3.53a.67.67 0 1 1 .94.94L8.94 8l3.53 3.53a.67.67 0 1 1-.94.94L8 8.94l-3.53 3.53a.67.67 0 1 1-.94-.94L7.06 8 3.53 4.47a.67.67 0 0 1 0-.94"
+                    style="touch-action: none;" stroke-width="1.55"></path>
+            </svg>
+        </div>
+    </div>
+</template>
+
+<style scoped>
     .lightbox {
         position: fixed;
         z-index: 1000;
@@ -132,16 +132,6 @@
     #text-container {
         width: 134vh;
         max-width: 90rem;
-    }
-
-    @include xl {
-        .embla {
-            width: 100vw;
-        }
-
-        #text-container {
-            width: 100vw;
-        }
     }
 
     .embla__container {

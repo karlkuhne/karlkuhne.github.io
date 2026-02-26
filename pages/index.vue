@@ -1,21 +1,3 @@
-<template>
-    <Cover />
-    <main id="main">
-        <AboutBoxes />
-        <div id="project-container">
-            <h1 ref="elementRef" id="galery-header"
-                :class="`${hasFaded ? 'typing-fade-visible' : 'typing-fade-invisible'}`">
-                {{ $t('featured_projects') }}</h1>
-            <LazyProject hydrate-on-visible v-for="project in projects" :key="project.id" :projectId="project.id"
-                :projectLabel="project.label" :projectName="project.name" :projectDescription="project.description"
-                :projectHasPage="project.hasPage" :projectLink="project.link" :projectThumbnail="project.thumbnail"
-                :projectThumbnailMobile="project.thumbnailMobile" :projectImages="project.images" />
-            <LazyAllProjectsButton hydrate-on-visible />
-        </div>
-        <LazyContactForm hydrate-on-visible />
-    </main>
-</template>
-
 <script setup lang="ts">
     import { ref, onMounted } from 'vue';
     import { useI18n } from 'vue-i18n'
@@ -45,7 +27,25 @@
     })
 </script>
 
-<style scoped lang="scss">
+<template>
+    <Cover />
+    <main id="main">
+        <AboutBoxes />
+        <div id="project-container" class="w-[calc(100vw-2rem)] 2xl:w-screen-xl mx-auto">
+            <h1 ref="elementRef" id="galery-header"
+                :class="`${hasFaded ? 'typing-fade-visible' : 'typing-fade-invisible'}`">
+                {{ $t('featured_projects') }}</h1>
+            <LazyProject hydrate-on-visible v-for="project in projects" :key="project.id" :projectId="project.id"
+                :projectLabel="project.label" :projectName="project.name" :projectDescription="project.description"
+                :projectHasPage="project.hasPage" :projectLink="project.link" :projectThumbnail="project.thumbnail"
+                :projectThumbnailMobile="project.thumbnailMobile" :projectImages="project.images" />
+            <LazyAllProjectsButton hydrate-on-visible />
+        </div>
+        <LazyContactForm hydrate-on-visible />
+    </main>
+</template>
+
+<style scoped>
     #main {
         padding-top: 7rem;
         padding-bottom: 7rem;
@@ -53,18 +53,10 @@
     }
 
     #project-container {
-        width: $screen-xl;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
         gap: 1rem;
-    }
-
-    @include xl {
-        #project-container {
-            width: calc(100vw - 2rem);
-            margin: 0 auto;
-        }
     }
 
     .typing-fade-visible {

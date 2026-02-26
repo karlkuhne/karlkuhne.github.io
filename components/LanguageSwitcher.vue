@@ -1,12 +1,3 @@
-<template>
-  <div class="switcher">
-    <div class="highlight" :style="highlightStyle" />
-
-    <button v-for="(lang, index) in languages" :key="lang.code" class="tab" @click="changeLanguage(lang.code, index)"
-      ref="tabRefs"> <span class="icon">{{ lang.icon }}</span> {{ lang.label }} </button>
-  </div>
-</template>
-
 <script setup>
   import { ref, computed } from 'vue'
   import { useI18n } from 'vue-i18n'
@@ -40,40 +31,11 @@
   }
 </script>
 
-<style scoped>
-  .switcher {
-    position: relative;
-    width: fit-content;
-    height: fit-content;
-    display: flex;
-    background-color: rgb(50, 50, 50);
-    border-radius: 0.5rem;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-  }
+<template>
+  <div class="relative w-fit h-fit flex bg-primary-2 rounded-md p-1">
+    <div class="absolute top-0 bottom-0 bg-primary-2 rounded-md" :style="highlightStyle" />
 
-  .highlight {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    background-color: rgb(70, 70, 70);
-    border-radius: 0.5rem;
-  }
-
-  .tab {
-    z-index: 1;
-    color: white;
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-  }
-
-  .icon,
-  .tab {
-    font-size: 1rem;
-  }
-</style>
+    <button v-for="(lang, index) in languages" :key="lang.code" class="flex gap-1.5" @click="changeLanguage(lang.code, index)"
+      ref="tabRefs"> <span class="icon">{{ lang.icon }}</span> {{ lang.label }} </button>
+  </div>
+</template>

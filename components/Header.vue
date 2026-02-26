@@ -51,19 +51,17 @@
 </script>
 
 <template>
-    <header>
-        <nav>
-            <NuxtLink :to="localePath('/')" class="selectDisable" @click="closeAndScrollToTop">{{ $t('title') }}
-            </NuxtLink>
-            <div id="main-nav" ref="mainNav">
+    <header class="w-full bg-primary-1 fixed top-0 z-50">
+        <nav class="max-w-screen-xl mx-auto flex justify-between items-center h-16">
+            <NuxtLink :to="localePath('/')" class="ml-4 2xl:ml-0 selectDisable" @click="closeAndScrollToTop">{{ $t('title') }}</NuxtLink>
+            <div class="hidden xl:flex justify-between items-center flex-grow" id="main-nav" ref="mainNav">
                 <div id="nav-buttons">
                     <NuxtLink :to="localePath('/projekt-galerie')" class="main-nav-item selectDisable"
                         @click="closeAndScrollToTop">{{ $t('project-galery') }}</NuxtLink>
                     <NuxtLink class="main-nav-item selectDisable" @click="handleAbout">{{ $t('about-me') }}</NuxtLink>
-                    <NuxtLink class="main-nav-item selectDisable" @click="handleContact">{{ $t('contact') }}
-                    </NuxtLink>
+                    <NuxtLink class="main-nav-item selectDisable" @click="handleContact">{{ $t('contact') }}</NuxtLink>
                 </div>
-                <div id="linkedIn-button" class="selectDisable">
+                <div class="ml-4 2xl:ml-0 selectDisable">
                     <button onclick="window.open('https://www.linkedin.com/in/karl-kuhne', '_blank');"
                         @click="closeMenu">
                         <svg fill="white" class="button-icon" width="21" preserveAspectRatio="xMidYMid meet"
@@ -77,7 +75,7 @@
                 </div>
             </div>
 
-            <div id="burgerMenu" class="selectDisable" ref="burgerMenu" @click="toggleMenu">
+            <div id="burgerMenu" class="xl:hidden selectDisable" ref="burgerMenu" @click="toggleMenu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -86,50 +84,15 @@
     </header>
 </template>
 
-<style scoped lang="scss">
-    header {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 999;
-        background-color: rgb(30, 30, 30, 1);
-    }
-
-    nav {
-        max-width: $screen-xl;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 4rem;
-    }
+<style scoped>
 
     nav a {
-        color: white;
-        font-family: Work Sans;
         font-size: 1.25rem;
         font-weight: 600;
-        text-decoration: none;
-    }
-
-    @include xl {
-        nav a {
-            margin-left: 1rem;
-        }
-
-        #linkedIn-button {
-            margin-right: 1rem;
-        }
     }
 
     nav a:hover {
         color: rgb(181, 181, 181);
-    }
-
-    #main-nav {
-        display: flex;
-        justify-content: space-between;
-        flex-grow: 1;
     }
 
     /* Nav Buttons */
@@ -207,11 +170,7 @@
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    /* responsive */
-    @include lg {
-        #main-nav {
-            display: none;
-        }
+   
 
         #main-nav.active {
             display: block;
@@ -238,9 +197,5 @@
             margin: 0 auto;
         }
 
-        #burgerMenu {
-            display: block;
-        }
-    }
+        
 </style>
-```

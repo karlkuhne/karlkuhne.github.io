@@ -25,6 +25,7 @@ export default defineConfig({
             'primary': 'rgb(18, 18, 18)',
             'primary-1': 'rgb(30, 30, 30)',
             'primary-2': 'rgb(70, 70, 70)',
+            'primary-3': 'rgb(181, 181, 181)',
     
             'accent': 'rgb(45, 101, 188)',
             'accent-1': 'rgb(55, 121, 218)',
@@ -77,8 +78,9 @@ export default defineConfig({
                     color: white;
                     margin-bottom: 1rem;
                 }
-                p, label {
+                span, p, label {
                     font-family: Work Sans;
+                    color: white;
                     font-size: 1rem;
                     color: white;
                 }
@@ -98,5 +100,12 @@ export default defineConfig({
         '.primary-btn': 'bg-accent hover:bg-accent-1 text-white text-center rounded-md p-2',
         '.fade-in-visible': 'opacity-1 transition-opacity duration-500',
         '.fade-in-invisible': 'opacity-0 transition-opacity duration-500',
+        
+        '.gr': 'text-green',
+        '.b': 'text-blue',
+        '.p': 'text-pink',
+        '.ge': 'text-yellow',
+        '.o': 'text-orange',
+        '.l': 'text-purple',
     },
 });
