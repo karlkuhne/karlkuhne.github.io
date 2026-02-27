@@ -55,9 +55,9 @@
 
 
 <template>
-    <div class="relative h-[calc(100dvh-4rem)]">
+    <div class="relative h-[calc(100svh-4rem)] xl:h-[calc(100vh-4rem)]">
         <object :data="'/img/CoverDesktop.svg'" type="image/svg+xml" class="w-full h-full hidden xl:block" ref="coverDesktopRef"></object>
-        <object :data="'/img/CoverMobile.svg'" type="image/svg+xml" class="w-full h-full block xl:hidden" ref="coverMobileRef"></object>
+        <img :src="'/img/CoverMobile.webp'" class="w-full h-full object-cover object-center block xl:hidden" ref="coverMobileRef">
         <LanguageSwitcher id="languageSwitcher" class="right-4 xl:right-[calc(50%-640px)] bottom-4"/>
     </div>
 </template>
