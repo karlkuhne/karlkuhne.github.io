@@ -55,7 +55,7 @@
 
 
 <template>
-    <div class="h-[calc(100vh-4rem)]">
+    <div class="relative h-[calc(100dvh-4rem)]">
         <object :data="'/img/CoverDesktop.svg'" type="image/svg+xml" class="w-full h-full hidden xl:block" ref="coverDesktopRef"></object>
         <object :data="'/img/CoverMobile.svg'" type="image/svg+xml" class="w-full h-full block xl:hidden" ref="coverMobileRef"></object>
         <LanguageSwitcher id="languageSwitcher" class="right-4 xl:right-[calc(50%-640px)] bottom-4"/>
