@@ -35,6 +35,7 @@ export default defineConfig({
     
             'accent': 'rgb(45, 101, 188)',
             'accent-1': 'rgb(55, 121, 218)',
+            'accent-2': 'rgb(65, 142, 248)',
     
             'green': 'rgb(99, 245, 131)',
             'blue': 'rgb(107, 214, 237)',
@@ -113,7 +114,7 @@ export default defineConfig({
     ],
     shortcuts: {
         'box': 'bg-primary-30 border-solid border-2 border-primary-70 rounded-lg',
-        'hyperlink': 'text-accent hover:text-accent-1',
+        'hyperlink': 'text-accent-1 hover:text-accent-2',
         'primary-btn': 'bg-accent hover:bg-accent-1 text-white text-center rounded-md p-2 border-none',
         'filter-btn': 'bg-primary-50 hover:bg-primary-60 border-none px-2.3 py-1.8 rounded-lg',
         'embla-arrows': 'absolute top-1/2 translate-y-[-50%] z-10 border-none cursor-pointer pointer-events-auto bg-transparent',
