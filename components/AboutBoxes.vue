@@ -113,8 +113,7 @@
                     <p v-html="formatNewlines(column)"></p>
                 </li>
             </ol>
-            <a href="/Lebenslauf.pdf" download target="_blank" class="primary-btn" style="margin-left: 2.5rem;">{{
-                $t('resume') }}</a>
+            <a href="https://admin.karlkuhne.me/media/download/lebenslauf.pdf" target="_blank" class="primary-btn" style="margin-left: 2.5rem;">{{ $t('resume') }}</a>
         </div>
 
         <div ref="portraitRef"
