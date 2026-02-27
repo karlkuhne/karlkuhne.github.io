@@ -58,7 +58,7 @@ export default defineConfig({
                     margin: 0 auto;
                     width: 1280px;
                     @media (max-width: 1280px) {
-                        width: calc(100vw - 2rem);
+                        width: calc(100vw - 3rem);
                     }
                 }
                 h1 {
@@ -71,7 +71,7 @@ export default defineConfig({
                     line-height: 4rem;
                     text-align: center;
                     @media (max-width: 1024px) {
-                        font-size: clamp(3rem, 5.25vw, 6rem);
+                        font-size: clamp(2.8rem, 5.25vw, 4rem);
                     }
                 }
                 h2 {
@@ -115,10 +115,10 @@ export default defineConfig({
         'box': 'bg-primary-30 border-solid border-2 border-primary-70 rounded-lg',
         'hyperlink': 'text-accent hover:text-accent-1',
         'primary-btn': 'bg-accent hover:bg-accent-1 text-white text-center rounded-md p-2 border-none',
-        'filter-btn': 'bg-primary-50 hover:bg-primary-60 border-none px-2.7 py-1.8 rounded-lg',
+        'filter-btn': 'bg-primary-50 hover:bg-primary-60 border-none px-2.3 py-1.8 rounded-lg',
         'embla-arrows': 'absolute top-1/2 translate-y-[-50%] z-10 border-none cursor-pointer pointer-events-auto bg-transparent',
         'project-icon': 'w-4.4 h-4.4 fill-primary-80 stroke-primary-80 hover:fill-primary-140 hover:stroke-primary-140 cursor-pointer mr-2',
-        'input': 'w-full h-12 bg-primary-20 border-solid border-2 border-primary-70 rounded-lg mb-4 mt-4 text-white text-[1rem]',
+        'input': 'w-full box-border h-12 bg-primary-20 border-solid border-2 border-primary-70 rounded-lg mb-4 mt-4 text-white text-[1rem] font-sans pl-3',
         'fade-in-visible': 'opacity-100 transition-opacity duration-500',
         'fade-in-invisible': 'opacity-0 transition-opacity duration-500',
         

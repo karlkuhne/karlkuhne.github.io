@@ -128,7 +128,7 @@
                 </svg>
             </div>
         </div>
-        <div class="h-[26rem] overflow-hidden" v-show="!isMinimized">
+        <div class="aspect-square sm:aspect-auto sm:h-[26rem] overflow-hidden" v-show="!isMinimized">
             <NuxtImg id="thumbnail-img" class="w-full h-full object-cover object-center transition-transform duration-400 ease cursor-pointer hover:scale-102.5 selectDisable" :src="isMobile ? thumbnailMobile : thumbnail"
                 @error="handleThumbnailError" draggable="false" oncontextmenu="return false"
                 @click="openLightbox(projectName, projectDescription, images, projectHasPage, projectLink)" />

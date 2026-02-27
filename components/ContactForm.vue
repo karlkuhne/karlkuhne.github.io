@@ -14,24 +14,20 @@
             <p>{{ $t('contact_form') }}</p>
         </div>
 
-        <form class="pb-6 pr-12" action="https://formspree.io/f/xnnqzbbk" method="POST">
-            <ol class="mt-4 mb-0">
-                <li>
-                    <label for="nameInput">name</label> <br>
-                    <input id="nameInput" class="input" type="text" name="name" required>
-                </li>
-                <li>
-                    <label for="emailInput">{{ $t('e_mail_address') }}</label> <br>
-                    <input id="emailInput" class="input" type="email" name="email" required>
-                </li>
-                <li>
-                    <label for="messageInput">{{ $t('message') }}</label> <br>
-                    <textarea id="messageInput" class="input" name="message" rows="1" style="resize: none;"
-                        oninput='this.style.height = ""; this.style.height = this.scrollHeight + "px";'
-                        required></textarea>
-                </li>
-            </ol>
-            <div class="flex ml-4 mb-4">
+        <form class="p-4" action="https://formspree.io/f/xnnqzbbk" method="POST">
+            <div>
+                <label for="nameInput">{{ $t('name') }}</label> <br>
+                <input id="nameInput" class="input" type="text" name="name" :placeholder="$t('placeholder_name')" required> <br>
+                
+                <label for="emailInput">{{ $t('e_mail_address') }}</label> <br>
+                <input id="emailInput" class="input" type="email" name="email" :placeholder="$t('placeholder_email')" required> <br>
+                
+                <label for="messageInput">{{ $t('message') }}</label> <br>
+                <textarea id="messageInput" class="input h-auto py-3 overflow-hidden line-height-6" name="message" rows="1" style="resize: none;"
+                    oninput='this.style.height = ""; this.style.height = this.scrollHeight + "px";'
+                    :placeholder="$t('placeholder_message')" required></textarea>
+            </div>
+            <div class="flex mb-4">
                 <input id="consentCheckbox" type="checkbox" required>
                 <label class="pl-1" for="consentCheckbox">
                     {{ $t('consent_1') }}
