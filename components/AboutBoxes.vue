@@ -48,7 +48,7 @@
     <div class="flex flex-col items-center h-fit md:h-[53.7rem] lg:h-[34.75rem] transition-[height] duration-650 ease">
         <div ref="aboutMeRef"
             class="box
-                translate-x-[0] translate-y-[0] w-[calc(100vw-2rem)] mx-auto mb-3
+                translate-x-[0] translate-y-[0] w-full mx-auto mb-3
                 md:w-[34rem] md:m-0
                 lg:translate-x-[-2rem]"
             
@@ -66,7 +66,7 @@
 
         <div ref="languagesRef"
             class="box
-                translate-x-[0] translate-y-[0] w-[calc(100vw-6rem)] mx-auto mb-3
+                translate-x-[0] translate-y-[0] w-full mx-auto mb-3
                 md:translate-x-[-9.4rem] md:translate-y-[0.8rem] md:w-fit md:m-0
                 lg:translate-x-[-22.5rem] lg:translate-y-[-0.95rem]"
 
@@ -83,7 +83,7 @@
 
         <div ref="hobbysRef" 
             class="box
-                translate-x-[0] translate-y-[0] w-[calc(100vw-6rem)] mx-auto mb-3
+                translate-x-[0] translate-y-[0] w-full mx-auto mb-3
                 md:translate-x-[-10.4rem] md:translate-y-[1.6rem] md:w-fit md:m-0
                 lg:translate-x-[-9rem] lg:translate-y-[-3rem]"
             
@@ -100,7 +100,7 @@
 
         <div ref="degreesRef"
             class="box pb-6
-                translate-x-[0] translate-y-[0] w-[calc(100vw-2rem)] mx-auto mb-3
+                translate-x-[0] translate-y-[0] w-full mx-auto mb-3
                 md:translate-x-[4.7rem] md:translate-y-[3.6rem] md:w-fit md:m-0
                 lg:translate-x-[9.4rem] lg:translate-y-[-18.4rem]"
             
@@ -119,7 +119,7 @@
 
         <div ref="portraitRef"
             class="box
-                translate-x-[0] translate-y-[0] w-[calc(100vw-6rem)] mx-auto mb-3
+                translate-x-[0] translate-y-[0] w-full mx-auto mb-3
                 md:translate-x-[8.3rem] md:translate-y-[-30.8rem] md:w-[17.5rem] md:m-0
                 lg:translate-x-[22rem] lg:translate-y-[-47.2rem]"
 
@@ -135,7 +135,7 @@
 
 <style scoped>
     .box {
-        transition: transform 0.65s ease, width 0.65s ease, opacity 0.6s ease;
+        transition: transform 0.65s ease, opacity 0.6s ease;
     }
 
     ul,

@@ -3,13 +3,13 @@
 </script>
 
 <template>
-    <footer class="w-full h-53 md:h-46 bg-primary-30 flex items-center justify-center">
+    <footer class="w-full py-6 bg-primary-30 flex items-center justify-center">
         <div class="flex flex-col gap-4 text-center">
             <span class="font-bold">© {{ new Date().getFullYear() }} Karl Kuhne</span>
 
-            <div class="flex flex-col md:flex-row gap-2">
+            <div class="flex gap-2">
                 <NuxtLink :to="localePath('/legal')" class="text-white hover:text-primary-180 selectDisable">{{ $t('imprint') }}</NuxtLink>
-                <span class="hidden md:inline">·</span>
+                <span>·</span>
                 <NuxtLink :to="localePath('/legal')" class="text-white hover:text-primary-180 selectDisable">{{ $t('privacy') }}</NuxtLink>
             </div>
 
