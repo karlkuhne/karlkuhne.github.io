@@ -1,37 +1,3 @@
-<template>
-    <div class="project" :class="{ 'fadeInUp': isVisible, 'shrink': isClosed }">
-        <div class="label" :style="{ borderBottom: isMinimized ? 'none' : '0.15rem solid rgb(70, 70, 70)' }">
-            <p>{{ projectLabel }}</p>
-
-            <div>
-                <svg class="icon" @click="handleMinimize" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                    <path d="M2.67 8c0-.37.3-.67.66-.67h9.34a.67.67 0 1 1 0 1.34H3.33A.67.67 0 0 1 2.67 8"
-                        style="touch-action: none;" stroke-width="1.55"></path>
-                </svg>
-
-                <svg class="icon"
-                    @click="openLightbox(projectName, projectDescription, images, projectHasPage, projectLink || '')"
-                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path
-                        d="M8.2 4c-1.12 0-1.82-.05-2.56.33a3 3 0 0 0-1.31 1.3C3.95 6.39 4 7.09 4 8.2v7.6c0 1.12-.05 1.82.33 2.56a3 3 0 0 0 1.3 1.31c.75.38 1.45.33 2.57.33h7.6c1.12 0 1.82.05 2.56-.33a3 3 0 0 0 1.31-1.3c.38-.75.33-1.45.33-2.57V8.2c0-1.12.05-1.82-.33-2.56a3 3 0 0 0-1.3-1.31C17.61 3.95 16.91 4 15.8 4Zm0 2h7.6c1.12 0 1.54.05 1.65.1a1 1 0 0 1 .44.45c.06.11.11.53.11 1.65v7.6c0 1.12-.05 1.54-.1 1.65a1 1 0 0 1-.45.44c-.11.06-.53.11-1.65.11H8.2a6 6 0 0 1-1.65-.1 1 1 0 0 1-.44-.45A6 6 0 0 1 6 15.8V8.2c0-1.12.05-1.54.1-1.65a1 1 0 0 1 .45-.44C6.66 6.05 7.08 6 8.2 6"
-                        style="touch-action: none;" stroke-width="1.55"></path>
-                </svg>
-
-                <svg class="icon" @click="handleClose" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                    <path
-                        d="M3.53 3.53a.67.67 0 0 1 .94 0L8 7.06l3.53-3.53a.67.67 0 1 1 .94.94L8.94 8l3.53 3.53a.67.67 0 1 1-.94.94L8 8.94l-3.53 3.53a.67.67 0 1 1-.94-.94L7.06 8 3.53 4.47a.67.67 0 0 1 0-.94"
-                        style="touch-action: none;" stroke-width="1.55"></path>
-                </svg>
-            </div>
-        </div>
-        <div id="thumbnail-container" v-show="!isMinimized">
-            <NuxtImg id="thumbnail-img" class="selectDisable" :src="isMobile ? thumbnailMobile : thumbnail"
-                @error="handleThumbnailError" draggable="false" oncontextmenu="return false"
-                @click="openLightbox(projectName, projectDescription, images, projectHasPage, projectLink)" />
-        </div>
-    </div>
-</template>
-
 <script setup lang="ts">
     import { ref, onMounted, onBeforeUnmount } from 'vue';
     import { useLightboxStore } from '~/stores/lightboxStore';
@@ -133,73 +99,44 @@
     });
 </script>
 
-<style scoped lang="scss">
+<template>
+    <div class="project w-full border-solid border-2 border-primary-70 bg-primary-30 rounded-xl align-self-center overflow-hidden opacity-0 translate-y-[75px] transition-[opacity,transform] duration-500 ease-out"
+        :class="{ 'fadeInUp': isVisible, 'shrink': isClosed }">
+        <div class="pl-2.4 flex items-center justify-between" :style="{ borderBottom: isMinimized ? 'none' : '0.15rem solid rgb(70, 70, 70)' }">
+            <p>{{ projectLabel }}</p>
 
-    .project {
-        width: 100%;
+            <div>
+                <svg class="project-icon"
+                    @click="handleMinimize" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                    <path d="M2.67 8c0-.37.3-.67.66-.67h9.34a.67.67 0 1 1 0 1.34H3.33A.67.67 0 0 1 2.67 8"
+                        style="touch-action: none;" stroke-width="1.55"></path>
+                </svg>
 
-        background-color: rgb(30, 30, 30);
-        border: var(--border);
-        border-radius: 0.7rem;
-        align-self: center;
+                <svg class="project-icon"
+                    @click="openLightbox(projectName, projectDescription, images, projectHasPage, projectLink || '')"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M8.2 4c-1.12 0-1.82-.05-2.56.33a3 3 0 0 0-1.31 1.3C3.95 6.39 4 7.09 4 8.2v7.6c0 1.12-.05 1.82.33 2.56a3 3 0 0 0 1.3 1.31c.75.38 1.45.33 2.57.33h7.6c1.12 0 1.82.05 2.56-.33a3 3 0 0 0 1.31-1.3c.38-.75.33-1.45.33-2.57V8.2c0-1.12.05-1.82-.33-2.56a3 3 0 0 0-1.3-1.31C17.61 3.95 16.91 4 15.8 4Zm0 2h7.6c1.12 0 1.54.05 1.65.1a1 1 0 0 1 .44.45c.06.11.11.53.11 1.65v7.6c0 1.12-.05 1.54-.1 1.65a1 1 0 0 1-.45.44c-.11.06-.53.11-1.65.11H8.2a6 6 0 0 1-1.65-.1 1 1 0 0 1-.44-.45A6 6 0 0 1 6 15.8V8.2c0-1.12.05-1.54.1-1.65a1 1 0 0 1 .45-.44C6.66 6.05 7.08 6 8.2 6"
+                        style="touch-action: none;" stroke-width="1.55"></path>
+                </svg>
 
-        opacity: 0;
-        transform: translateY(75px);
-        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+                <svg class="project-icon"
+                    @click="handleClose" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                    <path
+                        d="M3.53 3.53a.67.67 0 0 1 .94 0L8 7.06l3.53-3.53a.67.67 0 1 1 .94.94L8.94 8l3.53 3.53a.67.67 0 1 1-.94.94L8 8.94l-3.53 3.53a.67.67 0 1 1-.94-.94L7.06 8 3.53 4.47a.67.67 0 0 1 0-.94"
+                        style="touch-action: none;" stroke-width="1.55"></path>
+                </svg>
+            </div>
+        </div>
+        <div class="aspect-square sm:aspect-auto sm:h-[26rem] overflow-hidden" v-show="!isMinimized">
+            <NuxtImg id="thumbnail-img" class="w-full h-full object-cover object-center transition-transform duration-400 ease cursor-pointer hover:scale-102.5 selectDisable" :src="isMobile ? thumbnailMobile : thumbnail"
+                @error="handleThumbnailError" draggable="false" oncontextmenu="return false"
+                @click="openLightbox(projectName, projectDescription, images, projectHasPage, projectLink)" />
+        </div>
+    </div>
+</template>
 
-        overflow: hidden;
-    }
-
-    @include sm {
-        .project {
-            height: calc(100vw + 1rem);
-        }
-    }
-
-    #thumbnail-container {
-        height: 26rem;
-        overflow: hidden;
-    }
-
-    .label {
-        padding-left: 0.6rem;
-
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .icon {
-        fill: rgb(82, 82, 82);
-        stroke: rgb(82, 82, 82);
-
-        margin-right: 0.5rem;
-
-        width: 1.1rem;
-        height: 1.1rem;
-    }
-
-    .icon:hover {
-        fill: rgb(142, 142, 142);
-        stroke: rgb(142, 142, 142);
-        cursor: pointer;
-    }
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-        border-bottom-left-radius: 0.7rem;
-        border-bottom-right-radius: 0.7rem;
-        transition: transform 0.4s ease;
-    }
-
-    img:hover {
-        cursor: pointer;
-        transform: scale(1.025);
-    }
-
+<style scoped>
     .fadeInUp {
         opacity: 1;
         transform: translateY(0);

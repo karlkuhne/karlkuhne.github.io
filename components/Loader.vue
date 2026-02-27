@@ -3,16 +3,11 @@
 </script>
 
 <template>
-  <div class="loader" />
+  <div class="loader border-solid border-10 border-primary-70 border-t-transparent rounded-full w-12 h-12" />
 </template>
 
 <style scoped>
   .loader {
-    border: 0.5rem solid var(--border-color);
-    border-top: 0.5rem solid rgb(175, 175, 175);
-    border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
     animation: spin 1s linear infinite;
   }
 

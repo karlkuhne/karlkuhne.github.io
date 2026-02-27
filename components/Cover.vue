@@ -55,51 +55,9 @@
 
 
 <template>
-    <div id="cover">
-        <object :data="'/img/CoverDesktop.svg'" type="image/svg+xml" id="cover-desktop" ref="coverDesktopRef"></object>
-        <object :data="'/img/CoverMobile.svg'" type="image/svg+xml" id="cover-mobile" ref="coverMobileRef"></object>
-        <LanguageSwitcher id="languageSwitcher" />
+    <div class="relative h-[calc(100svh-4rem)] xl:h-[calc(100vh-4rem)]">
+        <object :data="'/img/CoverDesktop.svg'" type="image/svg+xml" class="w-full h-full hidden xl:block" ref="coverDesktopRef"></object>
+        <img :src="'/img/CoverMobile.webp'" class="w-full h-full object-cover object-center block xl:hidden" ref="coverMobileRef">
+        <LanguageSwitcher id="languageSwitcher" class="right-4 xl:right-[calc(50%-640px)] bottom-4"/>
     </div>
 </template>
-
-<style scoped lang="scss">
-    #cover {
-        width: 100%;
-        height: calc(100vh - 4rem);
-    }
-
-    #cover-desktop {
-        width: 100%;
-        height: 100%;
-        display: block;
-    }
-
-    #cover-mobile {
-        width: 100%;
-        height: 100%;
-        display: none;
-    }
-
-    @include xl {
-        #cover-desktop {
-            display: none;
-        }
-        #cover-mobile {
-            display: block;
-        }
-    }
-
-    #languageSwitcher {
-        position: absolute;
-        right: calc(50% - 640px);
-        bottom: 1rem;
-        will-change: transform;
-        transition: transform 0.001s;
-    }
-
-    @include xl {
-        #languageSwitcher {
-            right: 1rem;
-        }
-    }
-</style>

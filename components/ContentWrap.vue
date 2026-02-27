@@ -1,23 +1,7 @@
 <template>
-    <div id="content-wrap">
+    <div id="content-wrap" class="w-full max-w-screen-md mx-auto md:text-justify line-height-7 mt-20 mb-28
+        [&_a]:text-accent-1 [&_a:hover]:text-accent-2
+        [&_img]:w-full [&_img]:rounded-lg">
         <slot />
     </div>
 </template>
-
-<style scoped lang="scss">
-    #content-wrap {
-        width: $screen-md;
-        margin: 0 auto;
-        text-align: justify;
-        line-height: 1.5rem;
-
-        margin-top: 5rem;
-        margin-bottom: 7rem;
-    }
-
-    @include md {
-        #content-wrap {
-            width: calc(100vw - 2rem);
-        }
-    }
-</style>

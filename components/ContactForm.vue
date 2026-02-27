@@ -1,41 +1,3 @@
-<template>
-    <div ref="elementRef" :class="`box ${isVisible ? 'fade-in-visible' : 'fade-in-invisible'}`" id="contact-form">
-        <div class="label">
-            <p>{{ $t('contact_form') }}</p>
-        </div>
-
-        <form id="form" action="https://formspree.io/f/xnnqzbbk" method="POST">
-            <ol>
-                <li>
-                    <label for="nameInput">name</label> <br>
-                    <input id="nameInput" type="text" name="name" required>
-                </li>
-                <li>
-                    <label for="emailInput">{{ $t('e_mail_address') }}</label> <br>
-                    <input id="emailInput" type="email" name="email" required>
-                </li>
-                <li>
-                    <label for="messageInput">{{ $t('message') }}</label> <br>
-                    <textarea id="messageInput" name="message" rows="1" style="resize: none;"
-                        oninput='this.style.height = ""; this.style.height = this.scrollHeight + "px";'
-                        required></textarea>
-                </li>
-            </ol>
-            <div class="checkbox-container">
-                <input id="consentCheckbox" type="checkbox" required>
-                <label id="checkbox-text" for="consentCheckbox">
-                    {{ $t('consent_1') }}
-                    <a href="legal" target="_blank" class="selectDisable hyperlink">{{ $t('privacy_policy') }}</a>
-                    {{ $t('consent_2') }}
-                </label>
-            </div>
-            <div id="button-container">
-                <input id="sendButton" type="submit" value="senden">
-            </div>
-        </form>
-    </div>
-</template>
-
 <script setup lang="ts">
     import { ref } from 'vue';
 
@@ -46,120 +8,46 @@
     useFadeInOnScroll(isVisible, elementRef);
 </script>
 
+<template>
+    <div ref="elementRef" :class="`box ${isVisible ? 'fade-in-visible' : 'fade-in-invisible'}`" class="w-full max-w-screen-md mx-auto">
+        <div class="border-b-solid border-b-2 border-b-primary-70 pl-4">
+            <p>{{ $t('contact_form') }}</p>
+        </div>
 
-<style scoped lang="scss">
-    #contact-form {
-        width: $screen-md;
-        margin: 0 auto;
-    }
+        <form class="p-4" action="https://formspree.io/f/xnnqzbbk" method="POST">
+            <div>
+                <label for="nameInput">{{ $t('name') }}</label> <br>
+                <input id="nameInput" class="input" type="text" name="name" :placeholder="$t('placeholder_name')" required> <br>
+                
+                <label for="emailInput">{{ $t('e_mail_address') }}</label> <br>
+                <input id="emailInput" class="input" type="email" name="email" :placeholder="$t('placeholder_email')" required> <br>
+                
+                <label for="messageInput">{{ $t('message') }}</label> <br>
+                <textarea id="messageInput" class="input h-auto py-3 overflow-hidden line-height-6" name="message" rows="1" style="resize: none;"
+                    oninput='this.style.height = ""; this.style.height = this.scrollHeight + "px";'
+                    :placeholder="$t('placeholder_message')" required></textarea>
+            </div>
+            <div class="flex mb-4">
+                <input id="consentCheckbox" type="checkbox" required>
+                <label class="pl-1" for="consentCheckbox">
+                    {{ $t('consent_1') }}
+                    <a href="legal" target="_blank" class="selectDisable hyperlink">{{ $t('privacy_policy') }}</a>
+                    {{ $t('consent_2') }}
+                </label>
+            </div>
+            <div class="flex justify-end">
+                <button class="primary-btn" type="submit">
+                    <span>{{ $t('send') }}</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</template>
 
-    @include md {
-        #contact-form {
-            width: calc(100vw - 2rem);
-        }
-    }
-
-    .label {
-        border-bottom: var(--border);
-        padding-left: 1rem;
-    }
-
-    #form {
-        padding-right: 3rem;
-    }
-
-    #form>ol {
-        margin-bottom: 0;
-        margin-top: 1rem;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    textarea {
-        width: 100%;
-        height: 3rem;
-        background-color: rgb(18, 18, 18);
-
-        font-family: Work Sans;
-        font-size: 1rem;
-        color: white;
-
-        border: var(--border);
-        border-radius: 0.5rem;
-
-        margin-bottom: 1rem;
-    }
-
-    #nameInput,
-    #emailInput,
-    #messageInput {
-        margin-top: 1rem;
-    }
-
-    textarea {
-        width: calc(100% + 0.5rem);
-        height: 2.85rem;
-        overflow: hidden;
-
-        padding-top: 0.8rem;
-        padding-bottom: 2.3rem;
-        box-sizing: border-box;
-    }
-
+<style scoped>
     li::marker {
         color: white;
         font-family: Work Sans;
         font-size: 1rem;
-    }
-
-    .checkbox-container {
-        display: flex;
-        margin-left: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    #checkbox-text {
-        padding-right: 1rem;
-    }
-
-    .checkbox-container input[type="checkbox"] {
-        margin-right: 10px;
-        margin-top: 2px;
-        width: 1rem;
-    }
-
-    .checkbox-container .checkbox-text {
-        font-size: 1rem;
-        color: white;
-        font-family: Work Sans;
-    }
-
-
-    #button-container {
-        display: flex;
-        width: 100%;
-        justify-content: flex-end;
-    }
-
-    #sendButton {
-        background-color: rgb(11, 102, 194);
-        transition: background-color 0.15s;
-
-        border: none;
-        border-radius: 0.5rem;
-
-        font-family: Work Sans;
-        font-size: 1rem;
-        color: white;
-
-        padding: 0.4rem 0.75rem 0.4rem 0.75rem;
-
-        margin-bottom: 1.5rem;
-    }
-
-    #sendButton:hover {
-        background-color: rgb(5, 79, 155);
-        cursor: pointer;
-        color: #b5b5b5;
     }
 </style>

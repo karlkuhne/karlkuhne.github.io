@@ -45,11 +45,17 @@
 </script>
 
 <template>
-    <div id="container">
-        <div ref="aboutMeRef" class="box" :class="`${isAboutMeVisible ? 'fade-in-visible' : 'fade-in-invisible'}`"
+    <div class="flex flex-col items-center h-fit md:h-[53.7rem] lg:h-[34.75rem] transition-[height] duration-650 ease">
+        <div ref="aboutMeRef"
+            class="box
+                translate-x-[0] translate-y-[0] w-full mx-auto mb-3
+                md:w-[34rem] md:m-0
+                lg:translate-x-[-2rem]"
+            
+            :class="`${isAboutMeVisible ? 'fade-in-visible' : 'fade-in-invisible'}`"
             id="about-me">
-            <div class="label">
-                <p>{{ aboutBoxes[0].headline }}</p>
+            <div class="pl-2 border-b-solid border-b-2 border-b-primary-70">
+                <p class="ml-2 my-3">{{ aboutBoxes[0].headline }}</p>
             </div>
             <ol>
                 <li v-for="(column, index) in getColumns(aboutBoxes[0])" :key="index">
@@ -58,10 +64,15 @@
             </ol>
         </div>
 
-        <div ref="languagesRef" class="box aboutBox"
+        <div ref="languagesRef"
+            class="box
+                translate-x-[0] translate-y-[0] w-full mx-auto mb-3
+                md:translate-x-[-9.4rem] md:translate-y-[0.8rem] md:w-fit md:m-0
+                lg:translate-x-[-22.5rem] lg:translate-y-[-0.95rem]"
+
             :class="`${isLanguagesVisible ? 'fade-in-visible' : 'fade-in-invisible'}`" id="languages">
-            <div class="label">
-                <p>{{ aboutBoxes[1].headline }}</p>
+            <div class="pl-2 border-b-solid border-b-2 border-b-primary-70">
+                <p class="ml-2 my-3">{{ aboutBoxes[1].headline }}</p>
             </div>
             <ol>
                 <li v-for="(column, index) in getColumns(aboutBoxes[1])" :key="index">
@@ -70,10 +81,15 @@
             </ol>
         </div>
 
-        <div ref="hobbysRef" class="box aboutBox"
+        <div ref="hobbysRef" 
+            class="box
+                translate-x-[0] translate-y-[0] w-full mx-auto mb-3
+                md:translate-x-[-10.4rem] md:translate-y-[1.6rem] md:w-fit md:m-0
+                lg:translate-x-[-9rem] lg:translate-y-[-3rem]"
+            
             :class="`${isHobbysVisible ? 'fade-in-visible' : 'fade-in-invisible'}`" id="hobbys">
-            <div class="label">
-                <p>{{ aboutBoxes[2].headline }}</p>
+            <div class="pl-2 border-b-solid border-b-2 border-b-primary-70">
+                <p class="ml-2 my-3">{{ aboutBoxes[2].headline }}</p>
             </div>
             <ol>
                 <li v-for="(column, index) in getColumns(aboutBoxes[2])" :key="index">
@@ -82,24 +98,34 @@
             </ol>
         </div>
 
-        <div ref="degreesRef" class="box aboutBox"
+        <div ref="degreesRef"
+            class="box pb-6
+                translate-x-[0] translate-y-[0] w-full mx-auto mb-3
+                md:translate-x-[4.7rem] md:translate-y-[3.6rem] md:w-fit md:m-0
+                lg:translate-x-[9.4rem] lg:translate-y-[-18.4rem]"
+            
             :class="`${isDegreesVisible ? 'fade-in-visible' : 'fade-in-invisible'}`" id="degrees">
-            <div class="label">
-                <p>{{ aboutBoxes[3].headline }}</p>
+            <div class="pl-2 border-b-solid border-b-2 border-b-primary-70">
+                <p class="ml-2 my-3">{{ aboutBoxes[3].headline }}</p>
             </div>
             <ol>
                 <li v-for="(column, index) in getColumns(aboutBoxes[3])" :key="index">
                     <p v-html="formatNewlines(column)"></p>
                 </li>
             </ol>
-            <a href="/Lebenslauf.pdf" download target="_blank" class="blue-button" style="margin-left: 2.5rem;">{{
+            <a href="/Lebenslauf.pdf" download target="_blank" class="primary-btn" style="margin-left: 2.5rem;">{{
                 $t('resume') }}</a>
         </div>
 
-        <div ref="portraitRef" class="box aboutBox"
+        <div ref="portraitRef"
+            class="box
+                translate-x-[0] translate-y-[0] w-full mx-auto mb-3
+                md:translate-x-[8.3rem] md:translate-y-[-30.8rem] md:w-[17.5rem] md:m-0
+                lg:translate-x-[22rem] lg:translate-y-[-47.2rem]"
+
             :class="`${isPortraitVisible ? 'fade-in-visible' : 'fade-in-invisible'}`" id="portrait">
-            <div class="label">
-                <p>portrait</p>
+            <div class="pl-2 border-b-solid border-b-2 border-b-primary-70">
+                <p class="ml-2 my-3">portrait</p>
             </div>
             <NuxtImg src="/img/Portrait.avif" alt="Portrait of Karl" class="selectDisable" draggable="false"
                 loading="lazy" style="width: 100%; aspect-ratio: 1/1;" />
@@ -107,31 +133,10 @@
     </div>
 </template>
 
-<style scoped lang="scss">
-
-    #container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 35.8rem;
-    }
-
+<style scoped>
     .box {
-        transition: transform 0.5s ease-out, opacity 0.5s;
+        transition: transform 0.65s ease, opacity 0.6s ease;
     }
-
-    .label {
-        border-bottom: var(--border);
-        padding-left: 0.5rem;
-    }
-
-    .label p {
-        padding-left: 0.5rem;
-        margin-top: 0.75rem;
-        margin-bottom: 0.75rem;
-    }
-
-    /* LIST */
 
     ul,
     ol {
@@ -155,133 +160,5 @@
     ol li p {
         margin-top: 0;
         margin-bottom: 0;
-    }
-
-    /* POSITIONS + WIDTH */
-
-    #about-me {
-        transform: translateX(-2rem);
-        width: 34rem;
-    }
-
-    #portrait {
-        width: 17.5rem;
-        transform: translateX(22rem) translateY(-47.2rem);
-    }
-
-    #languages {
-        transform: translateX(-22.5rem) translateY(-0.95rem);
-        width: fit-content;
-    }
-
-    #degrees {
-        transform: translateX(9.4rem) translateY(-18.4rem);
-        padding-bottom: 1.5rem;
-        width: fit-content;
-    }
-
-    #hobbys {
-        transform: translateX(-9rem) translateY(-3rem);
-        width: fit-content;
-    }
-
-    #container {
-        height: 34.75rem;
-    }
-
-    @supports (-webkit-appearance: none) and (stroke-color: transparent) {
-        #degrees {
-            transform: translateX(9.4rem) translateY(-19.7rem);
-        }
-    }
-
-    @include lg {
-        #about-me {
-            transform: translateX(0rem);
-        }
-
-        #portrait {
-            transform: translateX(8.3rem) translateY(-30.8rem);
-        }
-
-        #languages {
-            transform: translateX(-9.4rem) translateY(0.7rem);
-        }
-
-        #degrees {
-            transform: translateX(4.7rem) translateY(3.2rem);
-        }
-
-        #hobbys {
-            transform: translateX(-10.4rem) translateY(1.4rem);
-        }
-
-        #container {
-            height: 53.7rem;
-        }
-
-
-        @supports (-webkit-appearance: none) and (stroke-color: transparent) {
-            #portrait {
-                transform: translateX(8.3rem) translateY(-32.4rem);
-            }
-
-            #degrees {
-                transform: translateX(4.8rem) translateY(2.2rem);
-            }
-        }
-    }
-
-    @include sm {
-
-        #about-me,
-        #languages,
-        #degrees,
-        #hobbys,
-        #portrait {
-            transform: translateX(0rem) translateY(0rem);
-
-
-            width: calc(100vw - 2rem);
-            margin: 0 auto;
-            margin-bottom: 0.78rem;
-        }
-
-        #languages,
-        #hobbys,
-        #portrait {
-            width: calc(100vw - 6rem);
-        }
-
-        #container {
-            height: fit-content;
-        }
-    }
-</style>
-
-<style lang="scss">
-
-    .gr {
-        color: $green;
-    }
-
-    .b {
-        color: $blue;
-    }
-
-    .p {
-        color: $pink;
-    }
-
-    .ge {
-        color: $yellow;
-    }
-
-    .o {
-        color: $orange;
-    }
-
-    .l {
-        color: $purple;
     }
 </style>

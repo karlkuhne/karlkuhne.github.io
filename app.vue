@@ -1,3 +1,13 @@
+<script setup lang="ts">
+  import Header from '~/components/Header.vue';
+  import Footer from '~/components/Footer.vue';
+
+  /* lightbox */
+  import { useLightboxStore } from '~/stores/lightboxStore';
+  import Lightbox from '~/components/Lightbox.vue';
+  const lightbox = useLightboxStore();
+</script>
+
 <template>
   <div id="__nuxt">
     <Header />
@@ -10,16 +20,6 @@
 
   <Lightbox v-if="lightbox.isVisible" />
 </template>
-
-<script setup lang="ts">
-  import Header from '~/components/Header.vue';
-  import Footer from '~/components/Footer.vue';
-
-  /* lightbox */
-  import { useLightboxStore } from '~/stores/lightboxStore';
-  import Lightbox from '~/components/Lightbox.vue';
-  const lightbox = useLightboxStore();
-</script>
 
 <style scoped>
 
