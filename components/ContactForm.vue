@@ -9,7 +9,7 @@
 </script>
 
 <template>
-    <div ref="elementRef" :class="`box ${isVisible ? 'fade-in-visible' : 'fade-in-invisible'}`" class="w-full md:w-screen-md mx-auto">
+    <div ref="elementRef" :class="`box ${isVisible ? 'fade-in-visible' : 'fade-in-invisible'}`" class="w-full max-w-screen-md mx-auto">
         <div class="border-b-solid border-b-2 border-b-primary-70 pl-4">
             <p>{{ $t('contact_form') }}</p>
         </div>

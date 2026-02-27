@@ -17,7 +17,9 @@
 </script>
 
 <template>
-    <ContentWrap>
-        <p v-html="formatNewlines(content)" />
-    </ContentWrap>
+    <main>
+        <ContentWrap>
+            <p v-html="formatNewlines(content)" />
+        </ContentWrap>
+    </main>
 </template>

@@ -1,16 +1,5 @@
 <template>
-    <div id="content-wrap" class="w-full md:w-screen-md">
+    <div id="content-wrap" class="w-full max-w-screen-md mx-auto text-justify line-height-6 mt-20 mb-28">
         <slot />
     </div>
 </template>
-
-<style scoped>
-    #content-wrap {
-        margin: 0 auto;
-        text-align: justify;
-        line-height: 1.5rem;
-
-        margin-top: 5rem;
-        margin-bottom: 7rem;
-    }
-</style>
