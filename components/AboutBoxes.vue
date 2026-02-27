@@ -127,7 +127,7 @@
             <div class="pl-2 border-b-solid border-b-2 border-b-primary-70">
                 <p class="ml-2 my-3">portrait</p>
             </div>
-            <NuxtImg src="/img/Portrait.avif" alt="Portrait of Karl" class="selectDisable" draggable="false"
+            <NuxtImg src="https://admin.karlkuhne.me/media/download/portrait.png" alt="Portrait of Karl" class="selectDisable" draggable="false"
                 loading="lazy" style="width: 100%; aspect-ratio: 1/1;" />
         </div>
     </div>
