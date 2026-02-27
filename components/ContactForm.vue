@@ -50,4 +50,8 @@
         font-family: Work Sans;
         font-size: 1rem;
     }
+
+    .input, .input::placeholder {
+        font-family: 'Work Sans', sans-serif;
+    }
 </style>
