@@ -52,7 +52,7 @@
 <template>
     <div class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-92 z-1000 overflow-auto flex flex-col items-center justify-center" @click="lightbox.close()">
         <div @click.stop>
-            <div class="w-[calc(100vw-1rem)] max-w-screen-xl overflow-hidden relative rounded-xl">
+            <div class="w-[135vh] max-w-screen-xl overflow-hidden relative rounded-xl">
                 <div class="embla__viewport" ref="emblaRef">
                     <div class="flex">
                         <div class="embla__slide" v-for="(image, index) in lightbox.projectImages" :key="index">
@@ -77,7 +77,7 @@
                 </div>
             </div>
 
-            <div class="w-[calc(100vw-1rem)] max-w-screen-xl">
+            <div class="w-[135vh] max-w-screen-xl">
                 <h3>{{ lightbox.projectName }}</h3>
                 <p>{{ lightbox.projectDescription }}</p>
 
