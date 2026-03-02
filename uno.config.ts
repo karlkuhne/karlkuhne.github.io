@@ -116,7 +116,7 @@ export default defineConfig({
         'box': 'bg-primary-30 border-solid border-2 border-primary-70 rounded-lg',
         'hyperlink': 'text-accent-1 hover:text-accent-2',
         'primary-btn': 'bg-accent hover:bg-accent-1 text-white text-center rounded-md p-2 border-none',
-        'filter-btn': 'bg-primary-50 hover:bg-primary-60 border-none px-2.3 py-1.8 rounded-lg',
+        'filter-btn': 'bg-primary-50 hover:bg-primary-60 border-none px-2.3 py-1.8 rounded-lg cursor-pointer',
         'embla-arrows': 'absolute top-1/2 translate-y-[-50%] z-10 border-none cursor-pointer pointer-events-auto bg-transparent',
         'project-icon': 'w-4.4 h-4.4 fill-primary-80 stroke-primary-80 hover:fill-primary-140 hover:stroke-primary-140 cursor-pointer mr-2',
         'input': 'w-full box-border h-12 bg-primary-20 border-solid border-2 border-primary-70 rounded-lg mb-4 mt-4 text-white text-[1rem] font-sans pl-3',
