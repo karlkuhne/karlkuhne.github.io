@@ -47,7 +47,7 @@
 <template>
     <div class="flex flex-col items-center h-fit md:h-[53.2rem] lg:h-[34.75rem] transition-[height] duration-650 ease">
         <div ref="aboutMeRef"
-            class="box
+            class="box about-box
                 translate-x-[0] translate-y-[0] w-full mx-auto mb-3
                 md:w-[34rem] md:m-0
                 lg:translate-x-[-2rem]"
@@ -65,7 +65,7 @@
         </div>
 
         <div ref="languagesRef"
-            class="box
+            class="box about-box
                 translate-x-[0] translate-y-[0] w-full mx-auto mb-3
                 md:translate-x-[-9.4rem] md:translate-y-[0.8rem] md:w-fit md:m-0
                 lg:translate-x-[-22.5rem] lg:translate-y-[-0.95rem]"
@@ -82,7 +82,7 @@
         </div>
 
         <div ref="hobbysRef" 
-            class="box
+            class="box about-box
                 translate-x-[0] translate-y-[0] w-full mx-auto mb-3
                 md:translate-x-[-10.2rem] md:translate-y-[1.6rem] md:w-fit md:m-0
                 lg:translate-x-[-9rem] lg:translate-y-[-3rem]"
@@ -99,7 +99,7 @@
         </div>
 
         <div ref="degreesRef"
-            class="box pb-6
+            class="box about-box pb-6
                 translate-x-[0] translate-y-[0] w-full mx-auto mb-3
                 md:translate-x-[4.9rem] md:translate-y-[2.5rem] md:w-fit md:m-0
                 lg:translate-x-[9.4rem] lg:translate-y-[-18.4rem]"
@@ -117,7 +117,7 @@
         </div>
 
         <div ref="portraitRef"
-            class="box
+            class="box about-box
                 translate-x-[0] translate-y-[0] w-full mx-auto mb-3
                 md:translate-x-[8.3rem] md:translate-y-[-31.7rem] md:w-[17.5rem] md:m-0
                 lg:translate-x-[22rem] lg:translate-y-[-47.2rem]"
@@ -133,9 +133,9 @@
 </template>
 
 <style scoped>
-    .box {
+    /* .about-box {
         transition: transform 0.65s ease, opacity 0.6s ease;
-    }
+    } */
 
     ul,
     ol {
