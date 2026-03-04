@@ -45,7 +45,7 @@
 </script>
 
 <template>
-    <div class="flex flex-col items-center h-fit md:h-[53.7rem] lg:h-[34.75rem] transition-[height] duration-650 ease">
+    <div class="flex flex-col items-center h-fit md:h-[53.2rem] lg:h-[34.75rem] transition-[height] duration-650 ease">
         <div ref="aboutMeRef"
             class="box
                 translate-x-[0] translate-y-[0] w-full mx-auto mb-3
@@ -84,7 +84,7 @@
         <div ref="hobbysRef" 
             class="box
                 translate-x-[0] translate-y-[0] w-full mx-auto mb-3
-                md:translate-x-[-10.4rem] md:translate-y-[1.6rem] md:w-fit md:m-0
+                md:translate-x-[-10.2rem] md:translate-y-[1.6rem] md:w-fit md:m-0
                 lg:translate-x-[-9rem] lg:translate-y-[-3rem]"
             
             :class="`${isHobbysVisible ? 'fade-in-visible' : 'fade-in-invisible'}`" id="hobbys">
@@ -101,7 +101,7 @@
         <div ref="degreesRef"
             class="box pb-6
                 translate-x-[0] translate-y-[0] w-full mx-auto mb-3
-                md:translate-x-[4.7rem] md:translate-y-[3.6rem] md:w-fit md:m-0
+                md:translate-x-[4.9rem] md:translate-y-[2.5rem] md:w-fit md:m-0
                 lg:translate-x-[9.4rem] lg:translate-y-[-18.4rem]"
             
             :class="`${isDegreesVisible ? 'fade-in-visible' : 'fade-in-invisible'}`" id="degrees">
@@ -119,7 +119,7 @@
         <div ref="portraitRef"
             class="box
                 translate-x-[0] translate-y-[0] w-full mx-auto mb-3
-                md:translate-x-[8.3rem] md:translate-y-[-30.8rem] md:w-[17.5rem] md:m-0
+                md:translate-x-[8.3rem] md:translate-y-[-31.7rem] md:w-[17.5rem] md:m-0
                 lg:translate-x-[22rem] lg:translate-y-[-47.2rem]"
 
             :class="`${isPortraitVisible ? 'fade-in-visible' : 'fade-in-invisible'}`" id="portrait">
