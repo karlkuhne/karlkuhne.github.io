@@ -81,7 +81,7 @@
                 <h3>{{ lightbox.projectName }}</h3>
                 <p>{{ lightbox.projectDescription }}</p>
 
-                <div style="margin-top: 1.5rem; display: flex; gap: 0.75rem">
+                <div class="flex gap-3">
                     <a v-if="lightbox.projectLink" :href="`${lightbox.projectLink}`" target="_blank" class="primary-btn">
                         {{ $t('open') }}
                     </a>
