@@ -50,13 +50,13 @@
 </script>
 
 <template>
-    <div class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-92 z-1000 overflow-auto flex flex-col items-center justify-center" @click="lightbox.close()">
-        <div @click.stop>
-            <div class="w-[135vh] max-w-screen-xl overflow-hidden relative rounded-xl">
+    <div class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-93 z-1000 overflow-auto flex flex-col items-center justify-center" @click="lightbox.close()">
+        <div class="w-[calc(100vw-1rem)] xl:w-[135vh] max-w-screen-xl" @click.stop>
+            <div class="overflow-hidden relative rounded-xl">
                 <div class="embla__viewport" ref="emblaRef">
                     <div class="flex">
                         <div class="embla__slide" v-for="(image, index) in lightbox.projectImages" :key="index">
-                            <NuxtImg class="w-full h-auto block" :src="image" :alt="`Slide ${index + 1}`" />
+                            <NuxtImg class="w-full h-auto block rounded-xl" :src="image" :alt="`Slide ${index + 1}`" />
                         </div>
                     </div>
                 </div>
@@ -77,7 +77,7 @@
                 </div>
             </div>
 
-            <div class="w-[135vh] max-w-screen-xl">
+            <div>
                 <h3>{{ lightbox.projectName }}</h3>
                 <p>{{ lightbox.projectDescription }}</p>
 
